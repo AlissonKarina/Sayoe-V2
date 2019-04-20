@@ -18,9 +18,9 @@ class DatabaseSeeder extends Seeder
             'escuelas_profesionales',
             'roles',
             'usuarios',
-            'alumnos',
+            'personas',
+            'estudiantes',
             'cursos_observados',
-            'info_academ',
             'unayoe_perfiles',
             'mensajes',
             'citas',
@@ -38,9 +38,9 @@ class DatabaseSeeder extends Seeder
         $this->call(EscuelaProfesionalSeeder::class);
         $this->call(RolSeeder::class);
         $this->call(UsuarioSeeder::class);
-        $this->call(AlumnoSeeder::class);
+        $this->call(PersonaSeeder::class);
+        $this->call(EstudianteSeeder::class);
         $this->call(CursoObservadoSeeder::class);
-        $this->call(InfoAcademSeeder::class);
         $this->call(UnayoePerfilSeeder::class);
         $this->call(MensajeSeeder::class);
         $this->call(CitaSeeder::class);

@@ -11,21 +11,17 @@
 |
 */
 
-$factory->define(App\Alumno::class, function (Faker\Generator $faker) {
+$factory->define(App\Persona::class, function (Faker\Generator $faker) {
     return [
-        'id' => '1',
-        'codigo' => $faker->randomNumber($nbDigits = 6),
+        'dni' => $faker->randomNumber($nbDigits = 7),
         'nombre' => $faker->name,
         'apellido_paterno' => $faker->name,
         'apellido_materno' => $faker->name,
-        'dni' => $faker->randomNumber($nbDigits = 6),
         'sexo' => '1',
         'fecha_nacimiento' => $faker->date(),
         'telefono' => $faker->randomNumber($nbDigits = 7),
         'celular' => $faker->randomNumber($nbDigits = 9),
         'direccion' => $faker->sentence(3, false),
-        'correo_personal' => $faker->unique()->safeEmail,
-        'id_usuario' => '1',
-        'id_escuela' => '1',
+        'correo_personal' => $faker->unique()->safeEmail
     ];
 });

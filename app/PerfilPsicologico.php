@@ -15,12 +15,12 @@ class PerfilPsicologico extends Model
      * @var array
      */
     protected $fillable = [
-        'recomendacion', 'motivo', 'fecha_limite', 'id_alumno',
+        'recomendacion', 'motivo', 'fecha_limite', 'estado', 'codigoEstudiante'
     ];
 
-    public function alumno()
+    public function estudiante()
     {
-        return $this->belongsTo('App\Alumno', 'id_alumno', 'id');
+        return $this->belongsTo('App\Estudiante', 'codigoEstudiante', 'codigo');
     }
 
     public function estadosPerfil()

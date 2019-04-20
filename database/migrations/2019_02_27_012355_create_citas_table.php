@@ -15,16 +15,17 @@ class CreateCitasTable extends Migration
     {
         Schema::create('citas', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('codigo', 6)->nullable();
             $table->string('asunto', 100);
             $table->dateTime('fecha');
             $table->string('descripcion', 180)->nullable();
             $table->tinyInteger('estado')->nullable();
-            $table->integer('id_alumno')->unsigned();
+
+            $table->string('codigoEstudiante',8);
             $table->integer('id_unayoe_perfil')->unsigned();
 
-            $table->foreign('id_alumno')->references('id')->on('alumnos');
+            $table->foreign('codigoEstudiante')->references('codigo')->on('estudiantes');
             $table->foreign('id_unayoe_perfil')->references('id')->on('unayoe_perfiles');
+        
         });
     }
 

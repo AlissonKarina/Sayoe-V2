@@ -11,14 +11,17 @@
 |
 */
 
-$factory->define(App\InfoAcadem::class, function (Faker\Generator $faker) {
+$factory->define(App\Estudiante::class, function (Faker\Generator $faker) {
     return [
+        'codigo' =>'1',
         'ciclo' => '5',
         'situacion' => "O",
         'promedio' => '15.6',
         'anho_ingreso' => '2016',
         'estado_permanencia' => 'Activo',
         'total_creditos' => '82',
-        'id_alumno' => '1',
+        'dni' => '1',
+        'id_usuario' => '1',
+        'id_escuela' => '1'
     ];
 });

@@ -17,9 +17,9 @@ class CreateCursosObservadosTable extends Migration
             $table->increments('id');
             $table->string('nombre');
             $table->integer('nota');
-            $table->integer('id_alumno')->unsigned();
 
-            $table->foreign('id_alumno')->references('id')->on('alumnos');
+            $table->string('codigoEstudiante',8);
+            $table->foreign('codigoEstudiante')->references('codigo')->on('estudiantes');
         });
     }
 

@@ -15,7 +15,7 @@ class Cita extends Model
      * @var array
      */
     protected $fillable = [
-        'codigo', 'asunto', 'fecha', 'descripcion', 'estado', 'id_alumno',
+        'codigoCita', 'asunto', 'fecha', 'descripcion', 'estado', 'codigoEstudiante',
         'id_unayoe_perfil',
     ];
 
@@ -24,9 +24,9 @@ class Cita extends Model
         return $this->belongsTo('App\UnayoePerfil', 'id_unayoe_perfil', 'id');
     }
 
-    public function alumno()
+    public function estudiante()
     {
-        return $this->belongsTo('App\Alumno', 'id_alumno', 'id');
+        return $this->belongsTo('App\estudiante', 'codigoEstudiante', 'codigo');
     }
 
 }

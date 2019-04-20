@@ -15,6 +15,6 @@ $factory->define(App\CursoObservado::class, function (Faker\Generator $faker) {
     return [
         'nombre' => $faker->name,
         'nota' => $faker->randomNumber($nbDigits = 2),
-        'id_alumno' => 1,
+        'codigoEstudiante' => '1',
     ];
 });

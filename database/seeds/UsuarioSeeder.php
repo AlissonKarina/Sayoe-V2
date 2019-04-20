@@ -17,6 +17,6 @@ class UsuarioSeeder extends Seeder
             'id_rol' => '542687'
         ]);
 
-        factory(Usuario::class)->times(10)->create();
+        factory(Usuario::class)->times(20)->create();
     }
 }

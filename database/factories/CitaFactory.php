@@ -13,12 +13,11 @@
 
 $factory->define(App\Cita::class, function (Faker\Generator $faker) {
     return [
-        'codigo' => $faker->randomNumber($nbDigits = 6),
         'asunto' => $faker->sentence(2, false),
         'fecha' => $faker->date(),
         'descripcion' => $faker->sentence(2, false),
         'estado' => '1',
-        'id_alumno' => '1',
+        'codigoEstudiante' => '1',
         'id_unayoe_perfil' => '1',
     ];
 });

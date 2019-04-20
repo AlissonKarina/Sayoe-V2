@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateInfoAcademTable extends Migration
+class CreateEstudiantesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,8 @@ class CreateInfoAcademTable extends Migration
      */
     public function up()
     {
-        Schema::create('info_academ', function (Blueprint $table) {
-            $table->increments('id');
+        Schema::create('estudiantes', function (Blueprint $table) {        
+            $table->string('codigo',8)->unique();
             $table->integer('ciclo');
             $table->char('situacion', 1)->nullable();
             $table->float('promedio', 5, 2);
@@ -22,11 +22,18 @@ class CreateInfoAcademTable extends Migration
             $table->string('estado_permanencia')->nullable();
             $table->integer('total_creditos')->nullable();
             
-            $table->integer('id_alumno')->unsigned()->unique();
+            $table->primary('codigo');
+            
+            $table->string('dni',8)->unique();
+            $table->integer('id_usuario')->unsigned();
+            $table->integer('id_escuela')->unsigned();
 
-            $table->foreign('id_alumno')->references('id')->on('alumnos');
+            $table->foreign('dni')->references('dni')->on('personas');
+            $table->foreign('id_usuario')->references('id')->on('usuarios');
+            $table->foreign('id_escuela')->references('id')->on('escuelas_profesionales');
+        
 
-
+            
         });
     }
 

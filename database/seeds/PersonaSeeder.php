@@ -1,9 +1,9 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\Alumno;
+use App\Persona;
 
-class AlumnoSeeder extends Seeder
+class PersonaSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -14,9 +14,8 @@ class AlumnoSeeder extends Seeder
     {
         
         for($i = 1 ; $i <= 20 ; $i ++){
-            factory(Alumno::class)->times(1)->create([
-                'id' => $i,
-                'codigo' => $i
+            factory(Persona::class)->times(1)->create([
+                'dni' => $i
             ]);
         }
     }

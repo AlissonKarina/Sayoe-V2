@@ -16,11 +16,11 @@ class CursoObservado extends Model
      * @var array
      */
     protected $fillable = [
-        'nombre', 'nota', 'id_alumno', 
+        'nombre', 'nota', 'codigoEstudiante', 
     ];
 
-    public function alumno()
+    public function estudiante()
     {
-        return $this->belongsTo('App\Alumno', 'id_alumno', 'id');
+        return $this->belongsTo('App\Estudiante', 'codigoEstudiante', 'codigo');
     }
 }

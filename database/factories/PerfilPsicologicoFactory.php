@@ -16,6 +16,7 @@ $factory->define(App\PerfilPsicologico::class, function (Faker\Generator $faker)
         'recomendacion' => $faker->sentence(3, false),
         'motivo' => $faker->sentence(2, false),
         'fecha_limite' => $faker->date(),
-        'id_alumno' => '1',
+        'estado' => '1',
+        'codigoEstudiante' => '1',
     ];
 });

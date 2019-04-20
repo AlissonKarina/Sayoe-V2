@@ -4,22 +4,20 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateAlumnosTable extends Migration
+class CreatePersonasTable extends Migration
 {
     /**
      * Run the migrations.
      *
      * @return void
      */
-    public function up()
+    public function up() 
     {
-        Schema::create('alumnos', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('codigo',8)->unique();
+        Schema::create('personas', function (Blueprint $table) {
+            $table->string('dni',8)->unique();
             $table->string('nombre',45);
             $table->string('apellido_paterno', 45);
-            $table->string('apellido_materno', 45)->nullable();
-            $table->string('dni',8);
+            $table->string('apellido_materno', 45)->nullable();            
             $table->tinyInteger('sexo');
             $table->date('fecha_nacimiento');
             $table->string('telefono',10)->nullable();
@@ -27,14 +25,7 @@ class CreateAlumnosTable extends Migration
             $table->string('direccion',80);
             $table->string('correo_personal',60)->nullable();
 
-        
-            $table->integer('id_usuario')->unsigned();
-            $table->integer('id_escuela')->unsigned();
-
-            $table->foreign('id_usuario')->references('id')->on('usuarios');
-            $table->foreign('id_escuela')->references('id')->on('escuelas_profesionales');
-        
-            
+            $table->primary('dni');
         });
     }
 
