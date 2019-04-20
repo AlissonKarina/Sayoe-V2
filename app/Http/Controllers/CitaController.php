@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 class CitaController extends Controller
 {
     public function index() {
-        return CitaResource::collection(Cita::with('alumno')->paginate(5));
+        return CitaResource::collection(Cita::with('alumno')->paginate(10));
     }
     
     public function create(Request $request) {

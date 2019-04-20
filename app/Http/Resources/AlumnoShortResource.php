@@ -9,9 +9,10 @@ class AlumnoShortResource extends JsonResource
     public function toArray($request)
     {
         return [
-            'nombre' => $this->nombre." ".$this->apellido_materno." ".$this->apellido_paterno ,
+            'nombre' => $this->persona->apellido_paterno." ".$this->persona->apellido_materno.", ".$this->persona->nombre,
+            'codigo' => $this->codigo,
             'escuela' => $this->escuelaProfesional->nombre,
-            'situacion' => $this->infoAcadem->situacion
+            'situacion' => $this->situacion
         ];
     }
 }

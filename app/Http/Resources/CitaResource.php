@@ -10,12 +10,12 @@ class CitaResource extends JsonResource
     {
         return [
             'id' => $this->id,
-            'codigo' => $this->codigo,
+            'alumno' => new AlumnoShortResource($this->whenLoaded('alumno')),
+            'estado' => $this->estado,
             'asunto' => $this->asunto,
             'fecha' => $this->fecha,
-            'descripcion' => $this->descripcion,
-            'estado' => $this->estado,
-            'alumno' => new AlumnoResource($this->whenLoaded('alumno')),
+            'descripcion' => $this->descripcion,           
+            
         ];
     }
-}
+} 
