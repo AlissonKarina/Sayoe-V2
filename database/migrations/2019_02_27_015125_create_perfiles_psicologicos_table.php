@@ -20,9 +20,9 @@ class CreatePerfilesPsicologicosTable extends Migration
             $table->date('fecha_limite')->nullable();
             $table->tinyInteger('estado')->default('0');
 
-            $table->string('codigoEstudiante',8);
+            $table->string('codigoAlumno',8);
 
-            $table->foreign('codigoEstudiante')->references('codigo')->on('estudiantes');
+            $table->foreign('codigoAlumno')->references('codigo')->on('alumnos');
         
         });
     }

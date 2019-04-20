@@ -1,9 +1,9 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\Estudiante;
+use App\Alumno;
 
-class EstudianteSeeder extends Seeder
+class AlumnoSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -13,7 +13,7 @@ class EstudianteSeeder extends Seeder
     public function run()
     {
         for($i = 1 ; $i <= 10 ; $i ++){
-            factory(Estudiante::class)->times(1)->create([
+            factory(Alumno::class)->times(1)->create([
                 'codigo' => $i,
                 'dni' => $i,
                 'id_usuario' => $i
@@ -21,7 +21,7 @@ class EstudianteSeeder extends Seeder
         }
 
         for($i = 11 ; $i <= 20 ; $i ++){
-            factory(Estudiante::class)->times(1)->create([
+            factory(Alumno::class)->times(1)->create([
                 'codigo' => $i,
                 'dni' => $i,
                 'id_usuario' => $i,

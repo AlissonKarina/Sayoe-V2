@@ -4,9 +4,9 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Estudiante extends Model 
+class Alumno extends Model 
 {
-    protected $table='estudiantes';
+    protected $table='alumnos';
     protected $primaryKey = 'codigo';
 
     public $timestamps = false;
@@ -37,17 +37,17 @@ class Estudiante extends Model
 
     public function cursosObservados()
     {
-        return $this->hasMany('App\CursoObservado', 'codigoEstudiante', 'codigo');
+        return $this->hasMany('App\CursoObservado', 'codigoAlumno', 'codigo');
     }
 
     public function citas()
     {
-        return $this->hasMany('App\Cita', 'codigoEstudiante', 'codigo');
+        return $this->hasMany('App\Cita', 'codigoAlumno', 'codigo');
     }
 
     public function perfilesPsicologicos()
     {
-        return $this->hasMany('App\PerfilPsicologico', 'codigoEstudiante', 'codigo');
+        return $this->hasMany('App\PerfilPsicologico', 'codigoAlumno', 'codigo');
     }
 
 }

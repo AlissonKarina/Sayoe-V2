@@ -11,7 +11,7 @@
 |
 */
 
-$factory->define(App\Estudiante::class, function (Faker\Generator $faker) {
+$factory->define(App\Alumno::class, function (Faker\Generator $faker) {
     return [
         'codigo' =>'1',
         'ciclo' => '5',

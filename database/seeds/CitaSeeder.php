@@ -14,7 +14,7 @@ class CitaSeeder extends Seeder
     {
         for($i = 1 ; $i <= 20 ; $i ++){
             factory(Cita::class)->times(2)->create([
-                'codigoEstudiante' => $i,
+                'codigoAlumno' => $i,
             ]); 
         }
     }

@@ -14,7 +14,7 @@ class CursoObservadoSeeder extends Seeder
     {
         for($i = 1 ; $i <= 20 ; $i ++){
             factory(CursoObservado::class)->times(2)->create([
-                'codigoEstudiante' => $i,
+                'codigoAlumno' => $i,
             ]);
         }
     }
