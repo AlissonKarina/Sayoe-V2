@@ -22,7 +22,7 @@ class UnayoePerfilSeeder extends Seeder
             'celular' => "9854-5412",
             'wsp' => "9854-4522",
             'correo' => "sayoe-personal@gmail.com",
-            'foto' => 'https://images-na.ssl-images-amazon.com/images/I/617VVLMw8QL._SX425_.jpg',
+            'foto' => 'https://www.psicologabcn.es/wp-content/uploads/2019/01/psicologa-barcelona.jpg',
             'auto_descripcion' => "Autodescripcion",
             'id_usuario' => '1',
             'id_facultad' => '1',

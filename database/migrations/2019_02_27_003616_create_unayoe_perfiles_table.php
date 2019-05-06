@@ -23,7 +23,7 @@ class CreateUnayoePerfilesTable extends Migration
             $table->string('celular', 10)->nullable();
             $table->string('wsp', 10)->nullable();
             $table->string('correo', 60)->unique();
-            $table->string('foto', 80)->nullable();
+            $table->string('foto', 100)->nullable();
             $table->string('auto_descripcion', 180)->nullable();
             $table->integer('id_usuario')->unsigned();
             $table->integer('id_facultad')->unsigned()->nullable();

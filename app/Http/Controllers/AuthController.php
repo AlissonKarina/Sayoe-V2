@@ -19,17 +19,15 @@ class AuthController extends BaseController
     }
     
     protected function jwt(Usuario $user) {
-        if($user->id_rol == "128963"){
-            $nombre = $user->alumno->persona->nombre;
-        }else if($user->id_rol == "542687"){
-            $nombre = $user->unayoePerfil->nombre;
-        }
+        if($user->id_rol == "128963")   $u = $user->alumno->persona;
+        else if($user->id_rol == "542687")  $u = $user->unayoePerfil;
+
         $payload = [
             'iss' => "lumen-jwt", 
             'sub' => $user->id, 
-            'nombre' => $this->primerNombre($nombre),
-            'apellido' => $user->unayoePerfil->apellido_paterno,
-            'foto' => $user->unayoePerfil->foto,
+            'nombre' => $this->primerNombre($u->nombre),
+            'apellido' => $u->apellido_paterno,
+            'foto' => $u->foto,
             'rol' => $user->rol,
             'iat' => time(), 
             'exp' => time() + 60*60 
