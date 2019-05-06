@@ -13,7 +13,7 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         
-        $this->truncateTable([
+/*         $this->truncateTable([
             'facultades',
             'escuelas_profesionales',
             'roles',
@@ -31,7 +31,7 @@ class DatabaseSeeder extends Seeder
             'preguntas',
             'alternativas',
             'respuestas'
-        ]);
+        ]); */
         // $this->call(UsersTableSeeder::class);
         
         $this->call(FacultadSeeder::class);
@@ -54,7 +54,7 @@ class DatabaseSeeder extends Seeder
     }
 
 
-    public function truncateTable(array $tables)
+/*     public function truncateTable(array $tables)
     {
         DB::statement('SET FOREIGN_KEY_CHECKS = 0;');
         
@@ -64,5 +64,5 @@ class DatabaseSeeder extends Seeder
        
         DB::statement('SET FOREIGN_KEY_CHECKS = 1;');
 
-    }
+    } */
 }
