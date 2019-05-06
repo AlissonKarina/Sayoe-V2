@@ -8,7 +8,7 @@ class EstadoPerfil extends Model
 {
     protected $table='estado_perfiles';
 
-    protected $primaryKey = 'id';
+    protected $primaryKey = 'id_perfil_psico';
 
     public $timestamps = false;
     /**
@@ -17,7 +17,7 @@ class EstadoPerfil extends Model
      * @var array
      */
     protected $fillable = [
-        'id','id_perfil_psico', 'id_cuest_eval', 'estado', 'fecha', 'id_resultado'
+        'id_perfil_psico', 'id_cuest_eval', 'estado', 'fecha', 'id_resultado'
     ];
 
     public function cuestionarioEvaluacion()
