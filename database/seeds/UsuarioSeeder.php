@@ -12,15 +12,24 @@ class UsuarioSeeder extends Seeder
      */
     public function run()
     {
-        factory(Usuario::class)->times(1)->create([
+        Usuario::create([
             'correo' => 'sayoe@gmail.com',
-            'id_rol' => '542687'
+            'contrasenha' => app('hash')->make('12345'),
+            'estado' => 1,
+            'autenticado' => 0,
+            'ultima_sesion' => '2012-02-03',
+            'id_rol' => '542687',
         ]);
 
-        factory(Usuario::class)->times(1)->create([
-            'correo' => 'alumno@gmail.com',
-        ]);
-
-        factory(Usuario::class)->times(19)->create();
+        for($i = 1 ; $i <= 20 ; $i ++){
+            Usuario::create([
+                'correo' => 'alumno'.$i.'@gmail.com',
+                'contrasenha' => app('hash')->make('12345'),
+                'estado' => 1,
+                'autenticado' => 0,
+                'ultima_sesion' => '2012-02-03',
+                'id_rol' => '128963',
+            ]);
+        }
     }
 } 

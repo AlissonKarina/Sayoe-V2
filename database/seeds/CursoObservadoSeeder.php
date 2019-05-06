@@ -13,7 +13,9 @@ class CursoObservadoSeeder extends Seeder
     public function run()
     {
         for($i = 1 ; $i <= 20 ; $i ++){
-            factory(CursoObservado::class)->times(2)->create([
+            CursoObservado::create([
+                'nombre' => "Curso ".$i,
+                'nota' => "15",
                 'codigoAlumno' => $i,
             ]);
         }

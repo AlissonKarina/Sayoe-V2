@@ -13,7 +13,11 @@ class PerfilPsicologicoSeeder extends Seeder
     public function run()
     {
         for($i = 1 ; $i <= 5 ; $i ++){
-            factory(PerfilPsicologico::class)->times(1)->create([
+            PerfilPsicologico::create([
+                'recomendacion' => "Recomendacion ".$i,
+                'motivo' => "Motivo ".$i,
+                'fecha_limite' => "2001-10-05",
+                'estado' => '1',
                 'codigoAlumno' => $i,
             ]);
         }

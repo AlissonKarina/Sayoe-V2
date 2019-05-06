@@ -12,6 +12,11 @@ class CuestionarioEvaluacionSeeder extends Seeder
      */
     public function run()
     {
-        Factory(CuestionarioEvaluacion::class)->times(4)->create();
+        for($i = 1 ; $i <= 4 ; $i ++){
+            CuestionarioEvaluacion::create([
+                'titulo' => "Evaluacion ".$i,
+                'autor' => "Autor ".$i,
+            ]);
+        }
     }
 }

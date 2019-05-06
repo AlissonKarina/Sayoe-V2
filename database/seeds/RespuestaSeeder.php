@@ -14,10 +14,14 @@ class RespuestaSeeder extends Seeder
     {
         for($p = 1 ; $p <= 3 ; $p ++){
             for($i = 1 ; $i <= 20 ; $i ++){
-                factory(Respuesta::class)->times(2)->create([
-                    'id_pregunta' => $i,
-                    'id_pefil_psico' => $p,
-                ]);
+                for($k = 1; $k<=2; $k ++){
+                    Respuesta::create([
+                        'valor' => "valor",
+                        'descripcion' => "descripcion",
+                        'id_pregunta' => $i,
+                        'id_pefil_psico' => $p,
+                    ]);
+                }
             }
         }
     }

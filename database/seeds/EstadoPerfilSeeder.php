@@ -14,9 +14,12 @@ class EstadoPerfilSeeder extends Seeder
     {
         for($p = 1 ; $p <= 5; $p++){
             for($e = 1 ; $e <= 4; $e++){
-                factory(EstadoPerfil::class)->times(1)->create([
+                EstadoPerfil::create([
                     'id_perfil_psico' => $p,
                     'id_cuest_eval' => $e,
+                    'estado' => '1',
+                    'fecha' => "2019-06-05",
+                    'id_resultado' => '1',
                 ]); 
             }
         }

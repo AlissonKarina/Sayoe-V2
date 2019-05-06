@@ -12,12 +12,12 @@ class RolSeeder extends Seeder
      */
     public function run()
     {
-        factory(Rol::class)->times(1)->create([
+        Rol::create([
             'id' => '542687',
             'nombre' => 'Unayoe'
         ]); 
 
-        factory(Rol::class)->times(1)->create([
+        Rol::create([
             'id' => '128963',
             'nombre' => 'Estudiante'
         ]); 

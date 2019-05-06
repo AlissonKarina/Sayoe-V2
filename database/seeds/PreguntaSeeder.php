@@ -12,17 +12,33 @@ class PreguntaSeeder extends Seeder
      */
     public function run()
     {
-        factory(Pregunta::class)->times(60)->create([
-            'id_cuest_eval' => 1, 
-        ]); 
-        factory(Pregunta::class)->times(21)->create([
-            'id_cuest_eval' => 2, 
-        ]); 
-        factory(Pregunta::class)->times(120)->create([
-            'id_cuest_eval' => 3, 
-        ]); 
-        factory(Pregunta::class)->times(180)->create([
-            'id_cuest_eval' => 4, 
-        ]); 
+        for($i = 1 ; $i <= 60 ; $i ++){
+            Pregunta::create([
+                'pregunta' => "Pregunta ".$i,
+                'id_cuest_eval' => 1, 
+            ]); 
+        }
+
+        for($i = 1 ; $i <= 21 ; $i ++){
+            Pregunta::create([
+                'pregunta' => "Pregunta ".$i,
+                'id_cuest_eval' => 2, 
+            ]); 
+        }
+
+        for($i = 1 ; $i <= 120 ; $i ++){
+            Pregunta::create([
+                'pregunta' => "Pregunta ".$i,
+                'id_cuest_eval' => 13, 
+            ]); 
+        }
+
+        for($i = 1 ; $i <= 180 ; $i ++){
+            Pregunta::create([
+                'pregunta' => "Pregunta ".$i,
+                'id_cuest_eval' => 4, 
+            ]); 
+        }
+
     }
 }

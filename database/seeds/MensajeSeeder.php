@@ -12,6 +12,11 @@ class MensajeSeeder extends Seeder
      */
     public function run()
     {
-        factory(Mensaje::class)->times(10)->create(); 
+        Mensaje::create([
+            'mensaje_mes' => "MENSAJE MES",
+            'mensaje_mision' => "MISION",
+            'mensaje_vision' => "VISION",
+            'id_unayoe_perfil' => '1',
+        ]); 
     }
 }
