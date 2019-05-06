@@ -8,6 +8,8 @@ class EstadoPerfil extends Model
 {
     protected $table='estado_perfiles';
 
+    protected $primaryKey = 'id';
+
     public $timestamps = false;
     /**
      * The attributes that are mass assignable.
@@ -15,7 +17,7 @@ class EstadoPerfil extends Model
      * @var array
      */
     protected $fillable = [
-        'id_perfil_psico', 'id_cuest_eval', 'estado', 'fecha', 'id_resultado'
+        'id','id_perfil_psico', 'id_cuest_eval', 'estado', 'fecha', 'id_resultado'
     ];
 
     public function cuestionarioEvaluacion()

@@ -8,6 +8,7 @@ class Alumno extends Model
 {
     protected $table='alumnos';
     protected $primaryKey = 'codigo';
+    protected $keyType = "string";
 
     public $timestamps = false;
     /**

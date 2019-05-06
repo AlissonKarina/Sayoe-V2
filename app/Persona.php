@@ -10,6 +10,7 @@ class Persona extends Model
     protected $table='personas';
 
     protected $primaryKey = 'dni';
+    protected $keyType = "string";
     /* aasdasd */
     public $timestamps = false;
     /**
