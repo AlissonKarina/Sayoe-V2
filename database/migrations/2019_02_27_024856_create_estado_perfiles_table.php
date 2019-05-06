@@ -24,8 +24,6 @@ class CreateEstadoPerfilesTable extends Migration
             $table->foreign('id_perfil_psico')->references('id')->on('perfiles_psicologicos');
             $table->foreign('id_cuest_eval')->references('id')->on('cuestionario_evaluaciones');
             $table->foreign('id_resultado')->references('id')->on('resultados');
-
-            $table->primary(['id_perfil_psico', 'id_cuest_eval']);
         });
     }
 
