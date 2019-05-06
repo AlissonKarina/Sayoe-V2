@@ -29,7 +29,7 @@ class PreguntaSeeder extends Seeder
         for($i = 1 ; $i <= 120 ; $i ++){
             Pregunta::create([
                 'pregunta' => "Pregunta ".$i,
-                'id_cuest_eval' => 13, 
+                'id_cuest_eval' => 3, 
             ]); 
         }
 
