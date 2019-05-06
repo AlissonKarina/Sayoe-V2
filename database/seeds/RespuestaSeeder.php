@@ -16,7 +16,7 @@ class RespuestaSeeder extends Seeder
             for($i = 1 ; $i <= 20 ; $i ++){
                 for($k = 1; $k<=2; $k ++){
                     Respuesta::create([
-                        'valor' => "valor",
+                        'valor' => 10,
                         'descripcion' => "descripcion",
                         'id_pregunta' => $i,
                         'id_pefil_psico' => $p,
