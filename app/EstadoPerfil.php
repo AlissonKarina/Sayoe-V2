@@ -8,8 +8,6 @@ class EstadoPerfil extends Model
 {
     protected $table='estado_perfiles';
 
-    protected $primaryKey = 'id_perfil_psico';
-
     public $timestamps = false;
     /**
      * The attributes that are mass assignable.

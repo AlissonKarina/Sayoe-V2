@@ -14,6 +14,7 @@ class CreateEstadoPerfilesTable extends Migration
     public function up()
     {
         Schema::create('estado_perfiles', function (Blueprint $table) {
+            $table->increments('id');
             $table->integer('id_perfil_psico')->unsigned();
             $table->integer('id_cuest_eval')->unsigned();
             $table->tinyInteger('estado')->default('0');
