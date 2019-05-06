@@ -19,7 +19,7 @@ class EstadoPerfilSeeder extends Seeder
                     'id_cuest_eval' => $e,
                     'estado' => '1',
                     'fecha' => "2019-06-05",
-                    'id_resultado' => '1',
+                    'id_resultado' => $e,
                 ]); 
             }
         }
