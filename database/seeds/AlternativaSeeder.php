@@ -13,9 +13,9 @@ class AlternativaSeeder extends Seeder
     public function run()
     {
         for($i = 1 ; $i <= 381 ; $i ++){
-            for($i = 1; $i <= 5; $i ++){
+            for($e = 1; $e <= 5; $e ++){
                 Alternativa::create([
-                'descripcion' =>"Descricion ".$i,
+                'descripcion' =>"Descricion ".$e,
                 'id_pregunta' => $i,
                 ]);
             }
