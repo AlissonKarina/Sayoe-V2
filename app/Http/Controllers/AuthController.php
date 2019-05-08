@@ -30,7 +30,7 @@ class AuthController extends BaseController
             'foto' => $u->foto,
             'rol' => $user->rol,
             'iat' => time(), 
-            'exp' => time() + 60*60 
+            'exp' => time() + 60*60*4,
         ];
         return JWT::encode($payload, env('JWT_SECRET'));
     } 
