@@ -27,7 +27,6 @@ class UnayoePerfilController extends Controller
         $usuario->save();
         
         $id = Usuario::where("correo",  $usuario->correo)->get();
-        return $id[0]["id_rol"];
 
        $perfil = new UnayoePerfil;
        $perfil->nombre = $request->nombre;
@@ -47,7 +46,7 @@ class UnayoePerfilController extends Controller
         $perfil->foto = $temp_name; */
        $perfil->foto = "https://cdn.icon-icons.com/icons2/412/PNG/128/UserEdit_40958.png";
        $perfil->auto_descripcion = $request->auto_descripcion;
-       $perfil->id_usuario = $request->$id[0];
+       $perfil->id_usuario = $request->$id[0]["id_rol"];
        $perfil->id_facultad = $request->id_facultad;
        
        $perfil->save();
