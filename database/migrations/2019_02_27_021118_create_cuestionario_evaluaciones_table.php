@@ -15,8 +15,8 @@ class CreateCuestionarioEvaluacionesTable extends Migration
     {
         Schema::create('cuestionario_evaluaciones', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('titulo', 45);
-            $table->string('autor', 45)->nullable();
+            $table->string('titulo', 120);
+            $table->string('autor', 120)->nullable();
         });
     }
 
