@@ -26,7 +26,7 @@ class UnayoePerfilController extends Controller
         $usuario->id_rol = $request->id_rol;
         $usuario->save(); */
         
-        $id = Usuario::where("correo", "unayoe@gmail.com")->get();
+        $id = Usuario::where("correo", "sayoe@gmail.com")->get();
         return $id;
 
        /* $perfil = new UnayoePerfil;
