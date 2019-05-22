@@ -83,6 +83,7 @@ class UnayoePerfilController extends Controller
     {
        $perfil = UnayoePerfil::find($id);
        $perfil->usuario->estado = '1';
+       $perfil->save();
        return response()->json('Perfil Habilitado');
     }
 
@@ -90,6 +91,7 @@ class UnayoePerfilController extends Controller
     {
        $perfil = UnayoePerfil::find($id);
        $perfil->usuario->estado = '0';
+       $perfil->save();
        return response()->json('Perfil Inhabilitado');
     }
 
