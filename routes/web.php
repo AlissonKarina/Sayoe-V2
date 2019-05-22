@@ -10,7 +10,7 @@
 | and give it the Closure to call when that URI is requested.
 |
 */
-$router->get('/{id}', 'UnayoePerfilController@getUsuario');
+$router->get('/{idUsuario}', 'UnayoePerfilController@getUsuario');
 $router->get('/facultades', 'FacultadController@index');
 $router->group(['prefix'=>'api/v1'], function() use($router){
  
