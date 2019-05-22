@@ -38,7 +38,7 @@ class UsuarioSeeder extends Seeder
             'estado' => 1,
             'autenticado' => 0,
             'ultima_sesion' => '2012-02-03',
-            'id_rol' => '123456',
+            'id_rol' => '685429',
         ]);
     }
 } 
