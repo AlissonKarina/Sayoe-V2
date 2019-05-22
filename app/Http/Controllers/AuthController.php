@@ -20,9 +20,10 @@ class AuthController extends BaseController
     }
     
     protected function jwt(Usuario $user) {
+        $id = UnayoePerfilController::getUsuario($user->id);
         $payload = [
             'iss' => "lumen-jwt", 
-            'sub' => UnayoePerfilController::getUsuario($user->id), 
+            'sub' => $id, 
             'rol' => $user->rol,
             'iat' => time(), 
             'exp' => time() + 60*60*4,
