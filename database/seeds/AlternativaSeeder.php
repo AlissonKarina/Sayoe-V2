@@ -12,15 +12,54 @@ class AlternativaSeeder extends Seeder
      */
     public function run()
     {
-        for($i = 1 ; $i <= 381 ; $i ++){
-            for($e = 1; $e <= 5; $e ++){
-                Alternativa::create([
-                'descripcion' =>"Descricion ".$e,
-                'id_pregunta' => $i,
-                ]);
-            }
-        }
+        Alternativa::create([
+            'descripcion' =>"Siempre",
+            'id_pregunta' => '1',
+        ]);
+       
+        Alternativa::create([
+            'descripcion' =>"Nunca",
+            'id_pregunta' => '1',
+        ]);
 
-        
+        Alternativa::create([
+            'descripcion' =>"Siempre",
+            'id_pregunta' => '2',
+        ]);
+       
+        Alternativa::create([
+            'descripcion' =>"Nunca",
+            'id_pregunta' => '2',
+        ]);
+
+        Alternativa::create([
+            'descripcion' =>"Siempre",
+            'id_pregunta' => '3',
+        ]);
+       
+        Alternativa::create([
+            'descripcion' =>"Nunca",
+            'id_pregunta' => '3',
+        ]);
+
+        Alternativa::create([
+            'descripcion' =>"Siempre",
+            'id_pregunta' => '4',
+        ]);
+       
+        Alternativa::create([
+            'descripcion' =>"Nunca",
+            'id_pregunta' => '4',
+        ]);
+
+        Alternativa::create([
+            'descripcion' =>"Siempre",
+            'id_pregunta' => '5',
+        ]);
+       
+        Alternativa::create([
+            'descripcion' =>"Nunca",
+            'id_pregunta' => '5',
+        ]);
     }
 }
