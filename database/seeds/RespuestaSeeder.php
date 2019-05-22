@@ -12,17 +12,13 @@ class RespuestaSeeder extends Seeder
      */
     public function run()
     {
-        for($p = 1 ; $p <= 3 ; $p ++){
-            for($i = 1 ; $i <= 20 ; $i ++){
-                for($k = 1; $k<=2; $k ++){
-                    Respuesta::create([
-                        'valor' => 10,
-                        'descripcion' => "descripcion",
-                        'id_pregunta' => $i,
-                        'id_pefil_psico' => $p,
-                    ]);
-                }
-            }
-        }
+        
+        /* Respuesta::create([
+            'valor' => 10,
+            'descripcion' => "descripcion",
+            'id_pregunta' => $i,
+            'id_pefil_psico' => 1,
+        ]); */
+          
     }
 }

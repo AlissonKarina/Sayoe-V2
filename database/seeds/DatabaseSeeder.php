@@ -26,7 +26,6 @@ class DatabaseSeeder extends Seeder
             'citas',
             'perfiles_psicologicos',
             'cuestionario_evaluaciones',
-            'resultados',
             'estado_perfiles',
             'preguntas',
             'alternativas',
@@ -46,7 +45,6 @@ class DatabaseSeeder extends Seeder
         $this->call(CitaSeeder::class);
         $this->call(PerfilPsicologicoSeeder::class);
         $this->call(CuestionarioEvaluacionSeeder::class);
-        $this->call(ResultadoSeeder::class);
         $this->call(EstadoPerfilSeeder::class);
         $this->call(PreguntaSeeder::class);
         $this->call(AlternativaSeeder::class);
