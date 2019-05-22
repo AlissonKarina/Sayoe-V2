@@ -29,7 +29,7 @@ class UnayoePerfilController extends Controller
         $id = Usuario::where("correo",  $usuario->correo)->get();
         return $id[0]["id_rol"];
 
-       /* $perfil = new UnayoePerfil;
+       $perfil = new UnayoePerfil;
        $perfil->nombre = $request->nombre;
        $perfil->apellido_paterno = $request->apellido_paterno;
        $perfil->apellido_materno = $request->apellido_materno;
@@ -44,15 +44,14 @@ class UnayoePerfilController extends Controller
         $temp_name = $this->random_string() . '.' . $imagenOriginal->getClientOriginalExtension();
         $imagen->resize(300,300);
         $imagen->save($ruta . $temp_name, 100);
-
-       $perfil->foto = $temp_name; *//*
+        $perfil->foto = $temp_name; */
        $perfil->foto = "https://cdn.icon-icons.com/icons2/412/PNG/128/UserEdit_40958.png";
        $perfil->auto_descripcion = $request->auto_descripcion;
        $perfil->id_usuario = $request->$id[0];
        $perfil->id_facultad = $request->id_facultad;
        
        $perfil->save();
-       return response()->json($id); */
+       return response()->json($id);
     }
 
     public function show($perfil)
