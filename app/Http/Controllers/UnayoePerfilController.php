@@ -17,7 +17,7 @@ class UnayoePerfilController extends Controller
 
     public function create(Request $request) {
        $usuario = new Usuario();
-        $usuario->correo = $request->correoUsuario;
+        $usuario->correo = $request->correoPrincipal;
         $usuario->contrasenha = app('hash')->make($request->contrasenha);
         $usuario->id_rol = $request->id_rol;
         $usuario->ultima_sesion = '2015-02-03';
@@ -26,7 +26,7 @@ class UnayoePerfilController extends Controller
         $usuario->id_rol = $request->id_rol;
         $usuario->save();
         
-        $id = Usuario::where("correo",  $request->correoUsuario)->get();
+        $id = Usuario::where("correo",  $usuario->correo)->get();
 
        $perfil = new UnayoePerfil();
        $perfil->nombre = $request->nombre;
@@ -70,7 +70,7 @@ class UnayoePerfilController extends Controller
         $perfil->profesion = $request->profesion;
         $perfil->facebook = $request->facebook;
         $perfil->celular = $request->celular;
-        $perfil->correo = $request->correo;
+        $perfil->correo = $request->correoAlternativo;
         $perfil->wsp = $request->wsp;
         $perfil->foto = $request->foto;
         $perfil->auto_descripcion = $request->auto_descripcion;
@@ -79,7 +79,14 @@ class UnayoePerfilController extends Controller
         return response()->json($perfil);
     }
 
-    public function destroy($id)
+    public function habilitar($id)
+    {
+       $perfil = UnayoePerfil::find($id);
+       $perfil->delete();
+       return response()->json('Perfil removido satisfactoriamente');
+    }
+
+    public function inhabilitar($id)
     {
        $perfil = UnayoePerfil::find($id);
        $perfil->delete();
