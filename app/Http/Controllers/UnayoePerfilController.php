@@ -20,7 +20,9 @@ class UnayoePerfilController extends Controller
 
         if($perfil != null){
             $info = [
+                "nombre" => $perfil->apellido_paterno.", ".$this->primerNombre($perfil->nombre),
                 "correoPrincipal" => $perfil->usuario->correo,
+                "foto" => $perfil->foto,
                 "sexo" => $perfil->sexo,
                 "celular" => $perfil->celular
             ];
@@ -119,5 +121,17 @@ class UnayoePerfilController extends Controller
         }
     
         return $key;
+    }
+
+    
+    protected function primerNombre ($nombres){
+        $nombre= '';
+        for($i=0 ; $i< strlen($nombres); $i++){
+            if($nombres{$i} == ' '){
+                return $nombre;
+            }
+            $nombre = $nombre.$nombres{$i};
+        }
+        return $nombre;
     }
 }

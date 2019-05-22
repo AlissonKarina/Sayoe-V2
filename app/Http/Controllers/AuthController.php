@@ -19,15 +19,9 @@ class AuthController extends BaseController
     }
     
     protected function jwt(Usuario $user) {
-        if($user->id_rol == "128963")   $u = $user->alumno->persona;
-        else if($user->id_rol == "542687" || $user->id_rol == "685429")  $u = $user->unayoePerfil;
-
         $payload = [
             'iss' => "lumen-jwt", 
             'sub' => $user->id, 
-            'nombre' => $this->primerNombre($u->nombre),
-            'apellido' => $u->apellido_paterno,
-            'foto' => $u->foto,
             'rol' => $user->rol,
             'iat' => time(), 
             'exp' => time() + 60*60*4,
@@ -83,14 +77,4 @@ class AuthController extends BaseController
       return $this->respondWithToken($token);
     }
 
-    public function primerNombre ($nombres){
-        $nombre= '';
-        for($i=0 ; $i< strlen($nombres); $i++){
-            if($nombres{$i} == ' '){
-                return $nombre;
-            }
-            $nombre = $nombre.$nombres{$i};
-        }
-        return $nombre;
-    }
 }
