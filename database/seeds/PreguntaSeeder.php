@@ -194,6 +194,7 @@ class PreguntaSeeder extends Seeder
             'id' => '30',
             'pregunta' => "Confío en mi buena suerte, por eso solo estudio aquellos temas que supongo que el profesor preguntará",
             'id_cuest_eval' => '1'
+        ]);
 
         Pregunta::create([
             'id' => '31',
@@ -325,18 +326,24 @@ class PreguntaSeeder extends Seeder
 
         Pregunta::create([
             'id' => '52',
-            'pregunta' => "En mis momentos de estudio...  Ocurren interrupciones como visitas o amigos que me quitan el tiempo",
+            'pregunta' => "En mis momentos de estudio...  Ocurren interrupciones por parte de sus padres pidiéndole algún favor",
             'id_cuest_eval' => '1' 
         ]);
 
         Pregunta::create([
             'id' => '53',
-            'pregunta' => "En mis momentos de estudio... Ocurren interrupciones sociales, como fiestas, paseos, citas, etc",
+            'pregunta' => "En mis momentos de estudio...  Ocurren interrupciones como visitas o amigos que me quitan el tiempo",
             'id_cuest_eval' => '1' 
         ]);
 
         Pregunta::create([
             'id' => '54',
+            'pregunta' => "En mis momentos de estudio... Ocurren interrupciones sociales, como fiestas, paseos, citas, etc",
+            'id_cuest_eval' => '1' 
+        ]);
+
+        Pregunta::create([
+            'id' => '55',
             'pregunta' => "En mis momentos de estudio... Debo estar conectado por celular u otro medio, con mis redes sociales",
             'id_cuest_eval' => '1' 
         ]);
