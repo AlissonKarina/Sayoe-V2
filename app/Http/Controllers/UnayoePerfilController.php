@@ -16,14 +16,23 @@ class UnayoePerfilController extends Controller
     }
 
     public function create(Request $request) {
-       $usuario = new Usuario();
+
+        $usuario = Usuario::create([
+            'correo' => $request->correoPrincipal,
+            'contrasenha' => app('hash')->make($request->contrasenha),
+            'estado' => 1,
+            'autenticado' => 0,
+            'ultima_sesion' => '2015-02-03',
+            'id_rol' => '542687',
+        ]);
+      /*  $usuario = new Usuario();
         $usuario->correo = $request->correoPrincipal;
         $usuario->contrasenha = app('hash')->make($request->contrasenha);
         $usuario->id_rol = "542687";
         $usuario->ultima_sesion = '2015-02-03';
         $usuario->estado = 1;
         $usuario->autenticado = 0;
-        $usuario->save();
+        $usuario->save(); */
         
         $id_usuario = Usuario::where("correo",  $usuario->correo)->get();
        $perfil = new UnayoePerfil();
