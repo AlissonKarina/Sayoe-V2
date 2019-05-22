@@ -48,7 +48,7 @@ class UnayoePerfilController extends Controller
 
        $perfil->foto = "https://cdn.icon-icons.com/icons2/412/PNG/128/UserEdit_40958.png";
        $perfil->auto_descripcion = $request->auto_descripcion;
-       $perfil->id_usuario = $request->$id[0]['id'];
+       $perfil->id_usuario = $id[0]['id'];
        $perfil->id_facultad = $request->id_facultad;
        
         $perfil->save();
