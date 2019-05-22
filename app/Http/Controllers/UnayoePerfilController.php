@@ -19,11 +19,10 @@ class UnayoePerfilController extends Controller
        $usuario = new Usuario();
         $usuario->correo = $request->correoPrincipal;
         $usuario->contrasenha = app('hash')->make($request->contrasenha);
-        $usuario->id_rol = $request->id_rol;
+        $usuario->id_rol = "542687";
         $usuario->ultima_sesion = '2015-02-03';
         $usuario->estado = 1;
-        $usuario->autenticado = 1;
-        $usuario->id_rol = $request->id_rol;
+        $usuario->autenticado = 0;
         $usuario->save();
         
         $id = Usuario::where("correo",  $usuario->correo)->get();
@@ -33,10 +32,7 @@ class UnayoePerfilController extends Controller
        $perfil->apellido_paterno = $request->apellido_paterno;
        $perfil->apellido_materno = $request->apellido_materno;
        $perfil->profesion = $request->profesion;
-       $perfil->facebook = $request->facebook;
        $perfil->celular = $request->celular;
-       $perfil->correo = $request->correo;
-       $perfil->wsp = $request->wsp; 
 
         /* $ruta = base_path('public') . '/img/';
         $imagenOriginal = $request->file('foto');
@@ -47,9 +43,8 @@ class UnayoePerfilController extends Controller
         $perfil->foto = $temp_name; */
 
        $perfil->foto = "https://cdn.icon-icons.com/icons2/412/PNG/128/UserEdit_40958.png";
-       $perfil->auto_descripcion = $request->auto_descripcion;
        $perfil->id_usuario = $id[0]['id'];
-       $perfil->id_facultad = $request->id_facultad;
+       $perfil->id_facultad = "1";
        
         $perfil->save();
        return response()->json($perfil); 
