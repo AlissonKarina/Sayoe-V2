@@ -12,10 +12,10 @@ class CuestionarioEvaluacionSeeder extends Seeder
      */
     public function run()
     {
-        for($i = 1 ; $i <= 4 ; $i ++){
-            CuestionarioEvaluacion::create([
-                'titulo' => "Evaluacion ".$i,
-                'autor' => "Autor ".$i,
+        CuestionarioEvaluacion::create([
+            'id' => 1,
+            'titulo' => "Inventario de Hábitos de Estudio CASM-85 Revisión 2017",
+            'autor' => "Luis Alberto Vicuña Peri "
             ]);
         }
     }
