@@ -20,7 +20,7 @@ class UnayoePerfilController extends Controller
         $usuario->correo = $request->correo_usuario;
         $usuario->contrasenha = $request->contrasenha;
         $usuario->id_rol = $request->id_rol;
-        $usuario->ultima_session = '2012-02-03';
+        $usuario->ultima_session = '2015-02-03';
         $usuario->estado = 1;
         $usuario->autenticado = 1;
         $usuario->id_rol = $request->id_rol;
