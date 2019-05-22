@@ -79,20 +79,20 @@ class UnayoePerfilController extends Controller
         return $this->show($id);
     }
 
-    public function habilitar($id)
+    public function activar($id)
     {
        $perfil = UnayoePerfil::find($id);
        $perfil->usuario->estado = '1';
        $perfil->usuario->save();
-       return response()->json('Perfil Habilitado');
+       return response()->json('Usuario Activado');
     }
 
-    public function inhabilitar($id)
+    public function desactivar($id)
     {
        $perfil = UnayoePerfil::find($id);
        $perfil->usuario->estado = '0';
        $perfil->usuario->save();
-       return response()->json('Perfil Inhabilitado');
+       return response()->json('Usuario Desactivado');
     }
 
     protected function random_string()
