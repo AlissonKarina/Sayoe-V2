@@ -11,7 +11,7 @@ class UnayoePerfilController extends Controller
 {
 
     public function index() {
-        return UnayoePerfilShortResource::collection(UnayoePerfil::with('usuario')->paginate(10));
+        return UnayoePerfilResource::collection(UnayoePerfil::with('usuario')->paginate(10));
     }
 
     public function create(Request $request) {
