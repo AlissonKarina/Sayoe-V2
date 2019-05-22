@@ -15,7 +15,7 @@ class CreatePreguntasTable extends Migration
     {
         Schema::create('preguntas', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('pregunta', 100);
+            $table->string('pregunta', 130);
             $table->integer('id_cuest_eval')->unsigned();
 
             $table->foreign('id_cuest_eval')->references('id')->on('cuestionario_evaluaciones');
