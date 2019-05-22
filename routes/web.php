@@ -22,16 +22,15 @@ $router->group(['prefix'=>'api/v1'], function() use($router){
     );        
 
     $router->group(['middleware' => 'jwt.auth'], function($router) {
-        // FACULTADES
-        $router->get('/facultades', 'FacultadController@index');
-        $router->get('/facultad/{id}', 'FacultadController@show');
+
+        $router->get('/administrador', 'AdministradorController@index');
 
         //PERFILES UNAYOE
         $router->get('/unayoe-perfiles', 'UnayoePerfilController@index');
         $router->post('/unayoe-perfil', 'UnayoePerfilController@create');
-        $router->get('/unayoe-perfil/{id}', 'UnayoePerfilController@show');
-        $router->put('/unayoe-perfil/{id}', 'UnayoePerfilController@update');
-        $router->delete('/unayoe-perfil/{id}', 'UnayoePerfilController@destroy');
+        $router->get('/unayoe-perfil/{perfil}', 'UnayoePerfilController@show');
+        $router->put('/unayoe-perfil/{perfil}', 'UnayoePerfilController@update');
+        $router->delete('/unayoe-perfil/{perfil}', 'UnayoePerfilController@destroy');
 
         //CUESTIONARIO EVALUACION
         $router->get('/cuestionario-evaluaciones', 'CuestionarioEvaluacionController@index');

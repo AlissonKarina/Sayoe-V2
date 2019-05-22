@@ -21,7 +21,8 @@ class UnayoePerfilResource extends JsonResource
             'foto' => $this->foto,
             'auto_descripcion' => $this->auto_descripcion,
             'facultad' => $this->facultad->nombre,
-            'usuario' => $this->usuario,
+            'usuario' => $this->usuario->correo,
+            'rol' => $this->usuario->rol->nombre,
         ]; 
     }
 }
