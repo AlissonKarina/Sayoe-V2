@@ -136,7 +136,6 @@ class UnayoePerfilController extends Controller
     }
 
     public function getUsuario($idUsuario){
-        return $idUsuario;
         $perfil = UnayoePerfil::where('id_usuario', '=' , $idUsuario)->get();
         return $perfil;
     }
