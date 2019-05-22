@@ -45,7 +45,7 @@ class UnayoePerfilController extends Controller
        $perfil->id_facultad = $request->id_facultad;
        
        $perfil->save();
-       return response()->json($perfil);
+       return response()->json($id);
     }
 
     public function show($perfil)
@@ -54,8 +54,9 @@ class UnayoePerfilController extends Controller
         return UnayoePerfilResource::collection($perfil);
     }
 
-    public function update(UnayoePerfil $perfil, Request $request)
+    public function update($id, Request $request)
     {
+        $perfil = UnayoePerfil::find($id);
         $perfil->nombre = $request->nombre;
         $perfil->apellido_paterno = $request->apellido_paterno;
         $perfil->apellido_materno = $request->apellido_materno;
