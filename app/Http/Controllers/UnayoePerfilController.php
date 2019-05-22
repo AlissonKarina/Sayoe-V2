@@ -74,9 +74,8 @@ class UnayoePerfilController extends Controller
         $perfil->wsp = $request->wsp;
         $perfil->foto = $request->foto;
         $perfil->auto_descripcion = $request->auto_descripcion;
-
         $perfil->save();
-        return UnayoePerfilResource::collection($perfil);
+        return show($id);
     }
 
     public function habilitar($id)
