@@ -54,8 +54,19 @@ class UnayoePerfilController extends Controller
         return UnayoePerfilResource::collection($perfil);
     }
 
-    public function update(UnayoePerfil $perfil)
+    public function update(UnayoePerfil $perfil, Request $request)
     {
+        $perfil->nombre = $request->nombre;
+        $perfil->apellido_paterno = $request->apellido_paterno;
+        $perfil->apellido_materno = $request->apellido_materno;
+        $perfil->profesion = $request->profesion;
+        $perfil->facebook = $request->facebook;
+        $perfil->celular = $request->celular;
+        $perfil->correo = $request->correo;
+        $perfil->wsp = $request->wsp;
+        $perfil->foto = $request->foto;
+        $perfil->auto_descripcion = $request->auto_descripcion;
+
         $perfil->save();
         return response()->json($perfil);
     }
