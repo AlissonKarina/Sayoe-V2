@@ -43,17 +43,6 @@ class UnayoePerfilController extends Controller
             'id_facultad' => '1',
         ]);
 
-       /* $perfil = new UnayoePerfil();
-       $perfil->nombre = $request->nombre;
-       $perfil->apellido_paterno = $request->apellido_paterno;
-       $perfil->apellido_materno = $request->apellido_materno;
-       $perfil->profesion = $request->profesion;
-       $perfil->facebook = "";
-       $perfil->celular = $request->celular;
-       $perfil->correo = $request->correoPrincipal;
-       $perfil->wsp = $request->celular; */
-       
-
         /* $ruta = base_path('public') . '/img/';
         $imagenOriginal = $request->file('foto');
         $imagen = Image::make($imagenOriginal);
@@ -62,12 +51,6 @@ class UnayoePerfilController extends Controller
         $imagen->save($ruta . $temp_name, 100);
         $perfil->foto = $temp_name; */
 
-       /* $perfil->foto = "https://cdn.icon-icons.com/icons2/412/PNG/128/UserEdit_40958.png";
-       $perfil->auto_descripcion = "";
-       $perfil->id_usuario = $id_usuario[0]['id'];
-       $perfil->id_facultad = '1'; */
-       
-       /*  $perfil->save(); */
         return $this->show($perfil->id);
     }
 
@@ -97,14 +80,14 @@ class UnayoePerfilController extends Controller
     public function habilitar($id)
     {
        $perfil = UnayoePerfil::find($id);
-       $perfil->delete();
+       
        return response()->json('Perfil removido satisfactoriamente');
     }
 
     public function inhabilitar($id)
     {
        $perfil = UnayoePerfil::find($id);
-       $perfil->delete();
+       
        return response()->json('Perfil removido satisfactoriamente');
     }
 
