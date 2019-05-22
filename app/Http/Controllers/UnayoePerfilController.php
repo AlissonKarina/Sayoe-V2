@@ -76,7 +76,7 @@ class UnayoePerfilController extends Controller
         $perfil->auto_descripcion = $request->auto_descripcion;
 
         $perfil->save();
-        return response()->json($perfil);
+        return UnayoePerfilResource::collection($perfil);
     }
 
     public function habilitar($id)
