@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\UnayoePerfil;
+use App\Usuario;
 use Intervention\Image\ImageManagerStatic as Image;
 use App\Http\Resources\UnayoePerfilResource;
 use Illuminate\Http\Request;
