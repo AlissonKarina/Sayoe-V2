@@ -42,9 +42,16 @@ class AuthController extends BaseController
         ]);
         
         $user = Usuario::where('correo', $this->request->input('correo'))->first();
+
         if (!$user) {
             return response()->json([
                 'error' => 'Email does not exist.'
+            ], 400);
+        }
+
+        if ($user->estado = '0') {
+            return response()->json([
+                'error' => 'Cuenta inhabilitada.'
             ], 400);
         }
         
