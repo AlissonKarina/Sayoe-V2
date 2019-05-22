@@ -75,7 +75,7 @@ class UnayoePerfilController extends Controller
         $perfil->foto = $request->foto;
         $perfil->auto_descripcion = $request->auto_descripcion;
         $perfil->save();
-        return show($id);
+        return $this->show($id);
     }
 
     public function habilitar($id)
