@@ -25,17 +25,25 @@ class UnayoePerfilController extends Controller
             'ultima_sesion' => '2015-02-03',
             'id_rol' => '542687',
         ]);
-      /*  $usuario = new Usuario();
-        $usuario->correo = $request->correoPrincipal;
-        $usuario->contrasenha = app('hash')->make($request->contrasenha);
-        $usuario->id_rol = "542687";
-        $usuario->ultima_sesion = '2015-02-03';
-        $usuario->estado = 1;
-        $usuario->autenticado = 0;
-        $usuario->save(); */
         
         $id_usuario = Usuario::where("correo",  $usuario->correo)->get();
-       $perfil = new UnayoePerfil();
+
+        $perfil = UnayoePerfil::create([
+            'nombre' => $request->nombre,
+            'apellido_paterno' => $request->apellido_paterno,
+            'apellido_materno' => $request->apellido_materno,
+            'profesion' => $request->profesion,
+            'facebook' => "",
+            'celular' => $request->celular,
+            'wsp' => $request->celular,
+            'correo' => $request->correoPrincipal,
+            'foto' => "https://cdn.icon-icons.com/icons2/412/PNG/128/UserEdit_40958.png",
+            'auto_descripcion' => "",
+            'id_usuario' => $id_usuario[0]['id'],
+            'id_facultad' => '1',
+        ]);
+
+       /* $perfil = new UnayoePerfil();
        $perfil->nombre = $request->nombre;
        $perfil->apellido_paterno = $request->apellido_paterno;
        $perfil->apellido_materno = $request->apellido_materno;
@@ -43,7 +51,7 @@ class UnayoePerfilController extends Controller
        $perfil->facebook = "";
        $perfil->celular = $request->celular;
        $perfil->correo = $request->correoPrincipal;
-       $perfil->wsp = $request->celular;
+       $perfil->wsp = $request->celular; */
        
 
         /* $ruta = base_path('public') . '/img/';
@@ -54,12 +62,12 @@ class UnayoePerfilController extends Controller
         $imagen->save($ruta . $temp_name, 100);
         $perfil->foto = $temp_name; */
 
-       $perfil->foto = "https://cdn.icon-icons.com/icons2/412/PNG/128/UserEdit_40958.png";
+       /* $perfil->foto = "https://cdn.icon-icons.com/icons2/412/PNG/128/UserEdit_40958.png";
        $perfil->auto_descripcion = "";
        $perfil->id_usuario = $id_usuario[0]['id'];
-       $perfil->id_facultad = '1';
+       $perfil->id_facultad = '1'; */
        
-        $perfil->save();
+       /*  $perfil->save(); */
         return $this->show($perfil->id);
     }
 
