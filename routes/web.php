@@ -11,7 +11,6 @@
 |
 */
 $router->get('/{idUsuario}', 'UnayoePerfilController@getUsuario');
-$router->get('/facultades', 'FacultadController@index');
 $router->group(['prefix'=>'api/v1'], function() use($router){
  
     //AUTH
