@@ -17,7 +17,7 @@ class UnayoePerfilController extends Controller
 
     public function create(Request $request) {
        $usuario = new Usuario();
-        $usuario->correo = $request->correo;
+        $usuario->correo = $request->correo_usuario;
         $usuario->contrasenha = $request->contrasenha;
         $usuario->id_rol = $request->id_rol;
         $usuario->save();
@@ -29,8 +29,10 @@ class UnayoePerfilController extends Controller
        $perfil->apellido_paterno = $request->apellido_paterno;
        $perfil->apellido_materno = $request->apellido_materno;
        $perfil->profesion = $request->profesion;
+       $perfil->facebook = $request->facebook;
        $perfil->celular = $request->celular;
-
+       $perfil->correo = $request->correo;
+       $perfil->wsp = $request->wsp;
         /* $ruta = base_path('public') . '/img/';
         $imagenOriginal = $request->file('foto');
         $imagen = Image::make($imagenOriginal);
