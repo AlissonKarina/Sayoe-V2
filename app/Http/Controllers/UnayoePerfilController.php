@@ -55,7 +55,7 @@ class UnayoePerfilController extends Controller
        return response()->json($id); 
     }
 
-    public function show($perfil)
+    public function show($id)
     {
         $perfil = UnayoePerfil::with('usuario')->where('id', $id)->get();
         return UnayoePerfilResource::collection($perfil);

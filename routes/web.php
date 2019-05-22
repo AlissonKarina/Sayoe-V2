@@ -12,7 +12,7 @@
 */
 $router->get('/facultades', 'FacultadController@index');
 $router->group(['prefix'=>'api/v1'], function() use($router){
-
+ 
     //AUTH
     $router->post(
         'auth/login', 
