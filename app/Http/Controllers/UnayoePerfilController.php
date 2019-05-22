@@ -50,8 +50,8 @@ class UnayoePerfilController extends Controller
        $perfil->id_usuario = $request->$id[0]["id_rol"];
        $perfil->id_facultad = $request->id_facultad; */
        
-       $perfil->save();
-       return response()->json($id);
+      /*  $perfil->save();
+       return response()->json($id); */
     }
 
     public function show($perfil)
