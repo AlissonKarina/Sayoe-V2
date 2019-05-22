@@ -23,8 +23,6 @@ $router->group(['prefix'=>'api/v1'], function() use($router){
 
     $router->group(['middleware' => 'jwt.auth'], function($router) {
 
-        $router->get('/administrador', 'AdministradorController@index');
-
         //PERFILES UNAYOE
         $router->get('/unayoe-perfiles', 'UnayoePerfilController@index');
         $router->post('/unayoe-perfil', 'UnayoePerfilController@create');

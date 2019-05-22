@@ -11,13 +11,14 @@ class UnayoePerfilController extends Controller
 {
 
     public function index() {
-        return UnayoePerfilResource::collection(UnayoePerfil::with('usuario')->paginate(10));
+        return UnayoePerfilShortResource::collection(UnayoePerfil::with('usuario')->paginate(10));
     }
 
     public function create(Request $request) {
        $usuario = new Usuario();
         $usuario->correo = $request->correo;
         $usuario->contrasenha = $request->contrasenha;
+        $usuario->id_rol = $request->id_rol;
         $usuario->save();
         
         $id = Usuario::where("correo", "=", $usuario->correo)->get();
