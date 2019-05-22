@@ -27,5 +27,21 @@ class UnayoePerfilSeeder extends Seeder
             'id_usuario' => '1',
             'id_facultad' => '1',
         ]);
+
+        UnayoePerfil::create([
+            'id' => '2',
+            'nombre' => "Administrador",
+            'apellido_paterno' => "Apellido paterno",
+            'apellido_materno' => "Apellido materno",
+            'profesion' => 'Psicologa',
+            'facebook' => 'https://www.facebook.com/LuisYauriMartinez',
+            'celular' => "9854-5412",
+            'wsp' => "9854-4522",
+            'correo' => "admin_personal@gmail.com",
+            'foto' => 'https://www.psicologabcn.es/wp-content/uploads/2019/01/psicologa-barcelona.jpg',
+            'auto_descripcion' => "Autodescripcion",
+            'id_usuario' => '22',
+            'id_facultad' => '1',
+        ]);
     }
 }

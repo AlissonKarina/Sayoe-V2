@@ -22,9 +22,6 @@ $router->group(['prefix'=>'api/v1'], function() use($router){
     );        
 
     $router->group(['middleware' => 'jwt.auth'], function($router) {
-        // FACULTADES
-        $router->get('/facultades', 'FacultadController@index');
-        $router->get('/facultad/{id}', 'FacultadController@show');
 
         //PERFILES UNAYOE
         $router->get('/unayoe-perfiles', 'UnayoePerfilController@index');
