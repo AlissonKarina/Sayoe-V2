@@ -18,7 +18,7 @@ class UnayoePerfilController extends Controller
     public function create(Request $request) {
 
         $usuario = Usuario::create([
-            'correo' => $request->correoPrincipal,$request->correoPrincipal,
+            'correo' => $request->correoPrincipaL,
             'contrasenha' => app('hash')->make($request->contrasenha),
             'estado' => 1,
             'autenticado' => 0,
