@@ -49,7 +49,7 @@ class AuthController extends BaseController
             ], 400);
         }
 
-        if ($user->estado = '0') {
+        if ($user->estado == '0') {
             return response()->json([
                 'error' => 'Cuenta inhabilitada.'
             ], 400);
