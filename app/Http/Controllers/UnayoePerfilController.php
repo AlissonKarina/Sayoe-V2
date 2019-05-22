@@ -31,7 +31,11 @@ class UnayoePerfilController extends Controller
        $perfil->apellido_paterno = $request->apellido_paterno;
        $perfil->apellido_materno = $request->apellido_materno;
        $perfil->profesion = $request->profesion;
+       $perfil->facebook = "";
        $perfil->celular = $request->celular;
+       $perfil->correo = "";
+       $perfil->wsp = "";
+       
 
         /* $ruta = base_path('public') . '/img/';
         $imagenOriginal = $request->file('foto');
@@ -42,6 +46,7 @@ class UnayoePerfilController extends Controller
         $perfil->foto = $temp_name; */
 
        $perfil->foto = "https://cdn.icon-icons.com/icons2/412/PNG/128/UserEdit_40958.png";
+       $perfil->auto_descripcion = "";
        $perfil->id_usuario = $id_usuario[0]['id'];
        $perfil->id_facultad = '1';
        
