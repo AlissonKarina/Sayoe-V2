@@ -13,6 +13,7 @@ class UnayoePerfilResource extends JsonResource
             'nombre' => $this->nombre,
             'apellido_paterno' => $this->apellido_paterno,
             'apellido_materno' => $this->apellido_materno,
+            'sexo' => $this->sexo,
             'profesion' => $this->profesion,
             'facebook' => $this->facebook,
             'celular' => $this->celular,
