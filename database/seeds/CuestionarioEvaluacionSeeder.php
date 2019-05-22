@@ -16,7 +16,7 @@ class CuestionarioEvaluacionSeeder extends Seeder
             'id' => 1,
             'titulo' => "Inventario de Hábitos de Estudio CASM-85 Revisión 2017",
             'autor' => "Luis Alberto Vicuña Peri "
-            ]);
-        }
+        ]);
+        
     }
 }
