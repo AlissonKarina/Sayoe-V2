@@ -16,7 +16,7 @@ class UnayoePerfil extends Model
      * @var array
      */
     protected $fillable = [
-        'nombre', 'apellido_paterno', 'apellido_materno', 'sexo', 'profesion', 'facebook',
+        'id','nombre', 'apellido_paterno', 'apellido_materno', 'sexo', 'profesion', 'facebook',
         'celular', 'wsp', 'correo', 'foto', 'auto_descripcion', 'id_usuario', 'id_facultad'
     ];
 
