@@ -14,7 +14,7 @@ class PreguntaSeeder extends Seeder
     {
         Pregunta::create([
             'id' => '1',
-            'pregunta' => "Leo todo lo que tengo que estudiar subrayando los puntos más importantes... ".$i,
+            'pregunta' => "Leo todo lo que tengo que estudiar subrayando los puntos más importantes... ",
             'id_cuest_eval' => '1'
         ]); 
         
