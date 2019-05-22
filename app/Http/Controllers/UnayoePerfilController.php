@@ -16,27 +16,35 @@ class UnayoePerfilController extends Controller
     }
 
     public function create(Request $request) {
-       $usuario = new Usuario();
-        $usuario->correo = $request->correoUsuario;
-        $usuario->contrasenha = $request->contrasenha;
-        $usuario->id_rol = $request->id_rol;
+
+        $usuario = Usuario::create([
+            'correo' => $request->correoPrincipal,
+            'contrasenha' => app('hash')->make($request->contrasenha),
+            'estado' => 1,
+            'autenticado' => 0,
+            'ultima_sesion' => '2015-02-03',
+            'id_rol' => '542687',
+        ]);
+      /*  $usuario = new Usuario();
+        $usuario->correo = $request->correoPrincipal;
+        $usuario->contrasenha = app('hash')->make($request->contrasenha);
+        $usuario->id_rol = "542687";
         $usuario->ultima_sesion = '2015-02-03';
         $usuario->estado = 1;
-        $usuario->autenticado = 1;
-        $usuario->id_rol = $request->id_rol;
-        $usuario->save();
+        $usuario->autenticado = 0;
+        $usuario->save(); */
         
-        $id = Usuario::where("correo",  $request->correo)->get();
-        
+        $id_usuario = Usuario::where("correo",  $usuario->correo)->get();
        $perfil = new UnayoePerfil();
        $perfil->nombre = $request->nombre;
        $perfil->apellido_paterno = $request->apellido_paterno;
        $perfil->apellido_materno = $request->apellido_materno;
        $perfil->profesion = $request->profesion;
-       $perfil->facebook = $request->facebook;
+       $perfil->facebook = "";
        $perfil->celular = $request->celular;
-       $perfil->correo = $request->correo;
-       $perfil->wsp = $request->wsp; 
+       $perfil->correo = "";
+       $perfil->wsp = "";
+       
 
         /* $ruta = base_path('public') . '/img/';
         $imagenOriginal = $request->file('foto');
@@ -47,15 +55,15 @@ class UnayoePerfilController extends Controller
         $perfil->foto = $temp_name; */
 
        $perfil->foto = "https://cdn.icon-icons.com/icons2/412/PNG/128/UserEdit_40958.png";
-       $perfil->auto_descripcion = $request->auto_descripcion;
-       $perfil->id_usuario = $request->$id[0]["id_rol"];
-       $perfil->id_facultad = $request->id_facultad;
+       $perfil->auto_descripcion = "";
+       $perfil->id_usuario = $id_usuario[0]['id'];
+       $perfil->id_facultad = '1';
        
         $perfil->save();
-       return response()->json($id); 
+        return $this->show($perfil->id);
     }
 
-    public function show($perfil)
+    public function show($id)
     {
         $perfil = UnayoePerfil::with('usuario')->where('id', $id)->get();
         return UnayoePerfilResource::collection($perfil);
@@ -70,16 +78,22 @@ class UnayoePerfilController extends Controller
         $perfil->profesion = $request->profesion;
         $perfil->facebook = $request->facebook;
         $perfil->celular = $request->celular;
-        $perfil->correo = $request->correo;
+        $perfil->correo = $request->correoAlternativo;
         $perfil->wsp = $request->wsp;
         $perfil->foto = $request->foto;
         $perfil->auto_descripcion = $request->auto_descripcion;
-
         $perfil->save();
-        return response()->json($perfil);
+        return $this->show($id);
     }
 
-    public function destroy($id)
+    public function habilitar($id)
+    {
+       $perfil = UnayoePerfil::find($id);
+       $perfil->delete();
+       return response()->json('Perfil removido satisfactoriamente');
+    }
+
+    public function inhabilitar($id)
     {
        $perfil = UnayoePerfil::find($id);
        $perfil->delete();

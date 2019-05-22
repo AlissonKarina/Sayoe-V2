@@ -15,7 +15,7 @@ class EstadoPerfil extends Model
      * @var array
      */
     protected $fillable = [
-        'id_perfil_psico', 'id_cuest_eval', 'estado', 'fecha', 'id_resultado'
+        'id_perfil_psico', 'id_cuest_eval', 'estado', 'fecha', 'valor', 'descripcion'
     ];
 
     public function cuestionarioEvaluacion()
@@ -26,11 +26,6 @@ class EstadoPerfil extends Model
     public function perfilPsicologico()
     {
         return $this->belongsTo('App\PerfilPsicologico', 'id_perfil_psico', 'id');
-    }
-
-    public function resultado()
-    {
-        return $this->belongsTo('App\Resultado', 'id_resultado', 'id');
     }
 
 }

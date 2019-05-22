@@ -13,15 +13,14 @@ class EstadoPerfilSeeder extends Seeder
     public function run()
     {
         for($p = 1 ; $p <= 5; $p++){
-            for($e = 1 ; $e <= 4; $e++){
-                EstadoPerfil::create([
-                    'id_perfil_psico' => $p,
-                    'id_cuest_eval' => $e,
-                    'estado' => '1',
-                    'fecha' => "2019-06-05",
-                    'id_resultado' => 1,
-                ]); 
-            }
+            EstadoPerfil::create([
+                'id_perfil_psico' => $p,
+                'id_cuest_eval' => 1,
+                'estado' => '1',
+                'fecha' => "2019-06-05",
+                'valor' => '10',
+                'descripcion' => "MUY POSITIVO",
+            ]); 
         }
         
         

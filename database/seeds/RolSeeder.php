@@ -23,7 +23,7 @@ class RolSeeder extends Seeder
         ]); 
 
         Rol::create([
-            'id' => '123456',
+            'id' => '685429',
             'nombre' => 'Administrador'
         ]); 
     }

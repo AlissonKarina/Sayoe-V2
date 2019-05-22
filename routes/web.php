@@ -12,7 +12,7 @@
 */
 $router->get('/facultades', 'FacultadController@index');
 $router->group(['prefix'=>'api/v1'], function() use($router){
-
+ 
     //AUTH
     $router->post(
         'auth/login', 
@@ -28,8 +28,8 @@ $router->group(['prefix'=>'api/v1'], function() use($router){
         $router->post('/unayoe-perfil', 'UnayoePerfilController@create');
         $router->get('/unayoe-perfil/{id}', 'UnayoePerfilController@show');
         $router->put('/unayoe-perfil/{id}', 'UnayoePerfilController@update');
-        $router->delete('/unayoe-perfil/{id}', 'UnayoePerfilController@destroy');
-
+        $router->delete('/unayoe-perfil/habilitar/{id}', 'UnayoePerfilController@habilitar');
+        $router->delete('/unayoe-perfil/inhabilitar/{id}', 'UnayoePerfilController@inhabilitar');
         //CUESTIONARIO EVALUACION
         $router->get('/cuestionario-evaluaciones', 'CuestionarioEvaluacionController@index');
         $router->get('/cuestionario-evaluacion/{id}', 'CuestionarioEvaluacionController@show');
