@@ -15,6 +15,19 @@ class UnayoePerfilController extends Controller
         return UnayoePerfilResource::collection(UnayoePerfil::with('usuario')->paginate(10));
     }
 
+    public function showShort($id){
+        $perfil = UnayoePerfil::find($id);
+
+        if($perfil != null){
+            $info = [
+                "correoPrincipal" => $perfil->usuario->correo,
+                "sexo" => $perfil->sexo,
+                "celular" => $perfil->celular
+            ];
+        }
+        return response()->json($info);
+    }
+
     public function create(Request $request) {
 
         $usuario = Usuario::create([

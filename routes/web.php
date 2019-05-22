@@ -27,6 +27,7 @@ $router->group(['prefix'=>'api/v1'], function() use($router){
         $router->get('/unayoe-perfiles', 'UnayoePerfilController@index');
         $router->post('/unayoe-perfil', 'UnayoePerfilController@create');
         $router->get('/unayoe-perfil/{id}', 'UnayoePerfilController@show');
+        $router->get('/unayoe-perfil/short/{id}', 'UnayoePerfilController@showShort');
         $router->put('/unayoe-perfil/{id}', 'UnayoePerfilController@update');
         $router->get('/unayoe-perfil/activar/{id}', 'UnayoePerfilController@activar');
         $router->get('/unayoe-perfil/desactivar/{id}', 'UnayoePerfilController@desactivar');
