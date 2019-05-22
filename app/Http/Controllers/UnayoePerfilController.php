@@ -32,6 +32,7 @@ class UnayoePerfilController extends Controller
             'nombre' => $request->nombre,
             'apellido_paterno' => $request->apellido_paterno,
             'apellido_materno' => $request->apellido_materno,
+            'sexo' => $request->sexo,
             'profesion' => $request->profesion,
             'facebook' => "",
             'celular' => $request->celular,
@@ -66,6 +67,7 @@ class UnayoePerfilController extends Controller
         $perfil->nombre = $request->nombre;
         $perfil->apellido_paterno = $request->apellido_paterno;
         $perfil->apellido_materno = $request->apellido_materno;
+        $perfil->sexo = $request->sexo;
         $perfil->profesion = $request->profesion;
         $perfil->facebook = $request->facebook;
         $perfil->celular = $request->celular;
