@@ -13,7 +13,6 @@ class UnayoePerfilSeeder extends Seeder
     public function run()
     {
         UnayoePerfil::create([
-            'id' => '1',
             'nombre' => "Araceli",
             'apellido_paterno' => "Campos",
             'apellido_materno' => "Sevallo",
@@ -30,7 +29,6 @@ class UnayoePerfilSeeder extends Seeder
         ]);
 
         UnayoePerfil::create([
-            'id' => '2',
             'nombre' => "Mariana",
             'apellido_paterno' => "Soto",
             'apellido_materno' => "Chirinos",
