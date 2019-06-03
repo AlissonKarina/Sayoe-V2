@@ -17,6 +17,7 @@ class CreateCuestionarioEvaluacionesTable extends Migration
             $table->increments('id');
             $table->string('titulo', 190);
             $table->string('autor', 190)->nullable();
+            $table->integer('nro_preguntas')->unsigned();
         });
     }
 
