@@ -15,12 +15,12 @@ class Respuesta extends Model
      * @var array
      */
     protected $fillable = [
-        'valor', 'descripcion', 'id_pregunta', 'id_pefil_psico',
+        'valor', 'descripcion', 'id_alternativa', 'id_pefil_psico',
     ];
 
-    public function pregunta()
+    public function alternativa()
     {
-        return $this->belongsTo('App\Pregunta', 'id_pregunta', 'id');
+        return $this->belongsTo('App\Alternativa', 'id_alternativa', 'id');
     }
 
     public function perfilPsicologico()

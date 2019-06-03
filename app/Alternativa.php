@@ -15,12 +15,17 @@ class Alternativa extends Model
      * @var array
      */
     protected $fillable = [
-        'descripcion', 'id_pregunta',
+        'descripcion', 'id_pregunta', 'puntuacion'
     ];
 
     public function pregunta()
     {
         return $this->belongsTo('App\Pregunta', 'id_pregunta', 'id');
+    }
+
+    public function respuestas()
+    {
+        return $this->hasMany('App\Respuesta', 'id_alternativa', 'id');
     }
 
     /* GIT HUB */

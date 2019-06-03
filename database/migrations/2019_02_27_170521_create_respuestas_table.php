@@ -17,10 +17,10 @@ class CreateRespuestasTable extends Migration
             $table->increments('id');
             $table->tinyInteger('valor')->nullable();
             $table->string('descripcion',190)->nullable();
-            $table->integer('id_pregunta')->unsigned();
+            $table->integer('id_alternativa')->unsigned();
             $table->integer('id_pefil_psico')->unsigned();
 
-            $table->foreign('id_pregunta')->references('id')->on('preguntas');
+            $table->foreign('id_alternativa')->references('id')->on('alternativas');
             $table->foreign('id_pefil_psico')->references('id')->on('perfiles_psicologicos');
         });
     }

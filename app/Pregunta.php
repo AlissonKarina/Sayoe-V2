@@ -28,9 +28,4 @@ class Pregunta extends Model
         return $this->hasMany('App\Alternativa', 'id_pregunta', 'id');
     }
 
-    public function respuestas()
-    {
-        return $this->hasMany('App\Respuesta', 'id_pregunta', 'id');
-    }
-
 }
