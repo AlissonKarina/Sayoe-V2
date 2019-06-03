@@ -25,6 +25,13 @@ class CuestionarioEvaluacionSeeder extends Seeder
             'autor' => "Aaron T. Beck, Robert A. Steer, Gregry K. Brown",
             'nro_preguntas' => '21'
         ]);
+
+        CuestionarioEvaluacion::create([
+            'id' => 3,
+            'titulo' => "Inventario de Depresion de Beck",
+            'autor' => "Aaron T. Beck, Robert A. Steer, Gregry K. Brown",
+            'nro_preguntas' => '2'
+        ]);
         
     }
 }
