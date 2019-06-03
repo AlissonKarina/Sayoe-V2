@@ -13,13 +13,8 @@ class AlumnoController extends Controller
     }
 
     public function shortAlumno($codigo) {
-        $alumno = $this::alumno($codigo);
+        $alumno = Alumno::find($codigo);
         return new AlumnoShortResource($alumno);
     }
 
-
-    public static function alumno($codigo){
-        $alumno = Alumno::where('codigo','=',$codigo)->get();
-        return $alumno;
-    }
 }
