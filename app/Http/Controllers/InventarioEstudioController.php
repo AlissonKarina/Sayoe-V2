@@ -5,25 +5,41 @@ namespace App\Http\Controllers;
 use App\CuestionarioEvaluacion;
 use App\Http\Resources\CuestionarioEvaluacionResource;
 use Illuminate\Http\Request;
+use App\Respuesta;
+use App\EstadoPerfil;
 
 class InventarioEstudioController extends Controller
 {
 
     public function puntaje(Request $request){
         $total = 0;
-        $evaluacion = $request->data;
+        $data = $request->data;
+        $id_pefil_psico = $data['id_perfil_psicologico'];
+        $id_evaluacion = $data['id_cuest_eval'];
 
-/*         for ($i = 0; $i < $evaluacion['nro_preguntas']; $i ++){
-            $total = $total + $evaluacion['alternativa']['puntuacion'];          
-        }
- */
-        foreach ($evaluacion['alternativa'] as $valor)
+        foreach ($data['alternativa'] as $valor)
         {
+            Respuesta::create([
+                "id_alternativa" => $valor['id'],
+                "id_pefil_psico" => $id_pefil_psico,
+            ]);
             $total = $total + $valor['puntuacion']; 
         }
-        
+
         $descripcion = $this->resultado($total);
         
+  /*       $fecha = new \DateTime();
+        echo $fecha->format('d-m-Y');
+
+        EstadoPerfil::create([
+            "id_perfil_psico" => $id_pefil_psico,
+            "id_cuest_eval" => $id_evaluacion,
+            "estado" => '1',
+            "fecha" => $fecha,
+            "valor" => $total,
+            "descripcion" => $descripcion,
+        ]); */
+
         return response()->json([
             "total" => $total,
             "descripcion" => $descripcion
@@ -41,4 +57,6 @@ class InventarioEstudioController extends Controller
             return "El alumno no presenta signos de depresión severo";
         }
     }
+
+
 }

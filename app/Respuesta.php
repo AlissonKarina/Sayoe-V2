@@ -15,7 +15,7 @@ class Respuesta extends Model
      * @var array
      */
     protected $fillable = [
-        'valor', 'descripcion', 'id_alternativa', 'id_pefil_psico',
+        'id_alternativa', 'id_pefil_psico',
     ];
 
     public function alternativa()

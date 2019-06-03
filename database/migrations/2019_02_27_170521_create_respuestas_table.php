@@ -15,8 +15,6 @@ class CreateRespuestasTable extends Migration
     {
         Schema::create('respuestas', function (Blueprint $table) {
             $table->increments('id');
-            $table->tinyInteger('valor')->nullable();
-            $table->string('descripcion',190)->nullable();
             $table->integer('id_alternativa')->unsigned();
             $table->integer('id_pefil_psico')->unsigned();
 
