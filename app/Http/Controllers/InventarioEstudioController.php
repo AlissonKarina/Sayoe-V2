@@ -28,8 +28,9 @@ class InventarioEstudioController extends Controller
 
         $descripcion = $this->resultado($total);
         
-  /*       $fecha = new \DateTime();
+        $fecha = new \DateTime();
         echo $fecha->format('d-m-Y');
+        return $fecha;
 
         EstadoPerfil::create([
             "id_perfil_psico" => $id_pefil_psico,
@@ -38,7 +39,7 @@ class InventarioEstudioController extends Controller
             "fecha" => $fecha,
             "valor" => $total,
             "descripcion" => $descripcion,
-        ]); */
+        ]); 
 
         return response()->json([
             "total" => $total,
