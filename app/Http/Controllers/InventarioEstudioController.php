@@ -31,11 +31,6 @@ class InventarioEstudioController extends Controller
         $fecha = new \Carbon\Carbon();
         $date = $fecha->format('d-m-Y');
 
-
-        return response()->json([
-            "date" => $date
-        ]);
-
         EstadoPerfil::create([
             "id_perfil_psico" => $id_pefil_psico,
             "id_cuest_eval" => $id_evaluacion,
