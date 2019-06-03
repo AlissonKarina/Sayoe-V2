@@ -16,6 +16,7 @@ class CreateAlternativasTable extends Migration
         Schema::create('alternativas', function (Blueprint $table) {
             $table->increments('id');
             $table->string('descripcion', 190);
+            $table->integer('puntuacion')->unsigned()->nullable();
             $table->integer('id_pregunta')->unsigned();
 
             $table->foreign('id_pregunta')->references('id')->on('preguntas');
