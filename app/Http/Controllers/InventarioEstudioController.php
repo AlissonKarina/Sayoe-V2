@@ -13,10 +13,15 @@ class InventarioEstudioController extends Controller
         $total = 0;
         $evaluacion = $request->data;
 
-        for ($i = 0; $i < $evaluacion['nro_preguntas']; $i ++){
+/*         for ($i = 0; $i < $evaluacion['nro_preguntas']; $i ++){
             $total = $total + $evaluacion['alternativa']['puntuacion'];          
         }
-
+ */
+        foreach ($evaluacion['alternativa'] as $valor)
+        {
+            $total = $total + $valor['puntuacion']; 
+        }
+        
         $descripcion = $this->resultado($total);
         
         return response()->json([
