@@ -16,7 +16,7 @@ class PerfilPsicologicoSeeder extends Seeder
             PerfilPsicologico::create([
                 'recomendacion' => "Recomendacion ".$i,
                 'motivo' => "Motivo ".$i,
-                'fecha_limite' => "2001-10-05",
+                'fecha_limite' => "05-06-2019",
                 'estado' => '1',
                 'codigoAlumno' => $i,
             ]);
