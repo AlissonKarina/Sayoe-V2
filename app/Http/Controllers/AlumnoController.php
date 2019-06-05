@@ -33,7 +33,7 @@ class AlumnoController extends Controller
         /* return $model; */
         $alumno = Alumno::where('id_usuario', '=' , $idUsuario)->get();
         
-        if($alumno == array()){
+        if(count($alumno) == 0){
             return 0;
         }
         return $alumno[0]['codigo'];
