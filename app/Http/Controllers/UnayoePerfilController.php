@@ -140,7 +140,7 @@ class UnayoePerfilController extends Controller
         /* return $model; */
         $perfil = UnayoePerfil::where('id_usuario', '=' , $idUsuario)->get();
         
-        if($perfil == null)
+        if(count($perfil) == 0)
             return 0;
         return $perfil[0]['id'];
     }
