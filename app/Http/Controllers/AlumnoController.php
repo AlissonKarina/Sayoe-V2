@@ -19,7 +19,7 @@ class AlumnoController extends Controller
 
     public function short($codigo) {
         $alumno = Alumno::find($codigo);
-
+        return response()->json($alumno);
         if($alumno != null){
             $info = [
                 "nombre" => $alumno->apellido_paterno.", ".$this->primerNombre($alumno->nombre),
