@@ -12,7 +12,7 @@ class UsuarioSeeder extends Seeder
      */
     public function run()
     {
-        Usuario::create([
+        Usuario::create([//1
             'correo' => 'sayoe@gmail.com',
             'contrasenha' => app('hash')->make('12345'),
             'estado' => 1,
@@ -21,7 +21,7 @@ class UsuarioSeeder extends Seeder
             'id_rol' => '542687',
         ]);
 
-        for($i = 1 ; $i <= 20 ; $i ++){
+        for($i = 1 ; $i <= 20 ; $i ++){//2 - 21
             Usuario::create([
                 'correo' => 'alumno'.$i.'@gmail.com',
                 'contrasenha' => app('hash')->make('12345'),
@@ -32,7 +32,7 @@ class UsuarioSeeder extends Seeder
             ]);
         }
 
-        Usuario::create([
+        Usuario::create([//22
             'correo' => 'admin@gmail.com',
             'contrasenha' => app('hash')->make('12345'),
             'estado' => 1,

@@ -10,7 +10,7 @@
 | and give it the Closure to call when that URI is requested.
 |
 */
-$router->get('/{idUsuario}', 'AlumnoController@getUsuario');
+$router->get('/{fecha}', 'Helper@fecha');
 $router->group(['prefix'=>'api/v1'], function() use($router){
  
     //AUTH
@@ -31,11 +31,19 @@ $router->group(['prefix'=>'api/v1'], function() use($router){
         $router->put('/unayoe-perfil/{id}', 'UnayoePerfilController@update');
         $router->get('/unayoe-perfil/activar/{id}', 'UnayoePerfilController@activar');
         $router->get('/unayoe-perfil/desactivar/{id}', 'UnayoePerfilController@desactivar');
+        
         //CUESTIONARIO EVALUACION
         $router->get('/cuestionario-evaluaciones', 'CuestionarioEvaluacionController@index');
         $router->get('/cuestionario-evaluacion/{id}', 'CuestionarioEvaluacionController@show');
         $router->post('/inventario-estudio/puntaje', 'InventarioEstudioController@puntaje');
- 
+
+        //ESTADO_PERFIL
+        $router->post('/estado-perfil/{codigo}', 'EstadoPerfilController@show');
+
+        //CREAR PERFIL_PSICOLOGICO, ESTADO_PERFIL
+        $router->post('/asignarAlumno', 'PerfilPsicologicoController@create');
+        $router->post('/asignarGrupo', 'PerfilPsicologicoController@createGroup');
+
         //CITAS
         $router->get('/citas', 'CitaController@index');
         $router->post('/cita', 'CitaController@create');
@@ -44,9 +52,7 @@ $router->group(['prefix'=>'api/v1'], function() use($router){
         $router->get('/alumnoShortAsignar/{codigo}', 'AlumnoController@shortAlumno');
         $router->get('/alumno/short/{codigo}', 'AlumnoController@short');
         
-        //CREAR PERFIL_PSICOLOGICO, ESTADO_PERFIL
-        $router->post('/asignarAlumno', 'PerfilPsicologicoController@create');
-        $router->post('/asignarGrupo', 'PerfilPsicologicoController@createGroup');
+       
     });    
 });
 

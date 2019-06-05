@@ -3,7 +3,7 @@
 namespace App\Http\Helper;
 
 
-class Helper
+class Helper extends Controller
 {
     public static function primerNombre ($nombres){
         $nombre= '';
@@ -15,5 +15,12 @@ class Helper
         }
         return $nombre;
     }
-    //
+    
+    public function fecha($fecha){
+        $dia = $fecha[0].$fecha[1];
+        $mes = $fecha[3].$fecha[4];
+        $anho = $fecha[6].$fecha[7].$fecha[8].$fecha[9];
+
+        return $dia;
+    }
 }
