@@ -69,7 +69,7 @@ class PerfilPsicologicoController extends Controller
             
             $perfil = PerfilPsicologico::create([
                 'fecha_limite' => $fechaLimite,
-                'codigoAlumno' => $a['codigo'],
+                'codigo_alumno' => $a['codigo'],
                 'semestre'     => $semestre
             ]);
 
