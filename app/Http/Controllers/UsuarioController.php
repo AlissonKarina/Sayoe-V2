@@ -20,6 +20,7 @@ class UsuarioController extends Controller
 
     public static function getUsuario($idUsuario, $model){
         $perfil = 'App\\'.$model::where('id_usuario', '=' , $idUsuario)->get();
+        return 'App\\'.$model;
         if($perfil == null)
             return 0;
         return $perfil[0]['id'];
