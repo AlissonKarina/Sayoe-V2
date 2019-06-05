@@ -18,7 +18,7 @@ class AlumnoController extends Controller
     }
 
     public function short($codigo) {
-        $alumno = Unayoealumno::find($codigo);
+        $alumno = Alumno::find($codigo);
 
         if($alumno != null){
             $info = [
