@@ -33,7 +33,7 @@ class AlumnoController extends Controller
         /* return $model; */
         $alumno = Alumno::where('id_usuario', '=' , $idUsuario)->get();
         return $alumno;
-        if($alumno == null)
+        if($alumno == [])
             return 0;
         return $alumno[0]['codigo'];
     }
