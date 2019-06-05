@@ -14,7 +14,7 @@ class EstadoPerfilController extends Controller
     {
 
         $perfil = PerfilPsicologico::where('codigo_alumno','=', $request->codigo)
-                              ->where('semestre','=', $$request->semestre)->get();
+                              ->where('semestre','=', $request->semestre)->get();
         return $perfil->estadosPerfil;
     }
 }
