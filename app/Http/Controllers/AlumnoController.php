@@ -23,8 +23,8 @@ class AlumnoController extends Controller
         $info = "Alumno no registrado";
         if($alumno != null){
             $info = [
-                "nombre" => $alumno->apellido_paterno.", ".Helper::primerNombre($alumno->nombre),
-                "foto" => $alumno->foto,
+                "nombre" => $alumno->$persona->apellido_paterno.", ".Helper::primerNombre($alumno->$persona->nombre),
+                "foto" => $alumno->$persona->foto,
             ];
         }
         return response()->json($info);
