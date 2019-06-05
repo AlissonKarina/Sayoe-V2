@@ -13,7 +13,7 @@ class PersonaSeeder extends Seeder
     public function run()
     {
         Persona::create([
-                'dni' => '9876541',
+                'dni' => '9876542',
                 'nombre' => "Luis David ",
                 'apellido_paterno' => "Yauri",
                 'apellido_materno' => "Martinez",
@@ -27,7 +27,7 @@ class PersonaSeeder extends Seeder
 
         ]);
         
-        for($i = 2 ; $i <= 10 ; $i ++){
+        for($i = 3 ; $i <= 10 ; $i ++){
             Persona::create([
                 'dni' => '987654'.$i,
                 'nombre' => "nombre ".$i,
@@ -43,7 +43,7 @@ class PersonaSeeder extends Seeder
             ]);
         }
 
-        for($i = 11 ; $i <= 20 ; $i ++){
+        for($i = 11 ; $i <= 21; $i ++){
             Persona::create([
                 'dni' => '987654'.$i,
                 'nombre' => "nombre ".$i,
