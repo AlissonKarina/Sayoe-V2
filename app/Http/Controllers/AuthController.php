@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Validator;
 use App\Usuario;
+use App\UnayoePerfil;
 use App\Http\Controllers\UsuarioController;
 use Firebase\JWT\JWT;
 use Illuminate\Http\Request;
@@ -23,7 +24,8 @@ class AuthController extends BaseController
         try{
             $id = UsuarioController::getUsuario($user->id, UnayoePerfil::class);
         }catch(Exception $e){
-            $id = UsuarioController::getUsuario($user->id, Alumno::class);
+            return $e;
+            /* $id = UsuarioController::getUsuario($user->id, 'Alumno'); */
         }
         
         
