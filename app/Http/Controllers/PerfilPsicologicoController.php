@@ -63,13 +63,13 @@ class PerfilPsicologicoController extends Controller
     
     public function asignarTest($listAlumnos, $listTest, $fechaLimite) {
         $fecha = Helper::fecha($fechaLimite);
-
+        $semestre = Helper::semestre($fecha['mes'], $fecha['anho']);
         foreach ($listAlumnos as $a) {
             
             $perfil = PerfilPsicologico::create([
                 'fecha_limite' => $fechaLimite,
                 'codigoAlumno' => $a['codigo'],
-                'semestre'     => $anho.'-',
+                'semestre'     => $semestre
             ]);
 
             foreach ($listTest as $t) {

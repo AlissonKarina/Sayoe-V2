@@ -28,13 +28,15 @@ class Helper
         ];
     }
 
-/*     public function fecha($fecha){
-        $dia = $fecha[0].$fecha[1];
-        $mes = $fecha[3].$fecha[4];
-        $anho = $fecha[6].$fecha[7].$fecha[8].$fecha[9];
-
-        $i = 0;
-
-        if()
-    } */
+    public function semestre($mes, $anho){
+        $semestre='';
+        if($mes=='01' or $mes=='02' or $mes=='03'){
+            $semestre = $anho.'-0';
+        }else if($mes=='04' or $mes=='05' or $mes=='06'){
+            $semestre = $anho.'-1';
+        }else{
+            $semestre = $anho.'-2';
+        }
+        return $semestre;
+    }
 }
