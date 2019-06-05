@@ -12,10 +12,24 @@ class PersonaSeeder extends Seeder
      */
     public function run()
     {
+        Persona::create([
+                'dni' => '9876541',
+                'nombre' => "Luis David ",
+                'apellido_paterno' => "Yauri",
+                'apellido_materno' => "Martinez",
+                'sexo' => '0',
+                'fecha_nacimiento' => "2001-10-05",
+                'foto' => 'https://autoescuela-aula4.es/wp-content/uploads/2016/01/chico-carnet-conducir.jpg',
+                'telefono' => "8888-888",
+                'celular' => "9999-9999",
+                'direccion' => "Miraflores ".$i,
+                'correo_personal' => "david.yauri".$i."@gamil.com",
+
+        ]);
         
-        for($i = 1 ; $i <= 10 ; $i ++){
+        for($i = 2 ; $i <= 10 ; $i ++){
             Persona::create([
-                'dni' => $i,
+                'dni' => '987654'.$i,
                 'nombre' => "nombre ".$i,
                 'apellido_paterno' => "apellido paterno ".$i,
                 'apellido_materno' => "apellido materno ".$i,
@@ -31,7 +45,7 @@ class PersonaSeeder extends Seeder
 
         for($i = 11 ; $i <= 20 ; $i ++){
             Persona::create([
-                'dni' => $i,
+                'dni' => '987654'.$i,
                 'nombre' => "nombre ".$i,
                 'apellido_paterno' => "apellido paterno ".$i,
                 'apellido_materno' => "apellido materno ".$i,

@@ -12,7 +12,7 @@ class CitaSeeder extends Seeder
      */
     public function run()
     {
-        for($i = 1 ; $i <= 20 ; $i ++){
+        /* for($i = 1 ; $i <= 20 ; $i ++){
             Cita::create([
                 'asunto' => "Asunto ".$i,
                 'fecha' => "2019-10-05",
@@ -21,6 +21,6 @@ class CitaSeeder extends Seeder
                 'codigoAlumno' => $i,
                 'id_unayoe_perfil' => '1',                
             ]); 
-        }
+        } */
     }
 }

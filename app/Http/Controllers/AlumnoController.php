@@ -17,4 +17,15 @@ class AlumnoController extends Controller
         return new AlumnoShortResource($alumno);
     }
 
+    public function short($codigo) {
+        $alumno = Unayoealumno::find($codigo);
+
+        if($alumno != null){
+            $info = [
+                "nombre" => $alumno->apellido_paterno.", ".$this->primerNombre($alumno->nombre),
+                "foto" => $alumno->foto,
+            ];
+        }
+        return response()->json($info);
+    }
 }

@@ -18,7 +18,7 @@ class PerfilPsicologicoSeeder extends Seeder
                 'motivo' => "Motivo ".$i,
                 'fecha_limite' => "05-06-2019",
                 'estado' => '1',
-                'codigoAlumno' => $i,
+                'codigoAlumno' => '162000'.$i
             ]);
         }
     }

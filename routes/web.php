@@ -41,7 +41,8 @@ $router->group(['prefix'=>'api/v1'], function() use($router){
         $router->post('/cita', 'CitaController@create');
 
         //ALUMNOS
-        $router->get('/alumnoShort/{codigo}', 'AlumnoController@shortAlumno');
+        $router->get('/alumnoShortAsignar/{codigo}', 'AlumnoController@shortAlumno');
+        $router->get('/alumno/short/{codigo}', 'AlumnoController@short');
         
         //CREAR PERFIL_PSICOLOGICO, ESTADO_PERFIL
         $router->post('/asignarAlumno', 'PerfilPsicologicoController@create');

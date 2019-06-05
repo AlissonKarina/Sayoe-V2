@@ -14,14 +14,14 @@ class AlumnoSeeder extends Seeder
     {
         for($i = 1 ; $i <= 10 ; $i ++){
             Alumno::create([
-                'codigo' => $i,
+                'codigo' => '162000'.$i,
                 'ciclo' => $i,
                 'situacion' => "O",
                 'promedio' => '15.6',
                 'anho_ingreso' => '2016',
                 'estado_permanencia' => 'Activo',
                 'total_creditos' => '82',
-                'dni' => $i,
+                'dni' => '987654'.$i,
                 'id_usuario' => $i,
                 'id_escuela' => '1'
             ]);
@@ -29,14 +29,14 @@ class AlumnoSeeder extends Seeder
 
         for($i = 11 ; $i <= 20 ; $i ++){
             Alumno::create([
-                'codigo' => $i,
+                'codigo' => '162000'.$i,
                 'ciclo' => '1',
                 'situacion' => "R",
                 'promedio' => '15.6',
                 'anho_ingreso' => '2016',
                 'estado_permanencia' => 'Activo',
                 'total_creditos' => '82',
-                'dni' => $i,
+                'dni' => '987654'.$i,
                 'id_usuario' => $i,
                 'id_escuela' => '1'
             ]);
