@@ -21,13 +21,12 @@ class AuthController extends BaseController
     
     protected function jwt(Usuario $user) {
         try{
-            $id = UsuarioController::getUsuario($user->id, \UnayoePerfil::class);
-        }catch(Exception $e){
-            return $e->getMessage();
-            /* $id = UsuarioController::getUsuario($user->id, 'Alumno'); */
+            $id = UnayoePerfilController::getUsuario($user->id);
+        }
+        catch (Exception $e){
+            $id = AlumnoController::getUsuario($user->id);
         }
         
-        return $id;
         $payload = [
             'iss' => "lumen-jwt", 
             'sub' => $id, 
