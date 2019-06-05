@@ -12,7 +12,7 @@ class PerfilPsicologicoSeeder extends Seeder
      */
     public function run()
     {
-        for($i = 1 ; $i <= 5 ; $i ++){
+        /* for($i = 1 ; $i <= 5 ; $i ++){
             PerfilPsicologico::create([
                 'recomendacion' => "Recomendacion ".$i,
                 'motivo' => "Motivo ".$i,
@@ -20,6 +20,6 @@ class PerfilPsicologicoSeeder extends Seeder
                 'estado' => '1',
                 'codigoAlumno' => '162000'.$i
             ]);
-        }
+        } */
     }
 }
