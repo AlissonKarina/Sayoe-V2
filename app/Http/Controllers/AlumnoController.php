@@ -28,4 +28,13 @@ class AlumnoController extends Controller
         }
         return response()->json($info);
     }
+
+    public static function getUsuario($idUsuario){
+        /* return $model; */
+        $alumno = Alumno::where('id_usuario', '=' , $idUsuario)->get();
+        
+        if($alumno == null)
+            return 0;
+        return $alumno[0]['codigo'];
+    }
 }
