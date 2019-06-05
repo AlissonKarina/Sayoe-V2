@@ -20,10 +20,10 @@ class CreateCitasTable extends Migration
             $table->string('descripcion', 180)->nullable();
             $table->tinyInteger('estado')->nullable();
 
-            $table->string('codigoAlumno',8);
+            $table->string('codigo_alumno',8);
             $table->integer('id_unayoe_perfil')->unsigned();
 
-            $table->foreign('codigoAlumno')->references('codigo')->on('alumnos');
+            $table->foreign('codigo_alumno')->references('codigo')->on('alumnos');
             $table->foreign('id_unayoe_perfil')->references('id')->on('unayoe_perfiles');
         
         });

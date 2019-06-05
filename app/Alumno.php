@@ -38,17 +38,17 @@ class Alumno extends Model
 
     public function cursosObservados()
     {
-        return $this->hasMany('App\CursoObservado', 'codigoAlumno', 'codigo');
+        return $this->hasMany('App\CursoObservado', 'codigo_alumno', 'codigo');
     }
 
     public function citas()
     {
-        return $this->hasMany('App\Cita', 'codigoAlumno', 'codigo');
+        return $this->hasMany('App\Cita', 'codigo_alumno', 'codigo');
     }
 
     public function perfilesPsicologicos()
     {
-        return $this->hasMany('App\PerfilPsicologico', 'codigoAlumno', 'codigo');
+        return $this->hasMany('App\PerfilPsicologico', 'codigo_alumno', 'codigo');
     }
 
 }
