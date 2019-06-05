@@ -15,7 +15,7 @@ class PerfilPsicologico extends Model
      * @var array
      */
     protected $fillable = [
-        'recomendacion', 'motivo', 'fecha_limite', 'estado', 'codigoAlumno'
+        'recomendacion', 'motivo', 'fecha_limite', 'estado', 'codigoAlumno','semestre'
     ];
 
     public function estudiante()
