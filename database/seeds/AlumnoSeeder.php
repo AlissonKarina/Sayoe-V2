@@ -12,7 +12,7 @@ class AlumnoSeeder extends Seeder
      */
     public function run()
     {
-        for($i = 1 ; $i <= 10 ; $i ++){
+        for($i = 2 ; $i <= 11 ; $i ++){
             Alumno::create([
                 'codigo' => '162000'.$i,
                 'ciclo' => $i,
@@ -27,7 +27,7 @@ class AlumnoSeeder extends Seeder
             ]);
         }
 
-        for($i = 11 ; $i <= 20 ; $i ++){
+        for($i = 12 ; $i <= 21 ; $i ++){
             Alumno::create([
                 'codigo' => '162000'.$i,
                 'ciclo' => '1',
