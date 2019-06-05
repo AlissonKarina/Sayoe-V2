@@ -21,7 +21,7 @@ class AuthController extends BaseController
     
     protected function jwt(Usuario $user) {
         try{
-            $id = UsuarioController::getUsuario($user->id, UnayoePerfil::class);
+            $id = UsuarioController::getUsuario($user->id, \UnayoePerfil::class);
         }catch(Exception $e){
             return $e->getMessage();
             /* $id = UsuarioController::getUsuario($user->id, 'Alumno'); */
