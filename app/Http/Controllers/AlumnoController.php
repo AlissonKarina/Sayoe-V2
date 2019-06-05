@@ -32,7 +32,6 @@ class AlumnoController extends Controller
     public static function getUsuario($idUsuario){
         /* return $model; */
         $alumno = Alumno::where('id_usuario', '=' , $idUsuario)->get();
-        return $alumno;
         if(empty($alumno))
             return 0;
         return $alumno[0]['codigo'];
