@@ -10,7 +10,7 @@
 | and give it the Closure to call when that URI is requested.
 |
 */
-$router->get('/{idUsuario}', 'UnayoePerfilController@getUsuario');
+$router->get('/{idUsuario}/{model}', 'UsuarioController@getUsuario');
 $router->group(['prefix'=>'api/v1'], function() use($router){
  
     //AUTH
