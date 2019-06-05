@@ -23,7 +23,7 @@ class CreatePerfilesPsicologicosTable extends Migration
             
             $table->string('codigo_alumno',8);
 
-            $table->foreign('codigoAlumno')->references('codigo')->on('alumnos');
+            $table->foreign('codigo_alumno')->references('codigo')->on('alumnos');
         
         });
     }
