@@ -22,8 +22,8 @@ class PersonaSeeder extends Seeder
                 'foto' => 'https://autoescuela-aula4.es/wp-content/uploads/2016/01/chico-carnet-conducir.jpg',
                 'telefono' => "8888-888",
                 'celular' => "9999-9999",
-                'direccion' => "Miraflores ".$i,
-                'correo_personal' => "david.yauri".$i."@gamil.com",
+                'direccion' => "Miraflores ",
+                'correo_personal' => "david.yauri"."@gamil.com",
 
         ]);
         
