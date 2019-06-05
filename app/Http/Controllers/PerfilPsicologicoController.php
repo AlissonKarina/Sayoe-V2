@@ -7,6 +7,7 @@ use App\EstadoPerfil;
 use App\InfoAcadem;
 use App\Alumno;
 use App\EscuelaProfesional;
+use App\Http\Helper\Helper;
 use Illuminate\Http\Request;
 
 class PerfilPsicologicoController extends Controller
