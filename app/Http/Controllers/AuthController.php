@@ -27,7 +27,7 @@ class AuthController extends BaseController
             /* $id = UsuarioController::getUsuario($user->id, 'Alumno'); */
         }
         
-        
+        return $id;
         $payload = [
             'iss' => "lumen-jwt", 
             'sub' => $id, 
