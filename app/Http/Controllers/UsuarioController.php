@@ -20,7 +20,7 @@ class UsuarioController extends Controller
 
     public static function getUsuario($idUsuario, $model){
        /*  return 'App\\'.$model; */
-        $perfil = UnayoePerfil::where('id_usuario', '=' , $idUsuario)->get();
+        $perfil = $model::where('id_usuario', '=' , $idUsuario)->get();
         
         if($perfil == null)
             return 0;
