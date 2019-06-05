@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Validator;
 use App\Usuario;
-use App\Http\Controllers\UnayoePerfilController;
+use App\Http\Controllers\UsuarioController;
 use Firebase\JWT\JWT;
 use Illuminate\Http\Request;
 use Firebase\JWT\ExpiredException;
@@ -21,9 +21,9 @@ class AuthController extends BaseController
     
     protected function jwt(Usuario $user) {
         try{
-            $id = UserController::getUsuario($user->id, 'UnayoePerfil');
+            $id = UsuarioController::getUsuario($user->id, 'UnayoePerfil');
         }catch(Exception $e){
-            $id = UserController::getUsuario($user->id, 'Alumno');
+            $id = UsuarioController::getUsuario($user->id, 'Alumno');
         }
         
         

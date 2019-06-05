@@ -6,7 +6,7 @@ use App\User;
 use App\UnayoePerfil;
 use App\Alumno;
 
-class UserController extends Controller
+class UsuarioController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -24,6 +24,5 @@ class UserController extends Controller
             return 0;
         return $perfil[0]['id'];
     }
-
     //
 }
