@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Alumno;
 use App\Http\Resources\AlumnoShortResource;
 use Illuminate\Http\Request;
+use App\Http\Helper\Helper;
 
 class AlumnoController extends Controller
 {
@@ -22,7 +23,7 @@ class AlumnoController extends Controller
         $info = "Alumno no registrado";
         if($alumno != null){
             $info = [
-                "nombre" => $alumno->apellido_paterno.", ".$this->primerNombre($alumno->nombre),
+                "nombre" => $alumno->apellido_paterno.", ".Helper::primerNombre($alumno->nombre),
                 "foto" => $alumno->foto,
             ];
         }
