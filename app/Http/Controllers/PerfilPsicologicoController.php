@@ -25,7 +25,7 @@ class PerfilPsicologicoController extends Controller
                 "mes" => $data["mes"],
                 "anho" => $data["anho"]
             ];
-            return $fechaLimite;
+            
             $value = $this->asignarTest($listAlumnos, $listTest, $fechaLimite);
             
             return $value;
@@ -38,7 +38,11 @@ class PerfilPsicologicoController extends Controller
 
             $grupo = $data['grupo'];
             $test = $data['test'];
-            $fecha_limite = $data['fecha_limite'];
+            $fechaLimite = [
+                "dia" => $data["dia"],
+                "mes" => $data["mes"],
+                "anho" => $data["anho"]
+            ];
 
             switch ($grupo) {
                 case "sis": $alumnos = Alumno::where('id_escuela', 1)->get(); break;
@@ -68,7 +72,7 @@ class PerfilPsicologicoController extends Controller
     }
     
     public function asignarTest($listAlumnos, $listTest, $fechaLimite) {
-        $semestre = Helper::semestre((int) $fechaLimite['mes']);
+        $semestre = Helper::semestre($fechaLimite['mes']);
 
         foreach ($listAlumnos as $a) {
             

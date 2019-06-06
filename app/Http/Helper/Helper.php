@@ -29,6 +29,7 @@ class Helper
     }
 
     public static function semestre($mes){
+        $mes = (int)$mes;
         if($mes >= 0 and $mes <= 3) {
             return 0;
         } else if ($mes >= 4 and $mes <= 6) {
