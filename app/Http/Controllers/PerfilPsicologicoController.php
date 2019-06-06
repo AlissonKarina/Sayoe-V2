@@ -78,12 +78,12 @@ class PerfilPsicologicoController extends Controller
         
         foreach ($listAlumnos as $a) {
             
-          /*   $perfil = PerfilPsicologico::create([
+            $perfil = PerfilPsicologico::create([
                 'fecha_limite'  => $fechaLimite['dia'].'-'.$fechaLimite['mes'].'-'.$fechaLimite['anho'],
                 'codigo_alumno' => $a['codigo'],
                 'anho'          => $fechaLimite['anho'],
                 'semestre'      => $semestre
-            ]); */
+            ]);
 
             /* foreach ($listTest as $t) {
                 EstadoPerfil::create([
