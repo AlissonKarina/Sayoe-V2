@@ -9,7 +9,7 @@ class EstadoPerfilResource extends JsonResource
     public function toArray($request)
     {
         return [
-            'evaa' => 'prueba',
+            'evaa' => $this->cuestionarioEvaluacion,
             'evaluaciones' => CuestionarioEvaluacionShortResource::collection($this->whenLoaded('evaluaciones')),
         ];
     }
