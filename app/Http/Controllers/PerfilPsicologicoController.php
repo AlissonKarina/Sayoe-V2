@@ -75,22 +75,22 @@ class PerfilPsicologicoController extends Controller
         $mes= $fechaLimite['mes'];
 
         $semestre = Helper::semestre($mes);
-        return $semestre;
+        
         foreach ($listAlumnos as $a) {
             
-            $perfil = PerfilPsicologico::create([
+          /*   $perfil = PerfilPsicologico::create([
                 'fecha_limite'  => $fechaLimite['dia'].'-'.$fechaLimite['mes'].'-'.$fechaLimite['anho'],
                 'codigo_alumno' => $a['codigo'],
                 'anho'          => $fechaLimite['anho'],
                 'semestre'      => $semestre
-            ]);
+            ]); */
 
-            foreach ($listTest as $t) {
+            /* foreach ($listTest as $t) {
                 EstadoPerfil::create([
                     'id_perfil_psico' => $perfil->id,
                     'id_cuest_eval'=> $t['id'],                 
                 ]);
-            }
+            } */
         }
 
         return response()->json("listo", 200);
