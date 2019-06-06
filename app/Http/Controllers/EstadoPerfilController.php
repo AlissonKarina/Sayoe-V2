@@ -12,9 +12,10 @@ class EstadoPerfilController extends Controller
 {
     public function evaluaciones(Request $request)
     {
-
+        $semestre = Helper::semestre($request->mes);
         $perfil = PerfilPsicologico::where('codigo_alumno','=', $request->codigo)
-                              ->where('semestre','=', $request->semestre)->get();
+                              ->where('anho','=', $request->anho)
+                              ->where('semestre','=', $semestre)->get();
         return $perfil;
     }
 }
