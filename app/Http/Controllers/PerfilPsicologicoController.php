@@ -27,7 +27,7 @@ class PerfilPsicologicoController extends Controller
             ];
             
             $value = $this->asignarTest($listAlumnos, $listTest, $fechaLimite);
-            
+            return $fechaLimite;
             return $value;
         }
     }
