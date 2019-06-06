@@ -25,9 +25,9 @@ class PerfilPsicologicoController extends Controller
                 "mes" => $data["mes"],
                 "anho" => $data["anho"]
             ];
-            
-            $value = $this->asignarTest($listAlumnos, $listTest, $fechaLimite);
             return $fechaLimite;
+            $value = $this->asignarTest($listAlumnos, $listTest, $fechaLimite);
+            
             return $value;
         }
     }
