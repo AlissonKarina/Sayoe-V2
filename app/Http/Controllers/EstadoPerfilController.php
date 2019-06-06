@@ -19,7 +19,7 @@ class EstadoPerfilController extends Controller
                               ->where('anho','=', $request->anho)
                               ->where('semestre','=', $semestre)->get();
  */
-        $perfiles = PerfilPsicologico::with('estadosPerfil')
+        $perfiles = PerfilPsicologico::with(['estadosPerfil','cuestionarioEvaluacion'])
                 ->where('codigo_alumno','=', $request->codigo)
                 ->where('anho','=', $request->anho)
                 ->where('semestre','=', $semestre)->get();
