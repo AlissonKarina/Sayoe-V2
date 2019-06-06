@@ -11,8 +11,8 @@ class PerfilPsicologicoEstadoResource extends JsonResource
         return [
             'anho' => $this->anho,
             'semestre' => $this->semestre,
-            'id_perfil_psico' => $this->estadosPerfil->id_perfil_psico,
-            'evaluaciones' => $this->estadosPerfil->cuestionarioEvaluacion
+            'id_perfil_psico' => $this->estadosPerfil,
+            /* 'evaluaciones' => $this->estadosPerfil->cuestionarioEvaluacion */
         ];
     }
 }
