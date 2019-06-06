@@ -19,6 +19,7 @@ class CreatePerfilesPsicologicosTable extends Migration
             $table->string('motivo', 45)->nullable();
             $table->string('fecha_limite')->nullable();
             $table->tinyInteger('estado')->default('0');
+            $table->integer('anho',5)->nullable();
             $table->string('semestre',8)->nullable();
             
             $table->string('codigo_alumno',8);

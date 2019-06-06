@@ -28,15 +28,13 @@ class Helper
         ];
     }
 
-    public static function semestre($mes, $anho){
-        $semestre='';
-        if($mes=='01' or $mes=='02' or $mes=='03'){
-            $semestre = $anho.'-0';
-        }else if($mes=='04' or $mes=='05' or $mes=='06'){
-            $semestre = $anho.'-1';
-        }else{
-            $semestre = $anho.'-2';
+    public static function semestre($mes){
+        if($mes >= 0 and $mes <= 3) {
+            return 0;
+        } else if ($mes >= 4 and $mes <= 6) {
+            return 1;
+        } else {
+            return 2;
         }
-        return $semestre;
     }
 }

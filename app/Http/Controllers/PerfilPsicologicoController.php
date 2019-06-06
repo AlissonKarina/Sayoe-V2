@@ -19,7 +19,12 @@ class PerfilPsicologicoController extends Controller
 
             $listAlumnos = $data['alumnos'];
             $listTest = $data["test"];
-            $fechaLimite = $data["fecha_limite"];
+            
+            $fechaLimite = [
+                "dia" => $data["dia"],
+                "mes" => $data["mes"],
+                "anho" => $data["anho"]
+            ];
             
             $value = $this->asignarTest($listAlumnos, $listTest, $fechaLimite);
             
@@ -63,14 +68,15 @@ class PerfilPsicologicoController extends Controller
     }
     
     public function asignarTest($listAlumnos, $listTest, $fechaLimite) {
-        $fecha = Helper::fecha($fechaLimite);
-        $semestre = Helper::semestre($fecha['mes'], $fecha['anho']);
+        $semestre = Helper::semestre((int) $fechaLimite['mes']);
+
         foreach ($listAlumnos as $a) {
             
             $perfil = PerfilPsicologico::create([
-                'fecha_limite' => $fechaLimite,
+                'fecha_limite'  => $fechaLimite,
                 'codigo_alumno' => $a['codigo'],
-                'semestre'     => $semestre
+                'anho'          => $fechaLimite['anho'],
+                'semestre'      => $semestre
             ]);
 
             foreach ($listTest as $t) {
