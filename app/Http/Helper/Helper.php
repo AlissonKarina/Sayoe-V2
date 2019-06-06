@@ -29,13 +29,12 @@ class Helper
     }
 
     public static function semestre($mes){
-        $mes = (int)$mes;
-        if($mes >= 0 and $mes <= 3) {
-            return 0;
-        } else if ($mes >= 4 and $mes <= 6) {
-            return 1;
+        if($mes =='1' or $mes=='2' or $mes=='3') {
+            return '0';
+        } else if ($mes =='4' or $mes=='5' or $mes=='6') {
+            return '1';
         } else {
-            return 2;
+            return '2';
         }
     }
 }
