@@ -75,11 +75,11 @@ class PerfilPsicologicoController extends Controller
         $mes= $fechaLimite['mes'];
 
         $semestre = Helper::semestre($mes);
-        
+        return $semestre;
         foreach ($listAlumnos as $a) {
             
             $perfil = PerfilPsicologico::create([
-                'fecha_limite'  => $fechaLimite,
+                'fecha_limite'  => $fechaLimite['dia'].'-'.$fechaLimite['mes'].'-'.$fechaLimite['anho'],
                 'codigo_alumno' => $a['codigo'],
                 'anho'          => $fechaLimite['anho'],
                 'semestre'      => $semestre
