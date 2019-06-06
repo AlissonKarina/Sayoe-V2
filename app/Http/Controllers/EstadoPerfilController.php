@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\EstadoPerfil;
 use App\PerfilPsicologico;
 use App\Http\Helper\Helper;
+use App\Http\Resources\PerfilPsicologicoEstadoResource;
 
 
 class EstadoPerfilController extends Controller
