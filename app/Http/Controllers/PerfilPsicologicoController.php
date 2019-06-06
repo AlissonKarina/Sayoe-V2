@@ -85,12 +85,12 @@ class PerfilPsicologicoController extends Controller
                 'semestre'      => $semestre
             ]);
 
-            /* foreach ($listTest as $t) {
+            foreach ($listTest as $t) {
                 EstadoPerfil::create([
                     'id_perfil_psico' => $perfil->id,
                     'id_cuest_eval'=> $t['id'],                 
                 ]);
-            } */
+            }
         }
 
         return response()->json("listo", 200);
