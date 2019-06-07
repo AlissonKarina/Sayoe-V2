@@ -10,7 +10,7 @@ class EstadoPerfilResource extends JsonResource
     {
         return [
             'evaluacion' => $this->cuestionarioEvaluacion,
-            'cuestionarioEvaluacion' => CuestionarioEvaluacionShortResource::collection($this->cuestionarioEvaluacion),
+            'cuestionarioEvaluacion' => CuestionarioEvaluacionShortResource::collection($this->whenLoaded('cuestionarioEvaluacion')),
         ];
     }
 }
