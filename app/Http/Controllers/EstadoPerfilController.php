@@ -8,6 +8,7 @@ use App\Model\EstadoPerfil;
 use App\Model\PerfilPsicologico;
 use App\Http\Helper\Helper;
 use App\Http\Resources\PerfilPsicologicoEstadoResource;
+use Illuminate\Support\Facades\DB;
 
 
 class EstadoPerfilController extends Controller
