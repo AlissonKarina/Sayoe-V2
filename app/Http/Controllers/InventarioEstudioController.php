@@ -35,7 +35,7 @@ class InventarioEstudioController extends Controller
         ->where('id_cuest_eval','=', $id_cuest_eval)->first();
         
 
-        $estadoPerfil->estado = 1;
+        $estadoPerfil->estado = '1';
         $estadoPerfil->fecha = $date;
         $estadoPerfil->valor = $total;
         $estadoPerfil->descripcion = $descripcion;
