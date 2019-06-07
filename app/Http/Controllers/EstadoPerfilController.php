@@ -22,28 +22,19 @@ class EstadoPerfilController extends Controller
                 ->where('perfiles_psicologicos.anho','=', $request->anho)
                 ->where('perfiles_psicologicos.semestre','=', $semestre)
                 ->where('estado_perfiles.estado','=', '0')->get();
-                
-      /* $perfiles = DB::table('perfiles_psicologicos')
-            ->join('estado_perfiles', 'estado_perfiles.id_perfil_psico', '=', 'perfiles_psicologicos.id')
-            ->where('perfiles_psicologicos.codigo_alumno','=', $request->codigo)
-            ->where('perfiles_psicologicos.anho','=', $request->anho)
-            ->where('perfiles_psicologicos.semestre','=', $semestre)
-            ->where('estado_perfiles.estado','=', '0')
-            ->get(['id', 'anho' 'semestre', 'fecha_limite']); */
-            /* ->select('users.*', 'contacts.phone', 'orders.price')
-            ->get(); */
+      
       return PerfilPsicologicoEstadoResource::collection($perfiles);
-     /*  return $perfiles; */
     }
 
     public function evaluacionesRealizadas(Request $request)
     {
       $semestre = Helper::semestre($request->mes);
       $perfiles = PerfilPsicologico::with('estadosPerfil')
-                ->where('codigo_alumno','=', $request->codigo)
-                ->where('anho','=', $request->anho)
-                ->where('semestre','=', $semestre)
-                ->where('estado','=', 1)->get();
+                ->join('estado_perfiles', 'estado_perfiles.id_perfil_psico', '=', 'perfiles_psicologicos.id')
+                ->where('perfiles_psicologicos.codigo_alumno','=', $request->codigo)
+                ->where('perfiles_psicologicos.anho','=', $request->anho)
+                ->where('perfiles_psicologicos.semestre','=', $semestre)
+                ->where('estado_perfiles.estado','=', '1')->get();
       return PerfilPsicologicoEstadoResource::collection($perfiles);
     }
 
