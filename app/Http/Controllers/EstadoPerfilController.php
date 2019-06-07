@@ -19,7 +19,7 @@ class EstadoPerfilController extends Controller
                 ->where('codigo_alumno','=', $request->codigo)
                 ->where('anho','=', $request->anho)
                 ->where('semestre','=', $semestre)
-                ->where('estado','=', '0')->get();
+                ->where('estado','=', 0)->get();
       return PerfilPsicologicoEstadoResource::collection($perfiles);
     }
 
@@ -30,7 +30,7 @@ class EstadoPerfilController extends Controller
                 ->where('codigo_alumno','=', $request->codigo)
                 ->where('anho','=', $request->anho)
                 ->where('semestre','=', $semestre)
-                ->where('estado','=', '1')->get();
+                ->where('estado','=', 1)->get();
       return PerfilPsicologicoEstadoResource::collection($perfiles);
     }
 
