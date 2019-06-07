@@ -32,7 +32,7 @@ class InventarioEstudioController extends Controller
         $date = $fecha->format('d-m-Y');
 
         $estadoPerfil = EstadoPerfil::where('id_perfil_psico','=', $id_perfil_psico)
-        ->where('id_cuest_eval','=', $id_cuest_eval)->get();
+        ->where('id_cuest_eval','=', $id_cuest_eval)->first();
         
 
         $estadoPerfil->estado = 1;
