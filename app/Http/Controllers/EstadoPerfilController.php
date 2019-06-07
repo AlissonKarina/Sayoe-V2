@@ -18,6 +18,9 @@ class EstadoPerfilController extends Controller
       $perfiles = PerfilPsicologico::with('estadosPerfil')
                 ->where('estado','=', 0)->get();
                 
+                /* ->where('codigo_alumno','=', $request->codigo)
+                ->where('anho','=', $request->anho)
+                ->where('semestre','=', $semestre) */
       return PerfilPsicologicoEstadoResource::collection($perfiles);
     }
 

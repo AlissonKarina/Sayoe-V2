@@ -10,6 +10,7 @@ class PerfilPsicologicoEstadoResource extends JsonResource
     {
         return [
             'id_perfil_psico' => $this->id,
+            'estado' => $this->estado,
             'anho' => $this->anho,
             'semestre' => $this->semestre,
             'fecha_vencimiento' => $this->fecha_limite,
