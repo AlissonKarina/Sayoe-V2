@@ -31,7 +31,7 @@ class Helper
     public static function semestre($mes){
         if($mes =='1' or $mes=='2' or $mes=='3') {
             return '0';
-        } else if ($mes =='4' or $mes=='5' or $mes=='6') {
+        } else if ($mes =='4' or $mes=='5' or $mes=='6'  or $mes=='7') {
             return '1';
         } else {
             return '2';
