@@ -27,14 +27,6 @@ class CuestionarioEvaluacionSeeder extends Seeder
             'autor' => "Aaron T. Beck, Robert A. Steer, Gregry K. Brown",
             'nro_preguntas' => '21'
         ]);
-
-        CuestionarioEvaluacion::create([
-            'id' => 3,
-            'titulo' => "Inventario de Prueba",
-            'titulo_secundario' => "Evaluación 03",
-            'autor' => "Sujeto de Pruebas",
-            'nro_preguntas' => '2'
-        ]);
         
     }
 }

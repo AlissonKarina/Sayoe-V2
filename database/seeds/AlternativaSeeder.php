@@ -1135,50 +1135,5 @@ class AlternativaSeeder extends Seeder
             'id_pregunta' => '76',
             'puntuacion' => '3'
         ]);
-
-        /*************** PRUEBAAAAAAAA DEL TEST ***************/
-        /*  1 */
-        Alternativa::create([
-            'descripcion' =>"Alternativa 1 del la primera pregunta del test de prueba",
-            'id_pregunta' => '77',
-            'puntuacion' => '0'
-        ]);
-        Alternativa::create([
-            'descripcion' =>"Alternativa 2 del la primera pregunta del test de prueba",
-            'id_pregunta' => '77',
-            'puntuacion' => '1'
-        ]);
-        Alternativa::create([
-            'descripcion' =>"Alternativa 3 del la primera pregunta del test de prueba",
-            'id_pregunta' => '77',
-            'puntuacion' => '2'
-        ]);
-        Alternativa::create([
-            'descripcion' =>"Alternativa 4 del la primera pregunta del test de prueba",
-            'id_pregunta' => '77',
-            'puntuacion' => '3'
-        ]);
-
-        /*  2 */
-        Alternativa::create([
-            'descripcion' =>"Alternativa 1 del la segunda pregunta del test de prueba",
-            'id_pregunta' => '78',
-            'puntuacion' => '0'
-        ]);
-        Alternativa::create([
-            'descripcion' =>"Alternativa 2 del la segunda  pregunta del test de prueba",
-            'id_pregunta' => '78',
-            'puntuacion' => '1'
-        ]);
-        Alternativa::create([
-            'descripcion' =>"Alternativa 3 del la segunda pregunta del test de prueba",
-            'id_pregunta' => '78',
-            'puntuacion' => '2'
-        ]);
-        Alternativa::create([
-            'descripcion' =>"Alternativa 4 del la segunda  pregunta del test de prueba",
-            'id_pregunta' => '8',
-            'puntuacion' => '3'
-        ]);
     }
 }

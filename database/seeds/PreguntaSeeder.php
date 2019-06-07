@@ -551,21 +551,6 @@ class PreguntaSeeder extends Seeder
             'bloque' => '2',
             'id_cuest_eval' => '2' 
         ]);
-
-        /*************** PRUEBAAAAAAAA DEL TEST ***************/
-        Pregunta::create([
-            'id' => '77',
-            'pregunta' => "Pregunta 1 del test de prueba ",
-            'bloque' => '1',
-            'id_cuest_eval' => '3' 
-        ]);
-
-        Pregunta::create([
-            'id' => '78',
-            'pregunta' => "Pregunta 1 del test de prueba ",
-            'bloque' => '1',
-            'id_cuest_eval' => '3' 
-        ]);
         
     }
 }
