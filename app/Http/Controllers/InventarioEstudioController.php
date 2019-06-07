@@ -33,12 +33,18 @@ class InventarioEstudioController extends Controller
 
         $estadoPerfil = EstadoPerfil::where('id_perfil_psico','=', $id_perfil_psico)
         ->where('id_cuest_eval','=', $id_cuest_eval)->get();
-        return response()->json($estadoPerfil);
+        
 
-        $estadoPerfil->estado = '1';
+        $estadoPerfil->estado = 1;
         $estadoPerfil->fecha = $fecha;
         $estadoPerfil->valor = $total;
         $estadoPerfil->descripcion = $descripcion;
+
+        return response()->json([
+            'fecha_actual' => $fecha,
+            'valor' => $total,
+            'descripcion' => $descripcion,
+        ]); 
         $estadoPerfil->save();
 
         return response()->json([
