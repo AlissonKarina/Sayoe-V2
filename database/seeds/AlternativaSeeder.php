@@ -672,6 +672,7 @@ class AlternativaSeeder extends Seeder
             'id_pregunta' => '55',
             'puntuacion' => '1'
         ]);
+        /** 110 */
 
         /*************** SEGUNDO TEST ***************/
         /*  1  */
@@ -1136,24 +1137,25 @@ class AlternativaSeeder extends Seeder
             'puntuacion' => '3'
         ]);
 
+        /** 110 + 21*4 = 194 */
         /** pruebapregunta 1 **/
-        Alternativa::create([
+        Alternativa::create([//195
             'descripcion' =>"Alternativa Prueba",
             'id_pregunta' => '77',
             'puntuacion' => '1'
         ]);
-        Alternativa::create([
+        Alternativa::create([//196
             'descripcion' =>"Alternativa Prueba",
             'id_pregunta' => '78',
             'puntuacion' => '2'
         ]);
         /**prueba pregunta 2 */
-        Alternativa::create([
+        Alternativa::create([//197
             'descripcion' =>"Alternativa Prueba",
             'id_pregunta' => '77',
             'puntuacion' => '1'
         ]);
-        Alternativa::create([
+        Alternativa::create([//198
             'descripcion' =>"Alternativa Prueba",
             'id_pregunta' => '78',
             'puntuacion' => '2'
