@@ -1135,5 +1135,28 @@ class AlternativaSeeder extends Seeder
             'id_pregunta' => '76',
             'puntuacion' => '3'
         ]);
+
+        /** pruebapregunta 1 **/
+        Alternativa::create([
+            'descripcion' =>"Alternativa Prueba",
+            'id_pregunta' => '77',
+            'puntuacion' => '1'
+        ]);
+        Alternativa::create([
+            'descripcion' =>"Alternativa Prueba",
+            'id_pregunta' => '78',
+            'puntuacion' => '2'
+        ]);
+        /**prueba pregunta 2 */
+        Alternativa::create([
+            'descripcion' =>"Alternativa Prueba",
+            'id_pregunta' => '77',
+            'puntuacion' => '1'
+        ]);
+        Alternativa::create([
+            'descripcion' =>"Alternativa Prueba",
+            'id_pregunta' => '78',
+            'puntuacion' => '2'
+        ]);
     }
 }
