@@ -36,15 +36,10 @@ class InventarioEstudioController extends Controller
         
 
         $estadoPerfil->estado = 1;
-        $estadoPerfil->fecha = $fecha;
+        $estadoPerfil->fecha = $date;
         $estadoPerfil->valor = $total;
         $estadoPerfil->descripcion = $descripcion;
 
-        return response()->json([
-            'fecha_actual' => $fecha,
-            'valor' => $total,
-            'descripcion' => $descripcion,
-        ]); 
         $estadoPerfil->save();
 
         return response()->json([
