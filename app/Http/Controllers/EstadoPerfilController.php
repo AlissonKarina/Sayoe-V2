@@ -30,11 +30,11 @@ class EstadoPerfilController extends Controller
     {
       $semestre = Helper::semestre($request->mes);
       $perfiles = PerfilPsicologico::with('estadosPerfil')
-                /* ->join('estado_perfiles', 'estado_perfiles.id_perfil_psico', '=', 'perfiles_psicologicos.id') */
-                ->where('codigo_alumno','=', $request->codigo)
-                ->where('anho','=', $request->anho)
-                ->where('semestre','=', $semestre)
-                ->where('estadosPerfil.estado','=', '1')->get();
+                ->join('estado_perfiles', 'estado_perfiles.id_perfil_psico', '=', 'perfiles_psicologicos.id')
+                ->where('perfiles_psicologicos.codigo_alumno','=', $request->codigo)
+                ->where('perfiles_psicologicos.anho','=', $request->anho)
+                ->where('perfiles_psicologicos.semestre','=', $semestre)
+                ->where('estado_perfiles.estado','=', '1')->get();
       return PerfilPsicologicoEstadoResource::collection($perfiles);
     }
 
