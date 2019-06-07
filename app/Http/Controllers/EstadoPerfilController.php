@@ -16,10 +16,11 @@ class EstadoPerfilController extends Controller
     {
       $semestre = Helper::semestre($request->mes);
       $perfiles = PerfilPsicologico::with('estadosPerfil')
+                ->where('estado','=', 0)
                 ->where('codigo_alumno','=', $request->codigo)
                 ->where('anho','=', $request->anho)
-                ->where('semestre','=', $semestre)
-                ->where('estado','=', 0)->get();
+                ->where('semestre','=', $semestre)->get();
+                
       return PerfilPsicologicoEstadoResource::collection($perfiles);
     }
 
