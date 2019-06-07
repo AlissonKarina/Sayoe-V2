@@ -35,7 +35,7 @@ $router->group(['prefix'=>'api/v1'], function() use($router){
         //CUESTIONARIO EVALUACION
         $router->get('/cuestionario-evaluaciones', 'CuestionarioEvaluacionController@index');
         $router->get('/cuestionario-evaluacion/{id}', 'CuestionarioEvaluacionController@show');
-        $router->post('/inventario-estudio/puntaje', 'InventarioEstudioController@puntaje');
+        $router->post('/inventario-estudio', 'InventarioEstudioController@puntaje');
 
         //ESTADO_PERFIL
         $router->post('/evaluaciones_asignadas', 'EstadoPerfilController@evaluaciones');
