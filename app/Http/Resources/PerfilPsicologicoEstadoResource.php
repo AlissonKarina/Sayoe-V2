@@ -9,6 +9,7 @@ class PerfilPsicologicoEstadoResource extends JsonResource
     public function toArray($request)
     {
         return [
+            'id_perfil_psico' => $this->id,
             'anho' => $this->anho,
             'semestre' => $this->semestre,
             'fecha_vencimiento' => $this->fecha_limite,

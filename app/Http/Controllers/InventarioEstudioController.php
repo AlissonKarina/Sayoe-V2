@@ -31,6 +31,9 @@ class InventarioEstudioController extends Controller
         $fecha = new \Carbon\Carbon();
         $date = $fecha->format('d-m-Y');
 
+        /* EstadoPerfil::where('anho','=', $request->anho)
+        ->where('semestre','=', $semestre)->get();
+
         EstadoPerfil::create([
             "id_perfil_psico" => $id_pefil_psico,
             "id_cuest_eval" => $id_evaluacion,
@@ -38,7 +41,7 @@ class InventarioEstudioController extends Controller
             "fecha" => $fecha,
             "valor" => $total,
             "descripcion" => $descripcion,
-        ]); 
+        ]);  */
 
         return response()->json([
             "total" => $total,
