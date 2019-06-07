@@ -15,7 +15,7 @@ class CuestionarioEvaluacion extends Model
      * @var array
      */
     protected $fillable = [
-        'titulo', 'autor', 'nro_preguntas'
+        'titulo','titulo_secundario', 'autor', 'nro_preguntas'
     ];
     
     public function estadosPerfil()

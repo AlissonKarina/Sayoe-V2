@@ -11,6 +11,7 @@ class CuestionarioEvaluacionResource extends JsonResource
         return [
             'id' => $this->id,
             'titulo' => $this->titulo,
+            'titulo_secundario' => $this->titulo_secundario,
             'autor' => $this->autor,
             'nro_preguntas' => $this->nro_preguntas,
             'preguntas' => PreguntaResource::collection($this->whenLoaded('preguntas'))

@@ -10,7 +10,7 @@ class CuestionarioEvaluacionShortResource extends JsonResource
     {
         return [
             'id' => $this->id,
-            'titulo' => $this->titulo,
+            'titulo_secundario' => $this->titulo_secundario,
             'nro_preguntas' => $this->nro_preguntas,
         ];
     }
