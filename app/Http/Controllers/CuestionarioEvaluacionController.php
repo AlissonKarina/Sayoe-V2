@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\CuestionarioEvaluacion;
+use App\Model\CuestionarioEvaluacion;
 use App\Http\Resources\CuestionarioEvaluacionResource;
 use Illuminate\Http\Request;
 

@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\Alternativa;
+use App\Model\Alternativa;
 
 class AlternativaSeeder extends Seeder
 {

@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\Facultad;
+use App\Model\Facultad;
 
 class FacultadSeeder extends Seeder
 {

@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Cita;
+use App\Model\Cita;
 use App\Http\Resources\CitaResource;
 use Illuminate\Http\Request;
 

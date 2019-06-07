@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\UnayoePerfil;
+use App\Model\UnayoePerfil;
 
 class UnayoePerfilSeeder extends Seeder
 {

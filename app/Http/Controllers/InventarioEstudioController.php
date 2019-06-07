@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\CuestionarioEvaluacion;
+use App\Model\CuestionarioEvaluacion;
 use App\Http\Resources\CuestionarioEvaluacionResource;
 use Illuminate\Http\Request;
-use App\Respuesta;
-use App\EstadoPerfil;
+use App\Model\Respuesta;
+use App\Model\EstadoPerfil;
 
 class InventarioEstudioController extends Controller
 {
@@ -26,7 +26,7 @@ class InventarioEstudioController extends Controller
             $total = $total + $valor['puntuacion']; 
         }
 
-        $descripcion = $this->resultado($total);
+        $descripcion = $this->descripcion($total);
         
         $fecha = new \Carbon\Carbon();
         $date = $fecha->format('d-m-Y');
@@ -39,23 +39,13 @@ class InventarioEstudioController extends Controller
         $estadoPerfil->valor = $total;
         $estadoPerfil->descripcion = $descripcion;
 
-/* 
-        EstadoPerfil::create([
-            "id_perfil_psico" => $id_pefil_psico,
-            "id_cuest_eval" => $id_evaluacion,
-            "estado" => '1',
-            "fecha" => $fecha,
-            "valor" => $total,
-            "descripcion" => $descripcion,
-        ]);  */
-
         return response()->json([
             "total" => $total,
             "descripcion" => $descripcion
         ]);
     }
 
-    private function resultado($total){
+    private function descripcion($total){
         if($total>= 0 or $total<=13){
             return "El alumno no presenta signos de depresión";
         }else if ($total>= 14 or $total<=19){

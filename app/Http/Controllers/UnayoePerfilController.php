@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\UnayoePerfil;
-use App\Usuario;
+use App\Model\UnayoePerfil;
+use App\Model\Usuario;
 use Intervention\Image\ImageManagerStatic as Image;
 use App\Http\Resources\UnayoePerfilResource;
 use Illuminate\Http\Request;

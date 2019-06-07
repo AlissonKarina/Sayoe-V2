@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\User;
-use App\UnayoePerfil;
-use App\Alumno;
+use App\Model\User;
+use App\Model\UnayoePerfil;
+use App\Model\Alumno;
 
 class UsuarioController extends Controller
 {

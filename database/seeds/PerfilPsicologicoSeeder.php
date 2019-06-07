@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\PerfilPsicologico;
+use App\Model\PerfilPsicologico;
 
 class PerfilPsicologicoSeeder extends Seeder
 {

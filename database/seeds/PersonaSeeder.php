@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\Persona;
+use App\Model\Persona;
 
 class PersonaSeeder extends Seeder
 {

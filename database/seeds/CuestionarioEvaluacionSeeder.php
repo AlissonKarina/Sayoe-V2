@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\CuestionarioEvaluacion;
+use App\Model\CuestionarioEvaluacion;
 
 class CuestionarioEvaluacionSeeder extends Seeder
 {

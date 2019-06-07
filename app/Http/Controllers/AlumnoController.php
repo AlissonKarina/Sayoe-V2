@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Alumno;
+use App\Model\Alumno;
 use App\Http\Resources\AlumnoShortResource;
 use Illuminate\Http\Request;
 use App\Http\Helper\Helper;

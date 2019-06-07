@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Validator;
-use App\Usuario;
+use App\Model\Usuario;
 use App\Http\Controllers\UsuarioController;
 use Firebase\JWT\JWT;
 use Illuminate\Http\Request;

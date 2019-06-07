@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\EstadoPerfil;
+use App\Model\EstadoPerfil;
 
 class EstadoPerfilSeeder extends Seeder
 {

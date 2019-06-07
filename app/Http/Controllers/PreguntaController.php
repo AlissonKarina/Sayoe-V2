@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use DB;
-use App\Pregunta;
+use App\Model\Pregunta;
 use App\Http\Resources\PreguntaResource;
 use Illuminate\Http\Request;
 

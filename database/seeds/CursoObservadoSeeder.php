@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\CursoObservado;
+use App\Model\CursoObservado;
 
 class CursoObservadoSeeder extends Seeder
 {

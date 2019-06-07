@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\PerfilPsicologico;
-use App\EstadoPerfil;
-use App\InfoAcadem;
-use App\Alumno;
-use App\EscuelaProfesional;
+use App\Model\PerfilPsicologico;
+use App\Model\EstadoPerfil;
+use App\Model\InfoAcadem;
+use App\Model\Alumno;
+use App\Model\EscuelaProfesional;
 use App\Http\Helper\Helper;
 use Illuminate\Http\Request;
 

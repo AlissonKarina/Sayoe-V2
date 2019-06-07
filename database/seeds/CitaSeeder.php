@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\Cita;
+use App\Model\Cita;
 
 class CitaSeeder extends Seeder
 {
