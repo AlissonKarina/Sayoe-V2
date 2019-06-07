@@ -15,7 +15,7 @@ class InventarioEstudioController extends Controller
         $total = 0;
         $data = $request->data;
         $id_pefil_psico = $data['id_perfil_psico'];
-        $id_evaluacion = $data['id_cuest_eval'];
+        $id_cuest_eval = $data['id_cuest_eval'];
 
         foreach ($data['alternativa'] as $valor)
         {
