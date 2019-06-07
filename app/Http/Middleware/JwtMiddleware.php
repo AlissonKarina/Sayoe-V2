@@ -4,7 +4,7 @@ namespace App\Http\Middleware;
 
 use Closure;
 use Exception;
-use App\Usuario;
+use App\Model\Usuario;
 use Firebase\JWT\JWT;
 use Firebase\JWT\ExpiredException;
 
