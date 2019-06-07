@@ -21,12 +21,12 @@ class Cita extends Model
 
     public function unayoePerfil()
     {
-        return $this->belongsTo('App\UnayoePerfil', 'id_unayoe_perfil', 'id');
+        return $this->belongsTo('App\Model\UnayoePerfil', 'id_unayoe_perfil', 'id');
     }
 
     public function alumno()
     {
-        return $this->belongsTo('App\Alumno', 'codigo_alumno', 'codigo');
+        return $this->belongsTo('App\Model\Alumno', 'codigo_alumno', 'codigo');
     }
 
 }

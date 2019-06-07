@@ -35,16 +35,16 @@ class Usuario extends Model implements AuthenticatableContract, AuthorizableCont
 
     public function alumno()
     {
-        return $this->hasOne('App\Alumno', 'id_usuario', 'id');
+        return $this->hasOne('App\Model\Alumno', 'id_usuario', 'id');
     }
 
     public function unayoePerfil()
     {
-        return $this->hasOne('App\UnayoePerfil', 'id_usuario', 'id');
+        return $this->hasOne('App\Model\UnayoePerfil', 'id_usuario', 'id');
     }
 
     public function rol()
     {
-        return $this->belongsTo('App\Rol', 'id_rol', 'id');
+        return $this->belongsTo('App\Model\Rol', 'id_rol', 'id');
     }
 }

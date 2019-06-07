@@ -17,11 +17,11 @@ class EscuelaProfesional extends Model
 
     public function facultad()
     {
-        return $this->belongsTo('App\Facultad', 'id_facultad', 'id');
+        return $this->belongsTo('App\Model\Facultad', 'id_facultad', 'id');
     }
 
     public function alumnos()
     {
-        return $this->hasMany('App\Alumno', 'id_escuela', 'id');
+        return $this->hasMany('App\Model\Alumno', 'id_escuela', 'id');
     }
 }

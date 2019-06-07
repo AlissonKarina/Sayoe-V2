@@ -23,32 +23,32 @@ class Alumno extends Model
 
     public function persona()
     {
-        return $this->belongsTo('App\Persona', 'dni', 'dni');
+        return $this->belongsTo('App\Model\Persona', 'dni', 'dni');
     }
 
     public function usuario()
     {
-        return $this->belongsTo('App\Usuario', 'id_usuario', 'id');
+        return $this->belongsTo('App\Model\Usuario', 'id_usuario', 'id');
     }
 
     public function escuelaProfesional()
     {
-        return $this->belongsTo('App\EscuelaProfesional', 'id_escuela', 'id');
+        return $this->belongsTo('App\Model\EscuelaProfesional', 'id_escuela', 'id');
     }
 
     public function cursosObservados()
     {
-        return $this->hasMany('App\CursoObservado', 'codigo_alumno', 'codigo');
+        return $this->hasMany('App\Model\CursoObservado', 'codigo_alumno', 'codigo');
     }
 
     public function citas()
     {
-        return $this->hasMany('App\Cita', 'codigo_alumno', 'codigo');
+        return $this->hasMany('App\Model\Cita', 'codigo_alumno', 'codigo');
     }
 
     public function perfilesPsicologicos()
     {
-        return $this->hasMany('App\PerfilPsicologico', 'codigo_alumno', 'codigo');
+        return $this->hasMany('App\Model\PerfilPsicologico', 'codigo_alumno', 'codigo');
     }
 
 }

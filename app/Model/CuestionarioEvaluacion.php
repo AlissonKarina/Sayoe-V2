@@ -20,22 +20,22 @@ class CuestionarioEvaluacion extends Model
     
     public function estadosPerfil()
     {
-        return $this->hasMany('App\EstadoPerfil', 'id_cuest_eval', 'id');
+        return $this->hasMany('App\Model\EstadoPerfil', 'id_cuest_eval', 'id');
     }
 
     public function resultados()
     {
-        return $this->hasMany('App\Resultado', 'id_cuest_eval', 'id');
+        return $this->hasMany('App\Model\Resultado', 'id_cuest_eval', 'id');
     }
 
     public function preguntas()
     {
-        return $this->hasMany('App\Pregunta', 'id_cuest_eval', 'id');
+        return $this->hasMany('App\Model\Pregunta', 'id_cuest_eval', 'id');
     }
 
     public function alternativas()
     {
-        return $this->hasManyThrough('App\Alternativa', 'App\Pregunta','id_cuest_eval',
+        return $this->hasManyThrough('App\Model\Alternativa', 'App\Model\Pregunta','id_cuest_eval',
                                     'id_pregunta','id','id');
     }
 }

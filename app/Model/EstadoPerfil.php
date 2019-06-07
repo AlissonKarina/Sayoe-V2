@@ -20,12 +20,12 @@ class EstadoPerfil extends Model
 
     public function cuestionarioEvaluacion()
     {
-        return $this->belongsTo('App\CuestionarioEvaluacion', 'id_cuest_eval', 'id');
+        return $this->belongsTo('App\Model\CuestionarioEvaluacion', 'id_cuest_eval', 'id');
     }
 
     public function perfilPsicologico()
     {
-        return $this->belongsTo('App\PerfilPsicologico', 'id_perfil_psico', 'id');
+        return $this->belongsTo('App\Model\PerfilPsicologico', 'id_perfil_psico', 'id');
     }
 
 }

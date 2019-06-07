@@ -20,12 +20,12 @@ class Pregunta extends Model
 
     public function cuestionarioEvaluacion()
     {
-        return $this->belongsTo('App\CuestionarioEvaluacion', 'id_cuest_eval', 'id');
+        return $this->belongsTo('App\Model\CuestionarioEvaluacion', 'id_cuest_eval', 'id');
     }
 
     public function alternativas()
     {
-        return $this->hasMany('App\Alternativa', 'id_pregunta', 'id');
+        return $this->hasMany('App\Model\Alternativa', 'id_pregunta', 'id');
     }
 
 }

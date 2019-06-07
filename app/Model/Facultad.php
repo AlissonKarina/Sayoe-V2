@@ -17,11 +17,11 @@ class Facultad extends Model
 
     public function escuelasProfesionales()
     {
-        return $this->hasMany('App\EscuelaProfesional', 'id_facultad', 'id');
+        return $this->hasMany('App\Model\EscuelaProfesional', 'id_facultad', 'id');
     }
 
     public function unayoePerfil()
     {
-        return $this->hasOne('App\UnayoePerfil', 'id_facultad', 'id');
+        return $this->hasOne('App\Model\UnayoePerfil', 'id_facultad', 'id');
     }
 }

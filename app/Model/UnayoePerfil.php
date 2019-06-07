@@ -22,22 +22,22 @@ class UnayoePerfil extends Model
 
     public function facultad()
     {
-        return $this->belongsTo('App\Facultad', 'id_facultad', 'id');
+        return $this->belongsTo('App\Model\Facultad', 'id_facultad', 'id');
     }
 
     public function usuario()
     {
-        return $this->belongsTo('App\Usuario', 'id_usuario', 'id');
+        return $this->belongsTo('App\Model\Usuario', 'id_usuario', 'id');
     }
 
     public function mensajes()
     {
-        return $this->hasMany('App\Mensaje', 'id_unayoe_perfil', 'id');
+        return $this->hasMany('App\Model\Mensaje', 'id_unayoe_perfil', 'id');
     }
 
     public function citas()
     {
-        return $this->hasMany('App\Cita', 'id_unayoe_perfil', 'id');
+        return $this->hasMany('App\Model\Cita', 'id_unayoe_perfil', 'id');
     }
 
 }

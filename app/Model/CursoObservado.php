@@ -21,6 +21,6 @@ class CursoObservado extends Model
 
     public function estudiante()
     {
-        return $this->belongsTo('App\Alumno', 'codigo_alumno', 'codigo');
+        return $this->belongsTo('App\Model\Alumno', 'codigo_alumno', 'codigo');
     }
 }

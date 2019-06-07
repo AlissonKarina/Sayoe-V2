@@ -21,7 +21,7 @@ class Mensaje extends Model
 
     public function unayoe_perfil()
     {
-        return $this->belongsTo('App\UnayoePerfil', 'id_unayoe_perfil', 'id');
+        return $this->belongsTo('App\Model\UnayoePerfil', 'id_unayoe_perfil', 'id');
     }
 
 }

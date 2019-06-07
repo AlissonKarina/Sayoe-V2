@@ -26,7 +26,7 @@ class Persona extends Model
 
     public function estudiante()
     {
-        return $this->hasOne('App\Alumno', 'dni', 'dni');
+        return $this->hasOne('App\Model\Alumno', 'dni', 'dni');
     }
 
 /*     public static function idAlumno ($codigo)

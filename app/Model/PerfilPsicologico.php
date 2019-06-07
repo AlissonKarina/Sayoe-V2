@@ -20,17 +20,17 @@ class PerfilPsicologico extends Model
 
     public function estudiante()
     {
-        return $this->belongsTo('App\Alumno', 'codigo_alumno', 'codigo');
+        return $this->belongsTo('App\Model\Alumno', 'codigo_alumno', 'codigo');
     }
 
     public function estadosPerfil()
     {
-        return $this->hasMany('App\EstadoPerfil', 'id_perfil_psico', 'id');
+        return $this->hasMany('App\Model\EstadoPerfil', 'id_perfil_psico', 'id');
     }
 
     public function respuestas()
     {
-        return $this->hasMany('App\Respuesta', 'id_pregunta', 'id');
+        return $this->hasMany('App\Model\Respuesta', 'id_pregunta', 'id');
     }
 
 }

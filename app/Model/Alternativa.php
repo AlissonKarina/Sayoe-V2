@@ -20,12 +20,12 @@ class Alternativa extends Model
 
     public function pregunta()
     {
-        return $this->belongsTo('App\Pregunta', 'id_pregunta', 'id');
+        return $this->belongsTo('App\Model\Pregunta', 'id_pregunta', 'id');
     }
 
     public function respuestas()
     {
-        return $this->hasMany('App\Respuesta', 'id_alternativa', 'id');
+        return $this->hasMany('App\Model\Respuesta', 'id_alternativa', 'id');
     }
 
     /* GIT HUB */

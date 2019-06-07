@@ -20,12 +20,12 @@ class Respuesta extends Model
 
     public function alternativa()
     {
-        return $this->belongsTo('App\Alternativa', 'id_alternativa', 'id');
+        return $this->belongsTo('App\Model\Alternativa', 'id_alternativa', 'id');
     }
 
     public function perfilPsicologico()
     {
-        return $this->belongsTo('App\PerfilPsicologico', 'id_pefil_psico', 'id');
+        return $this->belongsTo('App\Model\PerfilPsicologico', 'id_pefil_psico', 'id');
     }
 
 }
