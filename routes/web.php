@@ -38,7 +38,8 @@ $router->group(['prefix'=>'api/v1'], function() use($router){
         $router->post('/inventario-estudio', 'InventarioEstudioController@puntaje');
 
         //ESTADO_PERFIL
-        $router->post('/evaluaciones_asignadas', 'EstadoPerfilController@evaluaciones');
+        $router->post('/evaluaciones_asignadas/pendientes', 'EstadoPerfilController@evaluacionesPendientes');
+        $router->post('/evaluaciones_asignadas/realizadas', 'EstadoPerfilController@evaluacionesRealizadas');
 
         //CREAR PERFIL_PSICOLOGICO, ESTADO_PERFIL
         $router->post('/asignarAlumno', 'PerfilPsicologicoController@create');
