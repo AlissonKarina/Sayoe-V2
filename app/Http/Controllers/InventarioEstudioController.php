@@ -14,7 +14,7 @@ class InventarioEstudioController extends Controller
     public function puntaje(Request $request){
         $total = 0;
         $data = $request->data;
-        $id_pefil_psico = $data['id_perfil_psicologico'];
+        $id_pefil_psico = $data['id_perfil_psico'];
         $id_evaluacion = $data['id_cuest_eval'];
 
         foreach ($data['alternativa'] as $valor)
@@ -31,9 +31,15 @@ class InventarioEstudioController extends Controller
         $fecha = new \Carbon\Carbon();
         $date = $fecha->format('d-m-Y');
 
-        /* EstadoPerfil::where('anho','=', $request->anho)
-        ->where('semestre','=', $semestre)->get();
+        $estadoPerfil = EstadoPerfil::where('id_perfil_psico','=', $request->id_perfil_psico)
+        ->where('id_cuest_eval','=', $id_cuest_eval)->get();
 
+        $estadoPerfil->estado = '1';
+        $estadoPerfil->fecha = $fecha;
+        $estadoPerfil->valor = $total;
+        $estadoPerfil->descripcion = $descripcion;
+
+/* 
         EstadoPerfil::create([
             "id_perfil_psico" => $id_pefil_psico,
             "id_cuest_eval" => $id_evaluacion,
