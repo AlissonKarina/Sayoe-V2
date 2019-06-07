@@ -15,7 +15,7 @@ class Pregunta extends Model
      * @var array
      */
     protected $fillable = [
-        'pregunta', 'id_cuest_eval', 
+        'pregunta', 'bloque', 'id_cuest_eval', 
     ];
 
     public function cuestionarioEvaluacion()

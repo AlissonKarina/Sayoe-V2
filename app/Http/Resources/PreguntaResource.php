@@ -12,6 +12,7 @@ class PreguntaResource extends JsonResource
             //'cuestionarioEvaluacion' => $this->cuestionarioEvaluacion,
             'id'=>$this->id,
             'pregunta' => $this->pregunta,
+            'bloque' => $this->bloque,
             'alternativas' => $this->alternativas
         ];
     }
