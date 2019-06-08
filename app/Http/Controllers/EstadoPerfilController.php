@@ -39,7 +39,7 @@ class EstadoPerfilController extends Controller
             ->get();
                         */
       $total = DB::table('perfiles_psicologicos')
-            ->join('estado_perfiles', 'perfiles_psicologicos.id_perfil', '=', 'estado_perfiles.id_perfil_eval')
+            ->join('estado_perfiles', 'perfiles_psicologicos.id_perfil', '=', 'estado_perfiles.id_perfil_psico')
             ->where('perfiles_psicologicos.codigo_alumno','=', $request->codigo)
             ->where('perfiles_psicologicos.anho','=', $request->anho)
             ->where('perfiles_psicologicos.semestre','=', $semestre)
