@@ -24,7 +24,7 @@ class EstadoPerfilController extends Controller
                 ->where('semestre','=', $semestre)
                 ->get();
                        
-      foreach ($perfiles as $perfil){
+      /* foreach ($perfiles as $perfil){
           $evaluaciones = EstadoPerfil::where('id_perfil_psico','=',$perfil->id_perfil)
                           ->where('estado','=','0')
                           ->get();
@@ -36,7 +36,7 @@ class EstadoPerfilController extends Controller
             ],
           ];
           array_push($arrayTotal,$array);
-      }
+      } */
       /* $perfiles = PerfilPsicologico::with('estadosPerfil')
                 ->join('estado_perfiles', 'perfiles_psicologicos.id_perfil', '=', 'estado_perfiles.id_perfil_psico')
                 ->where('perfiles_psicologicos.codigo_alumno','=', $request->codigo)
@@ -45,8 +45,8 @@ class EstadoPerfilController extends Controller
                 ->where('estado_perfiles.estado','=', '0')
                 ->get(); */
       
-     /*  return PerfilPsicologicoEstadoResource::collection($perfiles); */
-     return response()->json($arrayTotal);
+      return PerfilPsicologicoEstadoResource::collection($perfiles);
+     /* return response()->json($arrayTotal); */
     }
 
     public function evaluacionesRealizadas(Request $request)
