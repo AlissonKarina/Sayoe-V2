@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class PerfilPsicologico extends Model 
 {
     protected $table='perfiles_psicologicos';
+    protected $primaryKey = 'id_perfil';
 
     public $timestamps = false;
     /**

@@ -19,7 +19,7 @@ class CreateRespuestasTable extends Migration
             $table->integer('id_pefil_psico')->unsigned();
 
             $table->foreign('id_alternativa')->references('id')->on('alternativas');
-            $table->foreign('id_pefil_psico')->references('id')->on('perfiles_psicologicos');
+            $table->foreign('id_pefil_psico')->references('id_perfil')->on('perfiles_psicologicos');
         });
     }
 
