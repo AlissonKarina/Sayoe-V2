@@ -78,7 +78,7 @@ class EstadoPerfilController extends Controller
           
       }
 
-      dd($arrayTotal);
+      /* dd($arrayTotal); */
             
 
       return response()->json($arrayTotal);
