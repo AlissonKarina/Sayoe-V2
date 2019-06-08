@@ -25,7 +25,7 @@ class EstadoPerfil extends Model
 
     public function perfilPsicologico()
     {
-        return $this->belongsTo('App\Model\PerfilPsicologico', 'id_perfil_psico', 'id');
+        return $this->belongsTo('App\Model\PerfilPsicologico', 'id_perfil_psico', 'id_perfil');
     }
 
 }

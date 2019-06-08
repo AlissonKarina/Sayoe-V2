@@ -25,7 +25,7 @@ class Respuesta extends Model
 
     public function perfilPsicologico()
     {
-        return $this->belongsTo('App\Model\PerfilPsicologico', 'id_pefil_psico', 'id');
+        return $this->belongsTo('App\Model\PerfilPsicologico', 'id_pefil_psico', 'id_perfil');
     }
 
 }

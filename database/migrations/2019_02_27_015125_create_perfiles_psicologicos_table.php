@@ -14,7 +14,7 @@ class CreatePerfilesPsicologicosTable extends Migration
     public function up()
     {
         Schema::create('perfiles_psicologicos', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('id_perfil');
             $table->string('recomendacion', 180)->nullable();
             $table->string('motivo', 45)->nullable();
             $table->string('fecha_limite')->nullable();
