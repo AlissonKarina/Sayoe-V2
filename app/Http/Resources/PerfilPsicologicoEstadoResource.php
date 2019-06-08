@@ -13,7 +13,8 @@ class PerfilPsicologicoEstadoResource extends JsonResource
             'anho' => $this->anho,
             'semestre' => $this->semestre,
             'fecha_vencimiento' => $this->fecha_limite,
-            'evaluaciones' => EstadoPerfilResource::collection($this->whenLoaded('estadosPerfil')),
+            'evaluaciones' =>  EstadoPerfilResource::collection($this->whenLoaded('estadosPerfil'))
+             
         ];
     }
 }
