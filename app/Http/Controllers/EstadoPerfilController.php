@@ -48,6 +48,8 @@ class EstadoPerfilController extends Controller
               'estado_perfiles.id', 'cuestionario_evaluaciones.titulo_secundario',
               'cuestionario_evaluaciones.nro_preguntas')
             ->get();
+
+      dd($perfiles);
             
             /* foreach ($perfiles as $perfil){
               $array = [
