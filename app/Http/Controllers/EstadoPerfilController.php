@@ -34,9 +34,7 @@ class EstadoPerfilController extends Controller
             "anho" => $perfil->anho,
             "semestre" => $perfil->semestre,
             "fecha_vencimiento" => $perfil->fecha_limite,
-            "evaluaciones" => [
-                EstadoPerfilResource::collection($evaluaciones),
-            ],
+            "evaluaciones" => EstadoPerfilResource::collection($evaluaciones),
           ];
           array_push($arrayTotal,$array);
       }
