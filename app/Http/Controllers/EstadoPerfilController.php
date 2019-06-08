@@ -24,8 +24,7 @@ class EstadoPerfilController extends Controller
       return $this->evaluaciones($request, 1);
     }
 
-
-    public function evaluaciones(Request $request, $estado)
+    protected function evaluaciones(Request $request, $estado)
     {
       $arrayTotal = ["data" => []];
       
