@@ -15,6 +15,7 @@ class EstadoPerfilController extends Controller
 {
     public function evaluacionesPendientes(Request $request)
     {
+      $arrayTotal = array();
       $semestre = Helper::semestre($request->mes);
       $perfiles = PerfilPsicologico::with('estadosPerfil')
                 ->where('codigo_alumno','=', $request->codigo)
@@ -22,11 +23,19 @@ class EstadoPerfilController extends Controller
                 ->where('semestre','=', $semestre)
                 ->get();
                        
-      /* foreach ($perfiles as $perfil){
+      foreach ($perfiles as $perfil){
           $evaluaciones = EstadoPerfil::where('id_perfil_psico','=',$perfil->id_perfil)
                           ->where('estado','=','0')
                           ->get();
-      } */
+
+          $array = [
+            "perfil_psicologico" => PerfilPsicologicoEstadoResource::collection($perfiles),
+            "evaluaciones" => [
+              "sasa" => EstadoPerfilResource::collection($evaluaciones),
+            ],
+          ];
+          array_push($arrayTotal,$array);
+      }
       /* $perfiles = PerfilPsicologico::with('estadosPerfil')
                 ->join('estado_perfiles', 'perfiles_psicologicos.id_perfil', '=', 'estado_perfiles.id_perfil_psico')
                 ->where('perfiles_psicologicos.codigo_alumno','=', $request->codigo)
