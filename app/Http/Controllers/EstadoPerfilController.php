@@ -30,16 +30,26 @@ class EstadoPerfilController extends Controller
       
       $semestre = Helper::semestre($request->mes);
 
-      $perfiles = PerfilPsicologico::with('estadosPerfil')
-                ->where('codigo_alumno','=', $request->codigo)
-                ->where('anho','=', $request->anho)
-                ->where('semestre','=', $semestre)
-                ->get();
-                       
-      foreach ($perfiles as $perfil){
+
+
+      /* $perfiles = PerfilPsicologico::with('estadosPerfil')
+            ->where('codigo_alumno','=', $request->codigo)
+            ->where('anho','=', $request->anho)
+            ->where('semestre','=', $semestre)
+            ->get();
+                        */
+      $total = DB::table('perfiles_psicologicos')
+            ->join('estado_perfiles', 'perfiles_psicologicos.id_perfil', '=', 'estado_perfiles.id_perfil_eval')
+            ->where('perfiles_psicologicos.codigo_alumno','=', $request->codigo)
+            ->where('perfiles_psicologicos.anho','=', $request->anho)
+            ->where('perfiles_psicologicos.semestre','=', $semestre)
+            ->where('estado_perfiles.estado','=',$estado)
+            ->select('perfiles_psicologicos.*', 'estado_perfiles.*')
+            ->get();
+    /*   foreach ($perfiles as $perfil){
           $evaluaciones = EstadoPerfil::where('id_perfil_psico','=',$perfil->id_perfil)
-                          ->where('estado','=',$estado)
-                          ->get();
+            ->where('estado','=',$estado)
+            ->get();
           $array = [
             "id_perfil_psico" => $perfil->id_perfil,
             "anho" => $perfil->anho,
@@ -48,8 +58,10 @@ class EstadoPerfilController extends Controller
             "evaluaciones" => EstadoPerfilResource::collection($evaluaciones),
           ];
           array_push($arrayTotal['data'],$array);
-      }
-      return response()->json($arrayTotal);
+      } */
+
+      /* return response()->json($arrayTotal); */
+      return response()->json($total);
     }
 
     public function obtenerResultado(Request $request)
