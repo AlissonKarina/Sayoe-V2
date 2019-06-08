@@ -64,6 +64,7 @@ class EstadoPerfilController extends Controller
       foreach ($perfiles as $perfil){
           $evaluaciones = EstadoPerfil::where('id_perfil_psico','=',$perfil->id_perfil)
             ->where('estado','=',$estado)
+            ->orderBy('fecha', 'desc')
             ->get();
           if(count($evaluaciones) != 0){
             $array = [
