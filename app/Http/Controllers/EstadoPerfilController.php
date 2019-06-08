@@ -30,7 +30,7 @@ class EstadoPerfilController extends Controller
                           ->get();
 
           $array = [
-            "perfil_psicologico" => new PerfilPsicologicoEstadoResource($perfiles),
+            "perfil_psicologico" => new PerfilPsicologicoEstadoResource($perfil),
             "evaluaciones" => [
               "sasa" => EstadoPerfilResource::collection($evaluaciones),
             ],
