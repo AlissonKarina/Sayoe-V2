@@ -44,7 +44,6 @@ class EstadoPerfilController extends Controller
             ->where('perfiles_psicologicos.anho','=', $request->anho)
             ->where('perfiles_psicologicos.semestre','=', $semestre)
             ->where('estado_perfiles.estado','=',$estado)
-            ->select('perfiles_psicologicos.*', 'estado_perfiles.*')
             ->get();
     /*   foreach ($perfiles as $perfil){
           $evaluaciones = EstadoPerfil::where('id_perfil_psico','=',$perfil->id_perfil)
