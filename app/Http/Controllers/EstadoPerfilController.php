@@ -30,13 +30,13 @@ class EstadoPerfilController extends Controller
       
       $semestre = Helper::semestre($request->mes);
 
-      /* $perfiles = PerfilPsicologico::with('estadosPerfil')
+      $perfiles = PerfilPsicologico::with('estadosPerfil')
             ->where('codigo_alumno','=', $request->codigo)
             ->where('anho','=', $request->anho)
             ->where('semestre','=', $semestre)
-            ->get(); */
+            ->get();
                        
-      $perfiles = DB::table('perfiles_psicologicos')
+      /* $perfiles = DB::table('perfiles_psicologicos')
             ->join('estado_perfiles', 'perfiles_psicologicos.id_perfil', '=', 'estado_perfiles.id_perfil_psico')
             ->join('cuestionario_evaluaciones', 'cuestionario_evaluaciones.id','=','estado_perfiles.id_cuest_eval')
             ->where('perfiles_psicologicos.codigo_alumno','=', $request->codigo)
@@ -47,10 +47,9 @@ class EstadoPerfilController extends Controller
               'perfiles_psicologicos.semestre', 'perfiles_psicologicos.anho',
               'estado_perfiles.id', 'cuestionario_evaluaciones.titulo_secundario',
               'cuestionario_evaluaciones.nro_preguntas')
-            ->get();
+            ->get(); */
 
-      dd($perfiles);
-            
+
             /* foreach ($perfiles as $perfil){
               $array = [
                 "id_perfil_psico" => $perfil->id_perfil,
@@ -62,7 +61,7 @@ class EstadoPerfilController extends Controller
               array_push($arrayTotal['data'],$array);
           } */ 
 
-      /* foreach ($perfiles as $perfil){
+      foreach ($perfiles as $perfil){
           $evaluaciones = EstadoPerfil::where('id_perfil_psico','=',$perfil->id_perfil)
             ->where('estado','=',$estado)
             ->get();
@@ -79,8 +78,12 @@ class EstadoPerfilController extends Controller
           
       }
 
-      return response()->json($arrayTotal); */
-      return response()->json($perfiles);
+      dd($arrayTotal);
+            
+
+      return response()->json($arrayTotal);
+
+      /* return response()->json($perfiles); */
     }
 
     public function obtenerResultado(Request $request)
