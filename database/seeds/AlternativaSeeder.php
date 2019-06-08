@@ -1160,5 +1160,462 @@ class AlternativaSeeder extends Seeder
             'id_pregunta' => '78',
             'puntuacion' => '2'
         ]);
+        /*************** TERCER TEST ***************/
+        /*  1 */
+        Alternativa::create([
+            'descripcion' => "Le gusta resolver problemas de matemática; o",
+            'id_pregunta' => '79',
+            'puntuacion' => '0'
+        ]);
+        Alternativa::create([
+            'descripcion' => "Prefiere diseñar el modelo de casas, edificios, parques, robots, etc.",
+            'id_pregunta' => '79',
+            'puntuacion' => '1'
+        ]);
+
+        /*  2 */
+        Alternativa::create([
+            'descripcion' => "Le agrada observar la conducta de las personas y opinar de su personalidad; o",
+            'id_pregunta' => '80',
+            'puntuacion' => '0'
+        ]);
+        Alternativa::create([
+            'descripcion' => "Prefiere expresar un fenómeno concreto en una ecuación matemática.",
+            'id_pregunta' => '80',
+            'puntuacion' => '1'
+        ]);
+
+        /*  3 */
+        Alternativa::create([
+            'descripcion' => "Le gusta caminar por los cerros buscando piedras raras; o",
+            'id_pregunta' => '81',
+            'puntuacion' => '0'
+        ]);
+        Alternativa::create([
+            'descripcion' => "Prefiere diseñar las viviendas de una urbanización.",
+            'id_pregunta' => '81',
+            'puntuacion' => '1'
+        ]);
+
+        /*  4  */
+        Alternativa::create([
+            'descripcion' => "Le gusta escribir artículos deportivos para un diario; o",
+            'id_pregunta' => '82',
+            'puntuacion' => '0'
+        ]);
+        Alternativa::create([
+            'descripcion' => "Prefiere determinar la resistencia de materiales para una construcción.",
+            'id_pregunta' => '82',
+            'puntuacion' => '1'
+        ]);
+
+        /*  5  */
+        Alternativa::create([
+            'descripcion' => "Le gusta gusta hacer tallado en madera; o",
+            'id_pregunta' => '83',
+            'puntuacion' => '0'
+        ]);
+        Alternativa::create([
+            'descripcion' => "Prefiere calcular la cantidad de materiales para una construcción.",
+            'id_pregunta' => '83',
+            'puntuacion' => '1'
+        ]);
+
+        /*  6  */
+        Alternativa::create([
+            'descripcion' => "Le gusta ordenar y archivar documentos; o",
+            'id_pregunta' => '84',
+            'puntuacion' => '0'
+        ]);
+        Alternativa::create([
+            'descripcion' => "Prefiere proyectar el sistema eléctrico y electrónico de una construcción.",
+            'id_pregunta' => '84',
+            'puntuacion' => '1'
+        ]);
+
+        /*  7  */
+        Alternativa::create([
+            'descripcion' => "Le agrada dedicar su tiempo en el estudio de teorías económicas; o",
+            'id_pregunta' => '85',
+            'puntuacion' => '0'
+        ]);
+        Alternativa::create([
+            'descripcion' => "Prefiere dedicar su tiempo en la lectura de revistas sobre mecánica.",
+            'id_pregunta' => '85',
+            'puntuacion' => '1'
+        ]);
+
+        /*  8  */
+        Alternativa::create([
+            'descripcion' => "Le gusta mucho la vida militar; o",
+            'id_pregunta' => '86',
+            'puntuacion' => '0'
+        ]);
+        Alternativa::create([
+            'descripcion' => "Prefiere diseñar; máquinas, motores, etc., de alto rendimiento.",
+            'id_pregunta' => '86',
+            'puntuacion' => '1'
+        ]);
+
+        /*  9  */
+        Alternativa::create([
+            'descripcion' => "Le gusta planificar acerca de como formar una empresa; o",
+            'id_pregunta' => '87',
+            'puntuacion' => '0'
+        ]);
+        Alternativa::create([
+            'descripcion' => "Prefiere estudar lenguajes de computación",
+            'id_pregunta' => '87',
+            'puntuacion' => '1'
+        ]);
+
+        /*  10  */
+        Alternativa::create([
+            'descripcion' => "Le agrada estudiar la gramática; o",
+            'id_pregunta' => '88',
+            'puntuacion' => '0'
+        ]);
+        Alternativa::create([
+            'descripcion' => "Prefiere estudiar las matemáticas.",
+            'id_pregunta' => '88',
+            'puntuacion' => '1'
+        ]);
+
+        /*  11  */
+        Alternativa::create([
+            'descripcion' => "Le interesa mucho ser abogado; o",
+            'id_pregunta' => '89',
+            'puntuacion' => '0'
+        ]);
+        Alternativa::create([
+            'descripcion' => "Preferiría dedicarse a escribir un libro de Física-Matemática. ",
+            'id_pregunta' => '89',
+            'puntuacion' => '1'
+        ]);
+
+        /*  12  */
+        Alternativa::create([
+            'descripcion' => "Le cuenta a su padre y a su madre todas sus cosas; o",
+            'id_pregunta' => '90',
+            'puntuacion' => '0'
+        ]);
+        Alternativa::create([
+            'descripcion' => "Prefiere ocultar algunas cosas para usted solo(a).",
+            'id_pregunta' => '90',
+            'puntuacion' => '1'
+        ]);
+
+        /*  13  */
+        Alternativa::create([
+            'descripcion' => "Le agrada estudiar la estructura anatómica de los cuerpos; o",
+            'id_pregunta' => '91',
+            'puntuacion' => '0'
+        ]);
+        Alternativa::create([
+            'descripcion' => "Prefiere asumir la defensa legal de una persona acusada por algún delito.",
+            'id_pregunta' => '91',
+            'puntuacion' => '1'
+        ]);
+
+        /*  14  */
+        Alternativa::create([
+            'descripcion' => "Le interesa mucho estudiar cómo funciona un computador; o",
+            'id_pregunta' => '92',
+            'puntuacion' => '0'
+        ]);
+        Alternativa::create([
+            'descripcion' => "Prefiere el estudio de leyes y principios de la conducta de las personas.",
+            'id_pregunta' => '92',
+            'puntuacion' => '1'
+        ]);
+
+        /*  15  */
+        Alternativa::create([
+            'descripcion' => "Le agrada analizar la forma en cómo se organiza un pueblo; o",
+            'id_pregunta' => '93',
+            'puntuacion' => '0'
+        ]);
+        Alternativa::create([
+            'descripcion' => "Prefiere responderse a la pregunta del porqué de los seres y las cosas.",
+            'id_pregunta' => '93',
+            'puntuacion' => '1'
+        ]);
+
+        /*  16  */
+        Alternativa::create([
+            'descripcion' => "Le gusta analizar las rocas, piedras y tierra para averiguar su composición mineral; o",
+            'id_pregunta' => '94',
+            'puntuacion' => '0'
+        ]);
+        Alternativa::create([
+            'descripcion' => "Prefiere el estudio de las organizaciones sean: campesinas, educativas, laborales, políticas, económicas o religiosas.",
+            'id_pregunta' => '94',
+            'puntuacion' => '1'
+        ]);
+
+        /*  17  */
+        Alternativa::create([
+            'descripcion' => "Le gusta escribir artículos culturales para un diario; o",
+            'id_pregunta' => '95',
+            'puntuacion' => '0'
+        ]);
+        Alternativa::create([
+            'descripcion' => "Prefiere pensar largamente acerca de la forma como el hombre podría mejorar sus existencia.",
+            'id_pregunta' => '95',
+            'puntuacion' => '1'
+        ]);
+
+        /*  18  */
+        Alternativa::create([
+            'descripcion' => "Le agrada diseñar: muebles, puertas, ventanas, etc.; o",
+            'id_pregunta' => '96',
+            'puntuacion' => '0'
+        ]);
+        Alternativa::create([
+            'descripcion' => "Prefiere dedicar su tiempo en conocer las costumbres y tradiciones de los pueblos.",
+            'id_pregunta' => '96',
+            'puntuacion' => '1'
+        ]);
+
+        /*  19  */
+        Alternativa::create([
+            'descripcion' => "Le interesa mucho conocer el trámite documentario de una institución pública; o",
+            'id_pregunta' => '97',
+            'puntuacion' => '0'
+        ]);
+        Alternativa::create([
+            'descripcion' => "Prefiere el estudio de las religiones.",
+            'id_pregunta' => '97',
+            'puntuacion' => '1'
+        ]);
+
+        /*  20  */
+        Alternativa::create([
+            'descripcion' => "Le interesa mucho conocer los mecanismo de la economía nacional; o",
+            'id_pregunta' => '98',
+            'puntuacion' => '0'
+        ]);
+        Alternativa::create([
+            'descripcion' => "Prefiere ser guía espiritual de las personas.",
+            'id_pregunta' => '98',
+            'puntuacion' => '1'
+        ]);
+
+        /*  21  */
+        Alternativa::create([
+            'descripcion' => "Le gusta ser parte del equipo militar que capacite al cadete en valores; o",
+            'id_pregunta' => '99',
+            'puntuacion' => '0'
+        ]);
+        Alternativa::create([
+            'descripcion' => "Prefiere enseñar lo que sabe a un grupo de de sus compañeros.",
+            'id_pregunta' => '99',
+            'puntuacion' => '1'
+        ]);
+
+        /*  22  */
+        Alternativa::create([
+            'descripcion' => "Le gusta ser parte de la administración económica de una empresa; o",
+            'id_pregunta' => '100',
+            'puntuacion' => '0'
+        ]);
+        Alternativa::create([
+            'descripcion' => "Prefiere el estudio de las formas más efecticas para la enseñanza de jóvenes y niños.",
+            'id_pregunta' => '100',
+            'puntuacion' => '1'
+        ]);
+
+        /*  23  */
+        Alternativa::create([
+            'descripcion' => "Le interesa mucho investigar la raíz gramatical de las palabras de su idioma; o",
+            'id_pregunta' => '101',
+            'puntuacion' => '0'
+        ]);
+        Alternativa::create([
+            'descripcion' => "Prefiere dedicar su tiempo en búsqueda de huacos y ruinas.",
+            'id_pregunta' => '101',
+            'puntuacion' => '1'
+        ]);
+
+        /*  24  */
+        Alternativa::create([
+            'descripcion' => "Le agrada mucho estudiar el código del derecho civil; o",
+            'id_pregunta' => '102',
+            'puntuacion' => '0'
+        ]);
+        Alternativa::create([
+            'descripcion' => "Prefiere el estudio de las culturas peruanas y de otras naciones.",
+            'id_pregunta' => '102',
+            'puntuacion' => '1'
+        ]);
+
+        /*  25  */
+        Alternativa::create([
+            'descripcion' => "Le agrada que sus hermanos o familiares lo vigilen constantemente; o",
+            'id_pregunta' => '103',
+            'puntuacion' => '0'
+        ]);
+        Alternativa::create([
+            'descripcion' => "Prefiere que confien en su buen criterio.",
+            'id_pregunta' => '103',
+            'puntuacion' => '1'
+        ]);
+
+        /*  26  */
+        Alternativa::create([
+            'descripcion' => "Le gustaría escribir un libro acerca de la historia del Perú; o",
+            'id_pregunta' => '104',
+            'puntuacion' => '0'
+        ]);
+        Alternativa::create([
+            'descripcion' => "Prefiere asesorar sobre asuntos legales.",
+            'id_pregunta' => '104',
+            'puntuacion' => '1'
+        ]);
+
+        /*  27  */
+        Alternativa::create([
+            'descripcion' => "Le gusta proyectar las redes de agua y desagüe de una ciudad; o",
+            'id_pregunta' => '105',
+            'puntuacion' => '0'
+        ]);
+        Alternativa::create([
+            'descripcion' => "Prefiere estudiar acerca de las enfermedades de la dentadura.",
+            'id_pregunta' => '105',
+            'puntuacion' => '1'
+        ]);
+
+        /*  28  */
+        Alternativa::create([
+            'descripcion' => "Le gusta visitar museos arqueológicos y conocer la vivienda y otros utensiliosde nuestros antepasados; o",
+            'id_pregunta' => '106',
+            'puntuacion' => '0'
+        ]);
+        Alternativa::create([
+            'descripcion' => "Prefiere hacer moldes para un dentadura postiza.",
+            'id_pregunta' => '106',
+            'puntuacion' => '1'
+        ]);
+
+        /*  29  */
+        Alternativa::create([
+            'descripcion' => "Le gusta recolectar plantas y clasificarlas por especie; o",
+            'id_pregunta' => '107',
+            'puntuacion' => '0'
+        ]);
+        Alternativa::create([
+            'descripcion' => "Prefiere leer sobre el origen y funcionamiento de las plantas y animales.",
+            'id_pregunta' => '107',
+            'puntuacion' => '1'
+        ]);
+
+        /*  30  */
+        Alternativa::create([
+            'descripcion' => "Le gusta saber cómo se organiza una editorial periodística; o",
+            'id_pregunta' => '108',
+            'puntuacion' => '0'
+        ]);
+        Alternativa::create([
+            'descripcion' => "Prefiere conocer las características de los órganos humanos y cómo funcionan.",
+            'id_pregunta' => '108',
+            'puntuacion' => '1'
+        ]);
+
+        /*  31  */
+        Alternativa::create([
+            'descripcion' => "Le agrada construir; muebles, puertas, ventanas, etc.; o",
+            'id_pregunta' => '109',
+            'puntuacion' => '0'
+        ]);
+        Alternativa::create([
+            'descripcion' => "Prefiere estudiar acerca de las enfermedades de las personas.",
+            'id_pregunta' => '109',
+            'puntuacion' => '1'
+        ]);
+
+        /*  32  */
+        Alternativa::create([
+            'descripcion' => "Le agradaría trabajar en la recepción y trámite documentario de una oficina pública; o",
+            'id_pregunta' => '110',
+            'puntuacion' => '0'
+        ]);
+        Alternativa::create([
+            'descripcion' => "Prefiere experimentar con las plantas para obtener una nueva especie.",
+            'id_pregunta' => '110',
+            'puntuacion' => '1'
+        ]);
+
+        /*  33  */
+        Alternativa::create([
+            'descripcion' => "Le gusta proyectarlos mecanismos inversión económica de una empresa; o",
+            'id_pregunta' => '111',
+            'puntuacion' => '0'
+        ]);
+        Alternativa::create([
+            'descripcion' => "Prefiere analizar las tierras .",
+            'id_pregunta' => '111',
+            'puntuacion' => '1'
+        ]);
+
+        /*  32  */
+        Alternativa::create([
+            'descripcion' => "Le ; o",
+            'id_pregunta' => '112',
+            'puntuacion' => '0'
+        ]);
+        Alternativa::create([
+            'descripcion' => "Prefiere .",
+            'id_pregunta' => '112',
+            'puntuacion' => '1'
+        ]);
+
+        /*  32  */
+        Alternativa::create([
+            'descripcion' => "Le ; o",
+            'id_pregunta' => '110',
+            'puntuacion' => '0'
+        ]);
+        Alternativa::create([
+            'descripcion' => "Prefiere .",
+            'id_pregunta' => '110',
+            'puntuacion' => '1'
+        ]);
+
+        /*  32  */
+        Alternativa::create([
+            'descripcion' => "Le ; o",
+            'id_pregunta' => '110',
+            'puntuacion' => '0'
+        ]);
+        Alternativa::create([
+            'descripcion' => "Prefiere .",
+            'id_pregunta' => '110',
+            'puntuacion' => '1'
+        ]);
+
+        /*  32  */
+        Alternativa::create([
+            'descripcion' => "Le ; o",
+            'id_pregunta' => '110',
+            'puntuacion' => '0'
+        ]);
+        Alternativa::create([
+            'descripcion' => "Prefiere .",
+            'id_pregunta' => '110',
+            'puntuacion' => '1'
+        ]);
+
+        /*  32  */
+        Alternativa::create([
+            'descripcion' => "Le ; o",
+            'id_pregunta' => '110',
+            'puntuacion' => '0'
+        ]);
+        Alternativa::create([
+            'descripcion' => "Prefiere .",
+            'id_pregunta' => '110',
+            'puntuacion' => '1'
+        ]);
+
     }
 }

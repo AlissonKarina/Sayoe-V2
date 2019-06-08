@@ -35,6 +35,14 @@ class CuestionarioEvaluacionSeeder extends Seeder
             'autor' => "Prueba",
             'nro_preguntas' => '2'
         ]);
+
+        CuestionarioEvaluacion::create([
+            'id' => 4,
+            'titulo' => "Inventario de intereses vocacionales y ocupacionales CASM-83 Revisión 2014",
+            'titulo_secundario' => "Evaluación 04",
+            'autor' => "Luis Alberto Vicuña Peri",
+            'nro_preguntas' => '143'
+        ]);
         
     }
 }

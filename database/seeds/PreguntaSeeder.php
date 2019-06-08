@@ -12,7 +12,7 @@ class PreguntaSeeder extends Seeder
      */
     public function run()
     {
-        /*************** PRIMER TEST ***************/
+        /*************** PRIMER TEST: Inventario de Hábitos de Estudio CASM-85 Revisión 2017 ***************/
         Pregunta::create([
             'id' => '1',
             'pregunta' => "Al estudiar... Leo todo lo que tengo que estudiar subrayando los puntos más importantes... ",
@@ -404,7 +404,7 @@ class PreguntaSeeder extends Seeder
             'id_cuest_eval' => '1' 
         ]);
 
-        /*************** SEGUNDO TEST ***************/
+        /*************** SEGUNDO TEST: Inventario de Depresion de Beck ***************/
         Pregunta::create([
             'id' => '56',
             'pregunta' => "Tristeza",
@@ -552,7 +552,7 @@ class PreguntaSeeder extends Seeder
             'id_cuest_eval' => '2' 
         ]);
 
-        /*** */
+        /*** SOLO TEST DE PRUEBA */
         Pregunta::create([
             'id' => '77',
             'pregunta' => "Pregunta prueba 01",
@@ -566,6 +566,1008 @@ class PreguntaSeeder extends Seeder
             'bloque' => '1',
             'id_cuest_eval' => '3' 
         ]);
-        
+
+        /*************** TERCER TEST: Inventario de intereses vocacionales y ocupacionales CASM-83 Revisión 2014 ***************/
+        /** 01 */
+        Pregunta::create([
+            'id' => '79',
+            'pregunta' => "",
+            'bloque' => '1',
+            'id_cuest_eval' => '4'
+       ]); 
+        /** 02 */
+        Pregunta::create([
+            'id' => '80',
+            'pregunta' => "",
+            'bloque' => '1',
+            'id_cuest_eval' => '4'
+        ]); 
+        /** 03 */
+        Pregunta::create([
+            'id' => '81',
+            'pregunta' => "",
+            'bloque' => '1',
+            'id_cuest_eval' => '4'
+        ]); 
+        /** 04 */
+        Pregunta::create([
+            'id' => '82',
+            'pregunta' => "",
+            'bloque' => '1',
+            'id_cuest_eval' => '4'
+        ]);
+       /** 05 */
+        Pregunta::create([
+            'id' => '83',
+            'pregunta' => "",
+            'bloque' => '1',
+            'id_cuest_eval' => '4'
+       ]); 
+        /** 06 */
+        Pregunta::create([
+            'id' => '84',
+            'pregunta' => "",
+            'bloque' => '1',
+            'id_cuest_eval' => '4'
+        ]); 
+        /** 07 */
+        Pregunta::create([
+            'id' => '85',
+            'pregunta' => "",
+            'bloque' => '1',
+            'id_cuest_eval' => '4'
+        ]); 
+        /** 08 */
+        Pregunta::create([
+            'id' => '86',
+            'pregunta' => "",
+            'bloque' => '1',
+            'id_cuest_eval' => '4'
+        ]); 
+        /** 09 */
+        Pregunta::create([
+            'id' => '87',
+            'pregunta' => "",
+            'bloque' => '1',
+            'id_cuest_eval' => '4'
+        ]); 
+        /** 10 */
+        Pregunta::create([
+            'id' => '88',
+            'pregunta' => "",
+            'bloque' => '1',
+            'id_cuest_eval' => '4'
+        ]); 
+        /** 11 */
+        Pregunta::create([
+            'id' => '89',
+            'pregunta' => "",
+            'bloque' => '1',
+            'id_cuest_eval' => '4'
+        ]); 
+        /** 12 */
+        Pregunta::create([
+            'id' => '90',
+            'pregunta' => "",
+            'bloque' => '1',
+            'id_cuest_eval' => '4'
+        ]); 
+        /** 13 */
+        Pregunta::create([
+            'id' => '91',
+            'pregunta' => "",
+            'bloque' => '1',
+            'id_cuest_eval' => '4'
+        ]); 
+        /** 14 */
+        Pregunta::create([
+            'id' => '92',
+            'pregunta' => "",
+            'bloque' => '1',
+            'id_cuest_eval' => '4'
+        ]); 
+        /** 15 */
+        Pregunta::create([
+            'id' => '93',
+            'pregunta' => "",
+            'bloque' => '1',
+            'id_cuest_eval' => '4'
+        ]); 
+        /** 16 */
+        Pregunta::create([
+            'id' => '94',
+            'pregunta' => "",
+            'bloque' => '1',
+            'id_cuest_eval' => '4'
+        ]);
+       /** 17 */
+        Pregunta::create([
+            'id' => '95',
+            'pregunta' => "",
+            'bloque' => '1',
+            'id_cuest_eval' => '4'
+       ]); 
+        /** 18 */
+        Pregunta::create([
+            'id' => '96',
+            'pregunta' => "",
+            'bloque' => '1',
+            'id_cuest_eval' => '4'
+        ]); 
+        /** 19 */
+        Pregunta::create([
+            'id' => '97',
+            'pregunta' => "",
+            'bloque' => '1',
+            'id_cuest_eval' => '4'
+        ]); 
+        /** 20 */
+        Pregunta::create([
+            'id' => '98',
+            'pregunta' => "",
+            'bloque' => '1',
+            'id_cuest_eval' => '4'
+        ]); 
+        /** 21 */
+        Pregunta::create([
+            'id' => '99',
+            'pregunta' => "",
+            'bloque' => '1',
+            'id_cuest_eval' => '4'
+        ]); 
+        /** 22 */
+        Pregunta::create([
+            'id' => '100',
+            'pregunta' => "",
+            'bloque' => '1',
+            'id_cuest_eval' => '4'
+        ]); 
+        /** 23 */
+        Pregunta::create([
+            'id' => '101',
+            'pregunta' => "",
+            'bloque' => '1',
+            'id_cuest_eval' => '4'
+        ]); 
+        /** 24 */
+        Pregunta::create([
+            'id' => '102',
+            'pregunta' => "",
+            'bloque' => '1',
+            'id_cuest_eval' => '4'
+        ]);
+        /** 25 */
+        Pregunta::create([
+            'id' => '103',
+            'pregunta' => "",
+            'bloque' => '1',
+            'id_cuest_eval' => '4'
+       ]); 
+        /** 26 */
+        Pregunta::create([
+            'id' => '104',
+            'pregunta' => "",
+            'bloque' => '1',
+            'id_cuest_eval' => '4'
+        ]); 
+        /** 27 */
+        Pregunta::create([
+            'id' => '105',
+            'pregunta' => "",
+            'bloque' => '1',
+            'id_cuest_eval' => '4'
+        ]); 
+        /** 28 */
+        Pregunta::create([
+            'id' => '106',
+            'pregunta' => "",
+            'bloque' => '1',
+            'id_cuest_eval' => '4'
+        ]);
+       /** 29 */
+        Pregunta::create([
+            'id' => '107',
+            'pregunta' => "",
+            'bloque' => '1',
+            'id_cuest_eval' => '4'
+       ]); 
+        /** 30 */
+        Pregunta::create([
+            'id' => '108',
+            'pregunta' => "",
+            'bloque' => '1',
+            'id_cuest_eval' => '4'
+        ]); 
+        /** 31 */
+        Pregunta::create([
+            'id' => '109',
+            'pregunta' => "",
+            'bloque' => '2',
+            'id_cuest_eval' => '4'
+        ]); 
+        /** 32 */
+        Pregunta::create([
+            'id' => '110',
+            'pregunta' => "",
+            'bloque' => '2',
+            'id_cuest_eval' => '4'
+        ]); 
+        /** 33 */
+        Pregunta::create([
+            'id' => '111',
+            'pregunta' => "",
+            'bloque' => '2',
+            'id_cuest_eval' => '4'
+        ]); 
+        /** 34 */
+        Pregunta::create([
+            'id' => '112',
+            'pregunta' => "",
+            'bloque' => '2',
+            'id_cuest_eval' => '4'
+        ]); 
+        /** 35 */
+        Pregunta::create([
+            'id' => '113',
+            'pregunta' => "",
+            'bloque' => '2',
+            'id_cuest_eval' => '4'
+        ]); 
+        /** 36 */
+        Pregunta::create([
+            'id' => '114',
+            'pregunta' => "",
+            'bloque' => '2',
+            'id_cuest_eval' => '4'
+        ]);  
+        /** 37 */
+        Pregunta::create([
+            'id' => '115',
+            'pregunta' => "",
+            'bloque' => '2',
+            'id_cuest_eval' => '4'
+        ]); 
+        /** 38 */
+        Pregunta::create([
+            'id' => '116',
+            'pregunta' => "",
+            'bloque' => '2',
+            'id_cuest_eval' => '4'
+        ]); 
+        /** 39 */
+        Pregunta::create([
+            'id' => '117',
+            'pregunta' => "",
+            'bloque' => '2',
+            'id_cuest_eval' => '4'
+        ]); 
+        /** 40 */
+        Pregunta::create([
+            'id' => '118',
+            'pregunta' => "",
+            'bloque' => '2',
+            'id_cuest_eval' => '4'
+        ]); 
+        /** 41 */
+        Pregunta::create([
+            'id' => '119',
+            'pregunta' => "",
+            'bloque' => '2',
+            'id_cuest_eval' => '4'
+        ]); 
+        /** 42 */
+        Pregunta::create([
+            'id' => '120',
+            'pregunta' => "",
+            'bloque' => '2',
+            'id_cuest_eval' => '4'
+        ]); 
+        /** 43 */
+        Pregunta::create([
+            'id' => '121',
+            'pregunta' => "",
+            'bloque' => '2',
+            'id_cuest_eval' => '4'
+        ]);
+        /** 44 */
+        Pregunta::create([
+            'id' => '122',
+            'pregunta' => "",
+            'bloque' => '2',
+            'id_cuest_eval' => '4'
+        ]); 
+        /** 45 */
+        Pregunta::create([
+            'id' => '123',
+            'pregunta' => "",
+            'bloque' => '2',
+            'id_cuest_eval' => '4'
+        ]); 
+        /** 46 */
+        Pregunta::create([
+            'id' => '124',
+            'pregunta' => "",
+            'bloque' => '2',
+            'id_cuest_eval' => '4'
+        ]); 
+        /** 47 */
+        Pregunta::create([
+            'id' => '125',
+            'pregunta' => "",
+            'bloque' => '2',
+            'id_cuest_eval' => '4'
+        ]); 
+        /** 48 */
+        Pregunta::create([
+            'id' => '126',
+            'pregunta' => "",
+            'bloque' => '2',
+            'id_cuest_eval' => '4'
+        ]); 
+        /** 49 */
+        Pregunta::create([
+            'id' => '127',
+            'pregunta' => "",
+            'bloque' => '2',
+            'id_cuest_eval' => '4'
+        ]); 
+        /** 50 */
+        Pregunta::create([
+            'id' => '128',
+            'pregunta' => "",
+            'bloque' => '2',
+            'id_cuest_eval' => '4'
+        ]); 
+        /** 51 */
+        Pregunta::create([
+            'id' => '129',
+            'pregunta' => "",
+            'bloque' => '2',
+            'id_cuest_eval' => '4'
+        ]); 
+        /** 52 */
+        Pregunta::create([
+            'id' => '130',
+            'pregunta' => "",
+            'bloque' => '2',
+            'id_cuest_eval' => '4'
+        ]); 
+        /** 53 */
+        Pregunta::create([
+            'id' => '131',
+            'pregunta' => "",
+            'bloque' => '2',
+            'id_cuest_eval' => '4'
+        ]);
+        /** 54 */
+        Pregunta::create([
+            'id' => '132',
+            'pregunta' => "",
+            'bloque' => '2',
+            'id_cuest_eval' => '4'
+        ]); 
+        /** 55 */
+        Pregunta::create([
+            'id' => '133',
+            'pregunta' => "",
+            'bloque' => '2',
+            'id_cuest_eval' => '4'
+        ]); 
+        /** 56 */
+        Pregunta::create([
+            'id' => '134',
+            'pregunta' => "",
+            'bloque' => '2',
+            'id_cuest_eval' => '4'
+        ]); 
+        /** 57 */
+        Pregunta::create([
+            'id' => '135',
+            'pregunta' => "",
+            'bloque' => '2',
+            'id_cuest_eval' => '4'
+        ]); 
+        /** 58 */
+        Pregunta::create([
+            'id' => '136',
+            'pregunta' => "",
+            'bloque' => '2',
+            'id_cuest_eval' => '4'
+        ]); 
+        /** 59 */
+        Pregunta::create([
+            'id' => '137',
+            'pregunta' => "",
+            'bloque' => '2',
+            'id_cuest_eval' => '4'
+        ]); 
+        /** 60 */
+        Pregunta::create([
+            'id' => '138',
+            'pregunta' => "",
+            'bloque' => '2',
+            'id_cuest_eval' => '4'
+        ]); 
+        /** 61 */
+        Pregunta::create([
+            'id' => '139',
+            'pregunta' => "",
+            'bloque' => '3',
+            'id_cuest_eval' => '4'
+        ]); 
+        /** 62 */
+        Pregunta::create([
+            'id' => '140',
+            'pregunta' => "",
+            'bloque' => '3',
+            'id_cuest_eval' => '4'
+        ]); 
+        /** 63 */
+        Pregunta::create([
+            'id' => '141',
+            'pregunta' => "",
+            'bloque' => '3',
+            'id_cuest_eval' => '4'
+        ]);
+        /** 64 */
+        Pregunta::create([
+            'id' => '142',
+            'pregunta' => "",
+            'bloque' => '3',
+            'id_cuest_eval' => '4'
+        ]); 
+        /** 65 */
+        Pregunta::create([
+            'id' => '143',
+            'pregunta' => "",
+            'bloque' => '3',
+            'id_cuest_eval' => '4'
+        ]); 
+        /** 66 */
+        Pregunta::create([
+            'id' => '144',
+            'pregunta' => "",
+            'bloque' => '3',
+            'id_cuest_eval' => '4'
+        ]); 
+        /** 67 */
+        Pregunta::create([
+            'id' => '145',
+            'pregunta' => "",
+            'bloque' => '3',
+            'id_cuest_eval' => '4'
+        ]); 
+        /** 68 */
+        Pregunta::create([
+            'id' => '146',
+            'pregunta' => "",
+            'bloque' => '3',
+            'id_cuest_eval' => '4'
+        ]); 
+        /** 69 */
+        Pregunta::create([
+            'id' => '147',
+            'pregunta' => "",
+            'bloque' => '3',
+            'id_cuest_eval' => '4'
+        ]); 
+        /** 70 */
+        Pregunta::create([
+            'id' => '148',
+            'pregunta' => "",
+            'bloque' => '3',
+            'id_cuest_eval' => '4'
+        ]);
+        /** 71 */
+        Pregunta::create([
+            'id' => '149',
+            'pregunta' => "",
+            'bloque' => '3',
+            'id_cuest_eval' => '4'
+        ]); 
+        /** 72 */
+        Pregunta::create([
+            'id' => '150',
+            'pregunta' => "",
+            'bloque' => '3',
+            'id_cuest_eval' => '4'
+        ]); 
+        /** 73 */
+        Pregunta::create([
+            'id' => '151',
+            'pregunta' => "",
+            'bloque' => '3',
+            'id_cuest_eval' => '4'
+        ]);
+        /** 74 */
+        Pregunta::create([
+            'id' => '152',
+            'pregunta' => "",
+            'bloque' => '3',
+            'id_cuest_eval' => '4'
+        ]); 
+        /** 75 */
+        Pregunta::create([
+            'id' => '153',
+            'pregunta' => "",
+            'bloque' => '3',
+            'id_cuest_eval' => '4'
+        ]); 
+        /** 76 */
+        Pregunta::create([
+            'id' => '154',
+            'pregunta' => "",
+            'bloque' => '3',
+            'id_cuest_eval' => '4'
+        ]); 
+        /** 77 */
+        Pregunta::create([
+            'id' => '155',
+            'pregunta' => "",
+            'bloque' => '3',
+            'id_cuest_eval' => '4'
+        ]); 
+        /** 78 */
+        Pregunta::create([
+            'id' => '156',
+            'pregunta' => "",
+            'bloque' => '3',
+            'id_cuest_eval' => '4'
+        ]); 
+        /** 79 */
+        Pregunta::create([
+            'id' => '157',
+            'pregunta' => "",
+            'bloque' => '3',
+            'id_cuest_eval' => '4'
+        ]); 
+        /** 80 */
+        Pregunta::create([
+            'id' => '158',
+            'pregunta' => "",
+            'bloque' => '3',
+            'id_cuest_eval' => '4'
+        ]);
+        /** 81 */
+        Pregunta::create([
+            'id' => '159',
+            'pregunta' => "",
+            'bloque' => '3',
+            'id_cuest_eval' => '4'
+        ]); 
+        /** 82 */
+        Pregunta::create([
+            'id' => '160',
+            'pregunta' => "",
+            'bloque' => '3',
+            'id_cuest_eval' => '4'
+        ]); 
+        /** 83 */
+        Pregunta::create([
+            'id' => '161',
+            'pregunta' => "",
+            'bloque' => '3',
+            'id_cuest_eval' => '4'
+        ]);
+        /** 84 */
+        Pregunta::create([
+            'id' => '162',
+            'pregunta' => "",
+            'bloque' => '3',
+            'id_cuest_eval' => '4'
+        ]); 
+        /** 85 */
+        Pregunta::create([
+            'id' => '163',
+            'pregunta' => "",
+            'bloque' => '3',
+            'id_cuest_eval' => '4'
+        ]); 
+        /** 86 */
+        Pregunta::create([
+            'id' => '164',
+            'pregunta' => "",
+            'bloque' => '3',
+            'id_cuest_eval' => '4'
+        ]); 
+        /** 87 */
+        Pregunta::create([
+            'id' => '165',
+            'pregunta' => "",
+            'bloque' => '3',
+            'id_cuest_eval' => '4'
+        ]); 
+        /** 88 */
+        Pregunta::create([
+            'id' => '166',
+            'pregunta' => "",
+            'bloque' => '3',
+            'id_cuest_eval' => '4'
+        ]); 
+        /** 89 */
+        Pregunta::create([
+            'id' => '167',
+            'pregunta' => "",
+            'bloque' => '3',
+            'id_cuest_eval' => '4'
+        ]); 
+        /** 90 */
+        Pregunta::create([
+            'id' => '168',
+            'pregunta' => "",
+            'bloque' => '3',
+            'id_cuest_eval' => '4'
+        ]);
+        /** 91 */
+        Pregunta::create([
+            'id' => '169',
+            'pregunta' => "",
+            'bloque' => '4',
+            'id_cuest_eval' => '4'
+        ]); 
+        /** 92 */
+        Pregunta::create([
+            'id' => '170',
+            'pregunta' => "",
+            'bloque' => '4',
+            'id_cuest_eval' => '4'
+        ]); 
+        /** 93 */
+        Pregunta::create([
+            'id' => '171',
+            'pregunta' => "",
+            'bloque' => '4',
+            'id_cuest_eval' => '4'
+        ]);
+        /** 94 */
+        Pregunta::create([
+            'id' => '172',
+            'pregunta' => "",
+            'bloque' => '4',
+            'id_cuest_eval' => '4'
+        ]); 
+        /** 95 */
+        Pregunta::create([
+            'id' => '173',
+            'pregunta' => "",
+            'bloque' => '4',
+            'id_cuest_eval' => '4'
+        ]); 
+        /** 96 */
+        Pregunta::create([
+            'id' => '174',
+            'pregunta' => "",
+            'bloque' => '4',
+            'id_cuest_eval' => '4'
+        ]); 
+        /** 97 */
+        Pregunta::create([
+            'id' => '175',
+            'pregunta' => "",
+            'bloque' => '4',
+            'id_cuest_eval' => '4'
+        ]); 
+        /** 98 */
+        Pregunta::create([
+            'id' => '176',
+            'pregunta' => "",
+            'bloque' => '4',
+            'id_cuest_eval' => '4'
+        ]); 
+        /** 99 */
+        Pregunta::create([
+            'id' => '177',
+            'pregunta' => "",
+            'bloque' => '4',
+            'id_cuest_eval' => '4'
+        ]); 
+        /** 100 */
+        Pregunta::create([
+            'id' => '178',
+            'pregunta' => "",
+            'bloque' => '4',
+            'id_cuest_eval' => '4'
+        ]);
+        /** 101 */
+        Pregunta::create([
+            'id' => '179',
+            'pregunta' => "",
+            'bloque' => '4',
+            'id_cuest_eval' => '4'
+        ]); 
+        /** 102 */
+        Pregunta::create([
+            'id' => '180',
+            'pregunta' => "",
+            'bloque' => '4',
+            'id_cuest_eval' => '4'
+        ]); 
+        /** 103 */
+        Pregunta::create([
+            'id' => '181',
+            'pregunta' => "",
+            'bloque' => '4',
+            'id_cuest_eval' => '4'
+        ]);
+        /** 104 */
+        Pregunta::create([
+            'id' => '182',
+            'pregunta' => "",
+            'bloque' => '4',
+            'id_cuest_eval' => '4'
+        ]); 
+        /** 105 */
+        Pregunta::create([
+            'id' => '183',
+            'pregunta' => "",
+            'bloque' => '4',
+            'id_cuest_eval' => '4'
+        ]); 
+        /** 106 */
+        Pregunta::create([
+            'id' => '184',
+            'pregunta' => "",
+            'bloque' => '4',
+            'id_cuest_eval' => '4'
+        ]); 
+        /** 107 */
+        Pregunta::create([
+            'id' => '185',
+            'pregunta' => "",
+            'bloque' => '4',
+            'id_cuest_eval' => '4'
+        ]); 
+        /** 108 */
+        Pregunta::create([
+            'id' => '186',
+            'pregunta' => "",
+            'bloque' => '4',
+            'id_cuest_eval' => '4'
+        ]); 
+        /** 109 */
+        Pregunta::create([
+            'id' => '187',
+            'pregunta' => "",
+            'bloque' => '4',
+            'id_cuest_eval' => '4'
+        ]); 
+        /** 110 */
+        Pregunta::create([
+            'id' => '188',
+            'pregunta' => "",
+            'bloque' => '3',
+            'id_cuest_eval' => '4'
+        ]);   
+        /** 111 */
+        Pregunta::create([
+            'id' => '189',
+            'pregunta' => "",
+            'bloque' => '4',
+            'id_cuest_eval' => '4'
+        ]); 
+        /** 112 */
+        Pregunta::create([
+            'id' => '190',
+            'pregunta' => "",
+            'bloque' => '4',
+            'id_cuest_eval' => '4'
+        ]); 
+        /** 113 */
+        Pregunta::create([
+            'id' => '191',
+            'pregunta' => "",
+            'bloque' => '4',
+            'id_cuest_eval' => '4'
+        ]);
+        /** 114 */
+        Pregunta::create([
+            'id' => '192',
+            'pregunta' => "",
+            'bloque' => '4',
+            'id_cuest_eval' => '4'
+        ]); 
+        /** 115 */
+        Pregunta::create([
+            'id' => '193',
+            'pregunta' => "",
+            'bloque' => '4',
+            'id_cuest_eval' => '4'
+        ]); 
+        /** 116 */
+        Pregunta::create([
+            'id' => '194',
+            'pregunta' => "",
+            'bloque' => '4',
+            'id_cuest_eval' => '4'
+        ]); 
+        /** 117 */
+        Pregunta::create([
+            'id' => '195',
+            'pregunta' => "",
+            'bloque' => '4',
+            'id_cuest_eval' => '4'
+        ]); 
+        /** 118 */
+        Pregunta::create([
+            'id' => '196',
+            'pregunta' => "",
+            'bloque' => '4',
+            'id_cuest_eval' => '4'
+        ]); 
+        /** 119 */
+        Pregunta::create([
+            'id' => '197',
+            'pregunta' => "",
+            'bloque' => '4',
+            'id_cuest_eval' => '4'
+        ]); 
+        /** 120 */
+        Pregunta::create([
+            'id' => '198',
+            'pregunta' => "",
+            'bloque' => '3',
+            'id_cuest_eval' => '4'
+        ]);
+        /** 121 */
+        Pregunta::create([
+            'id' => '199',
+            'pregunta' => "",
+            'bloque' => '5',
+            'id_cuest_eval' => '4'
+        ]); 
+        /** 122 */
+        Pregunta::create([
+            'id' => '200',
+            'pregunta' => "",
+            'bloque' => '5',
+            'id_cuest_eval' => '4'
+        ]); 
+        /** 123 */
+        Pregunta::create([
+            'id' => '201',
+            'pregunta' => "",
+            'bloque' => '5',
+            'id_cuest_eval' => '4'
+        ]);
+        /** 124 */
+        Pregunta::create([
+            'id' => '202',
+            'pregunta' => "",
+            'bloque' => '5',
+            'id_cuest_eval' => '4'
+        ]); 
+        /** 125 */
+        Pregunta::create([
+            'id' => '203',
+            'pregunta' => "",
+            'bloque' => '5',
+            'id_cuest_eval' => '4'
+        ]); 
+        /** 126 */
+        Pregunta::create([
+            'id' => '204',
+            'pregunta' => "",
+            'bloque' => '5',
+            'id_cuest_eval' => '4'
+        ]); 
+        /** 127 */
+        Pregunta::create([
+            'id' => '205',
+            'pregunta' => "",
+            'bloque' => '5',
+            'id_cuest_eval' => '4'
+        ]); 
+        /** 128 */
+        Pregunta::create([
+            'id' => '206',
+            'pregunta' => "",
+            'bloque' => '5',
+            'id_cuest_eval' => '4'
+        ]); 
+        /** 129 */
+        Pregunta::create([
+            'id' => '207',
+            'pregunta' => "",
+            'bloque' => '5',
+            'id_cuest_eval' => '4'
+        ]); 
+        /** 130 */
+        Pregunta::create([
+            'id' => '208',
+            'pregunta' => "",
+            'bloque' => '5',
+            'id_cuest_eval' => '4'
+        ]);
+        /** 131 */
+        Pregunta::create([
+            'id' => '209',
+            'pregunta' => "",
+            'bloque' => '5',
+            'id_cuest_eval' => '4'
+        ]); 
+        /** 132 */
+        Pregunta::create([
+            'id' => '210',
+            'pregunta' => "",
+            'bloque' => '5',
+            'id_cuest_eval' => '4'
+        ]); 
+        /** 133 */
+        Pregunta::create([
+            'id' => '211',
+            'pregunta' => "",
+            'bloque' => '5',
+            'id_cuest_eval' => '4'
+        ]);
+        /** 134 */
+        Pregunta::create([
+            'id' => '212',
+            'pregunta' => "",
+            'bloque' => '5',
+            'id_cuest_eval' => '4'
+        ]); 
+        /** 135 */
+        Pregunta::create([
+            'id' => '213',
+            'pregunta' => "",
+            'bloque' => '5',
+            'id_cuest_eval' => '4'
+        ]); 
+        /** 136 */
+        Pregunta::create([
+            'id' => '214',
+            'pregunta' => "",
+            'bloque' => '5',
+            'id_cuest_eval' => '4'
+        ]); 
+        /** 137 */
+        Pregunta::create([
+            'id' => '215',
+            'pregunta' => "",
+            'bloque' => '5',
+            'id_cuest_eval' => '4'
+        ]); 
+        /** 138 */
+        Pregunta::create([
+            'id' => '216',
+            'pregunta' => "",
+            'bloque' => '5',
+            'id_cuest_eval' => '4'
+        ]); 
+        /** 139 */
+        Pregunta::create([
+            'id' => '217',
+            'pregunta' => "",
+            'bloque' => '5',
+            'id_cuest_eval' => '4'
+        ]); 
+        /** 140 */
+        Pregunta::create([
+            'id' => '218',
+            'pregunta' => "",
+            'bloque' => '5',
+            'id_cuest_eval' => '4'
+        ]);
+        /** 141 */
+        Pregunta::create([
+            'id' => '219',
+            'pregunta' => "",
+            'bloque' => '5',
+            'id_cuest_eval' => '4'
+        ]); 
+        /** 142 */
+        Pregunta::create([
+            'id' => '220',
+            'pregunta' => "",
+            'bloque' => '5',
+            'id_cuest_eval' => '4'
+        ]); 
+        /** 143 */
+        Pregunta::create([
+            'id' => '221',
+            'pregunta' => "",
+            'bloque' => '5',
+            'id_cuest_eval' => '4'
+        ]);
     }
 }
