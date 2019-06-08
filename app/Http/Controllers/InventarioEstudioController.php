@@ -15,7 +15,7 @@ class InventarioEstudioController extends Controller
         $total = 0;
         $data = $request->data;
         $id_perfil_psico = $data['id_perfil_psico'];
-        $id_cuest_eval = $data['id_cuest_eval'];
+        $id_estado_perfil = $data['id_estado_perfil'];
         
         foreach ($data['alternativa'] as $valor)
         {
@@ -31,8 +31,7 @@ class InventarioEstudioController extends Controller
         $fecha = new \Carbon\Carbon();
         $date = $fecha->format('d-m-Y');
 
-        $estadoPerfil = EstadoPerfil::where('id_perfil_psico','=', $id_perfil_psico)
-        ->where('id_cuest_eval','=', $id_cuest_eval)->first();
+        $estadoPerfil = EstadoPerfil::find($id_estado_perfil);
         
 
         $estadoPerfil->estado = '1';
