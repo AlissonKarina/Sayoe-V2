@@ -24,19 +24,22 @@ class EstadoPerfilController extends Controller
                 ->where('semestre','=', $semestre)
                 ->get();
                        
-      /* foreach ($perfiles as $perfil){
+      foreach ($perfiles as $perfil){
           $evaluaciones = EstadoPerfil::where('id_perfil_psico','=',$perfil->id_perfil)
                           ->where('estado','=','0')
                           ->get();
 
           $array = [
-            "perfil_psicologico" => new PerfilPsicologicoEstadoResource($perfil),
+            "id_perfil_psico" => $perfil->id_perfil,
+            "anho" => $perfil->anho,
+            "semestre" => $perfil->semestre,
+            "fecha_vencimiento" => $perfil->fecha_limite,
             "evaluaciones" => [
-              "sasa" => EstadoPerfilResource::collection($evaluaciones),
+                EstadoPerfilResource::collection($evaluaciones),
             ],
           ];
           array_push($arrayTotal,$array);
-      } */
+      }
       /* $perfiles = PerfilPsicologico::with('estadosPerfil')
                 ->join('estado_perfiles', 'perfiles_psicologicos.id_perfil', '=', 'estado_perfiles.id_perfil_psico')
                 ->where('perfiles_psicologicos.codigo_alumno','=', $request->codigo)
