@@ -46,8 +46,8 @@ class EstadoPerfilController extends Controller
                 ->where('estado_perfiles.estado','=', '0')
                 ->get(); */
       
-      return PerfilPsicologicoEstadoResource::collection($perfiles);
-     /* return response()->json($arrayTotal); */
+      /* return PerfilPsicologicoEstadoResource::collection($perfiles); */
+     return response()->json($arrayTotal);
     }
 
     public function evaluacionesRealizadas(Request $request)
