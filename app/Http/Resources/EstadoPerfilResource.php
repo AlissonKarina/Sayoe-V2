@@ -12,7 +12,7 @@ class EstadoPerfilResource extends JsonResource
             'id_estado_perfil' => $this->id,
             'id_cuest_eval' => $this->cuestionarioEvaluacion->id,
             'titulo_secundario' => $this->cuestionarioEvaluacion->titulo_secundario,
-            'estado' => $this->cuestionarioEvaluacion->estado,
+            'estado' => $this->estado,
             'nro_preguntas' => $this->cuestionarioEvaluacion->nro_preguntas,
         ];
     }
