@@ -34,6 +34,7 @@ class EstadoPerfilController extends Controller
             ->where('codigo_alumno','=', $request->codigo)
             ->where('anho','=', $request->anho)
             ->where('semestre','=', $semestre)
+            ->orderBy('fecha_limite', 'desc')
             ->get();
                        
       /* $perfiles = DB::table('perfiles_psicologicos')
