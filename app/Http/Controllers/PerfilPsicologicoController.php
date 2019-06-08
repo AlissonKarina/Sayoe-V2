@@ -87,7 +87,7 @@ class PerfilPsicologicoController extends Controller
 
             foreach ($listTest as $t) {
                 EstadoPerfil::create([
-                    'id_perfil_psico' => $perfil->id,
+                    'id_perfil_psico' => $perfil->id_perfil,
                     'id_cuest_eval'=> $t['id'],                 
                 ]);
             }
