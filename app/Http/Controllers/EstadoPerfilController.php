@@ -8,6 +8,7 @@ use App\Model\EstadoPerfil;
 use App\Model\PerfilPsicologico;
 use App\Http\Helper\Helper;
 use App\Http\Resources\PerfilPsicologicoEstadoResource;
+use App\Http\Resources\EstadoPerfilResource;
 use Illuminate\Support\Facades\DB;
 
 
