@@ -16,7 +16,9 @@ class EstadoPerfilController extends Controller
 {
     public function evaluacionesPendientes(Request $request)
     {
-      $arrayTotal = array();
+      $arrayTotal = [
+        "data" => []
+      ];
       $semestre = Helper::semestre($request->mes);
       $perfiles = PerfilPsicologico::with('estadosPerfil')
                 ->where('codigo_alumno','=', $request->codigo)
@@ -30,14 +32,13 @@ class EstadoPerfilController extends Controller
                           ->get();
 
           $array = [
-            "data" => [
             "id_perfil_psico" => $perfil->id_perfil,
             "anho" => $perfil->anho,
             "semestre" => $perfil->semestre,
             "fecha_vencimiento" => $perfil->fecha_limite,
             "evaluaciones" => EstadoPerfilResource::collection($evaluaciones),
-          ]];
-          array_push($arrayTotal,$array);
+          ];
+          array_push($arrayTotal['data'],$array);
       }
             
       /* return PerfilPsicologicoEstadoResource::collection($perfiles); */
