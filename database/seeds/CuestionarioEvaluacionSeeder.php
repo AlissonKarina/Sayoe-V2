@@ -38,10 +38,10 @@ class CuestionarioEvaluacionSeeder extends Seeder
 
         CuestionarioEvaluacion::create([
             'id' => 4,
-            'titulo' => "Inventario de intereses vocacionales y ocupacionales CASM-83 Revisión 2014",
+            'titulo' => "Cuestionario de Personalidad 16 PF",
             'titulo_secundario' => "Evaluación 04",
-            'autor' => "Luis Alberto Vicuña Peri",
-            'nro_preguntas' => '143'
+            'autor' => "R. B. Cattell",
+            'nro_preguntas' => '187'
         ]);
         
     }
