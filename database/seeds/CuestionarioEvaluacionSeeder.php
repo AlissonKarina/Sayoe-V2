@@ -28,13 +28,22 @@ class CuestionarioEvaluacionSeeder extends Seeder
             'nro_preguntas' => '21'
         ]);
 
-        /* CuestionarioEvaluacion::create([
+        CuestionarioEvaluacion::create([
             'id' => 3,
             'titulo' => "Inventario de Prueba",
             'titulo_secundario' => "Evaluación 03",
             'autor' => "Prueba",
             'nro_preguntas' => '2'
-        ]); */
+        ]);
+
+        CuestionarioEvaluacion::create([
+            'id' => 4,
+            'titulo' => "Cuestionario de Personalidad 16 PF",
+            'titulo_secundario' => "Evaluación 04",
+            'autor' => "R. B. Cattell",
+            'nro_preguntas' => '187'
+        ]);
+
         
     }
 }
