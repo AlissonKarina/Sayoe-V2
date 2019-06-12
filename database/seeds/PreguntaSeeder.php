@@ -553,7 +553,7 @@ class PreguntaSeeder extends Seeder
         ]);
 
         /*** */
-        Pregunta::create([
+      /*   Pregunta::create([
             'id' => '77',
             'pregunta' => "Pregunta prueba 01",
             'bloque' => '1',
@@ -565,7 +565,7 @@ class PreguntaSeeder extends Seeder
             'pregunta' => "Pregunta prueba 02",
             'bloque' => '1',
             'id_cuest_eval' => '3' 
-        ]);
+        ]); */
         
     }
 }

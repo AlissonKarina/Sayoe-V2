@@ -28,13 +28,13 @@ class CuestionarioEvaluacionSeeder extends Seeder
             'nro_preguntas' => '21'
         ]);
 
-        CuestionarioEvaluacion::create([
+        /* CuestionarioEvaluacion::create([
             'id' => 3,
             'titulo' => "Inventario de Prueba",
             'titulo_secundario' => "Evaluación 03",
             'autor' => "Prueba",
             'nro_preguntas' => '2'
-        ]);
+        ]); */
         
     }
 }

@@ -1139,7 +1139,7 @@ class AlternativaSeeder extends Seeder
 
         /** 110 + 21*4 = 194 */
         /** pruebapregunta 1 **/
-        Alternativa::create([//195
+      /*   Alternativa::create([//195
             'descripcion' =>"Alternativa Prueba",
             'id_pregunta' => '77',
             'puntuacion' => '1'
@@ -1148,9 +1148,9 @@ class AlternativaSeeder extends Seeder
             'descripcion' =>"Alternativa Prueba",
             'id_pregunta' => '78',
             'puntuacion' => '2'
-        ]);
+        ]); */
         /**prueba pregunta 2 */
-        Alternativa::create([//197
+ /*        Alternativa::create([//197
             'descripcion' =>"Alternativa Prueba",
             'id_pregunta' => '77',
             'puntuacion' => '1'
@@ -1159,6 +1159,6 @@ class AlternativaSeeder extends Seeder
             'descripcion' =>"Alternativa Prueba",
             'id_pregunta' => '78',
             'puntuacion' => '2'
-        ]);
+        ]); */
     }
 }
