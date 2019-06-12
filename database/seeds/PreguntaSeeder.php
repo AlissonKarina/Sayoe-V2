@@ -1647,149 +1647,143 @@ class PreguntaSeeder extends Seeder
             'bloque' => '5',
             'id_cuest_eval' => '4'
         ]);
-        /** 155 */
+        
+        /** 156 */
         Pregunta::create([
             'id' => '233',
             'pregunta' => "",
             'bloque' => '5',
             'id_cuest_eval' => '4'
         ]);
-        /** 156 */
+        /** 157 */
         Pregunta::create([
             'id' => '234',
             'pregunta' => "",
             'bloque' => '5',
             'id_cuest_eval' => '4'
         ]);
-        /** 157 */
+        /** 158 */
         Pregunta::create([
             'id' => '235',
             'pregunta' => "",
             'bloque' => '5',
             'id_cuest_eval' => '4'
         ]);
-        /** 158 */
+        /** 159 */
         Pregunta::create([
             'id' => '236',
             'pregunta' => "",
             'bloque' => '5',
             'id_cuest_eval' => '4'
         ]);
-        /** 159 */
+        /** 160 */
         Pregunta::create([
             'id' => '237',
             'pregunta' => "",
             'bloque' => '5',
             'id_cuest_eval' => '4'
         ]);
-        /** 160 */
+        /** 161 */
         Pregunta::create([
             'id' => '238',
             'pregunta' => "",
             'bloque' => '5',
             'id_cuest_eval' => '4'
         ]);
-        /** 161 */
+        /** 162 */
         Pregunta::create([
             'id' => '239',
             'pregunta' => "",
             'bloque' => '5',
             'id_cuest_eval' => '4'
         ]);
-        /** 162 */
+        /** 163 */
         Pregunta::create([
             'id' => '240',
             'pregunta' => "",
             'bloque' => '5',
             'id_cuest_eval' => '4'
         ]);
-        /** 163 */
+        /** 164 */
         Pregunta::create([
             'id' => '241',
             'pregunta' => "",
             'bloque' => '5',
             'id_cuest_eval' => '4'
         ]);
-        /** 164 */
+        /** 165 */
         Pregunta::create([
             'id' => '242',
             'pregunta' => "",
             'bloque' => '5',
             'id_cuest_eval' => '4'
         ]);
-        /** 165 */
+        /** 166 */
         Pregunta::create([
             'id' => '243',
             'pregunta' => "",
             'bloque' => '5',
             'id_cuest_eval' => '4'
         ]);
-        /** 166 */
+        /** 167 */
         Pregunta::create([
             'id' => '244',
             'pregunta' => "",
             'bloque' => '5',
             'id_cuest_eval' => '4'
         ]);
-        /** 167 */
+        /** 168 */
         Pregunta::create([
             'id' => '245',
             'pregunta' => "",
             'bloque' => '5',
             'id_cuest_eval' => '4'
         ]);
-        /** 168 */
+        /** 169 */
         Pregunta::create([
             'id' => '246',
             'pregunta' => "",
             'bloque' => '5',
             'id_cuest_eval' => '4'
         ]);
-        /** 169 */
+        /** 170 */
         Pregunta::create([
             'id' => '247',
             'pregunta' => "",
             'bloque' => '5',
             'id_cuest_eval' => '4'
         ]);
-        /** 170 */
+        /** 171 */
         Pregunta::create([
             'id' => '248',
             'pregunta' => "",
             'bloque' => '5',
             'id_cuest_eval' => '4'
         ]);
-        /** 171 */
+        /** 172 */
         Pregunta::create([
             'id' => '249',
             'pregunta' => "",
             'bloque' => '5',
             'id_cuest_eval' => '4'
         ]);
-        /** 172 */
+        /** 173 */
         Pregunta::create([
             'id' => '250',
             'pregunta' => "",
             'bloque' => '5',
             'id_cuest_eval' => '4'
         ]);
-        /** 173 */
+        /** 174 */
         Pregunta::create([
             'id' => '251',
             'pregunta' => "",
             'bloque' => '5',
             'id_cuest_eval' => '4'
         ]);
-        /** 174 */
-        Pregunta::create([
-            'id' => '252',
-            'pregunta' => "",
-            'bloque' => '5',
-            'id_cuest_eval' => '4'
-        ]);
         /** 175 */
         Pregunta::create([
-            'id' => '253',
+            'id' => '252',
             'pregunta' => "",
             'bloque' => '5',
             'id_cuest_eval' => '4'
