@@ -45,7 +45,8 @@ $router->group(['prefix'=>'api/v1'], function() use($router){
         //CREAR PERFIL_PSICOLOGICO, ESTADO_PERFIL
         $router->post('/asignarAlumno', 'PerfilPsicologicoController@create');
         $router->post('/asignarGrupo', 'PerfilPsicologicoController@createGroup');
-        $router->post('/perfiles-pendientes', 'PerfilPsicologicoController@perfilesPendientes');
+        $router->post('/perfiles/pendientes', 'PerfilPsicologicoController@perfilesPendientes');
+        $router->post('/perfiles/realizados', 'PerfilPsicologicoController@perfilesRealizados');
 
         //CITAS
         $router->get('/citas', 'CitaController@index');

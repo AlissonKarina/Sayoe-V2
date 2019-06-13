@@ -103,7 +103,7 @@ class PerfilPsicologicoController extends Controller
         return $this->perfiles($request, false);
     }
 
-    public function perfilesRealizadas(Request $request)
+    public function perfilesRealizados(Request $request)
     {
         return $this->perfiles($request, true);
     }
