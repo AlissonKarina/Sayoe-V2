@@ -10,6 +10,7 @@ use App\Model\EscuelaProfesional;
 use App\Http\Helper\Helper;
 use Illuminate\Http\Request;
 use App\Http\Resources\AlumnoShortResource;
+use App\Http\Resources\PerfilPsicologicoResource;
 
 class PerfilPsicologicoController extends Controller
 {   
