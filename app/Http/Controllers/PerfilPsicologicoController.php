@@ -108,8 +108,15 @@ class PerfilPsicologicoController extends Controller
         ->where('estado','=', '1')
         ->get();
 
-        return [
-            'alumno' => PerfilPsicologicoResource::collection($perfiles)    
-        ];
+        $array = [
+            "anho" => $perfil->anho,
+            "semestre" => $perfil->semestre,
+            "id_perfil_psico" => $perfil->id_perfil,
+            'alumno' => PerfilPsicologicoResource::collection($perfiles)  
+          ];
+          
+        array_push($arrayTotal['data'],$array);
+
+        return response()->json($arrayTotal);
     }
 }
