@@ -48,13 +48,13 @@ class InventarioEstudioController extends Controller
     }
 
     private function descripcion($total){
-        if($total>= 0 or $total<=13){
+        if($total>= 0 and $total<=13){
             return "no presenta signos de depresión";
-        }else if ($total>= 14 or $total<=19){
+        }else if ($total>= 14 and $total<=19){
             return "no presenta signos de depresión leve";
-        }else if ($total>= 20 or $total<=28){
+        }else if ($total>= 20 and $total<=28){
             return "no presenta signos de depresión moderado";
-        }else if ($total>= 29 or $total<=63){
+        }else if ($total>= 29 and $total<=63){
             return "no presenta signos de depresión severo";
         }
     }
