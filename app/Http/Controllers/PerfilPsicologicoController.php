@@ -9,6 +9,7 @@ use App\Model\Alumno;
 use App\Model\EscuelaProfesional;
 use App\Http\Helper\Helper;
 use Illuminate\Http\Request;
+use App\Http\Resources\EstadoPerfilResource;
 
 class PerfilPsicologicoController extends Controller
 {   
