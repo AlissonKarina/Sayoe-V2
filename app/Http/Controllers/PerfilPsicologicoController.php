@@ -107,6 +107,7 @@ class PerfilPsicologicoController extends Controller
         ->where('anho','=', $anho)
         ->where('semestre','=', $semestre)
         ->where('estado','=', '1')
+        ->orderBy('fecha_resuelto', 'asc')
         ->get();
 
         $array = [
