@@ -109,7 +109,7 @@ class PerfilPsicologicoController extends Controller
         ->get();
 
         return [
-            'alumno' => EstadoPerfilResource::collection($perfiles)    
+            'alumno' => PerfilPsicologicoResource::collection($perfiles)    
         ];
     }
 }
