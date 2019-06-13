@@ -99,19 +99,20 @@ class PerfilPsicologicoController extends Controller
 
     public function perfilesPendientes(Request $request){
         $arrayTotal = ["data" => []];
+        $mes = $request->mes;
+        $anho = $request->anho;
 
-        $semestre = Helper::semestre($request->mes);
+        $semestre = Helper::semestre($mes);
 
         $perfiles = PerfilPsicologico::with('alumno')
-        ->where('anho','=', $request->anho)
+        ->where('anho','=', $anho)
         ->where('semestre','=', $semestre)
         ->where('estado','=', '1')
         ->get();
 
         $array = [
-            "anho" => $perfil->anho,
-            "semestre" => $perfil->semestre,
-            "id_perfil_psico" => $perfil->id_perfil,
+            "anho" => $anho,
+            "semestre" => $semestre,
             'alumno' => PerfilPsicologicoResource::collection($perfiles)  
           ];
           
