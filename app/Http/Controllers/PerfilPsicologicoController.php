@@ -116,11 +116,8 @@ class PerfilPsicologicoController extends Controller
             "semestre" => $semestre,
             "perfiles" => PerfilPsicologicoResource::collection($perfiles),
         ];
-
         array_push($arrayTotal['data'],$array);
-
         return response()->json($arrayTotal);
-    
     }
 
     public function perfilesRealizados(Request $request)
