@@ -10,7 +10,6 @@ class PerfilPsicologicoResource extends JsonResource
     {
         return [
             'fecha_resuelto' => $this->fecha_resuelto,
-            'recomendacion' => $this->when($this->recomendacion != null, $this->recomendacion),
             'alumno' => new AlumnoShortResource($this->whenLoaded('alumno')),   
         ];
     }
