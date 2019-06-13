@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use App\Model\Respuesta;
 use App\Model\EstadoPerfil;
 use App\Http\Controllers\Controller;
+use App\Http\Helper\Helper;
 
 class InventarioBeckController extends Controller
 {
