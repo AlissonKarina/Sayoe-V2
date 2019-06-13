@@ -32,8 +32,6 @@ class InventarioEstudioController extends Controller
         $date = $fecha->format('Y-m-d');
 
         $estadoPerfil = EstadoPerfil::find($id_estado_perfil);
-        
-
         $estadoPerfil->estado = '1';
         $estadoPerfil->fecha = $date;
         $estadoPerfil->valor = $total;
