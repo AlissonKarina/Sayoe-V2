@@ -108,9 +108,6 @@ class PerfilPsicologicoController extends Controller
         ->get();
 
         return [
-            'id_perfil_psico' => $this->id_perfil,
-            'anho' => $this->anho,
-            'semestre' => $this->semestre,
             'alumno' => EstadoPerfilResource::collection($perfiles)    
         ];
     }
