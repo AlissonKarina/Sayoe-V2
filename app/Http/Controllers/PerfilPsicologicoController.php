@@ -101,7 +101,6 @@ class PerfilPsicologicoController extends Controller
         $arrayTotal = ["data" => []];
         $mes = $request->mes;
         $anho = $request->anho;
-
         $semestre = Helper::semestre($mes);
 
         $perfiles = PerfilPsicologico::with('alumno')

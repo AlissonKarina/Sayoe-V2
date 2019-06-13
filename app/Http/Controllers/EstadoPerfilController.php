@@ -96,6 +96,7 @@ class EstadoPerfilController extends Controller
 
         $perfil = PerfilPsicologico::find($id_perfil_psico);
         $perfil->estado = '1';
+        $perfil->fecha_resuelto = Helper::fechaActual();
         $perfil->save();
         return true;
     }

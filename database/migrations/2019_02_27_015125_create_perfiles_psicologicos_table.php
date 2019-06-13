@@ -18,6 +18,8 @@ class CreatePerfilesPsicologicosTable extends Migration
             $table->string('recomendacion', 180)->nullable();
             $table->string('motivo', 45)->nullable();
             $table->date('fecha_limite')->nullable();
+            $table->date('fecha_resuelto')->nullable();
+            $table->date('fecha_recomendacion')->nullable();
             $table->tinyInteger('estado')->default('0');
             $table->integer('anho')->unisgned()->nullable();
             $table->string('semestre',8)->nullable();
