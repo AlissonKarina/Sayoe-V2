@@ -57,18 +57,43 @@ class EstadoPerfilController extends Controller
           }
           
       }
-
-      /* dd($arrayTotal); */
-            
-
       return response()->json($arrayTotal);
-
-      /* return response()->json($perfiles); */
     }
 
+    public function obtenerResultado(Request $request){
+      $data = $request->data;
+      $id_cuest_eval = $data['id_cuest_eval'];
+      switch($id_cuest_eval){
+        case '1':
+          $controlador = new InventarioBeckController();
+          $resultado = $controlador->puntaje($request);
+          break;
+        case '2':
+          $controlador = new InventarioBeckController();
+          $resultado = $controlador->puntaje($request);
+          break;
+        case '3':
+          $controlador = new InventarioBeckController();
+          $resultado = $controlador->puntaje($request);
+          break;
+      }
+      $this->revisar($id_cuest_eval);
+      return $resultado;
+    }
 
-    public function obtenerResultado(Request $request)
+    private function revisar($id_perfil_psico)
     {
-      
+        $evaluaciones = EstadoPerfil::where('id_perfil_psico','=', $id_perfil_psico)
+                    ->get();
+        foreach ($evaluaciones as $eva){
+          if($eva->estado == '0'){
+            return false;
+          }
+        }
+
+        $perfil = PerfilPsicologico::find($id_perfil_psico);
+        $perfil->estado = '1';
+        $perfil->save();
+        return true;
     }
 }

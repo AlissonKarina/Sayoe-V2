@@ -28,6 +28,13 @@ class Helper
         ];
     }
 
+    public static function fechaActual(){
+        $fecha = new \Carbon\Carbon();
+        $date = $fecha->format('Y-m-d');
+
+        return $date;
+    }
+
     public static function semestre($mes){
         if($mes =='1' or $mes=='2' or $mes=='3') {
             return '0';

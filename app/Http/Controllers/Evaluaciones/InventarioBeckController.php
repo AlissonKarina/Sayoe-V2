@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Evaluaciones;
 
 use App\Model\CuestionarioEvaluacion;
 use App\Http\Resources\CuestionarioEvaluacionResource;
@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 use App\Model\Respuesta;
 use App\Model\EstadoPerfil;
 
-class InventarioEstudioController extends Controller
+class InventarioBeckController extends Controller
 {
 
     public function puntaje(Request $request){
@@ -28,8 +28,7 @@ class InventarioEstudioController extends Controller
 
         $descripcion = $this->descripcion($total);
         
-        $fecha = new \Carbon\Carbon();
-        $date = $fecha->format('Y-m-d');
+        $date = Helper::fechaActual();
 
         $estadoPerfil = EstadoPerfil::find($id_estado_perfil);
         $estadoPerfil->estado = '1';
@@ -43,7 +42,7 @@ class InventarioEstudioController extends Controller
             "descripcion" => $descripcion
         ]);
     }
-
+    
     private function descripcion($total){
         if($total>= 0 and $total<=13){
             return "no presenta signos de depresión";
