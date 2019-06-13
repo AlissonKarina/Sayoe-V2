@@ -9,8 +9,9 @@ class PerfilPsicologicoResource extends JsonResource
     public function toArray($request)
     {
         return [
-            // no uso
-                    
+            'fecha_resuelto' => $this->fecha_resuelto,
+            'alumno' => new AlumnoShortResource($this->whenLoaded('alumno')),
+
             /* AlumnoShortResource::collection()    */      
         ];
     }

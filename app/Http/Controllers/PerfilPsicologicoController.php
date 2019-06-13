@@ -113,13 +113,14 @@ class PerfilPsicologicoController extends Controller
         $array = [
             "anho" => $anho,
             "semestre" => $semestre,
-            "alumnos" => []
+            "perfiles" => PerfilPsicologicoResource::collection($perfiles),
         ];
 
-        foreach ($perfiles as $perfil){
+        /* foreach ($perfiles as $perfil){
+            $fecha_resuelto = $perfil->fecha_resuelto;
             $alumno = new AlumnoShortResource($perfil->alumno);
             array_push($array['alumnos'],$alumno);            
-        }
+        } */
           
         array_push($arrayTotal['data'],$array);
 
