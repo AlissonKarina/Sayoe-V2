@@ -64,6 +64,7 @@ class EstadoPerfilController extends Controller
     public function obtenerResultado(Request $request){
       $data = $request->data;
       $id_cuest_eval = $data['id_cuest_eval'];
+      $id_perfil_psico = $data['id_perfil_psico'];
       switch($id_cuest_eval){
         case '1':
           $controlador = new InventarioBeckController();
@@ -79,7 +80,7 @@ class EstadoPerfilController extends Controller
           break;
 
       }
-      $this->revisar($id_cuest_eval);
+      $this->revisar($id_perfil_psico);
       return $resultado;
     }
 
