@@ -108,6 +108,7 @@ class PerfilPsicologicoController extends Controller
         ->where('anho','=', $anho)
         ->where('semestre','=', $semestre)
         ->where('estado','=', '1')
+        ->whereNull('descripcion')
         ->orderBy('fecha_resuelto', 'asc')
         ->get();
 
@@ -117,12 +118,6 @@ class PerfilPsicologicoController extends Controller
             "perfiles" => PerfilPsicologicoResource::collection($perfiles),
         ];
 
-        /* foreach ($perfiles as $perfil){
-            $fecha_resuelto = $perfil->fecha_resuelto;
-            $alumno = new AlumnoShortResource($perfil->alumno);
-            array_push($array['alumnos'],$alumno);            
-        } */
-          
         array_push($arrayTotal['data'],$array);
 
         return response()->json($arrayTotal);
