@@ -10,7 +10,7 @@ class PerfilPsicologicoResource extends JsonResource
     {
         return [
             // no uso
-            new AlumnoShortResource($this->whenLoaded('alumno'))            
+                    
             /* AlumnoShortResource::collection()    */      
         ];
     }
