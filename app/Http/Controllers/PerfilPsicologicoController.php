@@ -113,8 +113,8 @@ class PerfilPsicologicoController extends Controller
         $array = [
             "anho" => $anho,
             "semestre" => $semestre,
-            'alumno' => PerfilPsicologicoResource::collection($perfiles)  
-          ];
+            'alumnos' => PerfilPsicologicoResource::collection($perfiles)  
+        ];
           
         array_push($arrayTotal['data'],$array);
 
