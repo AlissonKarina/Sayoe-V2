@@ -66,9 +66,9 @@ class EstadoPerfilController extends Controller
       /* return response()->json($perfiles); */
     }
 
-    public function show($id)
+    public function show($id_estado_perfil)
     {
-      $estadoPerfil = EstadoPerfil::find($id);
+      $estadoPerfil = EstadoPerfil::find($id_estado_perfil);
 
       return response()->json([
         "descripcion" => $estadoPerfil->descripcion
