@@ -95,4 +95,23 @@ class PerfilPsicologicoController extends Controller
 
         return response()->json("listo", 200);
     }
+
+    public function perfilesPendientes(Request $request){
+        $arrayTotal = ["data" => []];
+
+        $semestre = Helper::semestre($request->mes);
+
+        $perfiles = PerfilPsicologico::with('alumno')
+        ->where('anho','=', $request->anho)
+        ->where('semestre','=', $semestre)
+        ->where('estado','=', '1')
+        ->get();
+
+        return [
+            'id_perfil_psico' => $this->id_perfil,
+            'anho' => $this->anho,
+            'semestre' => $this->semestre,
+            'alumno' => EstadoPerfilResource::collection($perfiles)    
+        ];
+    }
 }

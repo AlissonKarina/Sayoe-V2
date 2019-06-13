@@ -36,7 +36,6 @@ class InventarioEstudioController extends Controller
         $estadoPerfil->fecha = $date;
         $estadoPerfil->valor = $total;
         $estadoPerfil->descripcion = $descripcion;
-
         $estadoPerfil->save();
 
         return response()->json([

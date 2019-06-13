@@ -66,15 +66,6 @@ class EstadoPerfilController extends Controller
       /* return response()->json($perfiles); */
     }
 
-    public function show($id_estado_perfil)
-    {
-      $estadoPerfil = EstadoPerfil::find($id_estado_perfil);
-
-      return response()->json([
-        "descripcion" => $estadoPerfil->descripcion
-      ]);
-
-    }
 
     public function obtenerResultado(Request $request)
     {
