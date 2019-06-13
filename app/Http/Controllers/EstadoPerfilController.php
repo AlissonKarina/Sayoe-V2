@@ -77,6 +77,7 @@ class EstadoPerfilController extends Controller
           $controlador = new InventarioBeckController();
           $resultado = $controlador->puntaje($request);
           break;
+          
       }
       $this->revisar($id_cuest_eval);
       return $resultado;
