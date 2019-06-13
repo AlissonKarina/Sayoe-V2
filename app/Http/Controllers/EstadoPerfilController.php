@@ -11,7 +11,7 @@ use App\Http\Resources\PerfilPsicologicoEstadoResource;
 use App\Http\Resources\EstadoPerfilResource;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Evaluaciones\InventarioBeckController;
-
+use App\Http\Controllers\Controller;
 
 class EstadoPerfilController extends Controller
 {
