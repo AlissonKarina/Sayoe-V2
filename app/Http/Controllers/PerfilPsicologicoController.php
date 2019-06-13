@@ -98,22 +98,41 @@ class PerfilPsicologicoController extends Controller
         return response()->json("listo", 200);
     }
 
-    public function perfilesPendientes(Request $request){
-        $arrayTotal = ["data" => []];
-        $mes = $request->mes;
-        $anho = $request->anho;
-        $semestre = Helper::semestre($mes);
+    public function perfilesPendientes(Request $request)
+    {
+        return $this->perfiles($request, false);
+    }
 
-        $perfiles = PerfilPsicologico::with('alumno')
-        ->where('anho','=', $anho)
-        ->where('semestre','=', $semestre)
-        ->where('estado','=', '1')
-        ->whereNull('recomendacion')
-        ->orderBy('fecha_resuelto', 'asc')
-        ->get();
+    public function perfilesRealizadas(Request $request)
+    {
+        return $this->perfiles($request, true);
+    }
+
+    private function perfiles(Request $request, $null){
+        $arrayTotal = ["data" => []];
+        $semestre = Helper::semestre($request->mes);
+
+        if($null){
+            $perfiles = PerfilPsicologico::with('alumno')
+            ->where('anho','=', $request->anho)
+            ->where('semestre','=', $semestre)
+            ->where('estado','=', '1')
+            ->whereNotNull('recomendacion')
+            ->orderBy('fecha_resuelto', 'asc')
+            ->get();
+        }else{
+            $perfiles = PerfilPsicologico::with('alumno')
+            ->where('anho','=', $request->anho)
+            ->where('semestre','=', $semestre)
+            ->where('estado','=', '1')
+            ->whereNull('recomendacion')
+            ->orderBy('fecha_resuelto', 'asc')
+            ->get();
+        }
+        
 
         $array = [
-            "anho" => $anho,
+            "anho" => $request->anho,
             "semestre" => $semestre,
             "perfiles" => PerfilPsicologicoResource::collection($perfiles),
         ];
@@ -122,4 +141,5 @@ class PerfilPsicologicoController extends Controller
 
         return response()->json($arrayTotal);
     }
+
 }
