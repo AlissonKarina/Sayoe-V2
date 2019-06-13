@@ -7,6 +7,7 @@ use App\Http\Resources\CuestionarioEvaluacionResource;
 use Illuminate\Http\Request;
 use App\Model\Respuesta;
 use App\Model\EstadoPerfil;
+use App\Http\Controllers\Controller;
 
 class InventarioBeckController extends Controller
 {

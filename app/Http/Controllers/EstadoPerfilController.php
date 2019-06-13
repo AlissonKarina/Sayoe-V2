@@ -11,7 +11,7 @@ use App\Http\Resources\PerfilPsicologicoEstadoResource;
 use App\Http\Resources\EstadoPerfilResource;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Evaluaciones\InventarioBeckController;
-use App\Http\Controllers\Controller;
+
 
 class EstadoPerfilController extends Controller
 {
@@ -77,7 +77,7 @@ class EstadoPerfilController extends Controller
           $controlador = new InventarioBeckController();
           $resultado = $controlador->puntaje($request);
           break;
-          
+
       }
       $this->revisar($id_cuest_eval);
       return $resultado;
