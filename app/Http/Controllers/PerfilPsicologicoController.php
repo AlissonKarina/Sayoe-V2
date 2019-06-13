@@ -125,14 +125,8 @@ class PerfilPsicologicoController extends Controller
 
     public function perfilesRealizados(Request $request)
     {
-        return $this->perfiles($request, true);
-    }
-
-    private function perfiles(Request $request, $null){
         $arrayTotal = ["data" => []];
         $semestre = Helper::semestre($request->mes);
-
-        if($null){
             $perfiles = PerfilPsicologico::with('alumno')
             ->where('anho','=', $request->anho)
             ->where('semestre','=', $semestre)
@@ -140,26 +134,13 @@ class PerfilPsicologicoController extends Controller
             ->whereNotNull('recomendacion')
             ->orderBy('fecha_resuelto', 'asc')
             ->get();
-        }else{
-            $perfiles = PerfilPsicologico::with('alumno')
-            ->where('anho','=', $request->anho)
-            ->where('semestre','=', $semestre)
-            ->where('estado','=', '1')
-            ->whereNull('recomendacion')
-            ->orderBy('fecha_resuelto', 'asc')
-            ->get();
-        }
-        
-
         $array = [
             "anho" => $request->anho,
             "semestre" => $semestre,
             "perfiles" => PerfilPsicologicoResource::collection($perfiles),
         ];
-
         array_push($arrayTotal['data'],$array);
 
         return response()->json($arrayTotal);
     }
-
 }
