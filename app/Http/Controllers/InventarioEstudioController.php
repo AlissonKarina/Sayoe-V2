@@ -29,7 +29,7 @@ class InventarioEstudioController extends Controller
         $descripcion = $this->descripcion($total);
         
         $fecha = new \Carbon\Carbon();
-        $date = $fecha->format('d-m-Y');
+        $date = $fecha->format('Y-m-d');
 
         $estadoPerfil = EstadoPerfil::find($id_estado_perfil);
         
@@ -49,13 +49,13 @@ class InventarioEstudioController extends Controller
 
     private function descripcion($total){
         if($total>= 0 or $total<=13){
-            return "El alumno no presenta signos de depresión";
+            return "no presenta signos de depresión";
         }else if ($total>= 14 or $total<=19){
-            return "El alumno no presenta signos de depresión leve";
+            return "no presenta signos de depresión leve";
         }else if ($total>= 20 or $total<=28){
-            return "El alumno no presenta signos de depresión moderado";
+            return "no presenta signos de depresión moderado";
         }else if ($total>= 29 or $total<=63){
-            return "El alumno no presenta signos de depresión severo";
+            return "no presenta signos de depresión severo";
         }
     }
 
