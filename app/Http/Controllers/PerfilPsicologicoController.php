@@ -140,4 +140,12 @@ class PerfilPsicologicoController extends Controller
 
         return response()->json($arrayTotal);
     }
+
+    public function recomendar(Request $request)
+    {
+        $perfil = PerfilPsicologico::find($request->id_perfil_psico);
+
+        $perfil->recomendacion = $request->recomendar;
+        $perfil->save();
+    }
 }
