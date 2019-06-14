@@ -145,9 +145,9 @@ class PerfilPsicologicoController extends Controller
     {
         $data = $request['data'];
         return $data;
-        $perfil = PerfilPsicologico::find($data->id_perfil_psico);
+        $perfil = PerfilPsicologico::find($data['id_perfil_psico']);
 
-        $perfil->recomendacion = $data->recomendacion;
+        $perfil->recomendacion = $data['recomendacion'];
         $perfil->save();
     }
 }
