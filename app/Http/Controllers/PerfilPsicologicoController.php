@@ -149,6 +149,6 @@ class PerfilPsicologicoController extends Controller
         $perfil->recomendacion = $data['recomendacion'];
         $perfil->save();
 
-        return true;
+        return response()->json("listo");;
     }
 }
