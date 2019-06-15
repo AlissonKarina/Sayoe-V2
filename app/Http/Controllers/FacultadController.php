@@ -10,7 +10,7 @@ class FacultadController extends Controller
 
     public function index() {
       $facultades = Facultad::all();
-      return response()->json($facultades);
+      return response()->json($facultades,200);
     }
 
     public function create(Request $request) {
@@ -18,13 +18,13 @@ class FacultadController extends Controller
        $facultad->nombre = $request->nombre;
        
        $facultad->save();
-       return response()->json($facultad);
+       return response()->json($facultad,200);
     }
 
     public function show($id)
     {
        $facultad = Facultad::find($id);
-       return response()->json($facultad);
+       return response()->json($facultad,200);
     }
 
     public function update(Request $request, $id)
@@ -33,13 +33,13 @@ class FacultadController extends Controller
         
        $facultad->nombre = $request->input('nombre');
        $facultad->save();
-       return response()->json($facultad);
+       return response()->json($facultad,200);
     }
 
     public function destroy($id)
     {
        $facultad = Facultad::find($id);
        $facultad->delete();
-       return response()->json('facultad removida satisfactoriamente');
+       return response()->json('facultad removida satisfactoriamente',200);
     }
 }

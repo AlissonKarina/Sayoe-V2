@@ -117,7 +117,7 @@ class PerfilPsicologicoController extends Controller
             "perfiles" => PerfilPsicologicoResource::collection($perfiles),
         ];
         array_push($arrayTotal['data'],$array);
-        return response()->json($arrayTotal);
+        return response()->json($arrayTotal,200);
     }
 
     public function perfilesRealizados(Request $request)
@@ -149,6 +149,6 @@ class PerfilPsicologicoController extends Controller
         $perfil->recomendacion = $data['recomendacion'];
         $perfil->save();
 
-        return response()->json("listo");;
+        return response()->json("OK",200);;
     }
 }

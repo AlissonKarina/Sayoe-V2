@@ -58,7 +58,7 @@ class EstadoPerfilController extends Controller
           }
           
       }
-      return response()->json($arrayTotal);
+      return response()->json($arrayTotal,200);
     }
 
     public function obtenerResultado(Request $request){
