@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Helper;
+use Carbon\Carbon;
 
 
 class Helper
@@ -16,25 +17,31 @@ class Helper
         return $nombre;
     }
     
-    public static function fecha($fecha){
-        $dia = $fecha[0].$fecha[1];
-        $mes = $fecha[3].$fecha[4];
-        $anho = $fecha[6].$fecha[7].$fecha[8].$fecha[9];
+    public static function fecha_hora($fecha_hora){
+        $fecha = substr($fecha_hora, 0, 10);
+        $hora = substr($fecha_hora, 11, 5);
 
         return [
-            "dia" => $dia,
-            "mes" => $mes,
-            'anho' => $anho
+            "fecha" => $fecha,
+            "hora" => $hora
         ];
     }
 
+    public static function fechaActual(){
+        $fecha = new \Carbon\Carbon();
+        $date = $fecha->format('Y-m-d');
+
+        return $date;
+    }
+
     public static function semestre($mes){
-        if($mes =='1' or $mes=='2' or $mes=='3') {
-            return '0';
-        } else if ($mes =='4' or $mes=='5' or $mes=='6'  or $mes=='7') {
-            return '1';
+        $mes = (int)$mes;
+        if($mes >= 0 and $mes <= 3) {
+            return 0;
+        } else if ($mes >= 4 and $mes <= 7) {
+            return 1;
         } else {
-            return '2';
+            return 2;
         }
     }
 }

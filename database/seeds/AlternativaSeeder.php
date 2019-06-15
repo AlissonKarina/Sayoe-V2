@@ -1802,265 +1802,117 @@ class AlternativaSeeder extends Seeder
             'id_pregunta' => '116',
             'puntuacion' => '1'
         ]);
-        Alternativa::create([
-            'descripcion' => "No",
-            'id_pregunta' => '116',
-            'puntuacion' => '2'
-        ]);
 
-        /*  39  */
-        Alternativa::create([
-            'descripcion' => "Solo en pocas ocasiones",
-            'id_pregunta' => '117',
-            'puntuacion' => '0'
-        ]);
-        Alternativa::create([
-            'descripcion' => "Varias veces",
-            'id_pregunta' => '117',
-            'puntuacion' => '1'
-        ]);
-        Alternativa::create([
-            'descripcion' => "Muchas veces",
-            'id_pregunta' => '117',
+        /** prueba alternativas prueba habitos estudio */
+        /** 1 */
+        Alternativa::create([//275
+            'descripcion' => "Descripcion prueba habitos estudio",
+            'id_pregunta' => '253',
             'puntuacion' => '2'
         ]);
-
-        /*  40  */
-        Alternativa::create([
-            'descripcion' => "Vela",
-            'id_pregunta' => '118',
-            'puntuacion' => '0'
+        Alternativa::create([//276
+            'descripcion' => "Descripcion prueba habitos estudio",
+            'id_pregunta' => '253',
+            'puntuacion' => '3'
         ]);
-        Alternativa::create([
-            'descripcion' => "Luna",
-            'id_pregunta' => '118',
-            'puntuacion' => '1'
-        ]);
-        Alternativa::create([
-            'descripcion' => "Luz eléctrica",
-            'id_pregunta' => '118',
+        /** 2 */
+        Alternativa::create([//277
+            'descripcion' => "Descripcion prueba habitos estudio",
+            'id_pregunta' => '254',
             'puntuacion' => '2'
         ]);
-
-        /*  41  */
-        Alternativa::create([
-            'descripcion' => "Valeroso",
-            'id_pregunta' => '119',
-            'puntuacion' => '0'
+        Alternativa::create([//278
+            'descripcion' => "Descripcion prueba habitos estudio",
+            'id_pregunta' => '254',
+            'puntuacion' => '3'
         ]);
-        Alternativa::create([
-            'descripcion' => "No estoy seguro",
-            'id_pregunta' => '119',
-            'puntuacion' => '1'
-        ]);
-        Alternativa::create([
-            'descripcion' => "Falso",
-            'id_pregunta' => '119',
+        /** 3 */
+        Alternativa::create([//279
+            'descripcion' => "Descripcion prueba habitos estudio",
+            'id_pregunta' => '255',
             'puntuacion' => '2'
         ]);
-
-        /*  42  */
-        Alternativa::create([
-            'descripcion' => "Verdadero",
-            'id_pregunta' => '120',
-            'puntuacion' => '0'
+        Alternativa::create([//280
+            'descripcion' => "Descripcion prueba habitos estudio",
+            'id_pregunta' => '255',
+            'puntuacion' => '3'
         ]);
-        Alternativa::create([
-            'descripcion' => "No estoy seguro",
-            'id_pregunta' => '120',
-            'puntuacion' => '1'
-        ]);
-        Alternativa::create([
-            'descripcion' => "Falso",
-            'id_pregunta' => '120',
+        /** 4 */
+        Alternativa::create([//281
+            'descripcion' => "Descripcion prueba habitos estudio",
+            'id_pregunta' => '256',
             'puntuacion' => '2'
         ]);
-
-        /*  43  */
-        Alternativa::create([
-            'descripcion' => "Verdadero",
-            'id_pregunta' => '121',
-            'puntuacion' => '0'
+        Alternativa::create([//282
+            'descripcion' => "Descripcion prueba habitos estudio",
+            'id_pregunta' => '256',
+            'puntuacion' => '3'
         ]);
-        Alternativa::create([
-            'descripcion' => "Término medio",
-            'id_pregunta' => '121',
-            'puntuacion' => '1'
-        ]);
-        Alternativa::create([
-            'descripcion' => "Falso",
-            'id_pregunta' => '121',
+        /** 5 */
+        Alternativa::create([//283
+            'descripcion' => "Descripcion prueba habitos estudio",
+            'id_pregunta' => '257',
             'puntuacion' => '2'
         ]);
-
-        /*  44  */
-        Alternativa::create([
-            'descripcion' => "Sí",
-            'id_pregunta' => '122',
-            'puntuacion' => '0'
+        Alternativa::create([//284
+            'descripcion' => "Descripcion prueba habitos estudio",
+            'id_pregunta' => '257',
+            'puntuacion' => '3'
         ]);
-        Alternativa::create([
-            'descripcion' => "Término medio",
-            'id_pregunta' => '122',
-            'puntuacion' => '1'
-        ]);
-        Alternativa::create([
-            'descripcion' => "No",
-            'id_pregunta' => '122',
+        /** 6 */
+        Alternativa::create([//285
+            'descripcion' => "Descripcion prueba habitos estudio",
+            'id_pregunta' => '258',
             'puntuacion' => '2'
         ]);
-
-        /*  45  */
-        Alternativa::create([
-            'descripcion' => "Verdadero",
-            'id_pregunta' => '123',
-            'puntuacion' => '0'
+        Alternativa::create([//286
+            'descripcion' => "Descripcion prueba habitos estudio",
+            'id_pregunta' => '258',
+            'puntuacion' => '3'
         ]);
-        Alternativa::create([
-            'descripcion' => "No estoy seguro",
-            'id_pregunta' => '123',
-            'puntuacion' => '1'
-        ]);
-        Alternativa::create([
-            'descripcion' => "Falso",
-            'id_pregunta' => '123',
+        /** 7 */
+        Alternativa::create([//287
+            'descripcion' => "Descripcion prueba habitos estudio",
+            'id_pregunta' => '259',
             'puntuacion' => '2'
         ]);
-
-        /*  46  */
-        Alternativa::create([
-            'descripcion' => "Verdadero",
-            'id_pregunta' => '124',
-            'puntuacion' => '0'
+        Alternativa::create([//288
+            'descripcion' => "Descripcion prueba habitos estudio",
+            'id_pregunta' => '259',
+            'puntuacion' => '3'
         ]);
-        Alternativa::create([
-            'descripcion' => "No estoy seguro",
-            'id_pregunta' => '124',
-            'puntuacion' => '1'
-        ]);
-        Alternativa::create([
-            'descripcion' => "Falso",
-            'id_pregunta' => '124',
+        /** 8 */
+        Alternativa::create([//289
+            'descripcion' => "Descripcion prueba habitos estudio",
+            'id_pregunta' => '260',
             'puntuacion' => '2'
         ]);
-
-        /*  47  */
-        Alternativa::create([
-            'descripcion' => "Sí",
-            'id_pregunta' => '125',
-            'puntuacion' => '0'
+        Alternativa::create([//290
+            'descripcion' => "Descripcion prueba habitos estudio",
+            'id_pregunta' => '260',
+            'puntuacion' => '3'
         ]);
-        Alternativa::create([
-            'descripcion' => "Término medio",
-            'id_pregunta' => '125',
-            'puntuacion' => '1'
-        ]);
-        Alternativa::create([
-            'descripcion' => "No",
-            'id_pregunta' => '125',
+        /** 9 */
+        Alternativa::create([//291
+            'descripcion' => "Descripcion prueba habitos estudio",
+            'id_pregunta' => '261',
             'puntuacion' => '2'
         ]);
-
-        /*  48  */
-        Alternativa::create([
-            'descripcion' => "La música",
-            'id_pregunta' => '126',
-            'puntuacion' => '0'
+        Alternativa::create([//292
+            'descripcion' => "Descripcion prueba habitos estudio",
+            'id_pregunta' => '261',
+            'puntuacion' => '3'
         ]);
-        Alternativa::create([
-            'descripcion' => "No estoy seguro",
-            'id_pregunta' => '126',
-            'puntuacion' => '1'
-        ]);
-        Alternativa::create([
-            'descripcion' => "La actividad de tipo manual",
-            'id_pregunta' => '126',
+        /** 10 */
+        Alternativa::create([//293
+            'descripcion' => "Descripcion prueba habitos estudio",
+            'id_pregunta' => '262',
             'puntuacion' => '2'
         ]);
-
-        /*  49  */
-        Alternativa::create([
-            'descripcion' => "Intento calmarle",
-            'id_pregunta' => '127',
-            'puntuacion' => '0'
-        ]);
-        Alternativa::create([
-            'descripcion' => "No estoy seguro",
-            'id_pregunta' => '127',
-            'puntuacion' => '1'
-        ]);
-        Alternativa::create([
-            'descripcion' => "Me irrito con él",
-            'id_pregunta' => '127',
-            'puntuacion' => '2'
-        ]);
-
-        /*  50  */
-        Alternativa::create([
-            'descripcion' => "Ayudar a sus hijos a desarrollarse afectivamente",
-            'id_pregunta' => '128',
-            'puntuacion' => '0'
-        ]);
-        Alternativa::create([
-            'descripcion' => "Término medio",
-            'id_pregunta' => '128',
-            'puntuacion' => '1'
-        ]);
-        Alternativa::create([
-            'descripcion' => "Enseñarles a controlar sus emociones",
-            'id_pregunta' => '128',
-            'puntuacion' => '2'
-        ]);
-
-        /*  51  */
-        Alternativa::create([
-            'descripcion' => "Sí",
-            'id_pregunta' => '129',
-            'puntuacion' => '0'
-        ]);
-        Alternativa::create([
-            'descripcion' => "Término medio",
-            'id_pregunta' => '129',
-            'puntuacion' => '1'
-        ]);
-        Alternativa::create([
-            'descripcion' => "No",
-            'id_pregunta' => '129',
-            'puntuacion' => '2'
-        ]);
-
-        /*  52  */
-        Alternativa::create([
-            'descripcion' => "Muy raramente",
-            'id_pregunta' => '130',
-            'puntuacion' => '0'
-        ]);
-        Alternativa::create([
-            'descripcion' => "Término medio",
-            'id_pregunta' => '130',
-            'puntuacion' => '1'
-        ]);
-        Alternativa::create([
-            'descripcion' => "Muy a menudo",
-            'id_pregunta' => '130',
-            'puntuacion' => '2'
-        ]);
-
-        /*  53  */
-        Alternativa::create([
-            'descripcion' => "Sí",
-            'id_pregunta' => '120',
-            'puntuacion' => '0'
-        ]);
-        Alternativa::create([
-            'descripcion' => "Término medio",
-            'id_pregunta' => '120',
-            'puntuacion' => '1'
-        ]);
-        Alternativa::create([
-            'descripcion' => "No",
-            'id_pregunta' => '120',
-            'puntuacion' => '2'
+        Alternativa::create([//294
+            'descripcion' => "Descripcion prueba habitos estudio",
+            'id_pregunta' => '262',
+            'puntuacion' => '3'
         ]);
     }
 }

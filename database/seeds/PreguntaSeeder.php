@@ -12,7 +12,7 @@ class PreguntaSeeder extends Seeder
      */
     public function run()
     {
-        /*************** PRIMER TEST: Inventario de Hábitos de Estudio CASM-85 Revisión 2017 ***************/
+        //*************** PRIMER TEST: Inventario de Hábitos de Estudio CASM-85 Revisión 2017 ***************/
         Pregunta::create([
             'id' => '1',
             'pregunta' => "Al estudiar... Leo todo lo que tengo que estudiar subrayando los puntos más importantes... ",
@@ -563,7 +563,7 @@ class PreguntaSeeder extends Seeder
         Pregunta::create([
             'id' => '78',
             'pregunta' => "Pregunta prueba 02",
-            'bloque' => '1',
+            'bloque' => '2',
             'id_cuest_eval' => '3' 
         ]); 
 
@@ -1877,6 +1877,68 @@ class PreguntaSeeder extends Seeder
             'pregunta' => "Creo que no me he saltado ninguna cuestión y he contestado a todas de modo apropiado:",
             'bloque' => '5',
             'id_cuest_eval' => '4'
+        ]);
+
+        /** PRUEBAAA HABITOS ESTUDIO */
+        Pregunta::create([
+            'id' => '253',
+            'pregunta' => "Pregunta prueba",
+            'bloque' => '1',
+            'id_cuest_eval' => '5'
+        ]);
+        Pregunta::create([
+            'id' => '254',
+            'pregunta' => "Pregunta prueba",
+            'bloque' => '1',
+            'id_cuest_eval' => '5'
+        ]);
+        Pregunta::create([
+            'id' => '255',
+            'pregunta' => "Pregunta prueba",
+            'bloque' => '2',
+            'id_cuest_eval' => '5'
+        ]);
+        Pregunta::create([
+            'id' => '256',
+            'pregunta' => "Pregunta prueba",
+            'bloque' => '2',
+            'id_cuest_eval' => '5'
+        ]);
+        Pregunta::create([
+            'id' => '257',
+            'pregunta' => "Pregunta prueba",
+            'bloque' => '3',
+            'id_cuest_eval' => '5'
+        ]);
+        Pregunta::create([
+            'id' => '258',
+            'pregunta' => "Pregunta prueba",
+            'bloque' => '3',
+            'id_cuest_eval' => '5'
+        ]);
+        Pregunta::create([
+            'id' => '259',
+            'pregunta' => "Pregunta prueba",
+            'bloque' => '4',
+            'id_cuest_eval' => '5'
+        ]);
+        Pregunta::create([
+            'id' => '260',
+            'pregunta' => "Pregunta prueba",
+            'bloque' => '4',
+            'id_cuest_eval' => '5'
+        ]);
+        Pregunta::create([
+            'id' => '261',
+            'pregunta' => "Pregunta prueba",
+            'bloque' => '5',
+            'id_cuest_eval' => '5'
+        ]);
+        Pregunta::create([
+            'id' => '262',
+            'pregunta' => "Pregunta prueba",
+            'bloque' => '5',
+            'id_cuest_eval' => '5'
         ]);
     }
 }

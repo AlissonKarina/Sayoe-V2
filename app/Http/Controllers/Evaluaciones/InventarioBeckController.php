@@ -1,14 +1,16 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Evaluaciones;
 
 use App\Model\CuestionarioEvaluacion;
 use App\Http\Resources\CuestionarioEvaluacionResource;
 use Illuminate\Http\Request;
 use App\Model\Respuesta;
 use App\Model\EstadoPerfil;
+use App\Http\Controllers\Controller;
+use App\Http\Helper\Helper;
 
-class InventarioEstudioController extends Controller
+class InventarioBeckController extends Controller
 {
 
     public function puntaje(Request $request){
@@ -19,26 +21,18 @@ class InventarioEstudioController extends Controller
         
         foreach ($data['alternativa'] as $valor)
         {
-            Respuesta::create([
-                "id_alternativa" => $valor['id'],
-                "id_pefil_psico" => $id_perfil_psico,
-            ]);
             $total = $total + $valor['puntuacion']; 
         }
 
         $descripcion = $this->descripcion($total);
         
-        $fecha = new \Carbon\Carbon();
-        $date = $fecha->format('d-m-Y');
+        $date = Helper::fechaActual();
 
         $estadoPerfil = EstadoPerfil::find($id_estado_perfil);
-        
-
         $estadoPerfil->estado = '1';
         $estadoPerfil->fecha = $date;
         $estadoPerfil->valor = $total;
         $estadoPerfil->descripcion = $descripcion;
-
         $estadoPerfil->save();
 
         return response()->json([
@@ -46,16 +40,16 @@ class InventarioEstudioController extends Controller
             "descripcion" => $descripcion
         ]);
     }
-
+    
     private function descripcion($total){
-        if($total>= 0 or $total<=13){
-            return "El alumno no presenta signos de depresión";
-        }else if ($total>= 14 or $total<=19){
-            return "El alumno no presenta signos de depresión leve";
-        }else if ($total>= 20 or $total<=28){
-            return "El alumno no presenta signos de depresión moderado";
-        }else if ($total>= 29 or $total<=63){
-            return "El alumno no presenta signos de depresión severo";
+        if($total>= 0 and $total<=13){
+            return "no presenta signos de depresión";
+        }else if ($total>= 14 and $total<=19){
+            return "no presenta signos de depresión leve";
+        }else if ($total>= 20 and $total<=28){
+            return "no presenta signos de depresión moderado";
+        }else if ($total>= 29 and $total<=63){
+            return "no presenta signos de depresión severo";
         }
     }
 

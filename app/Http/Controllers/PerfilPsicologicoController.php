@@ -9,6 +9,8 @@ use App\Model\Alumno;
 use App\Model\EscuelaProfesional;
 use App\Http\Helper\Helper;
 use Illuminate\Http\Request;
+use App\Http\Resources\AlumnoShortResource;
+use App\Http\Resources\PerfilPsicologicoResource;
 
 class PerfilPsicologicoController extends Controller
 {   
@@ -94,5 +96,59 @@ class PerfilPsicologicoController extends Controller
         }
 
         return response()->json("listo", 200);
+    }
+
+    public function perfilesPendientes(Request $request)
+    {
+        $arrayTotal = ["data" => []];
+        $semestre = Helper::semestre($request->mes);
+
+            $perfiles = PerfilPsicologico::with('alumno')
+            ->where('anho','=', $request->anho)
+            ->where('semestre','=', $semestre)
+            ->where('estado','=', '1')
+            ->whereNull('recomendacion')
+            ->orderBy('fecha_resuelto', 'asc')
+            ->get();
+        
+        $array = [
+            "anho" => $request->anho,
+            "semestre" => $semestre,
+            "perfiles" => PerfilPsicologicoResource::collection($perfiles),
+        ];
+        array_push($arrayTotal['data'],$array);
+        return response()->json($arrayTotal,200);
+    }
+
+    public function perfilesRealizados(Request $request)
+    {
+        $arrayTotal = ["data" => []];
+        $semestre = Helper::semestre($request->mes);
+            $perfiles = PerfilPsicologico::with('alumno')
+            ->where('anho','=', $request->anho)
+            ->where('semestre','=', $semestre)
+            ->where('estado','=', '1')
+            ->whereNotNull('recomendacion')
+            ->orderBy('fecha_resuelto', 'asc')
+            ->get();
+        $array = [
+            "anho" => $request->anho,
+            "semestre" => $semestre,
+            "perfiles" => PerfilPsicologicoResource::collection($perfiles),
+        ];
+        array_push($arrayTotal['data'],$array);
+
+        return response()->json($arrayTotal);
+    }
+
+    public function recomendar(Request $request)
+    {
+        $data = $request->data;
+        $perfil = PerfilPsicologico::find($data['id_perfil_psico']);
+
+        $perfil->recomendacion = $data['recomendacion'];
+        $perfil->save();
+
+        return response()->json("OK",200);;
     }
 }

@@ -35,15 +35,19 @@ $router->group(['prefix'=>'api/v1'], function() use($router){
         //CUESTIONARIO EVALUACION
         $router->get('/cuestionario-evaluaciones', 'CuestionarioEvaluacionController@index');
         $router->get('/cuestionario-evaluacion/{id}', 'CuestionarioEvaluacionController@show');
-        $router->post('/inventario-estudio', 'InventarioEstudioController@puntaje');
+        
 
         //ESTADO_PERFIL
         $router->post('/evaluaciones_asignadas/pendientes', 'EstadoPerfilController@evaluacionesPendientes');
         $router->post('/evaluaciones_asignadas/realizadas', 'EstadoPerfilController@evaluacionesRealizadas');
+        $router->post('/cuestionario-evaluacion', 'EstadoPerfilController@obtenerResultado');
 
         //CREAR PERFIL_PSICOLOGICO, ESTADO_PERFIL
         $router->post('/asignarAlumno', 'PerfilPsicologicoController@create');
         $router->post('/asignarGrupo', 'PerfilPsicologicoController@createGroup');
+        $router->post('/perfiles/pendientes', 'PerfilPsicologicoController@perfilesPendientes');
+        $router->post('/perfiles/realizados', 'PerfilPsicologicoController@perfilesRealizados');
+        $router->post('/recomendar', 'PerfilPsicologicoController@recomendar');
 
         //CITAS
         $router->get('/citas', 'CitaController@index');
