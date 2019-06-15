@@ -24,7 +24,7 @@ class InventarioBeckController extends Controller
             $total = $total + $valor['puntuacion']; 
         }
 
-        $descripcion = $this->descripcion($total);
+        $descripcion = ['resultado' => $this->descripcion($total)];
         
         $date = Helper::fechaActual();
 
@@ -35,10 +35,7 @@ class InventarioBeckController extends Controller
         $estadoPerfil->descripcion = $descripcion;
         $estadoPerfil->save();
 
-        return response()->json([
-            "total" => $total,
-            "descripcion" => $descripcion
-        ]);
+        return response()->json($descripcion);
     }
     
     private function descripcion($total){
