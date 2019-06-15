@@ -21,10 +21,6 @@ class InventarioBeckController extends Controller
         
         foreach ($data['alternativa'] as $valor)
         {
-            Respuesta::create([
-                "id_alternativa" => $valor['id'],
-                "id_pefil_psico" => $id_perfil_psico,
-            ]);
             $total = $total + $valor['puntuacion']; 
         }
 

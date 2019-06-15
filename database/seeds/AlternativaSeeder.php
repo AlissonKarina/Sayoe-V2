@@ -1617,5 +1617,117 @@ class AlternativaSeeder extends Seeder
             'id_pregunta' => '110',
             'puntuacion' => '1'
         ]);
+
+        /** prueba alternativas prueba habitos estudio */
+        /** 1 */
+        Alternativa::create([//275
+            'descripcion' => "Descripcion prueba habitos estudio",
+            'id_pregunta' => '253',
+            'puntuacion' => '2'
+        ]);
+        Alternativa::create([//276
+            'descripcion' => "Descripcion prueba habitos estudio",
+            'id_pregunta' => '253',
+            'puntuacion' => '3'
+        ]);
+        /** 2 */
+        Alternativa::create([//277
+            'descripcion' => "Descripcion prueba habitos estudio",
+            'id_pregunta' => '254',
+            'puntuacion' => '2'
+        ]);
+        Alternativa::create([//278
+            'descripcion' => "Descripcion prueba habitos estudio",
+            'id_pregunta' => '254',
+            'puntuacion' => '3'
+        ]);
+        /** 3 */
+        Alternativa::create([//279
+            'descripcion' => "Descripcion prueba habitos estudio",
+            'id_pregunta' => '255',
+            'puntuacion' => '2'
+        ]);
+        Alternativa::create([//280
+            'descripcion' => "Descripcion prueba habitos estudio",
+            'id_pregunta' => '255',
+            'puntuacion' => '3'
+        ]);
+        /** 4 */
+        Alternativa::create([//281
+            'descripcion' => "Descripcion prueba habitos estudio",
+            'id_pregunta' => '256',
+            'puntuacion' => '2'
+        ]);
+        Alternativa::create([//282
+            'descripcion' => "Descripcion prueba habitos estudio",
+            'id_pregunta' => '256',
+            'puntuacion' => '3'
+        ]);
+        /** 5 */
+        Alternativa::create([//283
+            'descripcion' => "Descripcion prueba habitos estudio",
+            'id_pregunta' => '257',
+            'puntuacion' => '2'
+        ]);
+        Alternativa::create([//284
+            'descripcion' => "Descripcion prueba habitos estudio",
+            'id_pregunta' => '257',
+            'puntuacion' => '3'
+        ]);
+        /** 6 */
+        Alternativa::create([//285
+            'descripcion' => "Descripcion prueba habitos estudio",
+            'id_pregunta' => '258',
+            'puntuacion' => '2'
+        ]);
+        Alternativa::create([//286
+            'descripcion' => "Descripcion prueba habitos estudio",
+            'id_pregunta' => '258',
+            'puntuacion' => '3'
+        ]);
+        /** 7 */
+        Alternativa::create([//287
+            'descripcion' => "Descripcion prueba habitos estudio",
+            'id_pregunta' => '259',
+            'puntuacion' => '2'
+        ]);
+        Alternativa::create([//288
+            'descripcion' => "Descripcion prueba habitos estudio",
+            'id_pregunta' => '259',
+            'puntuacion' => '3'
+        ]);
+        /** 8 */
+        Alternativa::create([//289
+            'descripcion' => "Descripcion prueba habitos estudio",
+            'id_pregunta' => '260',
+            'puntuacion' => '2'
+        ]);
+        Alternativa::create([//290
+            'descripcion' => "Descripcion prueba habitos estudio",
+            'id_pregunta' => '260',
+            'puntuacion' => '3'
+        ]);
+        /** 9 */
+        Alternativa::create([//291
+            'descripcion' => "Descripcion prueba habitos estudio",
+            'id_pregunta' => '261',
+            'puntuacion' => '2'
+        ]);
+        Alternativa::create([//292
+            'descripcion' => "Descripcion prueba habitos estudio",
+            'id_pregunta' => '261',
+            'puntuacion' => '3'
+        ]);
+        /** 10 */
+        Alternativa::create([//293
+            'descripcion' => "Descripcion prueba habitos estudio",
+            'id_pregunta' => '262',
+            'puntuacion' => '2'
+        ]);
+        Alternativa::create([//294
+            'descripcion' => "Descripcion prueba habitos estudio",
+            'id_pregunta' => '262',
+            'puntuacion' => '3'
+        ]);
     }
 }

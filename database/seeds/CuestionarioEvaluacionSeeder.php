@@ -44,6 +44,14 @@ class CuestionarioEvaluacionSeeder extends Seeder
             'nro_preguntas' => '187'
         ]);
 
+        CuestionarioEvaluacion::create([
+            'id' => 5,
+            'titulo' => "Inventario de Prueba para Habitos Estudio",
+            'titulo_secundario' => "Evaluación 05",
+            'autor' => "Prueba Habitos Estudio",
+            'nro_preguntas' => '10'
+        ]);
+
         
     }
 }
