@@ -13,6 +13,8 @@ use App\Http\Resources\EstadoPerfilShortResource;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Evaluaciones\InventarioBeckController;
 use App\Http\Controllers\Evaluaciones\HabitoEstudioController;
+use App\Model\Evaluaciones\iEstrategiaHabitoEstudio;
+use App\Model\Evaluaciones\iEstrategiaInventarioBeck;
 
 
 class EstadoPerfilController extends Controller
@@ -69,16 +71,16 @@ class EstadoPerfilController extends Controller
       $id_perfil_psico = $data['id_perfil_psico'];
       switch($id_cuest_eval){
         case '1':
-          $controlador = new HabitoEstudioController();
+          $controlador = new HabitoEstudioController(new iEstrategiaHabitoEstudio());
           break;
         case '2':
-          $controlador = new InventarioBeckController();
+          $controlador = new InventarioBeckController(new iEstrategiaInventarioBeck());
           break;
         case '3':
-          $controlador = new InventarioBeckController();
+          $controlador = new InventarioBeckController(new iEstrategiaInventarioBeck());
           break;
         case '5':
-          $controlador = new HabitoEstudioController();
+          $controlador = new HabitoEstudioController(new iEstrategiaHabitoEstudio());
           break;
 
       }
@@ -111,15 +113,8 @@ class EstadoPerfilController extends Controller
     public function show($id_estado_perfil)
     {
       $estado = EstadoPerfil::find($id_estado_perfil);
-      $id_eva = $estado->id_cuest_eval;
-      $strategy="Evaluacion no existente";
-
-      if($id_eva == 1 or $id_eva == 5){
-        $data = ['data'=> $estado->descripcion[5]];
-      }else if($id_eva == 2 or $id_eva== 3){
-        $data = ['data'=> $estado->descripcion];
-      }
-      
+      $data = ['data'=> $estado->resultadoInstantaneo()];
+     
       return response()->json($data, 200);
     }
 }

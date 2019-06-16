@@ -9,15 +9,22 @@ use App\Model\Respuesta;
 use App\Model\EstadoPerfil;
 use App\Http\Controllers\Controller;
 use App\Http\Helper\Helper;
+use App\Model\Evaluaciones\iEstrategiaHabitoEstudio;
+use App\Model\Evaluaciones\iEstrategia;
 
 class HabitoEstudioController extends Controller
 {
+    private $strategy;
+
+    function __contruct(iStrategia $strategy){
+        $this->strategy = $strategy;
+    }
 
     public function puntaje(Request $request){
         $data = $request->data;
         $id_perfil_psico = $data['id_perfil_psico'];
         $id_estado_perfil = $data['id_estado_perfil'];
-        $strategy = new iEstrategiaHabitoEstudio();
+       /*  $strategy = new iEstrategiaHabitoEstudio(); */
         
         $count = [0,0,0,0,0,0];
 
@@ -48,7 +55,7 @@ class HabitoEstudioController extends Controller
             $count[5] = $count[5] + $valor['puntuacion']; 
         }
 
-        $resultado = $strategy->resultado($count);
+        $resultado = $this->strategy->resultado($count);
         
         $date = Helper::fechaActual();
 
