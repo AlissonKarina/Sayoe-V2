@@ -81,7 +81,10 @@ class EstadoPerfilController extends Controller
           break;
 
       }
-      $resultado = $controlador->puntaje($request);
+      $resultado = ['data' => [
+        'id_cuest_eval' => $id_cuest_eval,
+        'resultado' => $controlador->puntaje($request)
+      ]];
       $this->revisar($id_perfil_psico);
       return $resultado;
     }

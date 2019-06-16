@@ -47,7 +47,7 @@ class HabitoEstudioController extends Controller
             $count[5] = $count[5] + $valor['puntuacion']; 
         }
 
-        $resultado = ['resultado' => $this->resultado($count)];
+        $resultado = $this->resultado($count);
         
         $date = Helper::fechaActual();
 
@@ -58,9 +58,7 @@ class HabitoEstudioController extends Controller
         $estadoPerfil->descripcion = $resultado;
         $estadoPerfil->save();
 
-        return response()->json([
-            'resultado' => $resultado['resultado'][5]['area-6']
-        ]);
+        return $resultado[5]['area-6'];
     }
 
     private function resultado($total){

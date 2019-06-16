@@ -12,8 +12,8 @@ class EstadoPerfilResource extends JsonResource
             'id_estado_perfil' => $this->id,
             'id_cuest_eval' => $this->cuestionarioEvaluacion->id,
             'titulo_secundario' => $this->cuestionarioEvaluacion->titulo_secundario,
-            'nro_preguntas' => $this->cuestionarioEvaluacion->nro_preguntas,
-            /* 'descripcion' => $this->when($this->descripcion != null, $this->descripcion), */
+            /* 'nro_preguntas' => $this->cuestionarioEvaluacion->nro_preguntas, */
+            'descripcion' => $this->when($this->descripcion != null, $this->descripcion),
         ];
     }
 }
