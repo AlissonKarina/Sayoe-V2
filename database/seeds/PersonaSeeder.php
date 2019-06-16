@@ -284,7 +284,7 @@ class PersonaSeeder extends Seeder
 
         Persona::create([
             'dni' => '9876542',
-            'nombre' => "Luis David ",
+            'nombre' => "Luis David",
             'apellido_paterno' => "Yauri",
             'apellido_materno' => "Martinez",
             'sexo' => '0',
@@ -292,11 +292,78 @@ class PersonaSeeder extends Seeder
             'foto' => 'https://autoescuela-aula4.es/wp-content/uploads/2016/01/chico-carnet-conducir.jpg',
             'telefono' => "8888-888",
             'celular' => "9999-9999",
-            'direccion' => "Miraflores ",
+            'direccion' => "Miraflores - Lima",
             'correo_personal' => "david.yauri"."@gmail.com",
-
         ]);
 
-        }
+        Persona::create([
+            'dni' => '72113937',
+            'nombre' => "Luis Ángel",
+            'apellido_paterno' => "Arteaga",
+            'apellido_materno' => "Torres",
+            'sexo' => '0',
+            'fecha_nacimiento' => "1992-05-02",
+            'foto' => 'https://autoescuela-aula4.es/wp-content/uploads/2016/01/chico-carnet-conducir.jpg',
+            'telefono' => "287-8994",
+            'celular' => "94160-7487",
+            'direccion' => "San Juan de Lurigancho",
+            'correo_personal' => "laat92"."@gmail.com",
+        ]);
+
+        Persona::create([
+            'dni' => '71732618',
+            'nombre' => "Diego Alonso",
+            'apellido_paterno' => "Chavez",
+            'apellido_materno' => "Pacheco",
+            'sexo' => '0',
+            'fecha_nacimiento' => "1992-10-29",
+            'foto' => 'https://autoescuela-aula4.es/wp-content/uploads/2016/01/chico-carnet-conducir.jpg',
+            'telefono' => "433-9521",
+            'celular' => "9999-9999",
+            'direccion' => "Brecha - Lima",
+            'correo_personal' => "deocha7x"."@gmail.com",
+        ]);
+
+        Persona::create([
+            'dni' => '47484081',
+            'nombre' => "Martín Jair",
+            'apellido_paterno' => "Ayo",
+            'apellido_materno' => "Campos",
+            'sexo' => '0',
+            'fecha_nacimiento' => "2001-10-05",
+            'foto' => 'https://autoescuela-aula4.es/wp-content/uploads/2016/01/chico-carnet-conducir.jpg',
+            'telefono' => "8888-888",
+            'celular' => "9999-9999",
+            'direccion' => "San Miguel - Lima ",
+            'correo_personal' => "mrtnayo"."@gmail.com",
+        ]);
+
+        Persona::create([
+            'dni' => '72935196',
+            'nombre' => "Luis Enrique",
+            'apellido_paterno' => "Campos",
+            'apellido_materno' => "Rubina",
+            'sexo' => '0',
+            'fecha_nacimiento' => "2001-10-05",
+            'foto' => 'https://autoescuela-aula4.es/wp-content/uploads/2016/01/chico-carnet-conducir.jpg',
+            'telefono' => "8888-888",
+            'celular' => "9999-9999",
+            'direccion' => "Ventanilla - Callao ",
+            'correo_personal' => "lucaru9"."@gmail.com",
+        ]);
+
+        Persona::create([
+            'dni' => '71523029',
+            'nombre' => "Aaron",
+            'apellido_paterno' => "Castillo",
+            'apellido_materno' => "Rodriguez",
+            'sexo' => '0',
+            'fecha_nacimiento' => "1992-09-11",
+            'foto' => 'https://autoescuela-aula4.es/wp-content/uploads/2016/01/chico-carnet-conducir.jpg',
+            'telefono' => "8888-888",
+            'celular' => "9999-9999",
+            'direccion' => "Villa María del Triunfo - Lima",
+            'correo_personal' => "aaron.stbn"."@gmail.com",
+        ]);
     }
 }
