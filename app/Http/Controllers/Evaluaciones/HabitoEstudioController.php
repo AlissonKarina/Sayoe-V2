@@ -58,7 +58,7 @@ class HabitoEstudioController extends Controller
         $estadoPerfil->descripcion = $resultado;
         $estadoPerfil->save();
 
-        return $resultado[5]['area-6'];
+        return $resultado;
     }
 
     private function resultado($total){
@@ -89,14 +89,12 @@ class HabitoEstudioController extends Controller
                 $desc = $this->descripcion(0);
             }
             array_push($descripcion, [
-                'area-'.($i+1)=>[
-                    'valor' => $total[$i],
-                    'descripcion' => $desc
-                ]
+                'valor' => $total[$i],
+                'descripcion' => $desc
             ]);
         }
 
-        return $descripcion;
+        return $descripcion[5];
     }
 
     private function descripcion($indicador)
