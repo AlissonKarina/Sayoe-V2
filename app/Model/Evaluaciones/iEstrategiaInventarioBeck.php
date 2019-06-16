@@ -27,19 +27,19 @@ class iEstrategiaInventarioBeck implements iEstrategia
     {
         switch($indicador){
             case 0: 
-                $desc = "no presenta signos de depresión";
-                break;
+                return "no presenta signos de depresión";
+                
             case 1: 
-                $desc = "presenta signos de depresión leve";
-                break;
+                return "presenta signos de depresión leve";
+                
             case 2: 
-                $desc = "presenta signos de depresión moderado";
-                break;
+                return "presenta signos de depresión moderado";
+                
             case 3: 
-                $desc = "presenta signos de depresión severo";
-                break;
+                return "presenta signos de depresión severo";
+                
         }
-        return $desc;
+        return "Error";
     }
 
 }
