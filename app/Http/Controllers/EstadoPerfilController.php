@@ -85,6 +85,7 @@ class EstadoPerfilController extends Controller
         'id_cuest_eval' => $id_cuest_eval,
         'resultado' => $controlador->puntaje($request)
       ]];
+      
       $this->revisar($id_perfil_psico);
       return $resultado;
     }
@@ -104,5 +105,12 @@ class EstadoPerfilController extends Controller
         $perfil->fecha_resuelto = Helper::fechaActual();
         $perfil->save();
         return true;
+    }
+
+    public function show($id_estado_perfil)
+    {
+      $estado = EstadoPerfil::find($id_estado_perfil);
+      $data = ['data'=>$estado->descripcion ];
+      return response()->json($data, 200);
     }
 }

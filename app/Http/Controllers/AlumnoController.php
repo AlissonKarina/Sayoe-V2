@@ -4,13 +4,20 @@ namespace App\Http\Controllers;
 
 use App\Model\Alumno;
 use App\Http\Resources\AlumnoShortResource;
+use App\Http\Resources\AlumnoResource;
 use Illuminate\Http\Request;
 use App\Http\Helper\Helper;
 
 class AlumnoController extends Controller
 {
-    public function show($id) {
-        $alumno = Alumno::find($id);
+    public function index(){
+        $alumnos = Alumno::all();
+        return AlumnoShortResource::collection($alumnos);
+    }
+
+    public function show($codigo) {
+        $alumno = Alumno::find($codigo);
+        return new AlumnoResource($alumno);
     }
 
     public function shortAlumno($codigo) {
