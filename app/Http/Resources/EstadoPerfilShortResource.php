@@ -4,13 +4,15 @@ namespace App\Http\Resources;
 
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class EstadoPerfilResource extends JsonResource
+class EstadoPerfilShortResource extends JsonResource
 {
     public function toArray($request)
     {
         return [
+            'id_estado_perfil' => $this->id,
             'id_cuest_eval' => $this->cuestionarioEvaluacion->id,
-            /* 'nro_preguntas' => $this->cuestionarioEvaluacion->nro_preguntas, */
+            'titulo_secundario' => $this->cuestionarioEvaluacion->titulo_secundario,
+            'nro_preguntas' => $this->cuestionarioEvaluacion->nro_preguntas,
             'descripcion' => $this->when($this->descripcion != null, $this->descripcion),
         ];
     }

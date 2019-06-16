@@ -41,6 +41,7 @@ $router->group(['prefix'=>'api/v1'], function() use($router){
         $router->post('/evaluaciones_asignadas/pendientes', 'EstadoPerfilController@evaluacionesPendientes');
         $router->post('/evaluaciones_asignadas/realizadas', 'EstadoPerfilController@evaluacionesRealizadas');
         $router->post('/cuestionario-evaluacion', 'EstadoPerfilController@obtenerResultado');
+        $router->get('/resultado/{id_estado_perfil}', 'EstadoPerfilController@show');
 
         //CREAR PERFIL_PSICOLOGICO, ESTADO_PERFIL
         $router->post('/asignarAlumno', 'PerfilPsicologicoController@create');
@@ -48,6 +49,7 @@ $router->group(['prefix'=>'api/v1'], function() use($router){
         $router->post('/perfiles/pendientes', 'PerfilPsicologicoController@perfilesPendientes');
         $router->post('/perfiles/realizados', 'PerfilPsicologicoController@perfilesRealizados');
         $router->post('/recomendar', 'PerfilPsicologicoController@recomendar');
+        $router->get('/perfil/{id}', 'PerfilPsicologicoController@show');
 
         //CITAS
         $router->get('/citas', 'CitaController@index');
@@ -56,8 +58,8 @@ $router->group(['prefix'=>'api/v1'], function() use($router){
         //ALUMNOS
         $router->get('/alumnoShortAsignar/{codigo}', 'AlumnoController@shortAlumno');
         $router->get('/alumno/short/{codigo}', 'AlumnoController@short');
-        
-       
+        $router->get('/alumnos', 'AlumnoController@index');
+        $router->get('/alumno/{codigo}', 'AlumnoController@show');
     });    
 });
 

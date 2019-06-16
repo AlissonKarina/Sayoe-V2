@@ -11,7 +11,9 @@ use App\Http\Helper\Helper;
 use Illuminate\Http\Request;
 use App\Http\Resources\AlumnoShortResource;
 use App\Http\Resources\PerfilPsicologicoResource;
-
+use App\Http\Resources\PerfilPsicologicoShortResource;
+use App\Http\Resources\EstadoPerfilResource;
+use App\Http\Resources\AlumnoResource;
 class PerfilPsicologicoController extends Controller
 {   
     public function create(Request $request) 
@@ -114,7 +116,7 @@ class PerfilPsicologicoController extends Controller
         $array = [
             "anho" => $request->anho,
             "semestre" => $semestre,
-            "perfiles" => PerfilPsicologicoResource::collection($perfiles),
+            "perfiles" => PerfilPsicologicoShortResource::collection($perfiles),
         ];
         array_push($arrayTotal['data'],$array);
         return response()->json($arrayTotal,200);
@@ -134,7 +136,7 @@ class PerfilPsicologicoController extends Controller
         $array = [
             "anho" => $request->anho,
             "semestre" => $semestre,
-            "perfiles" => PerfilPsicologicoResource::collection($perfiles),
+            "perfiles" => PerfilPsicologicoShortResource::collection($perfiles),
         ];
         array_push($arrayTotal['data'],$array);
 
@@ -150,5 +152,28 @@ class PerfilPsicologicoController extends Controller
         $perfil->save();
 
         return response()->json("OK",200);;
+    }
+
+    public function show($id)
+    {
+        $perfil = PerfilPsicologico::with('alumno')->find($id);
+        $estado = EstadoPerfil::where('id_perfil_psico','=',$id)
+        ->where('estado','=',1)
+        ->get();
+
+        if($perfil == null && $estado == null){
+            return response()->json('No existe');
+        }
+
+        $data = ['data' => [
+            'id_perfil-psico' => $id,
+            'alumno' => new AlumnoResource($perfil->alumno),
+            'evaluaciones' => EstadoPerfilResource::collection($estado),
+            'recomendacion' => $perfil->when($perfil->recomendacion != null, $perfil->recomendacion),
+        ]];
+
+       /*  return response()->json($estado); */
+        return response()->json($data);
+
     }
 }

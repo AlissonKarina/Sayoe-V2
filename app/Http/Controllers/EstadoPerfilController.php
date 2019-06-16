@@ -8,7 +8,7 @@ use App\Model\EstadoPerfil;
 use App\Model\PerfilPsicologico;
 use App\Http\Helper\Helper;
 use App\Http\Resources\PerfilPsicologicoEstadoResource;
-use App\Http\Resources\EstadoPerfilResource;
+use App\Http\Resources\EstadoPerfilShortResource;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Evaluaciones\InventarioBeckController;
 use App\Http\Controllers\Evaluaciones\HabitoEstudioController;
@@ -52,7 +52,7 @@ class EstadoPerfilController extends Controller
               "anho" => $perfil->anho,
               "semestre" => $perfil->semestre,
               "fecha_vencimiento" => $perfil->fecha_limite,
-              "evaluaciones" => EstadoPerfilResource::collection($evaluaciones),
+              "evaluaciones" => EstadoPerfilShortResource::collection($evaluaciones),
             ];
             
             array_push($arrayTotal['data'],$array);
@@ -81,7 +81,11 @@ class EstadoPerfilController extends Controller
           break;
 
       }
-      $resultado = $controlador->puntaje($request);
+      $resultado = ['data' => [
+        'id_cuest_eval' => $id_cuest_eval,
+        'resultado' => $controlador->puntaje($request)
+      ]];
+      
       $this->revisar($id_perfil_psico);
       return $resultado;
     }
@@ -101,5 +105,12 @@ class EstadoPerfilController extends Controller
         $perfil->fecha_resuelto = Helper::fechaActual();
         $perfil->save();
         return true;
+    }
+
+    public function show($id_estado_perfil)
+    {
+      $estado = EstadoPerfil::find($id_estado_perfil);
+      $data = ['data'=>$estado->descripcion ];
+      return response()->json($data, 200);
     }
 }

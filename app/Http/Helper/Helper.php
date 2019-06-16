@@ -44,4 +44,12 @@ class Helper
             return 2;
         }
     }
+
+    public static function edad($fecha){
+        $anho = (int)substr($fecha, 0, 10);
+        $mes = (int)substr($fecha, 5, 2);
+        $dia = (int)substr($fecha, 8, 2);
+        $edad = Carbon::createFromDate($anho,$mes,$dia)->age;
+        return $edad;
+    }
 }

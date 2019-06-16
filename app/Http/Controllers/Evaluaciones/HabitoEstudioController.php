@@ -47,18 +47,18 @@ class HabitoEstudioController extends Controller
             $count[5] = $count[5] + $valor['puntuacion']; 
         }
 
-        $resultado = ['resultado' => $this->resultado($count)];
+        $resultado = $this->resultado($count);
         
         $date = Helper::fechaActual();
 
         $estadoPerfil = EstadoPerfil::find($id_estado_perfil);
         $estadoPerfil->estado = '1';
         $estadoPerfil->fecha = $date;
-        $estadoPerfil->valor = 1;
+        $estadoPerfil->valor = $count[5];
         $estadoPerfil->descripcion = $resultado;
         $estadoPerfil->save();
 
-        return response()->json($resultado);
+        return $resultado[5]['area-6'];
     }
 
     private function resultado($total){
