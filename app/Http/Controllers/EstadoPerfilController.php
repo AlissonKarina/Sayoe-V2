@@ -110,7 +110,7 @@ class EstadoPerfilController extends Controller
     public function show($id_estado_perfil)
     {
       $estado = EstadoPerfil::find($id_estado_perfil);
-      $data = ['data'=>$estado->descripcion ];
+      $data = ['data'=>$estado->descripcion[5]];
       return response()->json($data, 200);
     }
 }

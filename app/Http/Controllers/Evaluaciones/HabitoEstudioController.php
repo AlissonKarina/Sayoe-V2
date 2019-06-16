@@ -58,7 +58,7 @@ class HabitoEstudioController extends Controller
         $estadoPerfil->descripcion = $resultado;
         $estadoPerfil->save();
 
-        return $resultado;
+        return $resultado[5];
     }
 
     private function resultado($total){
@@ -94,7 +94,7 @@ class HabitoEstudioController extends Controller
             ]);
         }
 
-        return $descripcion[5];
+        return $descripcion;
     }
 
     private function descripcion($indicador)
