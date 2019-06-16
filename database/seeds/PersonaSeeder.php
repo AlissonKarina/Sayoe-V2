@@ -352,6 +352,7 @@ class PersonaSeeder extends Seeder
             'correo_personal' => "lucaru9"."@gmail.com",
         ]);
 
+<<<<<<< HEAD
         Persona::create([
             'dni' => '71523029',
             'nombre' => "Aaron",
@@ -365,5 +366,8 @@ class PersonaSeeder extends Seeder
             'direccion' => "Villa María del Triunfo - Lima",
             'correo_personal' => "aaron.stbn"."@gmail.com",
         ]);
+=======
+        
+>>>>>>> 88282087438157981ad0b7ba319e3e07140f207e
     }
 }

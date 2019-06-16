@@ -32,4 +32,24 @@ class EstadoPerfil extends Model
         return $this->belongsTo('App\Model\PerfilPsicologico', 'id_perfil_psico', 'id_perfil');
     }
 
+    public function resultadoInstantaneo(){
+        $id_eva = $this->id_cuest_eval;
+        $resultado = 'Not found';
+        switch($id_eva){
+            case 1:
+                $resultado = $this->descripcion[5];
+                break;
+            case 2:
+                $resultado = $this->descripcion;
+                break;
+            case 3:
+                $resultado = $this->descripcion;
+                break;
+            case 5:
+                $resultado = $this->descripcion[5];
+                break;
+        }
+        return $resultado;
+    }
+
 }

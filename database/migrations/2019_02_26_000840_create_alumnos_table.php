@@ -17,7 +17,7 @@ class CreateAlumnosTable extends Migration
             $table->string('codigo',8)->unique();
             $table->integer('ciclo');
             $table->char('situacion', 1)->nullable();
-            $table->float('promedio', 5, 2);
+            $table->float('promedio', 5, 2)->nullable();
             $table->string('anho_ingreso', 4);
             $table->string('estado_permanencia')->nullable();
             $table->integer('total_creditos')->nullable();

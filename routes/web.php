@@ -60,6 +60,7 @@ $router->group(['prefix'=>'api/v1'], function() use($router){
         $router->get('/alumno/short/{codigo}', 'AlumnoController@short');
         $router->get('/alumnos', 'AlumnoController@index');
         $router->get('/alumno/{codigo}', 'AlumnoController@show');
+        $router->post('/alumno', 'AlumnoController@create');
     });    
 });
 
