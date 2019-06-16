@@ -47,21 +47,21 @@ class HabitoEstudioController extends Controller
             $count[5] = $count[5] + $valor['puntuacion']; 
         }
 
-        $descripcion = ['resultado' => $this->categoria($count)];
+        $resultado = ['resultado' => $this->resultado($count)];
         
         $date = Helper::fechaActual();
 
         $estadoPerfil = EstadoPerfil::find($id_estado_perfil);
         $estadoPerfil->estado = '1';
         $estadoPerfil->fecha = $date;
-        $estadoPerfil->valor = $count;
-        $estadoPerfil->descripcion = $descripcion;
+        $estadoPerfil->valor = 1;
+        $estadoPerfil->descripcion = $resultado;
         $estadoPerfil->save();
 
-        return response()->json($descripcion);
+        return response()->json($resultado);
     }
 
-    private function categoria($total){
+    private function resultado($total){
         $array = [
             [10, 8, 5, 3, 1, 0],
             [10, 8, 6, 3, 1, 0],
