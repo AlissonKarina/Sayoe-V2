@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Evaluaciones;
+namespace App\Model\Evaluaciones;
 
 use App\Model\CuestionarioEvaluacion;
 use App\Http\Resources\CuestionarioEvaluacionResource;
@@ -10,58 +10,14 @@ use App\Model\EstadoPerfil;
 use App\Http\Controllers\Controller;
 use App\Http\Helper\Helper;
 
-class HabitoEstudioController extends Controller
+class HabitoEstudio extends EstadoPerfil
 {
+    /* function __constructor(EstadoPerfil $estado){
+        $this = $estado;
+    } */
 
-    public function puntaje(Request $request){
-        $data = $request->data;
-        $id_perfil_psico = $data['id_perfil_psico'];
-        $id_estado_perfil = $data['id_estado_perfil'];
-        
-        $count = [0,0,0,0,0,0];
-
-        foreach ($data['alternativa'] as $valor)
-        {
-            switch($valor['bloque']){
-                case 1:
-                    $count[0] += $valor['puntuacion'];
-                    break;
-                case 2:
-                    $count[1] += $valor['puntuacion'];
-                    break;
-                case 3:
-                    $count[2] += $valor['puntuacion'];
-                    break;
-                case 4:
-                    $count[3] += $valor['puntuacion'];
-                    break;
-                case 5:
-                    $count[4] += $valor['puntuacion'];
-                    break;
-            }
-            
-            Respuesta::create([
-                "id_alternativa" => $valor['id'],
-                "id_pefil_psico" => $id_perfil_psico,
-            ]);
-            $count[5] = $count[5] + $valor['puntuacion']; 
-        }
-
-        $resultado = $this->resultado($count);
-        
-        $date = Helper::fechaActual();
-
-        $estadoPerfil = EstadoPerfil::find($id_estado_perfil);
-        $estadoPerfil->estado = '1';
-        $estadoPerfil->fecha = $date;
-        $estadoPerfil->valor = $count[5];
-        $estadoPerfil->descripcion = $resultado;
-        $estadoPerfil->save();
-
-        return $resultado[5];
-    }
-
-    private function resultado($total){
+    public static function resultado($total)
+    {
         $array = [
             [10, 8, 5, 3, 1, 0],
             [10, 8, 6, 3, 1, 0],
@@ -145,6 +101,11 @@ class HabitoEstudioController extends Controller
                 break;
         }
         return $desc;
+    }
+
+    public function resultadoInstantaneo()
+    {
+        return $this->descripcion[5];
     }
 
 }

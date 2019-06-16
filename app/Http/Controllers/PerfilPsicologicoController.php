@@ -157,7 +157,7 @@ class PerfilPsicologicoController extends Controller
     public function show($id)
     {//ver perfil psicologico segun ID, solo evaluaciones resueltas
         $perfil = PerfilPsicologico::with('alumno')->find($id);
-        $estado = EstadoPerfil::where('id_perfil_psico','=',$id)
+        $estado = EstadoPerfil::where('id_perfil_psico','=',$id)        
         ->where('estado','=',1)
         ->get();
 
@@ -171,8 +171,7 @@ class PerfilPsicologicoController extends Controller
             'semestre'=>$perfil->semestre,
             'alumno' => new AlumnoResource($perfil->alumno),
             'evaluaciones' => EstadoPerfilResource::collection($estado),
-            'recomendacion' => $perfil->when(($perfil->recomendacion != null), 'recomendacion'),
-            // ,
+            'recomendacion' =>  $perfil->recomendacion,
         ]];
 
        /*  return response()->json($estado); */

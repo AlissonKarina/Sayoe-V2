@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Model\Usuario;
 use Illuminate\Http\Request;
 use App\Model\EstadoPerfil;
+use App\Model\Evaluaciones\HabitoEstudio;
 use App\Model\PerfilPsicologico;
 use App\Http\Helper\Helper;
 use App\Http\Resources\PerfilPsicologicoEstadoResource;
@@ -110,7 +111,14 @@ class EstadoPerfilController extends Controller
     public function show($id_estado_perfil)
     {
       $estado = EstadoPerfil::find($id_estado_perfil);
-      $data = ['data'=>$estado->descripcion[5]];
+      $id_eva = $estado->id_cuest_eval;
+      $data="Evaluacion no existente";
+      if($id_eva == 1 or $id_eva == 5){
+        $data = ['data'=> $estado->descripcion[5]];
+      }else if($id_eva == 2 or $id_eva== 3){
+        $data = ['data'=> $estado->descripcion];
+      }
+      
       return response()->json($data, 200);
     }
 }
