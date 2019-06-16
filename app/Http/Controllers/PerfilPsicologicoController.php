@@ -166,7 +166,7 @@ class PerfilPsicologicoController extends Controller
         }
 
         $data = ['data' => [
-            'id_perfil-psico' => $id,
+            'id_perfil_psico' => $id,
             'anho'=>$perfil->anho,
             'semestre'=>$perfil->semestre,
             'alumno' => new AlumnoResource($perfil->alumno),

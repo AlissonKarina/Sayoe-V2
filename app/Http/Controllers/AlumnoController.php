@@ -20,6 +20,37 @@ class AlumnoController extends Controller
         return new AlumnoResource($alumno);
     }
 
+    public function create(Request $request)
+    {
+        $data = $request->data;
+        
+        $persona = Persona::create([
+            'dni' => $data['dni'],
+            'nombre' => $data['nombre'],
+            'apellido_materno' => $data['apellido_materno'],
+            'apellido_paterno' => $data['apellido_paterno'],
+            'sexo' => $data['sexo'],
+            'fecha_nacimiento' => $data['fecha_nacimiento'],
+        ]);
+
+        $usuario = Usuario::create([
+            'usuario' => $data['usuario'],
+            'contrasenha' => $data['contrasenha'],
+        ]);
+        
+        $alumno = Alumno::create([
+            'codigo' => $data['codigo'],
+            'situacion' => $data['situacion'],
+            'anho_ingreso' => $data['anho_ingreso'],
+            'estado_permanencia' => $data['estado_permanencia'],
+            'dni' => $persona->dni,
+            'id_usuario' => $usuario->id,
+            'id_escuela' => $data['id_escuela']
+        ]);
+
+       
+    }
+
     public function shortAlumno($codigo) {
         $alumno = Alumno::find($codigo);
         return new AlumnoShortResource($alumno);
