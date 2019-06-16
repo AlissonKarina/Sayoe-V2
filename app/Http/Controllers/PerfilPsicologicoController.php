@@ -11,6 +11,8 @@ use App\Http\Helper\Helper;
 use Illuminate\Http\Request;
 use App\Http\Resources\AlumnoShortResource;
 use App\Http\Resources\PerfilPsicologicoResource;
+use App\Http\Resources\PerfilPsicologico_AlumnoResource;
+use App\Http\Resources\EstadoPerfilResource;
 
 class PerfilPsicologicoController extends Controller
 {   
@@ -114,7 +116,7 @@ class PerfilPsicologicoController extends Controller
         $array = [
             "anho" => $request->anho,
             "semestre" => $semestre,
-            "perfiles" => PerfilPsicologicoResource::collection($perfiles),
+            "perfiles" => PerfilPsicologico_AlumnoResource::collection($perfiles),
         ];
         array_push($arrayTotal['data'],$array);
         return response()->json($arrayTotal,200);
@@ -134,7 +136,7 @@ class PerfilPsicologicoController extends Controller
         $array = [
             "anho" => $request->anho,
             "semestre" => $semestre,
-            "perfiles" => PerfilPsicologicoResource::collection($perfiles),
+            "perfiles" => PerfilPsicologico_AlumnoResource::collection($perfiles),
         ];
         array_push($arrayTotal['data'],$array);
 
@@ -150,5 +152,26 @@ class PerfilPsicologicoController extends Controller
         $perfil->save();
 
         return response()->json("OK",200);;
+    }
+
+    public function show($id)
+    {
+        $perfil = PerfilPsicologico::find($id);
+        $estado = EstadoPerfil::where('id_perfil_psico','=',$id)
+        ->where('estado','=',1)
+        ->get();
+
+        if($perfil == null && $estado == null){
+            return response()->json('No existe');
+        }
+
+        $data = [
+            'perfil' => new PerfilPsicologicoResource($perfil),
+            'cuestionario' => EstadoPerfilResource::collection($estado),
+        ];
+
+       /*  return response()->json($estado); */
+        return response()->json($data);
+
     }
 }

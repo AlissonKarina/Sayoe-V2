@@ -48,6 +48,7 @@ $router->group(['prefix'=>'api/v1'], function() use($router){
         $router->post('/perfiles/pendientes', 'PerfilPsicologicoController@perfilesPendientes');
         $router->post('/perfiles/realizados', 'PerfilPsicologicoController@perfilesRealizados');
         $router->post('/recomendar', 'PerfilPsicologicoController@recomendar');
+        $router->get('/perfil/{id}', 'PerfilPsicologicoController@show');
 
         //CITAS
         $router->get('/citas', 'CitaController@index');
