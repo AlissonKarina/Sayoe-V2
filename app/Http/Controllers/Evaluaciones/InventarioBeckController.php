@@ -2,21 +2,18 @@
 
 namespace App\Http\Controllers\Evaluaciones;
 
-use App\Model\CuestionarioEvaluacion;
-use App\Http\Resources\CuestionarioEvaluacionResource;
 use Illuminate\Http\Request;
-use App\Model\Respuesta;
 use App\Model\EstadoPerfil;
 use App\Http\Controllers\Controller;
 use App\Http\Helper\Helper;
-use App\Model\Evaluaciones\iEstrategiaInventarioBeck;
+use App\Model\Evaluaciones\iEstrategia;
 
 class InventarioBeckController extends Controller
 {
-    private $strategy;
+    public $strategy = null;
 
-    function __contruct(iStrategia $strategy){
-        $this->strategy = $strategy;
+    function __construct(iEstrategia $strategy){
+        $this->strategy = $strategy ;
     }
 
     public function puntaje(Request $request){
@@ -24,7 +21,6 @@ class InventarioBeckController extends Controller
         $data = $request->data;
         $id_perfil_psico = $data['id_perfil_psico'];
         $id_estado_perfil = $data['id_estado_perfil'];
-        /* $strategy = new iEstrategiaInventarioBeck(); */
         
         foreach ($data['alternativa'] as $valor)
         {

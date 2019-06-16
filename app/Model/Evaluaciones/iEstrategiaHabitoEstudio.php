@@ -2,13 +2,6 @@
 
 namespace App\Model\Evaluaciones;
 
-use App\Model\CuestionarioEvaluacion;
-use App\Http\Resources\CuestionarioEvaluacionResource;
-use Illuminate\Http\Request;
-use App\Model\Respuesta;
-use App\Model\EstadoPerfil;
-use App\Http\Controllers\Controller;
-use App\Http\Helper\Helper;
 use App\Model\Evaluaciones\iEstrategia;
 
 class iEstrategiaHabitoEstudio implements iEstrategia
@@ -17,7 +10,7 @@ class iEstrategiaHabitoEstudio implements iEstrategia
         $this = $estado;
     } */
 
-    public static function resultado($total)
+    public function resultado($total)
     {
         $array = [
             [10, 8, 5, 3, 1, 0],

@@ -2,15 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Model\Usuario;
 use Illuminate\Http\Request;
 use App\Model\EstadoPerfil;
-use App\Model\Evaluaciones\HabitoEstudio;
 use App\Model\PerfilPsicologico;
 use App\Http\Helper\Helper;
 use App\Http\Resources\PerfilPsicologicoEstadoResource;
 use App\Http\Resources\EstadoPerfilShortResource;
-use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Evaluaciones\InventarioBeckController;
 use App\Http\Controllers\Evaluaciones\HabitoEstudioController;
 use App\Model\Evaluaciones\iEstrategiaHabitoEstudio;
