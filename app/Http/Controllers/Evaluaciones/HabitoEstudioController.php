@@ -71,7 +71,14 @@ class HabitoEstudioController extends Controller
             [44, 36, 28, 18, 9, 0],
         ];
 
-        $descripcion=[];
+        $descripcion=[
+            'area-1'=>[],
+            'area-2'=>[],
+            'area-3'=>[],
+            'area-4'=>[],
+            'area-5'=>[],
+            'area-6'=>[],
+        ];
 
         for ($i = 0; $i < 6; $i ++)
         {
@@ -94,7 +101,7 @@ class HabitoEstudioController extends Controller
                         'descripcion' => $this->descripcion(3)
                     ]]);
             }else if ($total[$i]>=$array[$i][3]){
-                array_push($descripcion, [
+                array_push($descripcion['area-'.($i+1)], [
                     'area-'.($i+1)=>[
                         'valor' => $total[$i],
                         'descripcion' => $this->descripcion(2)
@@ -167,5 +174,5 @@ class HabitoEstudioController extends Controller
         return $desc;
     }
 
-
+  
 }
