@@ -171,7 +171,7 @@ class PerfilPsicologicoController extends Controller
             'semestre'=>$perfil->semestre,
             'alumno' => new AlumnoResource($perfil->alumno),
             'evaluaciones' => EstadoPerfilResource::collection($estado),
-            'recomendacion' => $perfil->when(($perfil->recomendacion != null), 'secret-value'),
+            'recomendacion' => $perfil->when(($perfil->recomendacion != null), 'recomendacion'),
             // ,
         ]];
 

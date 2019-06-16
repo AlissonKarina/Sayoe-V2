@@ -14,7 +14,7 @@ class AlumnoSeeder extends Seeder
     {
         Alumno::create([
             'codigo' => '07200126',
-            'ciclo' => 'X',
+            'ciclo' => '10',
             'situacion' => "R",
             'promedio' => '12.4',
             'anho_ingreso' => '2007',
@@ -27,7 +27,7 @@ class AlumnoSeeder extends Seeder
 
         Alumno::create([
             'codigo' => '09200053',
-            'ciclo' => 'IX',
+            'ciclo' => '9',
             'situacion' => "O",
             'promedio' => '12.6',
             'anho_ingreso' => '2009',
@@ -40,7 +40,7 @@ class AlumnoSeeder extends Seeder
 
         Alumno::create([
             'codigo' => '09200054',
-            'ciclo' => 'X',
+            'ciclo' => '10',
             'situacion' => "R",
             'promedio' => '11.2',
             'anho_ingreso' => '2009',
@@ -53,7 +53,7 @@ class AlumnoSeeder extends Seeder
 
         Alumno::create([
             'codigo' => '09200139',
-            'ciclo' => 'IX',
+            'ciclo' => '9',
             'situacion' => "R",
             'promedio' => '13.2',
             'anho_ingreso' => '2009',
@@ -66,7 +66,7 @@ class AlumnoSeeder extends Seeder
 
         Alumno::create([
             'codigo' => '09200154',
-            'ciclo' => 'VIII',
+            'ciclo' => '8',
             'situacion' => "O",
             'promedio' => '11.2',
             'anho_ingreso' => '2009',
@@ -79,7 +79,7 @@ class AlumnoSeeder extends Seeder
 
         Alumno::create([
             'codigo' => '09200159',
-            'ciclo' => 'VIII',
+            'ciclo' => '8',
             'situacion' => "O",
             'promedio' => '13.6',
             'anho_ingreso' => '2009',
@@ -92,7 +92,7 @@ class AlumnoSeeder extends Seeder
 
         Alumno::create([
             'codigo' => '09200229',
-            'ciclo' => 'VIII',
+            'ciclo' => '8',
             'situacion' => "O",
             'promedio' => '13.8',
             'anho_ingreso' => '2009',
@@ -105,7 +105,7 @@ class AlumnoSeeder extends Seeder
 
         Alumno::create([
             'codigo' => '10200064',
-            'ciclo' => 'VIII',
+            'ciclo' => '8',
             'situacion' => "O",
             'promedio' => '13.8',
             'anho_ingreso' => '2010',
@@ -118,7 +118,7 @@ class AlumnoSeeder extends Seeder
 
         Alumno::create([
             'codigo' => '10200068',
-            'ciclo' => 'IX',
+            'ciclo' => '9',
             'situacion' => "R",
             'promedio' => '13.1',
             'anho_ingreso' => '2010',
@@ -131,7 +131,7 @@ class AlumnoSeeder extends Seeder
 
         Alumno::create([
             'codigo' => '10200071',
-            'ciclo' => 'VIII',
+            'ciclo' => '6',
             'situacion' => "R",
             'promedio' => '13.1',
             'anho_ingreso' => '2010',
@@ -144,7 +144,7 @@ class AlumnoSeeder extends Seeder
 
         Alumno::create([
             'codigo' => '10200143',
-            'ciclo' => 'VIII',
+            'ciclo' => '5',
             'situacion' => "R",
             'promedio' => '13.1',
             'anho_ingreso' => '2010',
@@ -157,7 +157,7 @@ class AlumnoSeeder extends Seeder
 
         Alumno::create([
             'codigo' => '10200144',
-            'ciclo' => 'VIII',
+            'ciclo' => '7',
             'situacion' => "R",
             'promedio' => '13.1',
             'anho_ingreso' => '2010',
@@ -170,7 +170,7 @@ class AlumnoSeeder extends Seeder
 
         Alumno::create([
             'codigo' => '10200151',
-            'ciclo' => 'VIII',
+            'ciclo' => '8',
             'situacion' => "R",
             'promedio' => '13.1',
             'anho_ingreso' => '2010',
@@ -183,7 +183,7 @@ class AlumnoSeeder extends Seeder
 
         Alumno::create([
             'codigo' => '10200156',
-            'ciclo' => 'VIII',
+            'ciclo' => '8',
             'situacion' => "R",
             'promedio' => '13.9',
             'anho_ingreso' => '2010',
@@ -196,7 +196,7 @@ class AlumnoSeeder extends Seeder
 
         Alumno::create([
             'codigo' => '10200157',
-            'ciclo' => 'VIII',
+            'ciclo' => '9',
             'situacion' => "O",
             'promedio' => '10.1',
             'anho_ingreso' => '2010',
@@ -209,7 +209,7 @@ class AlumnoSeeder extends Seeder
 
         Alumno::create([
             'codigo' => '10200166',
-            'ciclo' => 'VII',
+            'ciclo' => '7',
             'situacion' => "O",
             'promedio' => '13.1',
             'anho_ingreso' => '2010',
@@ -222,7 +222,7 @@ class AlumnoSeeder extends Seeder
 
         Alumno::create([
             'codigo' => '10200169',
-            'ciclo' => 'VII',
+            'ciclo' => '7',
             'situacion' => "O",
             'promedio' => '13.1',
             'anho_ingreso' => '2010',
@@ -235,7 +235,7 @@ class AlumnoSeeder extends Seeder
         
         Alumno::create([
             'codigo' => '10200176',
-            'ciclo' => 'VII',
+            'ciclo' => '7',
             'situacion' => "O",
             'promedio' => '13.1',
             'anho_ingreso' => '2010',
@@ -248,7 +248,7 @@ class AlumnoSeeder extends Seeder
 
         Alumno::create([
             'codigo' => '10200215',
-            'ciclo' => 'VII',
+            'ciclo' => '7',
             'situacion' => "O",
             'promedio' => '13.1',
             'anho_ingreso' => '2010',
@@ -261,7 +261,7 @@ class AlumnoSeeder extends Seeder
 
         Alumno::create([
             'codigo' => '16200200',
-            'ciclo' => 'VII',
+            'ciclo' => '7',
             'situacion' => "O",
             'promedio' => '13.1',
             'anho_ingreso' => '2010',
