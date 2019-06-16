@@ -71,54 +71,29 @@ class HabitoEstudioController extends Controller
             [44, 36, 28, 18, 9, 0],
         ];
 
-        $descripcion=[
-            'area-1'=>[],
-            'area-2'=>[],
-            'area-3'=>[],
-            'area-4'=>[],
-            'area-5'=>[],
-            'area-6'=>[],
-        ];
+        $descripcion=[];
 
         for ($i = 0; $i < 6; $i ++)
         {
             if($total[$i]>=$array[$i][0]){
-                array_push($descripcion, [
-                    'area-'.($i+1)=>[
-                        'valor' => $total[$i],
-                        'descripcion' => $this->descripcion(5)
-                    ]]);
+                $desc = $this->descripcion(5);
             }else if ($total[$i]>=$array[$i][1]){
-                array_push($descripcion, [
-                    'area-'.($i+1)=>[
-                        'valor' => $total[$i],
-                        'descripcion' => $this->descripcion(4)
-                    ]]);
+                $desc = $this->descripcion(4);
             }else if ($total[$i]>=$array[$i][2]){
-                array_push($descripcion, [
-                    'area-'.($i+1)=>[
-                        'valor' => $total[$i],
-                        'descripcion' => $this->descripcion(3)
-                    ]]);
+                $desc = $this->descripcion(3);
             }else if ($total[$i]>=$array[$i][3]){
-                array_push($descripcion['area-'.($i+1)], [
-                    'area-'.($i+1)=>[
-                        'valor' => $total[$i],
-                        'descripcion' => $this->descripcion(2)
-                    ]]);
+                $desc = $this->descripcion(2);
             }else if ($total[$i]>=$array[$i][4]){
-                array_push($descripcion, [
-                    'area-'.($i+1)=>[
-                        'valor' => $total[$i],
-                        'descripcion' => $this->descripcion(1)
-                    ]]);
+                $desc = $this->descripcion(1);
             }else if ($total[$i]>=$array[$i][5]){
-                array_push($descripcion, [
-                    'area-'.($i+1)=>[
-                        'valor' => $total[$i],
-                        'descripcion' => $this->descripcion(0)
-                    ]]);
+                $desc = $this->descripcion(0);
             }
+            array_push($descripcion, [
+                'area-'.($i+1)=>[
+                    'valor' => $total[$i],
+                    'descripcion' => $desc
+                ]
+            ]);
         }
 
         return $descripcion;
