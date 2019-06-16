@@ -220,6 +220,58 @@ class AlumnoSeeder extends Seeder
             'id_escuela' => '2'
         ]);
 
+        Alumno::create([
+            'codigo' => '10200169',
+            'ciclo' => 'VII',
+            'situacion' => "O",
+            'promedio' => '13.1',
+            'anho_ingreso' => '2010',
+            'estado_permanencia' => 'Activo',
+            'total_creditos' => '62',
+            'dni' => '42255984',
+            'id_usuario' => '1000016',
+            'id_escuela' => '2'
+        ]);  
+        
+        Alumno::create([
+            'codigo' => '10200176',
+            'ciclo' => 'VII',
+            'situacion' => "O",
+            'promedio' => '13.1',
+            'anho_ingreso' => '2010',
+            'estado_permanencia' => 'Activo',
+            'total_creditos' => '62',
+            'dni' => '70446446',
+            'id_usuario' => '1000017',
+            'id_escuela' => '1'
+        ]); 
+
+        Alumno::create([
+            'codigo' => '10200215',
+            'ciclo' => 'VII',
+            'situacion' => "O",
+            'promedio' => '13.1',
+            'anho_ingreso' => '2010',
+            'estado_permanencia' => 'Activo',
+            'total_creditos' => '62',
+            'dni' => '47753685',
+            'id_usuario' => '1000018',
+            'id_escuela' => '2'
+        ]); 
+
+        Alumno::create([
+            'codigo' => '16200200',
+            'ciclo' => 'VII',
+            'situacion' => "O",
+            'promedio' => '13.1',
+            'anho_ingreso' => '2010',
+            'estado_permanencia' => 'Activo',
+            'total_creditos' => '62',
+            'dni' => '9876542',
+            'id_usuario' => '1',
+            'id_escuela' => '2'
+        ]); 
+        
         for($i = 2 ; $i <= 11 ; $i ++){
             Alumno::create([
                 'codigo' => '162000'.$i,
