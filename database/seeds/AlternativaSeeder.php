@@ -1146,13 +1146,13 @@ class AlternativaSeeder extends Seeder
         ]);
         Alternativa::create([//196
             'descripcion' =>"Alternativa Prueba",
-            'id_pregunta' => '78',
+            'id_pregunta' => '77',
             'puntuacion' => '2'
         ]);
         /**prueba pregunta 2 */
         Alternativa::create([//197
             'descripcion' =>"Alternativa Prueba",
-            'id_pregunta' => '77',
+            'id_pregunta' => '78',
             'puntuacion' => '1'
         ]);
         Alternativa::create([//198
@@ -1807,111 +1807,111 @@ class AlternativaSeeder extends Seeder
         /** 1 */
         Alternativa::create([//275
             'descripcion' => "Descripcion prueba habitos estudio",
-            'id_pregunta' => '253',
+            'id_pregunta' => '266',
             'puntuacion' => '2'
         ]);
         Alternativa::create([//276
             'descripcion' => "Descripcion prueba habitos estudio",
-            'id_pregunta' => '253',
+            'id_pregunta' => '266',
             'puntuacion' => '3'
         ]);
         /** 2 */
         Alternativa::create([//277
             'descripcion' => "Descripcion prueba habitos estudio",
-            'id_pregunta' => '254',
+            'id_pregunta' => '267',
             'puntuacion' => '2'
         ]);
         Alternativa::create([//278
             'descripcion' => "Descripcion prueba habitos estudio",
-            'id_pregunta' => '254',
+            'id_pregunta' => '267',
             'puntuacion' => '3'
         ]);
         /** 3 */
         Alternativa::create([//279
             'descripcion' => "Descripcion prueba habitos estudio",
-            'id_pregunta' => '255',
+            'id_pregunta' => '268',
             'puntuacion' => '2'
         ]);
         Alternativa::create([//280
             'descripcion' => "Descripcion prueba habitos estudio",
-            'id_pregunta' => '255',
+            'id_pregunta' => '268',
             'puntuacion' => '3'
         ]);
         /** 4 */
         Alternativa::create([//281
             'descripcion' => "Descripcion prueba habitos estudio",
-            'id_pregunta' => '256',
+            'id_pregunta' => '269',
             'puntuacion' => '2'
         ]);
         Alternativa::create([//282
             'descripcion' => "Descripcion prueba habitos estudio",
-            'id_pregunta' => '256',
+            'id_pregunta' => '269',
             'puntuacion' => '3'
         ]);
         /** 5 */
         Alternativa::create([//283
             'descripcion' => "Descripcion prueba habitos estudio",
-            'id_pregunta' => '257',
+            'id_pregunta' => '270',
             'puntuacion' => '2'
         ]);
         Alternativa::create([//284
             'descripcion' => "Descripcion prueba habitos estudio",
-            'id_pregunta' => '257',
+            'id_pregunta' => '270',
             'puntuacion' => '3'
         ]);
         /** 6 */
         Alternativa::create([//285
             'descripcion' => "Descripcion prueba habitos estudio",
-            'id_pregunta' => '258',
+            'id_pregunta' => '271',
             'puntuacion' => '2'
         ]);
         Alternativa::create([//286
             'descripcion' => "Descripcion prueba habitos estudio",
-            'id_pregunta' => '258',
+            'id_pregunta' => '271',
             'puntuacion' => '3'
         ]);
         /** 7 */
         Alternativa::create([//287
             'descripcion' => "Descripcion prueba habitos estudio",
-            'id_pregunta' => '259',
+            'id_pregunta' => '272',
             'puntuacion' => '2'
         ]);
         Alternativa::create([//288
             'descripcion' => "Descripcion prueba habitos estudio",
-            'id_pregunta' => '259',
+            'id_pregunta' => '272',
             'puntuacion' => '3'
         ]);
         /** 8 */
         Alternativa::create([//289
             'descripcion' => "Descripcion prueba habitos estudio",
-            'id_pregunta' => '260',
+            'id_pregunta' => '273',
             'puntuacion' => '2'
         ]);
         Alternativa::create([//290
             'descripcion' => "Descripcion prueba habitos estudio",
-            'id_pregunta' => '260',
+            'id_pregunta' => '273',
             'puntuacion' => '3'
         ]);
         /** 9 */
         Alternativa::create([//291
             'descripcion' => "Descripcion prueba habitos estudio",
-            'id_pregunta' => '261',
+            'id_pregunta' => '274',
             'puntuacion' => '2'
         ]);
         Alternativa::create([//292
             'descripcion' => "Descripcion prueba habitos estudio",
-            'id_pregunta' => '261',
+            'id_pregunta' => '274',
             'puntuacion' => '3'
         ]);
         /** 10 */
         Alternativa::create([//293
             'descripcion' => "Descripcion prueba habitos estudio",
-            'id_pregunta' => '262',
+            'id_pregunta' => '275',
             'puntuacion' => '2'
         ]);
         Alternativa::create([//294
             'descripcion' => "Descripcion prueba habitos estudio",
-            'id_pregunta' => '262',
+            'id_pregunta' => '275',
             'puntuacion' => '3'
         ]);
     }

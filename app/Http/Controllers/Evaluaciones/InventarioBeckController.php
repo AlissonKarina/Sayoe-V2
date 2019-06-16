@@ -24,7 +24,7 @@ class InventarioBeckController extends Controller
             $total = $total + $valor['puntuacion']; 
         }
 
-        $descripcion = ['resultado' => $this->descripcion($total)];
+        $resultado = ["resultado" => $this->resultado($total)];
         
         $date = Helper::fechaActual();
 
@@ -32,21 +32,33 @@ class InventarioBeckController extends Controller
         $estadoPerfil->estado = '1';
         $estadoPerfil->fecha = $date;
         $estadoPerfil->valor = $total;
-        $estadoPerfil->descripcion = $descripcion;
+        $estadoPerfil->descripcion = $resultado;
         $estadoPerfil->save();
 
-        return response()->json($descripcion);
+        return response()->json($resultado);
     }
     
-    private function descripcion($total){
+    private function resultado($total){
         if($total>= 0 and $total<=13){
-            return "no presenta signos de depresión";
+            return [
+                'valor' => $total,
+                'descripcion' => "no presenta signos de depresión"
+            ]; 
         }else if ($total>= 14 and $total<=19){
-            return "no presenta signos de depresión leve";
+            return [
+                'valor' => $total,
+                'descripcion' => "presenta signos de depresión leve"
+            ];
         }else if ($total>= 20 and $total<=28){
-            return "no presenta signos de depresión moderado";
+            return [
+                'valor' => $total,
+                'descripcion' => "presenta signos de depresión moderado"
+            ];
         }else if ($total>= 29 and $total<=63){
-            return "no presenta signos de depresión severo";
+            return [
+                'valor' => $total,
+                'descripcion' => "presenta signos de depresión severo"
+            ];
         }
     }
 

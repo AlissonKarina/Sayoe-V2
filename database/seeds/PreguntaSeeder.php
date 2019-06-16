@@ -1881,61 +1881,61 @@ class PreguntaSeeder extends Seeder
 
         /** PRUEBAAA HABITOS ESTUDIO */
         Pregunta::create([
-            'id' => '253',
+            'id' => '266',
             'pregunta' => "Pregunta prueba",
             'bloque' => '1',
             'id_cuest_eval' => '5'
         ]);
         Pregunta::create([
-            'id' => '254',
+            'id' => '267',
             'pregunta' => "Pregunta prueba",
             'bloque' => '1',
             'id_cuest_eval' => '5'
         ]);
         Pregunta::create([
-            'id' => '255',
+            'id' => '268',
             'pregunta' => "Pregunta prueba",
             'bloque' => '2',
             'id_cuest_eval' => '5'
         ]);
         Pregunta::create([
-            'id' => '256',
+            'id' => '269',
             'pregunta' => "Pregunta prueba",
             'bloque' => '2',
             'id_cuest_eval' => '5'
         ]);
         Pregunta::create([
-            'id' => '257',
+            'id' => '270',
             'pregunta' => "Pregunta prueba",
             'bloque' => '3',
             'id_cuest_eval' => '5'
         ]);
         Pregunta::create([
-            'id' => '258',
+            'id' => '271',
             'pregunta' => "Pregunta prueba",
             'bloque' => '3',
             'id_cuest_eval' => '5'
         ]);
         Pregunta::create([
-            'id' => '259',
+            'id' => '272',
             'pregunta' => "Pregunta prueba",
             'bloque' => '4',
             'id_cuest_eval' => '5'
         ]);
         Pregunta::create([
-            'id' => '260',
+            'id' => '273',
             'pregunta' => "Pregunta prueba",
             'bloque' => '4',
             'id_cuest_eval' => '5'
         ]);
         Pregunta::create([
-            'id' => '261',
+            'id' => '274',
             'pregunta' => "Pregunta prueba",
             'bloque' => '5',
             'id_cuest_eval' => '5'
         ]);
         Pregunta::create([
-            'id' => '262',
+            'id' => '275',
             'pregunta' => "Pregunta prueba",
             'bloque' => '5',
             'id_cuest_eval' => '5'

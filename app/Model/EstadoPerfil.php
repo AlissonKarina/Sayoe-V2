@@ -18,6 +18,10 @@ class EstadoPerfil extends Model
         'id_perfil_psico', 'id_cuest_eval', 'estado', 'fecha', 'valor', 'descripcion'
     ];
 
+    protected $casts = [
+        'descripcion' => 'array'
+    ];
+
     public function cuestionarioEvaluacion()
     {
         return $this->belongsTo('App\Model\CuestionarioEvaluacion', 'id_cuest_eval', 'id');
