@@ -167,9 +167,11 @@ class PerfilPsicologicoController extends Controller
 
         $data = ['data' => [
             'id_perfil-psico' => $id,
+            'anho'=>$perfil->anho,
+            'semestre'=>$perfil->semestre,
             'alumno' => new AlumnoResource($perfil->alumno),
             'evaluaciones' => EstadoPerfilResource::collection($estado),
-            'recomendacion' => $perfil->when($perfil->recomendacion != null, $perfil->recomendacion),
+            'recomendacion' => $perfil->recomendacion,
         ]];
 
        /*  return response()->json($estado); */
