@@ -18,13 +18,14 @@ class InventarioBeckController extends Controller
         $data = $request->data;
         $id_perfil_psico = $data['id_perfil_psico'];
         $id_estado_perfil = $data['id_estado_perfil'];
+        $strategy = new iEstrategiaInventarioBeck();
         
         foreach ($data['alternativa'] as $valor)
         {
             $total = $total + $valor['puntuacion']; 
         }
 
-        $resultado = $this->resultado($total);
+        $resultado = $strategy->resultado($total);
         
         $date = Helper::fechaActual();
 
@@ -37,30 +38,4 @@ class InventarioBeckController extends Controller
 
         return $resultado;
     }
-    
-    private function resultado($total){
-        if($total>= 0 and $total<=13){
-            return [
-                'valor' => $total,
-                'descripcion' => "no presenta signos de depresión"
-            ]; 
-        }else if ($total>= 14 and $total<=19){
-            return [
-                'valor' => $total,
-                'descripcion' => "presenta signos de depresión leve"
-            ];
-        }else if ($total>= 20 and $total<=28){
-            return [
-                'valor' => $total,
-                'descripcion' => "presenta signos de depresión moderado"
-            ];
-        }else if ($total>= 29 and $total<=63){
-            return [
-                'valor' => $total,
-                'descripcion' => "presenta signos de depresión severo"
-            ];
-        }
-    }
-
-
 }

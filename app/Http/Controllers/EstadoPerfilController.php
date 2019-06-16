@@ -112,7 +112,8 @@ class EstadoPerfilController extends Controller
     {
       $estado = EstadoPerfil::find($id_estado_perfil);
       $id_eva = $estado->id_cuest_eval;
-      $data="Evaluacion no existente";
+      $strategy="Evaluacion no existente";
+
       if($id_eva == 1 or $id_eva == 5){
         $data = ['data'=> $estado->descripcion[5]];
       }else if($id_eva == 2 or $id_eva== 3){
