@@ -3,10 +3,13 @@
 namespace App\Http\Controllers;
 
 use App\Model\Alumno;
+use App\Model\Persona;
+use App\Model\Usuario;
 use App\Http\Resources\AlumnoShortResource;
 use App\Http\Resources\AlumnoResource;
 use Illuminate\Http\Request;
 use App\Http\Helper\Helper;
+use Illuminate\Support\Facades\Validator;
 
 class AlumnoController extends Controller
 {
@@ -24,6 +27,20 @@ class AlumnoController extends Controller
     {
         $data = $request->data;
         
+        $v = Validator::make($data, [
+            'dni' => 'required|unique:personas',
+            'correo' => 'required|email|unique:usuarios',
+            'codigo'    => 'required|unique:alumnos',
+        ], [
+            'dni.unique' => 'dni',
+            'correo.unique' => 'correo',
+            'codigo.unique' => 'codigo',
+        ]);
+
+         if ($v->fails()){
+            return ['errors' => $v->errors()];
+        }
+
         $persona = Persona::create([
             'dni' => $data['dni'],
             'nombre' => $data['nombre'],
@@ -34,21 +51,24 @@ class AlumnoController extends Controller
         ]);
 
         $usuario = Usuario::create([
-            'usuario' => $data['usuario'],
-            'contrasenha' => $data['contrasenha'],
-        ]);
+            'correo' => $data['correo'],
+            'contrasenha' => app('hash')->make($data['contrasenha']),
+            'estado' => '1',
+            'autenticado' => '0',
+            'id_rol' => '128963',
+        ]);       
         
         $alumno = Alumno::create([
             'codigo' => $data['codigo'],
             'situacion' => $data['situacion'],
             'anho_ingreso' => $data['anho_ingreso'],
             'estado_permanencia' => $data['estado_permanencia'],
-            'dni' => $persona->dni,
+            'dni' => $data['dni'],
             'id_usuario' => $usuario->id,
             'id_escuela' => $data['id_escuela']
         ]);
 
-       
+       return response()->json("OK",200);
     }
 
     public function shortAlumno($codigo) {

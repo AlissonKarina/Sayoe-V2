@@ -15,7 +15,7 @@ class CreateAlumnosTable extends Migration
     {
         Schema::create('alumnos', function (Blueprint $table) {        
             $table->string('codigo',8)->unique();
-            $table->integer('ciclo');
+            $table->integer('ciclo')->nullable();
             $table->char('situacion', 1)->nullable();
             $table->float('promedio', 5, 2)->nullable();
             $table->string('anho_ingreso', 4);
