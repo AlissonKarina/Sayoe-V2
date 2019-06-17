@@ -2,7 +2,6 @@
 
 namespace App\Model;
 
-use App\InfoAcadem;
 use Illuminate\Database\Eloquent\Model;
 
 class Persona extends Model 
@@ -28,16 +27,5 @@ class Persona extends Model
     {
         return $this->hasOne('App\Model\Alumno', 'dni', 'dni');
     }
-
-/*     public static function idAlumno ($codigo)
-    {
-        return (Alumno::select('id')->find($codigo))["id"];
-    }
-
-    public static function alumnosCiclo($ciclo) {
-        $listId = InfoAcadem::where('ciclo', $ciclo)->get(['id_alumno']);
-        return Alumno::whereIn('id', $listId)->get();
-    } */
-
     
 }
