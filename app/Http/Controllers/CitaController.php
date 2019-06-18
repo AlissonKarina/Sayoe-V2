@@ -8,12 +8,14 @@ use Illuminate\Http\Request;
 
 class CitaController extends Controller
 {
-    public function index() {
+    public function index() 
+    {
         return CitaResource::collection(Cita::orderBy('fecha', 'asc')
         ->get());
     }
     
-    public function create(Request $request) {
+    public function create(Request $request) 
+    {
         if ($request->isJson()) {
             $data = $request['data'];
 
@@ -32,6 +34,18 @@ class CitaController extends Controller
             
             $cita->save();
             
+            return response()->json('OK', 200);
+        }
+    }
+
+    public function estado(Request $request)
+    {
+        if ($request->isJson()) {
+            $data = $request['data'];
+
+            $cita = Cita::find($data['id_cita']);
+            $cita->estado = $data['estado'];
+            $cita->save();
             return response()->json('OK', 200);
         }
     }

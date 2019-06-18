@@ -18,7 +18,7 @@ class CreatePersonasTable extends Migration
             $table->string('nombre',45);
             $table->string('apellido_paterno', 45);
             $table->string('apellido_materno', 45)->nullable();            
-            $table->tinyInteger('sexo');
+            $table->char('sexo');
             $table->date('fecha_nacimiento');
             $table->string('foto', 100)->nullable();
             $table->string('telefono',10)->nullable();
