@@ -149,6 +149,7 @@ class PerfilPsicologicoController extends Controller
         $perfil = PerfilPsicologico::find($data['id_perfil_psico']);
 
         $perfil->recomendacion = $data['recomendacion'];
+        $perfil->fecha_recomendacion = Helper::fechaHoraActual();
         $perfil->save();
 
         return response()->json("OK",200);;
@@ -160,18 +161,20 @@ class PerfilPsicologicoController extends Controller
         $estado = EstadoPerfil::where('id_perfil_psico','=',$id)        
         ->where('estado','=',1)
         ->get();
+        $recomendacion = $perfil->recomendacion;
 
         if($perfil == null && $estado == null){
             return response()->json('No existe');
         }
 
         $data = ['data' => [
-            'id_perfil_psico' => $id,
+            /* 'id_perfil_psico' => $id,
             'anho'=>$perfil->anho,
-            'semestre'=>$perfil->semestre,
+            'semestre'=>$perfil->semestre, */
+            'perfil' => new PerfilPsicologicoResource($perfil),
             'alumno' => new AlumnoResource($perfil->alumno),
             'evaluaciones' => EstadoPerfilResource::collection($estado),
-            'recomendacion' =>  $perfil->recomendacion,
+            /* 'recomendacion' =>  $perfil->recomendacion, */
         ]];
 
        /*  return response()->json($estado); */

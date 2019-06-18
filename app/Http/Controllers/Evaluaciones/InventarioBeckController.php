@@ -29,7 +29,7 @@ class InventarioBeckController extends Controller
 
         $resultado = $this->strategy->resultado($total);
         
-        $date = Helper::fechaActual();
+        $date = Helper::fechaHoraActual();
 
         $estadoPerfil = EstadoPerfil::find($id_estado_perfil);
         $estadoPerfil->estado = '1';

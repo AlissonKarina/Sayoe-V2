@@ -53,7 +53,7 @@ class HabitoEstudioController extends Controller
 
         $resultado = $this->strategy->resultado($count);
         
-        $date = Helper::fechaActual();
+        $date = Helper::fechaHoraActual();
 
         $estadoPerfil = EstadoPerfil::find($id_estado_perfil);
         $estadoPerfil->estado = '1';

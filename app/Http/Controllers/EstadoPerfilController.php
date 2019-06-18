@@ -102,7 +102,7 @@ class EstadoPerfilController extends Controller
 
         $perfil = PerfilPsicologico::find($id_perfil_psico);
         $perfil->estado = '1';
-        $perfil->fecha_resuelto = Helper::fechaActual();
+        $perfil->fecha_resuelto = Helper::fechaHoraActual();
         $perfil->save();
         return true;
     }
@@ -110,7 +110,14 @@ class EstadoPerfilController extends Controller
     public function show($id_estado_perfil)
     {
       $estado = EstadoPerfil::find($id_estado_perfil);
-      $data = ['data'=> $estado->resultadoInstantaneo()];
+      $fecha_hora = Helper::fecha_hora($estado->fecha);
+      $data = [
+        'data'=> [
+          'fecha' => $fecha_hora['fecha'],
+          'hora' => $fecha_hora['hora'].' horas',
+          'resultado' => $estado->resultadoInstantaneo(),
+        ]
+      ];
      
       return response()->json($data, 200);
     }

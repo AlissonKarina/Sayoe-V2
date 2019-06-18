@@ -34,6 +34,13 @@ class Helper
         return $date;
     }
 
+    public static function fechaHoraActual(){
+        $fecha_hora = new \Carbon\Carbon();
+        $date_time = $fecha_hora->format('Y-m-d h:i:s');
+
+        return $date_time;
+    }
+
     public static function semestre($mes){
         $mes = (int)$mes;
         if($mes >= 0 and $mes <= 3) {
