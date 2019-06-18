@@ -101,33 +101,24 @@ class AlumnoController extends Controller
     public function update(Request $request)
     {
         $data = $reques['data'];
-        Alumno::find($data['codigo']);
 
-        $persona = Persona::create([
-            'dni' => $data['dni'],
-            'nombre' => strtoupper($data['nombre']),
-            'apellido_materno' => strtoupper($data['apellido_materno']),
-            'apellido_paterno' => strtoupper($data['apellido_paterno']),
-            'sexo' => strtoupper($data['sexo']),
-            'fecha_nacimiento' => $data['fecha_nacimiento'],
-        ]);
+        $alumno = Alumno::find($data['codigo']);
+        $alumno->situacion = strtoupper($data['situacion']);
+        $alumno->anho_ingreso = $data['anho_ingreso'];
+        $alumno->estado_permanencia = strtoupper($data['estado_permanencia']);
+        $alumno->save();
 
-        $usuario = Usuario::create([
-            'correo' => $data['correo'],
-            'contrasenha' => app('hash')->make($data['contrasenha']),
-            'estado' => '1',
-            'autenticado' => '0',
-            'id_rol' => '128963',
-        ]);       
+        $persona = Persona::find($alumno->dni);
+        $persona->nombre = strtoupper($data['nombre']);
+        $persona->apellido_materno = strtoupper($data['apellido_materno']);
+        $persona->apellido_paterno = strtoupper($data['apellido_paterno']);
+        $persona->sexo = strtoupper($data['sexo']);
+        $persona->save();
         
-        $alumno = Alumno::create([
-            'codigo' => $data['codigo'],
-            'situacion' => strtoupper($data['situacion']),
-            'anho_ingreso' => $data['anho_ingreso'],
-            'estado_permanencia' => strtoupper($data['estado_permanencia']),
-            'dni' => $data['dni'],
-            'id_usuario' => $usuario->id,
-            'id_escuela' => $data['id_escuela']
-        ]);
+        $usuario = Usuario::find($id_usuario);
+        $usuario->contrasenha = app('hash')->make($data['contrasenha']);
+        $usuario->save();
+             
+        return response()->json("OK", 200);
     }
 }

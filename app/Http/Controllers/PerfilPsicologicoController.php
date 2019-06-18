@@ -70,7 +70,7 @@ class PerfilPsicologicoController extends Controller
                             $alumnos = Alumno::whereIn('id', $listId)->get();
             }
 
-            $value = $this->asignarTest($alumnos, $test, $fecha_limite);
+            $value = $this->asignarTest($alumnos, $test, $fechaLimite);
             return $value;
         }
     }
@@ -97,10 +97,10 @@ class PerfilPsicologicoController extends Controller
             }
         }
 
-        return response()->json("listo", 200);
+        return response()->json("OK", 200);
     }
 
-    public function perfilesPendientes(Request $request)
+    public function perfilesPsicologicos(Request $request)
     {
         $arrayTotal = ["data" => []];
         $semestre = Helper::semestre($request->mes);
@@ -122,7 +122,7 @@ class PerfilPsicologicoController extends Controller
         return response()->json($arrayTotal,200);
     }
 
-    public function perfilesRealizados(Request $request)
+    public function recomendaciones(Request $request)
     {
         $arrayTotal = ["data" => []];
         $semestre = Helper::semestre($request->mes);
