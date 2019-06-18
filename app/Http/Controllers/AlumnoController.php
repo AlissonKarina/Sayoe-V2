@@ -97,4 +97,37 @@ class AlumnoController extends Controller
         }
         return $alumno[0]['codigo'];
     }
+
+    public function update(Request $request)
+    {
+        $data = $reques['data'];
+        Alumno::find($data['codigo']);
+
+        $persona = Persona::create([
+            'dni' => $data['dni'],
+            'nombre' => strtoupper($data['nombre']),
+            'apellido_materno' => strtoupper($data['apellido_materno']),
+            'apellido_paterno' => strtoupper($data['apellido_paterno']),
+            'sexo' => strtoupper($data['sexo']),
+            'fecha_nacimiento' => $data['fecha_nacimiento'],
+        ]);
+
+        $usuario = Usuario::create([
+            'correo' => $data['correo'],
+            'contrasenha' => app('hash')->make($data['contrasenha']),
+            'estado' => '1',
+            'autenticado' => '0',
+            'id_rol' => '128963',
+        ]);       
+        
+        $alumno = Alumno::create([
+            'codigo' => $data['codigo'],
+            'situacion' => strtoupper($data['situacion']),
+            'anho_ingreso' => $data['anho_ingreso'],
+            'estado_permanencia' => strtoupper($data['estado_permanencia']),
+            'dni' => $data['dni'],
+            'id_usuario' => $usuario->id,
+            'id_escuela' => $data['id_escuela']
+        ]);
+    }
 }

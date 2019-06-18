@@ -25,10 +25,7 @@ class AuthController extends BaseController
         if($id == 0){
             $id = UnayoePerfilController::getUsuario($user->id);
         }
-        
-           
-        
-        
+
         $payload = [
             'iss' => "lumen-jwt", 
             'sub' => $id, 

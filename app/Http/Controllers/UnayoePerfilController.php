@@ -45,11 +45,11 @@ class UnayoePerfilController extends Controller
         $id_usuario = Usuario::where("correo",  $usuario->correo)->get();
 
         $perfil = UnayoePerfil::create([
-            'nombre' => $request->nombre,
-            'apellido_paterno' => $request->apellido_paterno,
-            'apellido_materno' => $request->apellido_materno,
-            'sexo' => $request->sexo,
-            'profesion' => $request->profesion,
+            'nombre' => strtoupper($request->nombre),
+            'apellido_paterno' => strtoupper($request->apellido_paterno),
+            'apellido_materno' => strtoupper($request->apellido_materno),
+            'sexo' => strtoupper($request->sexo),
+            'profesion' => strtoupper($request->profesion),
             'facebook' => "",
             'celular' => $request->celular,
             'wsp' => $request->celular,
@@ -80,11 +80,11 @@ class UnayoePerfilController extends Controller
     public function update($id, Request $request)
     {
         $perfil = UnayoePerfil::find($id);
-        $perfil->nombre = $request->nombre;
-        $perfil->apellido_paterno = $request->apellido_paterno;
-        $perfil->apellido_materno = $request->apellido_materno;
-        $perfil->sexo = $request->sexo;
-        $perfil->profesion = $request->profesion;
+        $perfil->nombre = strtoupper($request->nombre);
+        $perfil->apellido_paterno = strtoupper($request->apellido_paterno);
+        $perfil->apellido_materno = strtoupper($request->apellido_materno);
+        $perfil->sexo = strtoupper($request->sexo);
+        $perfil->profesion = strtoupper($request->profesion);
         $perfil->facebook = $request->facebook;
         $perfil->celular = $request->celular;
         $perfil->correo = $request->correoAlternativo;

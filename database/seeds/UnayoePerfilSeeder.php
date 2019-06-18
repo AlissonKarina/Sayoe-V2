@@ -13,11 +13,11 @@ class UnayoePerfilSeeder extends Seeder
     public function run()
     {
         UnayoePerfil::create([
-            'nombre' => "Araceli",
-            'apellido_paterno' => "Campos",
-            'apellido_materno' => "Sevallo",
-            'sexo' => "1",
-            'profesion' => 'Psicologa',
+            'nombre' => strtoupper("Araceli"),
+            'apellido_paterno' => strtoupper("Campos"),
+            'apellido_materno' => strtoupper("Sevallo"),
+            'sexo' => "F",
+            'profesion' => strtoupper('Psicologa'),
             'facebook' => 'https://www.facebook.com/LuisYauriMartinez',
             'celular' => "9854-45202",
             'wsp' => "9854-45202",
@@ -29,11 +29,11 @@ class UnayoePerfilSeeder extends Seeder
         ]);
 
         UnayoePerfil::create([
-            'nombre' => "Mariana",
-            'apellido_paterno' => "Soto",
-            'apellido_materno' => "Chirinos",
+            'nombre' => strtoupper("Mariana"),
+            'apellido_paterno' => strtoupper("Soto"),
+            'apellido_materno' => strtoupper("Chirinos"),
             'sexo' => "1",
-            'profesion' => 'Psicologa',
+            'profesion' => strtoupper('Psicologa'),
             'facebook' => 'https://www.facebook.com/LuisYauriMartinez',
             'celular' => "9854-12543",
             'wsp' => "9854-12543",
