@@ -43,10 +43,10 @@ class AlumnoController extends Controller
 
         $persona = Persona::create([
             'dni' => $data['dni'],
-            'nombre' => $data['nombre'],
-            'apellido_materno' => $data['apellido_materno'],
-            'apellido_paterno' => $data['apellido_paterno'],
-            'sexo' => $data['sexo'],
+            'nombre' => strtoupper($data['nombre']),
+            'apellido_materno' => strtoupper($data['apellido_materno']),
+            'apellido_paterno' => strtoupper($data['apellido_paterno']),
+            'sexo' => strtoupper($data['sexo']),
             'fecha_nacimiento' => $data['fecha_nacimiento'],
         ]);
 
@@ -60,9 +60,9 @@ class AlumnoController extends Controller
         
         $alumno = Alumno::create([
             'codigo' => $data['codigo'],
-            'situacion' => $data['situacion'],
+            'situacion' => strtoupper($data['situacion']),
             'anho_ingreso' => $data['anho_ingreso'],
-            'estado_permanencia' => $data['estado_permanencia'],
+            'estado_permanencia' => strtoupper($data['estado_permanencia']),
             'dni' => $data['dni'],
             'id_usuario' => $usuario->id,
             'id_escuela' => $data['id_escuela']

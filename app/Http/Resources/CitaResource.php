@@ -12,12 +12,12 @@ class CitaResource extends JsonResource
         $fecha_hora = Helper::fecha_hora($this->fecha);
         return [
             'id' => $this->id,
-            'alumno' => $this->alumno->persona->apellido_paterno." ".$this->alumno->persona->apellido_materno.", ".$this->alumno->persona->nombre,
-            'estado' => $this->estado,
             'asunto' => $this->asunto,
             'fecha' => $fecha_hora['fecha'],
             'hora' => $fecha_hora['hora'].' horas',
-            'descripcion' => $this->descripcion,           
+            'estado' => $this->estado,
+            'descripcion' => $this->descripcion,    
+            'alumno' => new AlumnoResource($this->whenLoaded('alumno')),                  
             
         ];
     }

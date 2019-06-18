@@ -10,7 +10,7 @@ class CitaController extends Controller
 {
     public function index() 
     {
-        return CitaResource::collection(Cita::orderBy('fecha', 'asc')
+        return CitaResource::collection(Cita::with('alumno')->orderBy('fecha', 'asc')
         ->get());
     }
     
@@ -25,7 +25,7 @@ class CitaController extends Controller
              */
             $cita = new Cita;
             $cita->codigo_alumno = $data['codigo'];
-            $cita->asunto = $data['asunto'];
+            $cita->asunto = strtoupper($data['asunto']);
             /** debo saber cómo me enviará la fecha xD */
             $cita->fecha = $data['fecha_hora'];
             $cita->descripcion = $data['descripcion'];
