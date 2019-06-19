@@ -22,7 +22,7 @@ class CreatePerfilesPsicologicosTable extends Migration
             $table->dateTime('fecha_recomendacion')->nullable();
             $table->tinyInteger('estado')->default('0');
             $table->integer('anho')->unisgned()->nullable();
-            $table->string('semestre',8)->nullable();
+            $table->integer('semestre')->unisgned()->nullable();
             
             $table->string('codigo_alumno',8);
 
