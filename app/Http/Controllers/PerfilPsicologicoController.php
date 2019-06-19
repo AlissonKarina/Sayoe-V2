@@ -12,6 +12,7 @@ use Illuminate\Http\Request;
 use App\Http\Resources\AlumnoShortResource;
 use App\Http\Resources\PerfilPsicologicoResource;
 use App\Http\Resources\PerfilPsicologicoShortResource;
+use App\Http\Resources\PerfilPsicologicoAlumnoShortResource;
 use App\Http\Resources\EstadoPerfilResource;
 use App\Http\Resources\AlumnoResource;
 class PerfilPsicologicoController extends Controller
@@ -215,19 +216,17 @@ class PerfilPsicologicoController extends Controller
 
     public function perfilesAlumno($codigo)
     {
-        $arrayTotal = ["data" => []];
         $perfiles = PerfilPsicologico::with('alumno')
             ->where('codigo_alumno','=', $codigo)
             ->where('estado','=', 1)
+            ->whereNotNull('recomendacion')
+            ->orderBy('fecha_recomendacion', 'desc')
             ->get();
         
         $array = [
-            "anho" => $request->anho,
-            "semestre" => $semestre,
-            "perfiles" => PerfilPsicologicoAlumnoShortResource::collection($perfiles),
+            "data" => PerfilPsicologicoAlumnoShortResource::collection($perfiles)
         ];
-        array_push($arrayTotal['data'],$array);
 
-        return response()->json($arrayTotal, 200);
+        return response()->json($array, 200);
     }
 }

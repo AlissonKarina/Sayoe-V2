@@ -11,6 +11,8 @@ class PerfilPsicologicoAlumnoShortResource extends JsonResource
     {
         return [
             'id_perfil_psico' => $this->id_perfil,
+            "anho" => $this->anho,
+            "semestre" => $this->semestre,
             'fecha_resuelto' => $this->when($this->fecha_resuelto != null, function () {
                 $fecha_hora = Helper::fecha_hora($this->fecha_resuelto);
                 return [
