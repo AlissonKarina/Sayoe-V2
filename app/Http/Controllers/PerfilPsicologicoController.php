@@ -111,7 +111,7 @@ class PerfilPsicologicoController extends Controller
             ->where('semestre','=', $semestre)
             ->where('estado','=', '1')
             ->whereNull('recomendacion')
-            ->orderBy('fecha_resuelto', 'asc')
+            ->orderBy('fecha_resuelto', 'desc')
             ->get();
         
         $array = [
@@ -132,7 +132,7 @@ class PerfilPsicologicoController extends Controller
             ->where('semestre','=', $semestre)
             ->where('estado','=', '1')
             ->whereNotNull('recomendacion')
-            ->orderBy('fecha_resuelto', 'asc')
+            ->orderBy('fecha_resuelto', 'desc')
             ->get();
         $array = [
             "anho" => $request->anho,
@@ -228,5 +228,16 @@ class PerfilPsicologicoController extends Controller
         ];
 
         return response()->json($array, 200);
+    }
+
+    public function recomendacionPerfil($id)
+    {
+        $perfil = PerfilPsicologico::find($id);
+        $recomendacion = $perfil->recomendacion;
+        if($recomendacion == null) {$recomendacion = "";}
+        $data = [
+            'data' => ["recomendacion" => $recomendacion]
+        ];
+        return response()->json($data,200);
     }
 }
