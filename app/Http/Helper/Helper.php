@@ -36,7 +36,7 @@ class Helper
 
     public static function fechaHoraActual(){
         $fecha_hora = new \Carbon\Carbon();
-        $date_time = $fecha_hora->format('Y-m-d h:i:s');
+        $date_time = $fecha_hora->format('Y-m-d H:i:s');
 
         return $date_time;
     }
