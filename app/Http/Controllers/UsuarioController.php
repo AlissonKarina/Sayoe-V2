@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Model\User;
 use App\Model\UnayoePerfil;
 use App\Model\Alumno;
+use Illuminate\Http\Request;
 
 class UsuarioController extends Controller
 {
@@ -13,17 +14,28 @@ class UsuarioController extends Controller
      *
      * @return void
      */
-    public function index()
+    public function cambiarContrasenhaUnayoePerfil(Request $request)
     {
-        
+        $data = $request['data'];
+        $unayoe = UnayoePerfil::find($data['id']);
+
+        $usuario = $unayoe->usuario;
+        $usuario->contrasenha = app('hash')->make($data['contrasenha']);
+        $usuario->save();
+
+        return response()->json("OK", 200);
     }
 
-    public function fecha($fecha){
-        $dia = $fecha[0].$fecha[1];
-        $mes = $fecha[3].$fecha[4];
-        $anho = $fecha[6].$fecha[7].$fecha[8].$fecha[9];
+    public function cambiarContrasenhaAlumno(Request $request)
+    {
+        $data = $request['data'];
+        $alumno = Alumno::find($data['codigo']);
 
-        return $dia;
+        $usuario = $alumno->usuario;
+        $usuario->contrasenha = app('hash')->make($data['contrasenha']);
+        $usuario->save();
+
+        return response()->json("OK", 200);
     }
 
     //

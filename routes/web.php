@@ -66,7 +66,12 @@ $router->group(['prefix'=>'api/v1'], function() use($router){
         $router->get('/alumnos', 'AlumnoController@index');
         $router->get('/alumno/{codigo}', 'AlumnoController@show');
         $router->post('/alumno', 'AlumnoController@create');
-        $router->post('/alumno/actualizar', 'AlumnoController@update');
+        $router->post('/alumno/unayoe/actualizar', 'AlumnoController@updateUnayoe');
+        $router->post('/alumno/actualizar', 'AlumnoController@updateAlumno');
+
+        //USUARIO
+        $router->post('/usuario/contrasenha/unayoe', 'UsuarioController@cambiarContrasenhaUnayoePerfil');
+        $router->post('/usuario/contrasenha/alumno', 'UsuarioController@cambiarContrasenhaAlumno');
     });    
 });
 

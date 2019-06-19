@@ -61,6 +61,9 @@ class AlumnoController extends Controller
         
         $alumno = Alumno::create([
             'codigo' => $data['codigo'],
+            'ciclo' => $data['ciclo'],
+            'promedio' => $data['promedio'],
+            'total_creditos'=> $data['total_creditos'],
             'situacion' => strtoupper($data['situacion']),
             'anho_ingreso' => $data['anho_ingreso'],
             'estado_permanencia' => strtoupper($data['estado_permanencia']),
@@ -99,7 +102,7 @@ class AlumnoController extends Controller
         return $alumno[0]['codigo'];
     }
 
-    public function update(Request $request)
+    public function updateUnayoe(Request $request)
     {
         $data = $request['data'];
 
@@ -122,6 +125,24 @@ class AlumnoController extends Controller
         $persona->correo_personal = $data['correo_personal'];
 
         $alumno->save();
+        $persona->save();
+             
+        return response()->json("OK", 200);
+    }
+    
+    public function updateAlumno(Request $request)
+    {
+        $data = $request['data'];
+
+        $alumno = Alumno::find($data['codigo']);
+
+        $persona = $alumno->persona;
+        $persona->sexo = strtoupper($data['sexo']);
+        $persona->celular = $data['celular'];
+        $persona->telefono = $data['telefono'];
+        $persona->direccion = strtoupper($data['direccion']);
+        $persona->correo_personal = $data['correo_personal'];
+
         $persona->save();
              
         return response()->json("OK", 200);
