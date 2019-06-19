@@ -201,7 +201,7 @@ class PerfilPsicologicoController extends Controller
         $perfil->save();
 
         /* $estado = EstadoPerfil::find($id_estado);
-        $estado->; */
+        $estado-> ; */
         
     }
 }
