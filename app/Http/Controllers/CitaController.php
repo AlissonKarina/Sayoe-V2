@@ -50,4 +50,12 @@ class CitaController extends Controller
         }
     }
 
+    public function citasAlumno($codigo)
+    {
+        $citas = Cita::where('codigo_alumno','=', $codigo)
+            ->where('estado','=', 1)
+            ->orderBy('fecha', 'asc')
+            ->get();
+        return CitaResource::collection($citas);
+    }
 }

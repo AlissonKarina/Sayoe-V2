@@ -54,10 +54,11 @@ $router->group(['prefix'=>'api/v1'], function() use($router){
         $router->get('/finalizar-perfil/{id}', 'PerfilPsicologicoController@finalizarPerfil');
         $router->get('/perfiles/alumno/{codigo}', 'PerfilPsicologicoController@perfilesAlumno');
         $router->get('/recomendacion/{id}', 'PerfilPsicologicoController@recomendacionPerfil');
+
         //CITAS
         $router->get('/citas', 'CitaController@index');
         $router->post('/cita', 'CitaController@create');
-        $router->post('/cita/estado', 'CitaController@estado');
+        $router->get('/citas/alumno/{codigo}', 'CitaController@citasAlumno');
 
         //ALUMNOS
         $router->get('/alumnoShortAsignar/{codigo}', 'AlumnoController@shortAlumno');
