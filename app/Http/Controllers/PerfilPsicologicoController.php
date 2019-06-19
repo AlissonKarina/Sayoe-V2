@@ -143,6 +143,25 @@ class PerfilPsicologicoController extends Controller
         return response()->json($arrayTotal);
     }
 
+    public function perfilesNoCulminados(Request $request)
+    {
+        $arrayTotal = ["data" => []];
+        $semestre = Helper::semestre($request->mes);
+            $perfiles = PerfilPsicologico::with('alumno')
+            ->where('anho','=', $request->anho)
+            ->where('semestre','=', $semestre)
+            ->where('estado','=', '0')
+            ->get();
+        $array = [
+            "anho" => $request->anho,
+            "semestre" => $semestre,
+            "perfiles" => PerfilPsicologicoShortResource::collection($perfiles),
+        ];
+        array_push($arrayTotal['data'],$array);
+
+        return response()->json($arrayTotal);
+    }
+
     public function recomendar(Request $request)
     {
         $data = $request->data;
@@ -156,29 +175,33 @@ class PerfilPsicologicoController extends Controller
     }
 
     public function show($id)
-    {//ver perfil psicologico segun ID, solo evaluaciones resueltas
+    {//ver perfil psicologico segun ID, solo evaluaciones NO resueltas
         $perfil = PerfilPsicologico::with('alumno')->find($id);
-        $estado = EstadoPerfil::where('id_perfil_psico','=',$id)        
-        ->where('estado','=',1)
-        ->get();
+        
         $recomendacion = $perfil->recomendacion;
 
-        if($perfil == null && $estado == null){
+        if($perfil == null){
             return response()->json('No existe');
         }
 
         $data = ['data' => [
-            /* 'id_perfil_psico' => $id,
-            'anho'=>$perfil->anho,
-            'semestre'=>$perfil->semestre, */
             'perfil' => new PerfilPsicologicoResource($perfil),
             'alumno' => new AlumnoResource($perfil->alumno),
-            'evaluaciones' => EstadoPerfilResource::collection($estado),
-            /* 'recomendacion' =>  $perfil->recomendacion, */
+            'evaluaciones' => EstadoPerfilResource::collection($perfil->estadosPerfil),
         ]];
 
-       /*  return response()->json($estado); */
         return response()->json($data);
+    }
 
+    public function finalizarPerfil($id)
+    { //luis me explique
+        $perfil = PerfilPsicologico::with('alumno')->find($id);
+        $perfil->estado = 1;
+        $perfil->motivo = "NO REALIZÓ";
+        $perfil->save();
+
+        /* $estado = EstadoPerfil::find($id_estado);
+        $estado->; */
+        
     }
 }
