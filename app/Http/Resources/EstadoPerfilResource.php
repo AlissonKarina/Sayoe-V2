@@ -10,7 +10,7 @@ class EstadoPerfilResource extends JsonResource
     public function toArray($request)
     {
         return [
-            'id_estado_perfil' => $this->id,
+            'id_cuest_eval' => $this->cuestionarioEvaluacion->id,
             'titulo_evaluacion' => $this->cuestionarioEvaluacion->titulo,
             'estado' => $this->estado,
             'fecha_resuelto' => $this->when($this->fecha != null, function () {
