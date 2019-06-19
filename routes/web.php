@@ -58,7 +58,7 @@ $router->group(['prefix'=>'api/v1'], function() use($router){
         //CITAS
         $router->get('/citas', 'CitaController@index');
         $router->post('/cita', 'CitaController@create');
-        $router->get('/cita/estado', 'CitaController@estado');
+        $router->post('/cita/estado', 'CitaController@estado');
         $router->get('/citas/alumno/{codigo}', 'CitaController@citasAlumno');
 
         //ALUMNOS
