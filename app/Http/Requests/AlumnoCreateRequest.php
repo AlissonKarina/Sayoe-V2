@@ -25,16 +25,16 @@ class AlumnoCreateRequest extends FormRequest
             'nombre'            => 'required',
             'apellido_materno'  => 'required',
             'apellido_paterno'  => 'required',
-            'sexo'              => 'required',
-            'fecha_nacimiento'  => 'required',
+            'sexo'              => 'required|in:F,M',
+            'fecha_nacimiento'  => 'required|date_format:"Y-m-d',
             'contrasenha'       => 'required',
-            'ciclo'             => 'required',
-            'promedio'          => 'required',
-            'total_creditos'    => 'required',
-            'situacion'         => 'required',
-            'anho_ingreso'      => 'required',
-            'estado_permanencia'=> 'required',
-            'id_escuela'        => 'required'
+            'ciclo'             => 'required|numeric',
+            'promedio'          => 'required|numeric',
+            'total_creditos'    => 'required|numeric',
+            'situacion'         => 'required|in:R,O',
+            'anho_ingreso'      => 'required|numeric',
+            'estado_permanencia'=> 'required|in:Activo,Inactivo',
+            'id_escuela'        => 'required|numeric'
         ];
     }
     

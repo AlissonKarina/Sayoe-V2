@@ -28,20 +28,6 @@ class AlumnoController extends Controller
     public function create(AlumnoCreateRequest $request)
     {
         $data = $request->data;
-        
-        /* $v = Validator::make($data, [
-            'dni' => 'required|unique:personas',
-            'correo' => 'required|email|unique:usuarios',
-            'codigo'    => 'required|unique:alumnos',
-        ], [
-            'dni.unique' => 'dni',
-            'correo.unique' => 'correo',
-            'codigo.unique' => 'codigo',
-        ]); */
-
-         /* if ($v->fails()){
-            return ['errors' => $v->errors()];
-        } */
 
         $persona = Persona::create([
             'dni' => $data['dni'],
