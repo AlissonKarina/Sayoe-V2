@@ -11,6 +11,7 @@ use App\Http\Resources\AlumnoDetailsResource;
 use Illuminate\Http\Request;
 use App\Http\Helper\Helper;
 use Illuminate\Support\Facades\Validator;
+use App\Http\Requests\AlumnoCreateRequest;
 
 class AlumnoController extends Controller
 {
@@ -24,11 +25,11 @@ class AlumnoController extends Controller
         return new AlumnoDetailsResource($alumno);
     }
 
-    public function create(Request $request)
+    public function create(AlumnoCreateRequest $request)
     {
         $data = $request->data;
         
-        $v = Validator::make($data, [
+        /* $v = Validator::make($data, [
             'dni' => 'required|unique:personas',
             'correo' => 'required|email|unique:usuarios',
             'codigo'    => 'required|unique:alumnos',
@@ -36,11 +37,11 @@ class AlumnoController extends Controller
             'dni.unique' => 'dni',
             'correo.unique' => 'correo',
             'codigo.unique' => 'codigo',
-        ]);
+        ]); */
 
-         if ($v->fails()){
+         /* if ($v->fails()){
             return ['errors' => $v->errors()];
-        }
+        } */
 
         $persona = Persona::create([
             'dni' => $data['dni'],

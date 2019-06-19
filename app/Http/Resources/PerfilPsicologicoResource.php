@@ -11,6 +11,7 @@ class PerfilPsicologicoResource extends JsonResource
     {
         return [
             'id_perfil_psico' => $this->id_perfil,
+            'estado' => $this->estado,
             'anho'=> $this->anho,
             'semestre'=> $this->semestre,
             'fecha_resuelto' => $this->when($this->fecha_resuelto != null, function () {
