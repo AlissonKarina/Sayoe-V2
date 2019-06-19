@@ -22,6 +22,9 @@ class AlumnoController extends Controller
 
     public function show($codigo) {
         $alumno = Alumno::find($codigo);
+        if($alumno == null) 
+            return response()->json(['data' => 'El código no existe'],200);
+
         return new AlumnoDetailsResource($alumno);
     }
 
@@ -64,6 +67,9 @@ class AlumnoController extends Controller
 
     public function shortAlumno($codigo) {
         $alumno = Alumno::find($codigo);
+        if($alumno == null) 
+            return response()->json(['data' => 'El código no existe'],200);
+
         return new AlumnoShortResource($alumno);
     }
 

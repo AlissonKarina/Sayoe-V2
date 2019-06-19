@@ -26,15 +26,15 @@ class AlumnoCreateRequest extends FormRequest
             'apellido_materno'  => 'required',
             'apellido_paterno'  => 'required',
             'sexo'              => 'required|in:F,M',
-            'fecha_nacimiento'  => 'required|date_format:"Y-m-d',
+            'fecha_nacimiento'  => 'required|date_format:"Y-m-d"',
             'contrasenha'       => 'required',
-            'ciclo'             => 'required|integer|in:0,1,2',
+            'ciclo'             => 'required|integer',
             'promedio'          => 'required|numeric',
             'total_creditos'    => 'required|integer',
             'situacion'         => 'required|in:R,O',
-            'anho_ingreso'      => 'required|integer',
+            'anho_ingreso'      => 'required|digits:4',
             'estado_permanencia'=> 'required|in:Activo,Inactivo',
-            'id_escuela'        => 'required|integer'
+            'id_escuela'        => 'required|integer|in:1,2'
         ];
     }
     
@@ -69,12 +69,12 @@ class AlumnoCreateRequest extends FormRequest
             'fecha_nacimiento.date_format'=> 'El campo fecha_nacimiento solo acepta el formato: 2019-11-05',
             'situacion.in'                => 'El campo situacion solo acepta: R (Regular) u O (Observado)',
             'estado_permanencia.in'       => 'El campo estado_permanencia solo acepta: Activo o Inactivo',
+            'id_escuela.in'               => 'El campo id_escuela solo acepta 1 (Sistemas) o 2 (Software)',
             //numero
-            'ciclo'                       => 'El campo ciclo debe ser un número entero',
-            'promedio'                    => 'El campo promedio debe ser un número',
-            'total_creditos'              => 'El total_creditos debe ser un número entero',
-            'anho_ingreso'                => 'El anho_ingreso debe ser un número entero',
-            'id_escuela'                  => 'El id_escuela debe ser un número entero'
+            'ciclo.integer'               => 'El campo ciclo debe ser un número entero',
+            'promedio.numeric'            => 'El campo promedio debe ser un número',
+            'total_creditos.integer'      => 'El campo total_creditos debe ser un número entero',
+            'anho_ingreso.digits'         => 'El campo anho_ingreso debe ser un número entero y de 4 digitos',
         ];
     }
 }
