@@ -140,7 +140,7 @@ class PerfilPsicologicoController extends Controller
         ];
         array_push($arrayTotal['data'],$array);
 
-        return response()->json($arrayTotal);
+        return response()->json($arrayTotal, 200);
     }
 
     public function perfilesNoCulminados(Request $request)
@@ -159,7 +159,7 @@ class PerfilPsicologicoController extends Controller
         ];
         array_push($arrayTotal['data'],$array);
 
-        return response()->json($arrayTotal);
+        return response()->json($arrayTotal, 200);
     }
 
     public function recomendar(Request $request)
@@ -211,5 +211,23 @@ class PerfilPsicologicoController extends Controller
         }
         $perfil->save();
         return response()->json("OK",200);
+    }
+
+    public function perfilesAlumno($codigo)
+    {
+        $arrayTotal = ["data" => []];
+        $perfiles = PerfilPsicologico::with('alumno')
+            ->where('codigo_alumno','=', $codigo)
+            ->where('estado','=', 1)
+            ->get();
+        
+        $array = [
+            "anho" => $request->anho,
+            "semestre" => $semestre,
+            "perfiles" => PerfilPsicologicoAlumnoShortResource::collection($perfiles),
+        ];
+        array_push($arrayTotal['data'],$array);
+
+        return response()->json($arrayTotal, 200);
     }
 }

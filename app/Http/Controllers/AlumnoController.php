@@ -7,6 +7,7 @@ use App\Model\Persona;
 use App\Model\Usuario;
 use App\Http\Resources\AlumnoShortResource;
 use App\Http\Resources\AlumnoResource;
+use App\Http\Resources\AlumnoDetailsResource;
 use Illuminate\Http\Request;
 use App\Http\Helper\Helper;
 use Illuminate\Support\Facades\Validator;
@@ -20,7 +21,7 @@ class AlumnoController extends Controller
 
     public function show($codigo) {
         $alumno = Alumno::find($codigo);
-        return new AlumnoResource($alumno);
+        return new AlumnoDetailsResource($alumno);
     }
 
     public function create(Request $request)
@@ -100,25 +101,28 @@ class AlumnoController extends Controller
 
     public function update(Request $request)
     {
-        $data = $reques['data'];
+        $data = $request['data'];
 
         $alumno = Alumno::find($data['codigo']);
         $alumno->situacion = strtoupper($data['situacion']);
+        $alumno->promedio = $data['promedio'];
         $alumno->anho_ingreso = $data['anho_ingreso'];
         $alumno->estado_permanencia = strtoupper($data['estado_permanencia']);
-        
+        $alumno->total_creditos = $data['total_creditos'];
+        $alumno->ciclo = $data['ciclo'];
+
         $persona = Persona::find($alumno->dni);
         $persona->nombre = strtoupper($data['nombre']);
         $persona->apellido_materno = strtoupper($data['apellido_materno']);
         $persona->apellido_paterno = strtoupper($data['apellido_paterno']);
         $persona->sexo = strtoupper($data['sexo']);
-        
-        $usuario = Usuario::find($id_usuario);
-        $usuario->contrasenha = app('hash')->make($data['contrasenha']);
-        
+        $persona->celular = $data['celular'];
+        $persona->telefono = $data['telefono'];
+        $persona->direccion = strtoupper($data['direccion']);
+        $persona->correo_personal = $data['correo_personal'];
+
         $alumno->save();
         $persona->save();
-        $usuario->save();
              
         return response()->json("OK", 200);
     }
