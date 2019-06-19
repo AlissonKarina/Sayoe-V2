@@ -1162,7 +1162,7 @@ class AlternativaSeeder extends Seeder
         ]);
 
         /*************** TERCER TEST ***************/
-        /*  1 */
+        /*  1 
         Alternativa::create([
             'descripcion' => "Sí",
             'id_pregunta' => '79',
@@ -1179,7 +1179,7 @@ class AlternativaSeeder extends Seeder
             'puntuacion' => '2'
         ]);
 
-        /*  2 */
+        /*  2 
         Alternativa::create([
             'descripcion' => "Sí",
             'id_pregunta' => '80',
@@ -1196,7 +1196,7 @@ class AlternativaSeeder extends Seeder
             'puntuacion' => '2'
         ]);
 
-        /*  3 */
+        /*  3 
         Alternativa::create([
             'descripcion' => "Algo",
             'id_pregunta' => '81',
@@ -1213,7 +1213,7 @@ class AlternativaSeeder extends Seeder
             'puntuacion' => '2'
         ]);
 
-        /*  4  */
+        /*  4  
         Alternativa::create([
             'descripcion' => "Siempre",
             'id_pregunta' => '82',
@@ -1230,7 +1230,7 @@ class AlternativaSeeder extends Seeder
             'puntuacion' => '2'
         ]);
 
-        /*  5  */
+        /*  5  
         Alternativa::create([
             'descripcion' => "Sí",
             'id_pregunta' => '83',
@@ -1247,7 +1247,7 @@ class AlternativaSeeder extends Seeder
             'puntuacion' => '2'
         ]);
 
-        /*  6  */
+        /*  6  
         Alternativa::create([
             'descripcion' => "Generalmente",
             'id_pregunta' => '84',
@@ -1264,7 +1264,7 @@ class AlternativaSeeder extends Seeder
             'puntuacion' => '2'
         ]);
 
-        /*  7  */
+        /*  7  
         Alternativa::create([
             'descripcion' => "Verdadero",
             'id_pregunta' => '85',
@@ -1281,7 +1281,7 @@ class AlternativaSeeder extends Seeder
             'puntuacion' => '2'
         ]);
 
-        /*  8  */
+        /*  8  
         Alternativa::create([
             'descripcion' => "Les dejo solucionar sus problemas",
             'id_pregunta' => '86',
@@ -1298,7 +1298,7 @@ class AlternativaSeeder extends Seeder
             'puntuacion' => '2'
         ]);
 
-        /*  9  */
+        /*  9  
         Alternativa::create([
             'descripcion' => "Fácilmente soy de los que toman iniciativas",
             'id_pregunta' => '87',
@@ -1315,7 +1315,7 @@ class AlternativaSeeder extends Seeder
             'puntuacion' => '2'
         ]);
 
-        /*  10  */
+        /*  10  
         Alternativa::create([
             'descripcion' => "Ingeniero de construcción",
             'id_pregunta' => '88',
@@ -1332,7 +1332,7 @@ class AlternativaSeeder extends Seeder
             'puntuacion' => '2'
         ]);
 
-        /*  11  */
+        /*  11  
         Alternativa::create([
             'descripcion' => "Sí",
             'id_pregunta' => '89',
@@ -1349,7 +1349,7 @@ class AlternativaSeeder extends Seeder
             'puntuacion' => '2'
         ]);
 
-        /*  12  */
+        /*  12  
         Alternativa::create([
             'descripcion' => "Verdadero",
             'id_pregunta' => '90',
@@ -1366,7 +1366,7 @@ class AlternativaSeeder extends Seeder
             'puntuacion' => '2'
         ]);
 
-        /*  13  */
+        /*  13  
         Alternativa::create([
             'descripcion' => "Sí",
             'id_pregunta' => '91',
@@ -1383,7 +1383,7 @@ class AlternativaSeeder extends Seeder
             'puntuacion' => '2'
         ]);
 
-        /*  14  */
+        /*  14  
         Alternativa::create([
             'descripcion' => "Sí",
             'id_pregunta' => '92',
@@ -1400,7 +1400,7 @@ class AlternativaSeeder extends Seeder
             'puntuacion' => '2'
         ]);
 
-        /*  15  */
+        /*  15  
         Alternativa::create([
             'descripcion' => "No me siento culpable",
             'id_pregunta' => '93',
@@ -1417,7 +1417,7 @@ class AlternativaSeeder extends Seeder
             'puntuacion' => '2'
         ]);
 
-        /*  16  */
+        /*  16  
         Alternativa::create([
             'descripcion' => "Sí",
             'id_pregunta' => '94',
@@ -1434,7 +1434,7 @@ class AlternativaSeeder extends Seeder
             'puntuacion' => '2'
         ]);
 
-        /*  17  */
+        /*  17  
         Alternativa::create([
             'descripcion' => "Sí",
             'id_pregunta' => '95',
@@ -1451,7 +1451,7 @@ class AlternativaSeeder extends Seeder
             'puntuacion' => '2'
         ]);
 
-        /*  18  */
+        /*  18  
         Alternativa::create([
             'descripcion' => "Verdadero",
             'id_pregunta' => '96',
@@ -1468,7 +1468,7 @@ class AlternativaSeeder extends Seeder
             'puntuacion' => '2'
         ]);
 
-        /*  19  */
+        /*  19  
         Alternativa::create([
             'descripcion' => "Sí",
             'id_pregunta' => '97',
@@ -1485,7 +1485,7 @@ class AlternativaSeeder extends Seeder
             'puntuacion' => '2'
         ]);
 
-        /*  20  */
+        /*  20  
         Alternativa::create([
             'descripcion' => "En un barrio con vida social",
             'id_pregunta' => '98',
@@ -1502,7 +1502,7 @@ class AlternativaSeeder extends Seeder
             'puntuacion' => '2'
         ]);
 
-        /*  21  */
+        /*  21  
         Alternativa::create([
             'descripcion' => "El cocinero de un buen restaurante",
             'id_pregunta' => '99',
@@ -1519,7 +1519,7 @@ class AlternativaSeeder extends Seeder
             'puntuacion' => '2'
         ]);
 
-        /*  22  */
+        /*  22  
         Alternativa::create([
             'descripcion' => "Sonreír",
             'id_pregunta' => '100',
@@ -1536,7 +1536,7 @@ class AlternativaSeeder extends Seeder
             'puntuacion' => '2'
         ]);
 
-        /*  23  */
+        /*  23  
         Alternativa::create([
             'descripcion' => "Sí",
             'id_pregunta' => '101',
@@ -1553,7 +1553,7 @@ class AlternativaSeeder extends Seeder
             'puntuacion' => '2'
         ]);
 
-        /*  24  */
+        /*  24  
         Alternativa::create([
             'descripcion' => "Solo después de muchas discusiones",
             'id_pregunta' => '102',
@@ -1570,7 +1570,7 @@ class AlternativaSeeder extends Seeder
             'puntuacion' => '2'
         ]);
 
-        /*  25  */
+        /*  25  
         Alternativa::create([
             'descripcion' => "Sí",
             'id_pregunta' => '103',
@@ -1587,7 +1587,7 @@ class AlternativaSeeder extends Seeder
             'puntuacion' => '2'
         ]);
 
-        /*  26  */
+        /*  26  
         Alternativa::create([
             'descripcion' => "Más de una vez por semana (más de lo corriente)",
             'id_pregunta' => '104',
@@ -1604,7 +1604,7 @@ class AlternativaSeeder extends Seeder
             'puntuacion' => '2'
         ]);
 
-        /*  27  */
+        /*  27  
         Alternativa::create([
             'descripcion' => "Lo acepto simplemente",
             'id_pregunta' => '105',
@@ -1621,7 +1621,7 @@ class AlternativaSeeder extends Seeder
             'puntuacion' => '2'
         ]);
 
-        /*  28  */
+        /*  28  
         Alternativa::create([
             'descripcion' => "Sí",
             'id_pregunta' => '106',
@@ -1638,7 +1638,7 @@ class AlternativaSeeder extends Seeder
             'puntuacion' => '2'
         ]);
 
-        /*  29  */
+        /*  29  
         Alternativa::create([
             'descripcion' => "Verdadero",
             'id_pregunta' => '107',
@@ -1655,7 +1655,7 @@ class AlternativaSeeder extends Seeder
             'puntuacion' => '2'
         ]);
 
-        /*  30  */
+        /*  30  
         Alternativa::create([
             'descripcion' => "Sí",
             'id_pregunta' => '108',
@@ -1672,7 +1672,7 @@ class AlternativaSeeder extends Seeder
             'puntuacion' => '2'
         ]);
 
-        /*  31  */
+        /*  31  
         Alternativa::create([
             'descripcion' => "De acuerdo",
             'id_pregunta' => '109',
@@ -1689,7 +1689,7 @@ class AlternativaSeeder extends Seeder
             'puntuacion' => '2'
         ]);
 
-        /*  32  */
+        /*  32  
         Alternativa::create([
             'descripcion' => "Solo si es necesario",
             'id_pregunta' => '110',
@@ -1706,7 +1706,7 @@ class AlternativaSeeder extends Seeder
             'puntuacion' => '2'
         ]);
 
-        /*  33  */
+        /*  33  
         Alternativa::create([
             'descripcion' => "Verdadero",
             'id_pregunta' => '111',
@@ -1723,7 +1723,7 @@ class AlternativaSeeder extends Seeder
             'puntuacion' => '2'
         ]);
 
-        /*  34  */
+        /*  34  
         Alternativa::create([
             'descripcion' => "Aprovecho la ocasión para pedirle algo que deseo",
             'id_pregunta' => '112',
@@ -1740,7 +1740,7 @@ class AlternativaSeeder extends Seeder
             'puntuacion' => '2'
         ]);
 
-        /*  35  */
+        /*  35  
         Alternativa::create([
             'descripcion' => "El corazón",
             'id_pregunta' => '113',
@@ -1757,7 +1757,7 @@ class AlternativaSeeder extends Seeder
             'puntuacion' => '2'
         ]);
 
-        /*  36  */
+        /*  36  
         Alternativa::create([
             'descripcion' => "Algunas veces",
             'id_pregunta' => '114',
@@ -1774,7 +1774,7 @@ class AlternativaSeeder extends Seeder
             'puntuacion' => '2'
         ]);
 
-        /*  37  */
+        /*  37  
         Alternativa::create([
             'descripcion' => "Decir las cosas tal como se me ocurren",
             'id_pregunta' => '115',
@@ -1791,7 +1791,7 @@ class AlternativaSeeder extends Seeder
             'puntuacion' => '2'
         ]);
 
-        /*  38  */
+        /*  38  
         Alternativa::create([
             'descripcion' => "Sí",
             'id_pregunta' => '116',
@@ -1803,9 +1803,9 @@ class AlternativaSeeder extends Seeder
             'puntuacion' => '1'
         ]);
 
-        /** prueba alternativas prueba habitos estudio */
-        /** 1 */
-        Alternativa::create([//312
+        /** prueba alternativas prueba habitos estudio 
+        /** 1 
+        /* Alternativa::create([//312
             'descripcion' => "Descripcion prueba habitos estudio",
             'id_pregunta' => '266',
             'puntuacion' => '2'
@@ -1815,7 +1815,7 @@ class AlternativaSeeder extends Seeder
             'id_pregunta' => '266',
             'puntuacion' => '3'
         ]);
-        /** 2 */
+        /** 2 
         Alternativa::create([//314
             'descripcion' => "Descripcion prueba habitos estudio",
             'id_pregunta' => '267',
@@ -1826,7 +1826,7 @@ class AlternativaSeeder extends Seeder
             'id_pregunta' => '267',
             'puntuacion' => '3'
         ]);
-        /** 3 */
+        /** 3 
         Alternativa::create([//316
             'descripcion' => "Descripcion prueba habitos estudio",
             'id_pregunta' => '268',
@@ -1837,7 +1837,7 @@ class AlternativaSeeder extends Seeder
             'id_pregunta' => '268',
             'puntuacion' => '3'
         ]);
-        /** 4 */
+        /** 4 
         Alternativa::create([//318
             'descripcion' => "Descripcion prueba habitos estudio",
             'id_pregunta' => '269',
@@ -1848,7 +1848,7 @@ class AlternativaSeeder extends Seeder
             'id_pregunta' => '269',
             'puntuacion' => '3'
         ]);
-        /** 5 */
+        /** 5 
         Alternativa::create([//320
             'descripcion' => "Descripcion prueba habitos estudio",
             'id_pregunta' => '270',
@@ -1859,7 +1859,7 @@ class AlternativaSeeder extends Seeder
             'id_pregunta' => '270',
             'puntuacion' => '3'
         ]);
-        /** 6 */
+        /** 6 
         Alternativa::create([//322
             'descripcion' => "Descripcion prueba habitos estudio",
             'id_pregunta' => '271',
@@ -1870,7 +1870,7 @@ class AlternativaSeeder extends Seeder
             'id_pregunta' => '271',
             'puntuacion' => '3'
         ]);
-        /** 7 */
+        /** 7 
         Alternativa::create([//324
             'descripcion' => "Descripcion prueba habitos estudio",
             'id_pregunta' => '272',
@@ -1881,7 +1881,7 @@ class AlternativaSeeder extends Seeder
             'id_pregunta' => '272',
             'puntuacion' => '3'
         ]);
-        /** 8 */
+        /** 8 
         Alternativa::create([//326
             'descripcion' => "Descripcion prueba habitos estudio",
             'id_pregunta' => '273',
@@ -1892,7 +1892,7 @@ class AlternativaSeeder extends Seeder
             'id_pregunta' => '273',
             'puntuacion' => '3'
         ]);
-        /** 9 */
+        /** 9 
         Alternativa::create([//328
             'descripcion' => "Descripcion prueba habitos estudio",
             'id_pregunta' => '274',
@@ -1903,7 +1903,7 @@ class AlternativaSeeder extends Seeder
             'id_pregunta' => '274',
             'puntuacion' => '3'
         ]);
-        /** 10 */
+        /** 10 
         Alternativa::create([//330
             'descripcion' => "Descripcion prueba habitos estudio",
             'id_pregunta' => '275',
@@ -1913,6 +1913,6 @@ class AlternativaSeeder extends Seeder
             'descripcion' => "Descripcion prueba habitos estudio",
             'id_pregunta' => '275',
             'puntuacion' => '3'
-        ]);
+        ]); */
     }
 }
