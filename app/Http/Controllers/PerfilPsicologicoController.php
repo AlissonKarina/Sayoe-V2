@@ -203,7 +203,13 @@ class PerfilPsicologicoController extends Controller
         $perfil->fecha_resuelto = $fecha;
         $perfil->fecha_recomendacion = $fecha;
         $perfil->recomendacion = "--";
-        $estados = $perfil->estadosPerfil;
+        
+        $estados = EstadoPerfil::where('id_perfil_psico','=', $id)
+                                ->where('estado','=', '0')
+                                ->get();
+
+        /* $estados = $perfil->estadosPerfil; */
+
         foreach($estados as $estado){
             $estado->fecha = $fecha;
             $estado->estado = 1;
