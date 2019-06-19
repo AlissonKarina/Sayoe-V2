@@ -106,17 +106,18 @@ class AlumnoController extends Controller
         $alumno->situacion = strtoupper($data['situacion']);
         $alumno->anho_ingreso = $data['anho_ingreso'];
         $alumno->estado_permanencia = strtoupper($data['estado_permanencia']);
-        $alumno->save();
-
+        
         $persona = Persona::find($alumno->dni);
         $persona->nombre = strtoupper($data['nombre']);
         $persona->apellido_materno = strtoupper($data['apellido_materno']);
         $persona->apellido_paterno = strtoupper($data['apellido_paterno']);
         $persona->sexo = strtoupper($data['sexo']);
-        $persona->save();
         
         $usuario = Usuario::find($id_usuario);
         $usuario->contrasenha = app('hash')->make($data['contrasenha']);
+        
+        $alumno->save();
+        $persona->save();
         $usuario->save();
              
         return response()->json("OK", 200);

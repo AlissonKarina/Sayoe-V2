@@ -34,7 +34,6 @@ class InventarioBeckController extends Controller
         $estadoPerfil = EstadoPerfil::find($id_estado_perfil);
         $estadoPerfil->estado = '1';
         $estadoPerfil->fecha = $date;
-        $estadoPerfil->valor = $total;
         $estadoPerfil->descripcion = $resultado;
         $estadoPerfil->save();
 

@@ -58,7 +58,6 @@ class HabitoEstudioController extends Controller
         $estadoPerfil = EstadoPerfil::find($id_estado_perfil);
         $estadoPerfil->estado = '1';
         $estadoPerfil->fecha = $date;
-        $estadoPerfil->valor = $count[5];
         $estadoPerfil->descripcion = $resultado;
         $estadoPerfil->save();
 

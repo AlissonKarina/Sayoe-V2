@@ -15,7 +15,7 @@ class EstadoPerfil extends Model
      * @var array
      */
     protected $fillable = [
-        'id_perfil_psico', 'id_cuest_eval', 'estado', 'fecha', 'valor', 'descripcion'
+        'id_perfil_psico', 'id_cuest_eval', 'estado', 'fecha', 'descripcion'
     ];
 
     protected $casts = [

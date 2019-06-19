@@ -190,18 +190,26 @@ class PerfilPsicologicoController extends Controller
             'evaluaciones' => EstadoPerfilResource::collection($perfil->estadosPerfil),
         ]];
 
-        return response()->json($data);
+        return response()->json($data,200);
     }
 
     public function finalizarPerfil($id)
     { //luis me explique
-        $perfil = PerfilPsicologico::with('alumno')->find($id);
-        $perfil->estado = 1;
-        $perfil->motivo = "NO REALIZÓ";
-        $perfil->save();
+        $fecha = Helper::fechaHoraActual();
 
-        /* $estado = EstadoPerfil::find($id_estado);
-        $estado->; */
-        
+        $perfil = PerfilPsicologico::find($id);
+        $perfil->estado = 1;
+        $perfil->fecha_resuelto = $fecha;
+        $perfil->fecha_recomendacion = $fecha;
+        $perfil->recomendacion = "--";
+        $estados = $perfil->estadosPerfil;
+        foreach($estados as $estado){
+            $estado->fecha = $fecha;
+            $estado->estado = 1;
+            $estado->descripcion = "NO REALIZÓ";
+            $estado->save();
+        }
+        $perfil->save();
+        return response()->json("OK",200);
     }
 }

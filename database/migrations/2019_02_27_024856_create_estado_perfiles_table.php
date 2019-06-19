@@ -19,7 +19,6 @@ class CreateEstadoPerfilesTable extends Migration
             $table->integer('id_cuest_eval')->unsigned();
             $table->tinyInteger('estado')->default('0');
             $table->dateTime('fecha')->nullable();
-            $table->integer('valor')->unsigned()->nullable();
             $table->json('descripcion')->nullable();
 
             $table->foreign('id_perfil_psico')->references('id_perfil')->on('perfiles_psicologicos');
