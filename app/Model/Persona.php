@@ -22,6 +22,9 @@ class Persona extends Model
         'telefono', 'celular', 'direccion', 'correo_personal'
     ];
 
+    protected $casts = [
+        'foto' => 'array'
+    ];
 
     public function estudiante()
     {
