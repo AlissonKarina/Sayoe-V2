@@ -28,20 +28,20 @@ class UnayoePerfilSeeder extends Seeder
             'id_facultad' => '1',
         ]);
 
-        // UnayoePerfil::create([
-        //     'nombre' => strtoupper("Mariana"),
-        //     'apellido_paterno' => strtoupper("Soto"),
-        //     'apellido_materno' => strtoupper("Chirinos"),
-        //     'sexo' => "1",
-        //     'profesion' => strtoupper('Psicologa'),
-        //     'facebook' => 'https://www.facebook.com/LuisYauriMartinez',
-        //     'celular' => "9854-12543",
-        //     'wsp' => "9854-12543",
-        //     'correo' => "mariana.soto@unmsm.edu.pe",
-        //     'foto' => 'https://www.psicologabcn.es/wp-content/uploads/2019/01/psicologa-barcelona.jpg',
-        //     'auto_descripcion' => "Es una persona responsable, con muchas ganas de aprender.",
-        //     'id_usuario' => '22',
-        //     'id_facultad' => '1',
-        // ]);
+        UnayoePerfil::create([
+            'nombre' => strtoupper("Mariana"),
+            'apellido_paterno' => strtoupper("Soto"),
+            'apellido_materno' => strtoupper("Chirinos"),
+            'sexo' => "1",
+            'profesion' => strtoupper('Psicologa'),
+            'facebook' => 'https://www.facebook.com/LuisYauriMartinez',
+            'celular' => "9854-12543",
+            'wsp' => "9854-12543",
+            'correo' => "mariana.soto@unmsm.edu.pe",
+            'foto' => 'https://www.psicologabcn.es/wp-content/uploads/2019/01/psicologa-barcelona.jpg',
+            'auto_descripcion' => "Es una persona responsable, con muchas ganas de aprender.",
+            'id_usuario' => '22',
+            'id_facultad' => '1',
+        ]);
     }
 }
