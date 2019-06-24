@@ -99,7 +99,7 @@ class UsuarioSeeder extends Seeder
             'estado' => 1,
             'autenticado' => 0,
             'ultima_sesion' => '2012-02-03',
-            'id_rol' => '542687',
+            'id_rol' => '128963',
         ]);
 
         // Usuario::create([//22
