@@ -258,5 +258,18 @@ class AlumnoSeeder extends Seeder
             'id_usuario' => '20',
             'id_escuela' => '1'
         ]); 
+
+        Alumno::create([
+            'codigo' => '10200220',
+            'ciclo' => '7',
+            'situacion' => "O",
+            'promedio' => '13.1',
+            'anho_ingreso' => '2010',
+            'estado_permanencia' => strtoupper('Activo'),
+            'total_creditos' => '62',
+            'dni' => '72113937',
+            'id_usuario' => '21',
+            'id_escuela' => '1'
+        ]); 
     }
 }

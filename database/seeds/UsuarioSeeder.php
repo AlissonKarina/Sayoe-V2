@@ -219,31 +219,31 @@ class UsuarioSeeder extends Seeder
             'id_rol' => '128963',
         ]);
   
-        Usuario::create([//24
-            'correo' => 'diego.chavez@unmsm.edu.pe',
-            'contrasenha' => app('hash')->make('12345'),
-            'estado' => 1,
-            'autenticado' => 0,
-            'ultima_sesion' => '2012-02-03',
-            'id_rol' => '128963',
-        ]);
+        // Usuario::create([//24
+        //     'correo' => 'diego.chavez@unmsm.edu.pe',
+        //     'contrasenha' => app('hash')->make('12345'),
+        //     'estado' => 1,
+        //     'autenticado' => 0,
+        //     'ultima_sesion' => '2012-02-03',
+        //     'id_rol' => '128963',
+        // ]);
 
-        Usuario::create([//25
-            'correo' => 'martin.ayo@unmsm.edu.pe',
-            'contrasenha' => app('hash')->make('12345'),
-            'estado' => 1,
-            'autenticado' => 0,
-            'ultima_sesion' => '2012-02-03',
-            'id_rol' => '128963',
-        ]);
+        // Usuario::create([//25
+        //     'correo' => 'martin.ayo@unmsm.edu.pe',
+        //     'contrasenha' => app('hash')->make('12345'),
+        //     'estado' => 1,
+        //     'autenticado' => 0,
+        //     'ultima_sesion' => '2012-02-03',
+        //     'id_rol' => '128963',
+        // ]);
 
-        Usuario::create([//26
-            'correo' => 'luis.campos@unmsm.edu.pe',
-            'contrasenha' => app('hash')->make('12345'),
-            'estado' => 1,
-            'autenticado' => 0,
-            'ultima_sesion' => '2012-02-03',
-            'id_rol' => '128963',
-        ]);
+        // Usuario::create([//26
+        //     'correo' => 'luis.campos@unmsm.edu.pe',
+        //     'contrasenha' => app('hash')->make('12345'),
+        //     'estado' => 1,
+        //     'autenticado' => 0,
+        //     'ultima_sesion' => '2012-02-03',
+        //     'id_rol' => '128963',
+        // ]);
     }
 } 
