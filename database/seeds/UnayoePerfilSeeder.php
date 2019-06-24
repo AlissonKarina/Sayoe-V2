@@ -21,27 +21,27 @@ class UnayoePerfilSeeder extends Seeder
             'facebook' => 'https://www.facebook.com/LuisYauriMartinez',
             'celular' => "9854-45202",
             'wsp' => "9854-45202",
-            'correo' => "araceli_campos@gmail.com",
+            'correo' => "araceli.campos@unmsm.edu.pe",
             'foto' => 'https://www.psicologabcn.es/wp-content/uploads/2019/01/psicologa-barcelona.jpg',
-            'auto_descripcion' => "es una persona responsable, muy entusiasmada, muestra una actitud de respeto antes todos.",
+            'auto_descripcion' => "Es una persona responsable, muy entusiasmada, muestra una actitud de respeto antes todos.",
             'id_usuario' => '1',
             'id_facultad' => '1',
         ]);
 
-        UnayoePerfil::create([
-            'nombre' => strtoupper("Mariana"),
-            'apellido_paterno' => strtoupper("Soto"),
-            'apellido_materno' => strtoupper("Chirinos"),
-            'sexo' => "1",
-            'profesion' => strtoupper('Psicologa'),
-            'facebook' => 'https://www.facebook.com/LuisYauriMartinez',
-            'celular' => "9854-12543",
-            'wsp' => "9854-12543",
-            'correo' => "mariana@gmail.com",
-            'foto' => 'https://www.psicologabcn.es/wp-content/uploads/2019/01/psicologa-barcelona.jpg',
-            'auto_descripcion' => "Es una persona Responsable, con muchas ganas de aprender.",
-            'id_usuario' => '22',
-            'id_facultad' => '1',
-        ]);
+        // UnayoePerfil::create([
+        //     'nombre' => strtoupper("Mariana"),
+        //     'apellido_paterno' => strtoupper("Soto"),
+        //     'apellido_materno' => strtoupper("Chirinos"),
+        //     'sexo' => "1",
+        //     'profesion' => strtoupper('Psicologa'),
+        //     'facebook' => 'https://www.facebook.com/LuisYauriMartinez',
+        //     'celular' => "9854-12543",
+        //     'wsp' => "9854-12543",
+        //     'correo' => "mariana.soto@unmsm.edu.pe",
+        //     'foto' => 'https://www.psicologabcn.es/wp-content/uploads/2019/01/psicologa-barcelona.jpg',
+        //     'auto_descripcion' => "Es una persona responsable, con muchas ganas de aprender.",
+        //     'id_usuario' => '22',
+        //     'id_facultad' => '1',
+        // ]);
     }
 }
