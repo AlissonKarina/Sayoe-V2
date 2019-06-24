@@ -101,6 +101,7 @@ class UsuarioSeeder extends Seeder
             'ultima_sesion' => '2012-02-03',
             'id_rol' => '128963',
         ]);
+        
 
         // Usuario::create([//22
         //     'correo' => 'admin@gmail.com',
