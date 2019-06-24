@@ -296,19 +296,19 @@ class PersonaSeeder extends Seeder
             'correo_personal' => "laat92"."@gmail.com",
         ]);
 
-        // Persona::create([
-        //     'dni' => '71732618',
-        //     'nombre' => strtoupper("Diego Alonso"),
-        //     'apellido_paterno' => strtoupper("Chavez"),
-        //     'apellido_materno' => strtoupper("Pacheco"),
-        //     'sexo' => 'M',
-        //     'fecha_nacimiento' => "1992-10-29",
-        //     'foto' => 'https://estaticos.qdq.com/swdata/photos/769/769385991/25bc2f3e9e924f0db4c05cb91cbaf772.jpg',
-        //     'telefono' => "433-9521",
-        //     'celular' => "9999-9999",
-        //     'direccion' => strtoupper("Brecha - Lima"),
-        //     'correo_personal' => "deocha7x"."@gmail.com",
-        // ]);
+        Persona::create([
+            'dni' => '71732618',
+            'nombre' => strtoupper("Diego Alonso"),
+            'apellido_paterno' => strtoupper("Chavez"),
+            'apellido_materno' => strtoupper("Pacheco"),
+            'sexo' => 'M',
+            'fecha_nacimiento' => "1992-10-29",
+            'foto' => 'https://estaticos.qdq.com/swdata/photos/769/769385991/25bc2f3e9e924f0db4c05cb91cbaf772.jpg',
+            'telefono' => "433-9521",
+            'celular' => "9999-9999",
+            'direccion' => strtoupper("Brecha - Lima"),
+            'correo_personal' => "deocha7x"."@gmail.com",
+        ]);
 
         // Persona::create([
         //     'dni' => '47484081',
