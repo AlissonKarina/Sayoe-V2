@@ -8,19 +8,21 @@ class iEstrategiaInventarioBeck implements iEstrategia
 {
     public function resultado($total)
     {
+        $descripcion=[];
         if($total>= 0 and $total<=13){
-            $descipcion = $this->descripcion(0); 
+            $desc = $this->descripcion(0); 
         }else if ($total>= 14 and $total<=19){
-            $descipcion = $this->descripcion(1); 
+            $desc = $this->descripcion(1); 
         }else if ($total>= 20 and $total<=28){
-            $descipcion = $this->descripcion(2); 
+            $desc = $this->descripcion(2); 
         }else if ($total>= 29 and $total<=63){
-            $descipcion = $this->descripcion(3); 
+            $desc = $this->descripcion(3); 
         }
-        return [
+        array_push($descripcion, [
             'valor' => $total,
-            'descripcion' => $descipcion
-        ];
+            'descripcion' => $desc
+        ]);
+        return $descripcion;
     }
 
     public function descripcion($indicador)

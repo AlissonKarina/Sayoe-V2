@@ -33,23 +33,7 @@ class EstadoPerfil extends Model
     }
 
     public function resultadoInstantaneo(){
-        $id_eva = $this->id_cuest_eval;
-        $resultado = 'Not found';
-        switch($id_eva){
-            case 1:
-                $resultado = $this->descripcion[0];
-                break;
-            case 2:
-                $resultado = $this->descripcion;
-                break;
-            case 3:
-                $resultado = $this->descripcion;
-                break;
-            case 5:
-                $resultado  =$this->descripcion[0];
-                break;
-        }
-        return $resultado;
+        return $this->descripcion[0];
     }
 
 }

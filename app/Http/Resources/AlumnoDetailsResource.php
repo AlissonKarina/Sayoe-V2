@@ -18,7 +18,7 @@ class AlumnoDetailsResource extends JsonResource
                 'sexo' => $this->persona->sexo,
                 'fecha_nacimiento' => $this->persona->fecha_nacimiento,
                 'edad' => Helper::edad($this->persona->fecha_nacimiento),
-                'foto' => $this->persona->nombre,
+                'foto' => $this->persona->foto,
                 'telefono' => $this->persona->telefono,
                 'celular' => $this->persona->celular,
                 'direccion' => $this->persona->direccion,
