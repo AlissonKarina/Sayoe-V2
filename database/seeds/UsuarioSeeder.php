@@ -211,7 +211,7 @@ class UsuarioSeeder extends Seeder
         ]);
 
         Usuario::create([//23
-            'correo' => 'luis.arteaga@unmsm.edu.pe',
+            'correo' => 'diego.chavez@unmsm.edu.pe',
             'contrasenha' => app('hash')->make('12345'),
             'estado' => 1,
             'autenticado' => 0,
