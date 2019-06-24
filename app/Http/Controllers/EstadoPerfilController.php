@@ -18,15 +18,15 @@ class EstadoPerfilController extends Controller
 {
     public function evaluacionesPendientes(Request $request)
     {
-      return $this->evaluaciones($request, 0);
+      return $this->evaluaciones($request, 0,'fecha_limite', 'asc');
     }
 
     public function evaluacionesRealizadas(Request $request)
     {
-      return $this->evaluaciones($request, 1);
+      return $this->evaluaciones($request, 1,'fecha_resuelto', 'desc');
     }
 
-    private function evaluaciones(Request $request, $estado)
+    private function evaluaciones(Request $request, $estado, $dato, $orden)
     {
       $arrayTotal = ["data" => []];
       
@@ -36,7 +36,7 @@ class EstadoPerfilController extends Controller
             ->where('codigo_alumno','=', $request->codigo)
             ->where('anho','=', $request->anho)
             ->where('semestre','=', $semestre)
-            ->orderBy('fecha_limite', 'desc')
+            ->orderBy($dato, $orden)
             ->get();
 
       foreach ($perfiles as $perfil){
