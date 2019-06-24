@@ -36,7 +36,7 @@ class EstadoPerfilController extends Controller
             ->where('codigo_alumno','=', $request->codigo)
             ->where('anho','=', $request->anho)
             ->where('semestre','=', $semestre)
-            ->orderBy('fecha_limite', 'asc')
+            ->orderBy('fecha_limite', 'desc')
             ->get();
 
       foreach ($perfiles as $perfil){
