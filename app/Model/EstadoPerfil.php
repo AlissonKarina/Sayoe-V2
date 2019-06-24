@@ -37,7 +37,7 @@ class EstadoPerfil extends Model
         $resultado = 'Not found';
         switch($id_eva){
             case 1:
-                $resultado = $this->descripcion[5];
+                $resultado = $this->descripcion[0];
                 break;
             case 2:
                 $resultado = $this->descripcion;
@@ -46,7 +46,7 @@ class EstadoPerfil extends Model
                 $resultado = $this->descripcion;
                 break;
             case 5:
-                $resultado = $this->descripcion[5];
+                $resultado  =$this->descripcion[0];
                 break;
         }
         return $resultado;

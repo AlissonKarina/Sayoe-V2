@@ -22,7 +22,7 @@ class EstadoPerfilShortResource extends JsonResource
             }),
             'titulo_secundario' => $this->cuestionarioEvaluacion->titulo_secundario,
             'nro_preguntas' => $this->cuestionarioEvaluacion->nro_preguntas,
-            'descripcion' => $this->when($this->descripcion != null, $this->resultadoInstantaneo()),
+            'descripcion' => $this->when($this->descripcion != null , $this->resultadoInstantaneo()),
         ];
     }
 }

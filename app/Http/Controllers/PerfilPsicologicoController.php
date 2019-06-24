@@ -213,7 +213,7 @@ class PerfilPsicologicoController extends Controller
         foreach($estados as $estado){
             $estado->fecha = $fecha;
             $estado->estado = 1;
-            $estado->descripcion = "NO REALIZÓ";
+            $estado->descripcion = ["NO REALIZÓ"];
             $estado->save();
         }
         $perfil->save();

@@ -28,19 +28,19 @@ class HabitoEstudioController extends Controller
         {
             switch($valor['bloque']){
                 case 1:
-                    $count[0] += $valor['puntuacion'];
-                    break;
-                case 2:
                     $count[1] += $valor['puntuacion'];
                     break;
-                case 3:
+                case 2:
                     $count[2] += $valor['puntuacion'];
                     break;
-                case 4:
+                case 3:
                     $count[3] += $valor['puntuacion'];
                     break;
-                case 5:
+                case 4:
                     $count[4] += $valor['puntuacion'];
+                    break;
+                case 5:
+                    $count[5] += $valor['puntuacion'];
                     break;
             }
             
@@ -48,7 +48,7 @@ class HabitoEstudioController extends Controller
                 "id_alternativa" => $valor['id'],
                 "id_pefil_psico" => $id_perfil_psico,
             ]);
-            $count[5] = $count[5] + $valor['puntuacion']; 
+            $count[0] = $count[0] + $valor['puntuacion']; 
         }
 
         $resultado = $this->strategy->resultado($count);
@@ -61,6 +61,6 @@ class HabitoEstudioController extends Controller
         $estadoPerfil->descripcion = $resultado;
         $estadoPerfil->save();
 
-        return $resultado[5];
+        return $resultado[0];
     }
 }
