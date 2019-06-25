@@ -9,7 +9,6 @@ use Illuminate\Http\Request;
 class CuestionarioEvaluacionController extends Controller
 {
     public function index() {
-        //return UsersResource::collection($user->with('posts')->paginate());
         return CuestionarioEvaluacionResource::collection(CuestionarioEvaluacion::with('preguntas')->paginate(25));
     }
 

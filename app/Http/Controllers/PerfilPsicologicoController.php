@@ -31,9 +31,7 @@ class PerfilPsicologicoController extends Controller
                 "anho" => $data["anho"]
             ];
             
-            $value = $this->asignarTest($listAlumnos, $listTest, $fechaLimite);
-            
-            return $value;
+            return $this->asignarTest($listAlumnos, $listTest, $fechaLimite);
         }
     }
 
@@ -69,10 +67,12 @@ class PerfilPsicologicoController extends Controller
                             $alumnos->merge($alumnos2); break;
                 case "obs": $listId = InfoAcadem::where('situacion', "O")->get(['id_alumno']);
                             $alumnos = Alumno::whereIn('id', $listId)->get();
+                default:
+                    return ["Error, grupo no existe."];
+                    break;
             }
 
-            $value = $this->asignarTest($alumnos, $test, $fechaLimite);
-            return $value;
+            return $this->asignarTest($alumnos, $test, $fechaLimite);
         }
     }
     
@@ -172,14 +172,12 @@ class PerfilPsicologicoController extends Controller
         $perfil->fecha_recomendacion = Helper::fechaHoraActual();
         $perfil->save();
 
-        return response()->json("OK",200);;
+        return response()->json("OK",200);
     }
 
     public function show($id)
     {//ver perfil psicologico segun ID, solo evaluaciones NO resueltas
         $perfil = PerfilPsicologico::with('alumno')->find($id);
-        
-        $recomendacion = $perfil->recomendacion;
 
         if($perfil == null){
             return response()->json('No existe');
@@ -207,9 +205,7 @@ class PerfilPsicologicoController extends Controller
         $estados = EstadoPerfil::where('id_perfil_psico','=', $id)
                                 ->where('estado','=', '0')
                                 ->get();
-
-        /* $estados = $perfil->estadosPerfil; */
-
+                                
         foreach($estados as $estado){
             $estado->fecha = $fecha;
             $estado->estado = 1;

@@ -10,8 +10,8 @@ use App\Http\Resources\PerfilPsicologicoEstadoResource;
 use App\Http\Resources\EstadoPerfilShortResource;
 use App\Http\Controllers\Evaluaciones\InventarioBeckController;
 use App\Http\Controllers\Evaluaciones\HabitoEstudioController;
-use App\Model\Evaluaciones\iEstrategiaHabitoEstudio;
-use App\Model\Evaluaciones\iEstrategiaInventarioBeck;
+use App\Model\Evaluaciones\IEstrategiaHabitoEstudio;
+use App\Model\Evaluaciones\IEstrategiaInventarioBeck;
 
 
 class EstadoPerfilController extends Controller
@@ -68,16 +68,19 @@ class EstadoPerfilController extends Controller
       $id_perfil_psico = $data['id_perfil_psico'];
       switch($id_cuest_eval){
         case '1':
-          $controlador = new HabitoEstudioController(new iEstrategiaHabitoEstudio());
+          $controlador = new HabitoEstudioController(new IEstrategiaHabitoEstudio());
           break;
         case '2':
-          $controlador = new InventarioBeckController(new iEstrategiaInventarioBeck());
+          $controlador = new InventarioBeckController(new IEstrategiaInventarioBeck());
           break;
         case '3':
-          $controlador = new InventarioBeckController(new iEstrategiaInventarioBeck());
+          $controlador = new InventarioBeckController(new IEstrategiaInventarioBeck());
           break;
         case '5':
-          $controlador = new HabitoEstudioController(new iEstrategiaHabitoEstudio());
+          $controlador = new HabitoEstudioController(new IEstrategiaHabitoEstudio());
+          break;
+        default:
+          return ["Error no existe la Evaluación Psicologica."];
           break;
 
       }

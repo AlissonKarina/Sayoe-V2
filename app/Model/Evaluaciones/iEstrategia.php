@@ -2,7 +2,7 @@
 
 namespace App\Model\Evaluaciones;
 
-interface iEstrategia
+interface IEstrategia
 {
 
     public function resultado($total);

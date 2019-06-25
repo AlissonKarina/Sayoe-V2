@@ -37,36 +37,34 @@ class AuthController extends BaseController
     } 
     
     public function authenticate(Usuario $user) {
+        $correo = 'correo';
+        $contrasenha = 'contrasenha';
+        $clave = "error";
+        $descripcion = "El $correo o la contraseña son incorrectos.";
+        $codigo = 400;
+        
         $this->validate($this->request, [
-            'correo'     => 'required|email',
-            'contrasenha'  => 'required'
+            $correo     => 'required|email',
+            $contrasenha  => 'required'
         ]);
         
-        $user = Usuario::where('correo', $this->request->input('correo'))->first();
+        $user = Usuario::where($correo, $this->request->input($correo))->first();
 
         if (!$user) {
-            return response()->json([
-                'error' => 'Email does not exist.'
-            ], 400);
-        }
-
-        if ($user->estado == '0') {
-            return response()->json([
-                'error' => 'Cuenta inhabilitada.'
-            ], 400);
-        }
-        
-        if (Hash::check($this->request->input('contrasenha'), $user->contrasenha)) {
+            $descripcion = "El email no existe.";
+        }else if ($user->estado == '0') {
+            $descripcion = "Cuenta inhabilitada.";
+        } else if (Hash::check($this->request->input($contrasenha), $user->contrasenha)) {
             $user->ultima_sesion = new \DateTime();
             $user->save();
-            return response()->json([
-                'token' => $this->jwt($user)
-            ], 200);
+            $clave = "token";
+            $descripcion = $this->jwt($user);
+            $codigo = 200;
         }
         
         return response()->json([
-            'error' => 'Email or password is wrong.'
-        ], 400);
+            $clave => $descripcion
+        ], $codigo);
     }
 
     public function register(Request $request)

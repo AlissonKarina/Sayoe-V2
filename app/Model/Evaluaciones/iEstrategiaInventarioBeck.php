@@ -2,20 +2,20 @@
 
 namespace App\Model\Evaluaciones;
 
-use App\Model\Evaluaciones\iEstrategia;
+use App\Model\Evaluaciones\IEstrategia;
 
-class iEstrategiaInventarioBeck implements iEstrategia
+class IEstrategiaInventarioBeck implements IEstrategia
 {
     public function resultado($total)
     {
         $descripcion=[];
-        if($total>= 0 and $total<=13){
+        if($total>= 0 && $total<=13){
             $desc = $this->descripcion(0); 
-        }else if ($total>= 14 and $total<=19){
+        }else if ($total>= 14 && $total<=19){
             $desc = $this->descripcion(1); 
-        }else if ($total>= 20 and $total<=28){
+        }else if ($total>= 20 && $total<=28){
             $desc = $this->descripcion(2); 
-        }else if ($total>= 29 and $total<=63){
+        }else if ($total>= 29 && $total<=63){
             $desc = $this->descripcion(3); 
         }
         array_push($descripcion, [
@@ -39,9 +39,10 @@ class iEstrategiaInventarioBeck implements iEstrategia
                 
             case 3: 
                 return "presenta signos de depresión severo";
-                
+            
+            default:
+                return "Error, índice no valido";  
         }
-        return "Error";
     }
 
 }

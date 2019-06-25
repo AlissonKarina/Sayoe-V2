@@ -29,23 +29,19 @@ class Helper
 
     public static function fechaActual(){
         $fecha = new \Carbon\Carbon();
-        $date = $fecha->format('Y-m-d');
-
-        return $date;
+        return $fecha->format('Y-m-d');
     }
 
     public static function fechaHoraActual(){
         $fecha_hora = new \Carbon\Carbon();
-        $date_time = $fecha_hora->format('Y-m-d H:i:s');
-
-        return $date_time;
+        return $fecha_hora->format('Y-m-d H:i:s');
     }
 
     public static function semestre($mes){
         $mes = (int)$mes;
-        if($mes >= 0 and $mes <= 3) {
+        if($mes >= 0 && $mes <= 3) {
             return 0;
-        } else if ($mes >= 4 and $mes <= 7) {
+        } else if ($mes >= 4 && $mes <= 7) {
             return 1;
         } else {
             return 2;
@@ -56,7 +52,6 @@ class Helper
         $anho = (int)substr($fecha, 0, 10);
         $mes = (int)substr($fecha, 5, 2);
         $dia = (int)substr($fecha, 8, 2);
-        $edad = Carbon::createFromDate($anho,$mes,$dia)->age;
-        return $edad;
+        return Carbon::createFromDate($anho,$mes,$dia)->age;
     }
 }

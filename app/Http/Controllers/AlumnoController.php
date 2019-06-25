@@ -22,9 +22,9 @@ class AlumnoController extends Controller
 
     public function show($codigo) {
         $alumno = Alumno::find($codigo);
-        if($alumno == null) 
+        if($alumno == null) {
             return response()->json(['data' => 'El código no existe'],200);
-
+        }
         return new AlumnoDetailsResource($alumno);
     }
 
@@ -32,7 +32,7 @@ class AlumnoController extends Controller
     {
         $data = $request->data;
 
-        $persona = Persona::create([
+        Persona::create([
             'dni' => $data['dni'],
             'nombre' => strtoupper($data['nombre']),
             'apellido_materno' => strtoupper($data['apellido_materno']),
@@ -49,7 +49,7 @@ class AlumnoController extends Controller
             'id_rol' => '128963',
         ]);       
         
-        $alumno = Alumno::create([
+        Alumno::create([
             'codigo' => $data['codigo'],
             'ciclo' => $data['ciclo'],
             'promedio' => $data['promedio'],
@@ -67,9 +67,9 @@ class AlumnoController extends Controller
 
     public function shortAlumno($codigo) {
         $alumno = Alumno::find($codigo);
-        if($alumno == null) 
+        if($alumno == null) {
             return response()->json(['data' => 'El código no existe'],200);
-
+        }
         return new AlumnoShortResource($alumno);
     }
 
@@ -86,7 +86,6 @@ class AlumnoController extends Controller
     }
 
     public static function getUsuario($idUsuario){
-        /* return $model; */
         $alumno = Alumno::where('id_usuario', '=' , $idUsuario)->get();
         
         if(count($alumno) == 0){

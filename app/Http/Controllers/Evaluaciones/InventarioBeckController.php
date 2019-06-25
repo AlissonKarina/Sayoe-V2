@@ -6,20 +6,19 @@ use Illuminate\Http\Request;
 use App\Model\EstadoPerfil;
 use App\Http\Controllers\Controller;
 use App\Http\Helper\Helper;
-use App\Model\Evaluaciones\iEstrategia;
+use App\Model\Evaluaciones\IEstrategia;
 
 class InventarioBeckController extends Controller
 {
     public $strategy = null;
 
-    function __construct(iEstrategia $strategy){
+    function __construct(IEstrategia $strategy){
         $this->strategy = $strategy ;
     }
 
     public function puntaje(Request $request){
         $total = 0;
         $data = $request->data;
-        $id_perfil_psico = $data['id_perfil_psico'];
         $id_estado_perfil = $data['id_estado_perfil'];
         
         foreach ($data['alternativa'] as $valor)
